@@ -1,6 +1,4 @@
 
-// Auto-generated at 2025-07-28 16:24:07.994096 by ops-translator
-
 /*
 * Open source copyright declaration based on BSD open source template:
 * http://www.opensource.org/licenses/bsd-license.php
@@ -60,21 +58,7 @@
 // #define POWER_PROFILE
 #include "ops_lib_core.h"
 #include <ops_seq_v2.h>
-#include <ops_hls_rt_support.h>
-#include <hls_kernels.hpp>
 #include "blackscholes_kernels.h"
-/* ops_par_loop declarations */
-
-void ops_par_loop_ops_krnl_zero_init(ops::hls::Block, int, int*, ops::hls::Grid<float>&);
-
-void ops_par_loop_ops_krnl_const_init(ops::hls::Block, int, int*, ops::hls::Grid<float>&);
-
-void ops_par_loop_ops_krnl_interior_init(ops::hls::Block, int, int*, ops::hls::Grid<float>&);
-
-void ops_par_loop_ops_krnl_copy(ops::hls::Block, int, int*, ops::hls::Grid<float>&, ops::hls::Grid<float>&);
-
-void ops_par_loop_ops_krnl_calc_coefficient(ops::hls::Block, int, int*, ops::hls::Grid<float>&, ops::hls::Grid<float>&, ops::hls::Grid<float>&);
-
 
 extern const unsigned short mem_vector_factor;
 
@@ -89,8 +73,7 @@ extern const unsigned short mem_vector_factor;
 int main(int argc, const char **argv)
 {
     // OPS initialisation
-	ops_init_backend(argc, argv);
-
+    ops_init(argc,argv,1);
 
 	GridParameter gridProp;
 	gridProp.logical_size_x = 180;
@@ -212,8 +195,8 @@ gridProp.grid_size_x = gridProp.act_size_x;
 		}
 	}
 
-	//ops::hls::Block
-	ops::hls::Block grid1D = ops_hls_decl_block(1, "grid1D");
+	//ops_block
+	ops_block grid1D = ops_decl_block(1, "grid1D");
 
 	//ops_data
 	int size[] = {static_cast<int>(gridProp.logical_size_x)};
@@ -221,11 +204,11 @@ gridProp.grid_size_x = gridProp.act_size_x;
 	int d_m[] = {-1};
 	int d_p[] = {1};
 
-	ops::hls::Grid<stencil_type> dat_current[gridProp.batch]; // = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  current, "float",  "dat_current", mem_vector_factor);
-	ops::hls::Grid<stencil_type> dat_next[gridProp.batch];// = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  next, "float",  "dat_next", mem_vector_factor);
-	ops::hls::Grid<stencil_type> dat_a[gridProp.batch]; // = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  a,  "float",  "dat_a", mem_vector_factor);
-	ops::hls::Grid<stencil_type> dat_b[gridProp.batch]; // = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  b,  "float",  "dat_b", mem_vector_factor);
-	ops::hls::Grid<stencil_type> dat_c[gridProp.batch]; // = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  c,  "float",  "dat_c", mem_vector_factor);
+	ops_dat dat_current[gridProp.batch]; // = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, current,"float", "dat_current");
+	ops_dat dat_next[gridProp.batch];// = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, next,"float", "dat_next");
+	ops_dat dat_a[gridProp.batch]; // = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, a, "float", "dat_a");
+	ops_dat dat_b[gridProp.batch]; // = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, b, "float", "dat_b");
+	ops_dat dat_c[gridProp.batch]; // = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, c, "float", "dat_c");
 
 #ifdef VERIFICATION
     float * grid_u1_cpu[gridProp.batch]; // = (float*) aligned_alloc(4096, data_size_bytes);
@@ -238,15 +221,15 @@ gridProp.grid_size_x = gridProp.act_size_x;
 		float *a = nullptr, *b = nullptr, *c = nullptr;
 
 		std::string name = std::string("current_") + std::to_string(bat);
-		dat_current[bat] = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  current, "float",  name.c_str(), mem_vector_factor);
+		dat_current[bat] = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, current,"float", name.c_str());
 		name = std::string("next_") + std::to_string(bat);
-		dat_next[bat] = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  next, "float",  name.c_str(), mem_vector_factor);
+		dat_next[bat] = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, next,"float", name.c_str());
 		name = std::string("a_") + std::to_string(bat);
-		dat_a[bat] = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  a,  "float",  name.c_str(), mem_vector_factor);
+		dat_a[bat] = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, a, "float", name.c_str());
 		name = std::string("b_") + std::to_string(bat);
-		dat_b[bat] = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  a,  "float",  name.c_str(), mem_vector_factor);
+		dat_b[bat] = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, a, "float", name.c_str());
 		name = std::string("x_") + std::to_string(bat);
-		dat_c[bat] = ops_hls_decl_dat(grid1D,  1,  size,  base,  d_m,  d_p,  a,  "float",  name.c_str(), mem_vector_factor);
+		dat_c[bat] = ops_decl_dat(grid1D, 1, size, base, d_m, d_p, a, "float", name.c_str());
 #ifdef VERIFICATION
 		grid_u1_cpu[bat] = (float*) aligned_alloc(4096, data_size_bytes);
 		grid_u2_cpu[bat] = (float*) aligned_alloc(4096, data_size_bytes);
@@ -290,8 +273,11 @@ gridProp.grid_size_x = gridProp.act_size_x;
 	int s1d_3pt[] = {-1, 0, 1};
 	int s1d_1pt[] = {0};
 
+	ops_stencil S1D_3pt = ops_decl_stencil(1, 3, s1d_3pt, "3pt");
+	ops_stencil S1D_1pt = ops_decl_stencil(1, 1, s1d_1pt, "1pt");
 
 	//partition
+	ops_partition("1D_BLOCK_DECOMPOSE");
 
 	int lower_Pad_range[] = {-1,0};
 	int upper_pad_range[] = {gridProp.logical_size_x, gridProp.logical_size_x + 1};
@@ -304,35 +290,50 @@ gridProp.grid_size_x = gridProp.act_size_x;
 #ifdef PROFILE
 		auto grid_init_start_clk_point = std::chrono::high_resolution_clock::now();
 #endif
-		ops_par_loop_ops_krnl_zero_init( grid1D,  1 ,  lower_Pad_range, dat_current[bat]);
+		ops_par_loop(ops_krnl_zero_init, "ops_zero_init", grid1D, 1, lower_Pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
 
 		
 		float sMax = calcParam[bat].SMaxFactor * calcParam[bat].strike_price;
 
-		ops_par_loop_ops_krnl_const_init( grid1D,  1 ,  upper_pad_range, dat_current[bat], &sMax);
+		ops_par_loop(ops_krnl_const_init, "ops_const_init", grid1D, 1, upper_pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&sMax, 1, "float", OPS_READ));
 		
 		float* delta_s = &calcParam[bat].delta_S;
 		float* strike_price = &calcParam[bat].strike_price;
 
-		ops_par_loop_ops_krnl_interior_init( grid1D,  1 ,  interior_range, dat_current[bat], delta_s, strike_price);
+		ops_par_loop(ops_krnl_interior_init, "interior_init", grid1D, 1, interior_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_idx(),
+				ops_arg_gbl(delta_s, 1, "float", OPS_READ),
+				ops_arg_gbl(strike_price, 1,"float", OPS_READ));
 
 
-		ops_par_loop_ops_krnl_copy( grid1D,  1 ,  full_range, dat_current[bat], dat_next[bat]);
+		ops_par_loop(ops_krnl_copy, "init_dat_next", grid1D, 1, full_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_READ),
+				ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE));
 
 		//blackscholes calc
 		float alpha = calcParam[bat].volatility * calcParam[bat].volatility * calcParam[bat].delta_t;
 		float beta = calcParam[bat].risk_free_rate * calcParam[bat].delta_t;
 
-		ops_par_loop_ops_krnl_calc_coefficient( grid1D,  1 ,  interior_range, dat_a[bat], dat_b[bat], dat_c[bat], &(alpha), &(beta));
+		ops_par_loop(ops_krnl_calc_coefficient, "calc_coefficient", grid1D, 1, interior_range,
+				ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&(alpha), 1, "float", OPS_READ),
+				ops_arg_gbl(&(beta), 1 , "float", OPS_READ),
+				ops_arg_idx());
 
 #ifdef VERIFICATION
     for (unsigned int bat = 0; bat < gridProp.batch; bat++)
     { 
-        float* current_raw = (float*)dat_current[bat].get_raw_pointer();
-		float* next_raw = (float*)dat_next[bat].get_raw_pointer();
-        float* a_raw = (float*)dat_a[bat].get_raw_pointer();
-        float* b_raw = (float*)dat_b[bat].get_raw_pointer();
-        float* c_raw = (float*)dat_c[bat].get_raw_pointer();
+        float* current_raw = (float*)ops_dat_get_raw_pointer(dat_current[bat], 0, S1D_1pt, OPS_HOST);
+		float* next_raw = (float*)ops_dat_get_raw_pointer(dat_next[bat], 0, S1D_1pt, OPS_HOST);
+        float* a_raw = (float*)ops_dat_get_raw_pointer(dat_a[bat], 0, S1D_1pt, OPS_HOST);
+        float* b_raw = (float*)ops_dat_get_raw_pointer(dat_b[bat], 0, S1D_1pt, OPS_HOST);
+        float* c_raw = (float*)ops_dat_get_raw_pointer(dat_c[bat], 0, S1D_1pt, OPS_HOST);
 
     #ifdef DEBUG_VERBOSE
 
@@ -354,9 +355,21 @@ gridProp.grid_size_x = gridProp.act_size_x;
     {
 #endif
 #ifdef OPS_FPGA
+        #pragma ISL "isl0" calcParam[bat].N
 #endif 
 // #ifndef OPS_FPGA
-		isl0(calcParam[bat].N, interior_range, dat_current[bat], dat_a[bat], dat_b[bat], dat_c[bat], dat_next[bat]);
+		for (int iter = 0 ; iter < calcParam[bat].N; iter++)
+		{
+			ops_par_loop(ops_krnl_blackscholes, "blackscholes_1", grid1D, 1, interior_range,
+					ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE),
+					ops_arg_dat(dat_current[bat], 1, S1D_3pt, "float", OPS_READ),
+					ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_READ));
+            ops_par_loop(ops_krnl_copy, "copy_1", grid1D, 1, interior_range,
+                    ops_arg_dat(dat_next[bat], 1, S1D_3pt, "float", OPS_READ),
+                    ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
+		}
 // #else
 //         ops_iter_par_loop("ops_iter_par_loop_0", calcParam[bat].N,
 // 			ops_par_loop(ops_krnl_blackscholes, "blackscholes_1", grid1D, 1, interior_range,
@@ -412,8 +425,8 @@ gridProp.grid_size_x = gridProp.act_size_x;
 		//explicit blackscholes test
     	float direct_calc_value = test_blackscholes_call_option(calcParam[bat]);
 
-		float* current_raw = (float*)dat_current[bat].get_raw_pointer();
-		float* next_raw = (float*)dat_next[bat].get_raw_pointer();
+		float* current_raw = (float*)ops_dat_get_raw_pointer(dat_current[bat], 0, S1D_1pt, OPS_HOST);
+		float* next_raw = (float*)ops_dat_get_raw_pointer(dat_next[bat], 0, S1D_1pt, OPS_HOST);
 
 	#ifdef DEBUG_VERBOSE
 
@@ -597,8 +610,7 @@ gridProp.grid_size_x = gridProp.act_size_x;
 
 	//Finalizing the OPS library
 
-	ops_exit_backend();
-
+    ops_exit();
 
  	std::cout << "Exit properly" << std::endl;
     return 0;

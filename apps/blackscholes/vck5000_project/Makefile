@@ -16,12 +16,12 @@ HLS_TARGET_MODE=sw_emu
 HLS_JOBS=64
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile_hls.mk
 
-HEADERS=../blackscholes_utils.h ../blackscholes_cpu.h ../blackscholes_kernels.h
+HEADERS=blackscholes_utils.h blackscholes_cpu.h blackscholes_kernels.h
 
-OPS_FILES=../blackscholes.cpp
+OPS_FILES=blackscholes.cpp
 OPS_GENERATED_SUFFIX=_ops
 
-OTHER_FILES=../blackscholes_cpu.cpp 
+OTHER_FILES=blackscholes_cpu.cpp 
 
 
 APP=blackscholes
