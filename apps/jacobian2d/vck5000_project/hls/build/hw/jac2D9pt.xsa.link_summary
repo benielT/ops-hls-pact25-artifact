@@ -1,0 +1,1536 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/jac2D9pt.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 04:55:45 2025",
+ "timestampMillis": "1745459745958",
+ "buildStep": {
+  "cmdId": "7c9a2d08-507f-4a5f-bfc0-3fb0ccd03cc5",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/jac2D9pt.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "./hls/build/hw/jac2D9pt.xsa",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/host/xrt.cfg",
+    "content": "[connectivity]\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16384\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16384\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:55:45 2025",
+ "timestampMillis": "1745459745959",
+ "status": {
+  "cmdId": "7c9a2d08-507f-4a5f-bfc0-3fb0ccd03cc5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Apr 24 04:55:51 2025",
+ "timestampMillis": "1745459751619",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "jac2D9pt",
+    "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:55:51 2025",
+ "timestampMillis": "1745459751883",
+ "buildStep": {
+  "cmdId": "f602e0f0-cd86-4589-bbea-c560adad8619",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16384\nsc=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16384\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:55:51 2025",
+ "timestampMillis": "1745459751883",
+ "status": {
+  "cmdId": "f602e0f0-cd86-4589-bbea-c560adad8619",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:04 2025",
+ "timestampMillis": "1745459764672",
+ "status": {
+  "cmdId": "f602e0f0-cd86-4589-bbea-c560adad8619",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:56:04 2025",
+ "timestampMillis": "1745459764679",
+ "buildStep": {
+  "cmdId": "d9c02b9b-9b59-46e0-91df-5c2d59199691",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:04 2025",
+ "timestampMillis": "1745459764680",
+ "status": {
+  "cmdId": "d9c02b9b-9b59-46e0-91df-5c2d59199691",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767255",
+ "status": {
+  "cmdId": "d9c02b9b-9b59-46e0-91df-5c2d59199691",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767262",
+ "buildStep": {
+  "cmdId": "004aa021-f67a-43df-9134-5919c465f538",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767263",
+ "status": {
+  "cmdId": "004aa021-f67a-43df-9134-5919c465f538",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767559",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767561",
+ "status": {
+  "cmdId": "004aa021-f67a-43df-9134-5919c465f538",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767570",
+ "buildStep": {
+  "cmdId": "093eba7f-5de1-4d4f-9d34-267e5b1392c9",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental\nmisc=BinaryName=jac2D9pt\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:07 2025",
+ "timestampMillis": "1745459767570",
+ "status": {
+  "cmdId": "093eba7f-5de1-4d4f-9d34-267e5b1392c9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 04:56:08 2025",
+ "timestampMillis": "1745459768688",
+ "buildStep": {
+  "cmdId": "77d3095d-04cb-4166-b66f-c8ed0072f6b7",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:08 2025",
+ "timestampMillis": "1745459768688",
+ "status": {
+  "cmdId": "77d3095d-04cb-4166-b66f-c8ed0072f6b7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu Apr 24 04:56:16 2025",
+ "timestampMillis": "1745459776799",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:56:16 2025",
+ "timestampMillis": "1745459776801",
+ "buildStep": {
+  "cmdId": "3b89750e-0371-4e37-8c06-deae4aaf4fee",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:56:16 2025",
+ "timestampMillis": "1745459776802",
+ "status": {
+  "cmdId": "3b89750e-0371-4e37-8c06-deae4aaf4fee",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:56:51 2025",
+ "timestampMillis": "1745459811301",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:56:51 2025",
+ "timestampMillis": "1745459811408",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 05:09:07 2025",
+ "timestampMillis": "1745460547435",
+ "buildStep": {
+  "cmdId": "be9803ae-e717-4ac1-b225-7ce27753238a",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 05:09:07 2025",
+ "timestampMillis": "1745460547435",
+ "status": {
+  "cmdId": "be9803ae-e717-4ac1-b225-7ce27753238a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 05:09:07 2025",
+ "timestampMillis": "1745460547436",
+ "buildStep": {
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 05:09:07 2025",
+ "timestampMillis": "1745460547437",
+ "status": {
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:22:15 2025",
+ "timestampMillis": "1745464935519",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:23:25 2025",
+ "timestampMillis": "1745465005887",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:23:25 2025",
+ "timestampMillis": "1745465005890",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:28:16 2025",
+ "timestampMillis": "1745465296573",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:28:16 2025",
+ "timestampMillis": "1745465296578",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327413",
+ "status": {
+  "cmdId": "3b89750e-0371-4e37-8c06-deae4aaf4fee",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327573",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327580",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327583",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327585",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327588",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327591",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327594",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327596",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327599",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327602",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327605",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327608",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327611",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327614",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327716",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327719",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327722",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327725",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327728",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327731",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327734",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327738",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327741",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327744",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327748",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_datamover_outerloop_0_1_0_synth_1_ulp_inst_0_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327751",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_kernel_outerloop_0_1_0_synth_1_ulp_inst_0_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327754",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327758",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327763",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327773",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327780",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327783",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327792",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327800",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327803",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "2835fecc-31c7-4e93-aaf2-6981c2403dd3"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327829",
+ "status": {
+  "cmdId": "77d3095d-04cb-4166-b66f-c8ed0072f6b7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327848",
+ "status": {
+  "cmdId": "093eba7f-5de1-4d4f-9d34-267e5b1392c9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327855",
+ "buildStep": {
+  "cmdId": "47b4be1b-7241-41bb-9188-eda7fb1a1e6a",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327855",
+ "status": {
+  "cmdId": "47b4be1b-7241-41bb-9188-eda7fb1a1e6a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327876",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327883",
+ "buildStep": {
+  "cmdId": "7d75f42e-d277-45e5-9236-47c9b89f6e2a",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:07 2025",
+ "timestampMillis": "1745467327883",
+ "status": {
+  "cmdId": "7d75f42e-d277-45e5-9236-47c9b89f6e2a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330070",
+ "status": {
+  "cmdId": "7d75f42e-d277-45e5-9236-47c9b89f6e2a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330071",
+ "buildStep": {
+  "cmdId": "0eacfabe-eb4b-4d75-8604-47bd3a883689",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330071",
+ "status": {
+  "cmdId": "0eacfabe-eb4b-4d75-8604-47bd3a883689",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330077",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330079",
+ "status": {
+  "cmdId": "0eacfabe-eb4b-4d75-8604-47bd3a883689",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330079",
+ "buildStep": {
+  "cmdId": "c79e0709-cc7d-4910-bf18-382dbccbe6ca",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330080",
+ "status": {
+  "cmdId": "c79e0709-cc7d-4910-bf18-382dbccbe6ca",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330084",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330086",
+ "status": {
+  "cmdId": "c79e0709-cc7d-4910-bf18-382dbccbe6ca",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330091",
+ "status": {
+  "cmdId": "47b4be1b-7241-41bb-9188-eda7fb1a1e6a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330099",
+ "buildStep": {
+  "cmdId": "80d06143-25eb-41ee-b3a4-a18b537e2fa3",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330099",
+ "status": {
+  "cmdId": "80d06143-25eb-41ee-b3a4-a18b537e2fa3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330286",
+ "status": {
+  "cmdId": "80d06143-25eb-41ee-b3a4-a18b537e2fa3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330291",
+ "buildStep": {
+  "cmdId": "27d8b532-7662-486c-b247-64f8afe46874",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin.info --input /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330291",
+ "status": {
+  "cmdId": "27d8b532-7662-486c-b247-64f8afe46874",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330560",
+ "status": {
+  "cmdId": "27d8b532-7662-486c-b247-64f8afe46874",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330566",
+ "buildStep": {
+  "cmdId": "83f76baf-a68f-46f5-a961-370d6b81bac2",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330566",
+ "status": {
+  "cmdId": "83f76baf-a68f-46f5-a961-370d6b81bac2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330569",
+ "status": {
+  "cmdId": "83f76baf-a68f-46f5-a961-370d6b81bac2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:10 2025",
+ "timestampMillis": "1745467330608",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/system_estimate_jac2D9pt.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:11 2025",
+ "timestampMillis": "1745467331090",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/v++_link_jac2D9pt_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:11 2025",
+ "timestampMillis": "1745467331091",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/v++_link_jac2D9pt_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:02:11 2025",
+ "timestampMillis": "1745467331095",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:02:11 2025",
+ "timestampMillis": "1745467331098",
+ "status": {
+  "cmdId": "7c9a2d08-507f-4a5f-bfc0-3fb0ccd03cc5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

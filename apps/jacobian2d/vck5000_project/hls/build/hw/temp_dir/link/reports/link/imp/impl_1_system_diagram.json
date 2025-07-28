@@ -1,0 +1,1005 @@
+{
+ "system_diagram_metadata": {
+  "schema_version": {
+   "major": "2",
+   "minor": "0",
+   "patch": "0"
+  },
+  "xsa": {
+   "vendor": "xilinx",
+   "board_id": "vck5000",
+   "name": "gen4x8_xdma_2",
+   "version_major": "202210",
+   "version_minor": "1",
+   "description": "\nThis platform targets the Versal VCK5000 Alveo Developer Kit. This high-performance acceleration platform features four channels of DDR4-3200 SDRAM, and Xilinx XDMA for PCI Express with PCIe Gen4x8 connectivity.\n    ",
+   "generated_by": {
+    "name": "Vivado",
+    "version": "2022.1",
+    "cl": "3523110",
+    "time_stamp": "Wed Apr 13 18:03:54 2022"
+   },
+   "board": {
+    "name": "xilinx.com:vck5000:1.0",
+    "vendor": "xilinx.com",
+    "part": "xcvc1902-vsvd1760-2MP-e-S",
+    "board_part": "xilinx.com:vck5000:part0:1.0"
+   },
+   "available_resources": {
+    "LUT": "899840",
+    "REG": "1779881",
+    "BRAM": "967",
+    "DSP": "1968",
+    "URAM": ""
+   },
+   "device_topology": [
+    {
+     "id": "0",
+     "type": "Ddr4",
+     "used": "yes",
+     "sizeKB": "0x3fffff",
+     "base_address": "0x0",
+     "tag": "MC_NOC0",
+     "slr": "",
+     "spTag": "MC_NOC0"
+    },
+    {
+     "id": "1",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x3fffff",
+     "base_address": "0x0",
+     "tag": "BRAM",
+     "slr": "",
+     "spTag": "BRAM"
+    },
+    {
+     "id": "2",
+     "type": "DirectConnection",
+     "used": "yes",
+     "sizeKB": "",
+     "base_address": "",
+     "tag": "dc_0",
+     "slr": "",
+     "spTag": ""
+    },
+    {
+     "id": "3",
+     "type": "DirectConnection",
+     "used": "yes",
+     "sizeKB": "",
+     "base_address": "",
+     "tag": "dc_1",
+     "slr": "",
+     "spTag": ""
+    }
+   ],
+   "design_intent": [
+    "dataCenter",
+    "externalHost",
+    "serverManaged"
+   ],
+   "clocks": [
+    {
+     "name": "CPU",
+     "orig_name": "CPU",
+     "id": -1,
+     "default": false,
+     "type": "RESERVED",
+     "spec_frequency": 1,
+     "spec_period": 1000,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 2",
+     "orig_name": "_bd_top_blp_s_aclk_ctrl_00",
+     "id": 2,
+     "default": false,
+     "type": "FIXED",
+     "spec_frequency": 100,
+     "spec_period": 10,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 0",
+     "orig_name": "_bd_top_blp_s_aclk_kernel_00",
+     "id": 0,
+     "default": false,
+     "type": "SCALABLE",
+     "spec_frequency": 299.996999,
+     "spec_period": 3.333367,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    },
+    {
+     "name": "PL 1",
+     "orig_name": "_bd_top_blp_s_aclk_kernel_01",
+     "id": 1,
+     "default": false,
+     "type": "SCALABLE",
+     "spec_frequency": 499.994999,
+     "spec_period": 2.00002,
+     "requested_frequency": 0,
+     "achieved_frequency": 0,
+     "clock_domain": "",
+     "inst_ref": "",
+     "comp_ref": "",
+     "xclbin_name": ""
+    }
+   ]
+  },
+  "xclbin": {
+   "generated_by": {
+    "name": "v++",
+    "version": "2022.1",
+    "cl": "3524075",
+    "time_stamp": "2022-04-13-17:42:45",
+    "options": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/jac2D9pt.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+    "xclbin_name": "jac2D9pt",
+    "uuid": "7c9a2d08-507f-4a5f-bfc0-3fb0ccd03cc5",
+    "link_uuid": "7c9a2d08-507f-4a5f-bfc0-3fb0ccd03cc5",
+    "package_uuid": "",
+    "system_compile_flow": false
+   },
+   "user_regions": [
+    {
+     "name": "OCL_REGION_0",
+     "type": "clc_region",
+     "instance_path": "top_i/ulp",
+     "available_resources": {
+      "LUT": "886810",
+      "REG": "1779881",
+      "BRAM": "967",
+      "DSP": "",
+      "by_SLR": [],
+      "URAM": ""
+     },
+     "kernels": [
+      {
+       "name": "kernel_outerloop_0",
+       "estimated_resources": {
+        "LUT": "20",
+        "REG": "3",
+        "BRAM": "",
+        "DSP": "",
+        "URAM": ""
+       },
+       "ports": [
+        {
+         "name": "ARG0_AXIS_IN",
+         "mode": "read_only",
+         "range": "",
+         "data_width": "256",
+         "port_type": "stream",
+         "base": "",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "ARG1_AXIS_OUT",
+         "mode": "write_only",
+         "range": "",
+         "data_width": "256",
+         "port_type": "stream",
+         "base": "",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x68",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "slr_region",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "1",
+         "name": "outer_itr",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x18",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "2",
+         "name": "stencilConfig_grid_size_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x20",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "3",
+         "name": "stencilConfig_grid_size_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x28",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "4",
+         "name": "stencilConfig_dim",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x30",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "5",
+         "name": "stencilConfig_total_itr",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x38",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "6",
+         "name": "stencilConfig_lower_limit_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x40",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "7",
+         "name": "stencilConfig_lower_limit_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x48",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "8",
+         "name": "stencilConfig_upper_limit_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x50",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "9",
+         "name": "stencilConfig_upper_limit_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x58",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "10",
+         "name": "stencilConfig_outer_loop_limit",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x60",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "11",
+         "name": "arg0_axis_in",
+         "address_qualifier": "4",
+         "port": "ARG0_AXIS_IN",
+         "size": "0x0",
+         "offset": "0x0",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "stream\u003chls::axis\u003cap_uint\u003c256\u003e, 0, 0, 0\u003e, 0\u003e&",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "12",
+         "name": "arg1_axis_out",
+         "address_qualifier": "4",
+         "port": "ARG1_AXIS_OUT",
+         "size": "0x0",
+         "offset": "0x0",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "stream\u003chls::axis\u003cap_uint\u003c256\u003e, 0, 0, 0\u003e, 0\u003e&",
+         "direction": "DirUnknown"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": []
+      },
+      {
+       "name": "datamover_outerloop_0",
+       "estimated_resources": {
+        "LUT": "8",
+        "REG": "3",
+        "BRAM": "",
+        "DSP": "",
+        "URAM": ""
+       },
+       "ports": [
+        {
+         "name": "M_AXI_GMEM0",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "M_AXI_GMEM1",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "ARG0_AXIS_OUT",
+         "mode": "write_only",
+         "range": "",
+         "data_width": "256",
+         "port_type": "stream",
+         "base": "",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "ARG1_AXIS_IN",
+         "mode": "read_only",
+         "range": "",
+         "data_width": "256",
+         "port_type": "stream",
+         "base": "",
+         "direction": "DirUnknown"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x68",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0",
+         "direction": "DirUnknown"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "is_loopback",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x1",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "1",
+         "name": "range_start_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x18",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "2",
+         "name": "range_end_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x20",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "3",
+         "name": "range_start_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x28",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "4",
+         "name": "range_end_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x30",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "5",
+         "name": "gridSize_0",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x38",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "6",
+         "name": "gridSize_1",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x40",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "7",
+         "name": "outer_itr",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x48",
+         "host_offset": "0x0",
+         "host_size": "0x4",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "8",
+         "name": "arg0",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM0",
+         "size": "0x8",
+         "offset": "0x50",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "9",
+         "name": "arg1",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x5C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "10",
+         "name": "arg0_axis_out",
+         "address_qualifier": "4",
+         "port": "ARG0_AXIS_OUT",
+         "size": "0x0",
+         "offset": "0x0",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "stream\u003chls::axis\u003cap_uint\u003c256\u003e, 0, 0, 0\u003e, 0\u003e&",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "11",
+         "name": "arg1_axis_in",
+         "address_qualifier": "4",
+         "port": "ARG1_AXIS_IN",
+         "size": "0x0",
+         "offset": "0x0",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "stream\u003chls::axis\u003cap_uint\u003c256\u003e, 0, 0, 0\u003e, 0\u003e&",
+         "direction": "DirUnknown"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": []
+      }
+     ],
+     "compute_units": [
+      {
+       "id": "0",
+       "kernel_name": "datamover_outerloop_0",
+       "cu_name": "datamover_outerloop_0_1",
+       "base_address": "",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "7476",
+         "REG": "15485",
+         "BRAM": "15",
+         "DSP": "",
+         "URAM": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "7476",
+         "REG": "15485",
+         "BRAM": "15",
+         "DSP": "",
+         "URAM": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "7541",
+         "REG": "15364",
+         "BRAM": "15",
+         "DSP": "",
+         "URAM": "0"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": [
+        {
+         "port_name": "ap_clk",
+         "id": "0"
+        }
+       ],
+       "reset_port_name": "ap_rst_n"
+      },
+      {
+       "id": "1",
+       "kernel_name": "kernel_outerloop_0",
+       "cu_name": "kernel_outerloop_0_1",
+       "base_address": "",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "36224",
+         "REG": "220199",
+         "BRAM": "144",
+         "DSP": "",
+         "URAM": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "36224",
+         "REG": "220199",
+         "BRAM": "144",
+         "DSP": "",
+         "URAM": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "42189",
+         "REG": "221825",
+         "BRAM": "144",
+         "DSP": "",
+         "URAM": "0"
+        }
+       ],
+       "clock_name": "",
+       "clock_id": 0,
+       "clocks": [
+        {
+         "port_name": "ap_clk",
+         "id": "0"
+        }
+       ],
+       "reset_port_name": "ap_rst_n"
+      }
+     ],
+     "connectivity": [
+      {
+       "id": "0",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "8",
+        "arg_name": "arg0",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "1",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "9",
+        "arg_name": "arg1",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "2",
+       "node1": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "12",
+        "arg_name": "arg1_axis_out",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "11",
+        "arg_name": "arg1_axis_in",
+        "mode": "Slave",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "3",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "10",
+        "arg_name": "arg0_axis_out",
+        "mode": "Master",
+        "name": "",
+        "port_name": ""
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "11",
+        "arg_name": "arg0_axis_in",
+        "mode": "Slave",
+        "name": "",
+        "port_name": ""
+       }
+      },
+      {
+       "id": "4",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "arg0_axis_out"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "buffer_datamover_outerloop_0_1_arg0_axis_out",
+        "port_name": "S_AXIS"
+       }
+      },
+      {
+       "id": "5",
+       "node1": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "buffer_kernel_outerloop_0_1_arg1_axis_out",
+        "port_name": "M_AXIS"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "arg1_axis_in"
+       }
+      },
+      {
+       "id": "6",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "m_axi_gmem0"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "axi_noc_kernel0",
+        "port_name": "S00_AXI"
+       }
+      },
+      {
+       "id": "7",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "m_axi_gmem1"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "axi_noc_kernel0",
+        "port_name": "S01_AXI"
+       }
+      },
+      {
+       "id": "8",
+       "node1": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "axi_ic_user",
+        "port_name": "M01_AXI"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "s_axi_control"
+       }
+      },
+      {
+       "id": "9",
+       "node1": {
+        "type": "bd_clock",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": "blp_s_aclk_kernel_00"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "ap_clk"
+       }
+      },
+      {
+       "id": "10",
+       "node1": {
+        "type": "ip_reset",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "reset_controllers",
+        "port_name": "peripheral_aresetn"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "datamover_outerloop_0_1",
+        "port_name": "ap_rst_n"
+       }
+      },
+      {
+       "id": "11",
+       "node1": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "buffer_datamover_outerloop_0_1_arg0_axis_out",
+        "port_name": "M_AXIS"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "kernel_outerloop_0_1",
+        "port_name": "arg0_axis_in"
+       }
+      },
+      {
+       "id": "12",
+       "node1": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "kernel_outerloop_0_1",
+        "port_name": "arg1_axis_out"
+       },
+       "node2": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "buffer_kernel_outerloop_0_1_arg1_axis_out",
+        "port_name": "S_AXIS"
+       }
+      },
+      {
+       "id": "13",
+       "node1": {
+        "type": "ip",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "axi_ic_user",
+        "port_name": "M02_AXI"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "kernel_outerloop_0_1",
+        "port_name": "s_axi_control"
+       }
+      },
+      {
+       "id": "14",
+       "node1": {
+        "type": "bd_clock",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "",
+        "port_name": "blp_s_aclk_kernel_00"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "kernel_outerloop_0_1",
+        "port_name": "ap_clk"
+       }
+      },
+      {
+       "id": "15",
+       "node1": {
+        "type": "ip_reset",
+        "id": "",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "reset_controllers",
+        "port_name": "peripheral_aresetn"
+       },
+       "node2": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "",
+        "arg_name": "",
+        "mode": "",
+        "name": "kernel_outerloop_0_1",
+        "port_name": "ap_rst_n"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
+
