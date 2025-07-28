@@ -1,0 +1,17 @@
+Timestamp,Power (W)
+1745493247281,35
+1745493252213,36
+1745493256714,36
+1745493261715,36
+1745493266714,36
+1745493271714,36
+1745493276715,36
+1745493281715,36
+1745493286214,36
+1745493291214,36
+1745493296214,36
+1745493301213,36
+1745493306214,36
+1745493311214,36
+1745493315714,36
+Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin -sizex=20000 -iters=60000 -piter=5000
