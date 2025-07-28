@@ -1,0 +1,11 @@
+Timestamp,Power (W)
+1745401959981,35
+1745401964947,35
+1745401969947,44
+1745401974449,44
+1745401979447,44
+1745401984447,44
+1745401989447,44
+1745401994448,44
+1745401999447,44
+Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin -sizex=400 -sizey=300 -iters=60032 -piter=500
