@@ -1,0 +1,1536 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/heat3d.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 04:50:36 2025",
+ "timestampMillis": "1745459436497",
+ "buildStep": {
+  "cmdId": "9b74fbf6-ae50-4b34-85a2-01303e4705ec",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/heat3d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "./hls/build/hw/heat3d.xsa",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/host/xrt.cfg",
+    "content": "[connectivity]\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:2048\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:2048\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:36 2025",
+ "timestampMillis": "1745459436498",
+ "status": {
+  "cmdId": "9b74fbf6-ae50-4b34-85a2-01303e4705ec",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Apr 24 04:50:42 2025",
+ "timestampMillis": "1745459442664",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "heat3d",
+    "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:50:43 2025",
+ "timestampMillis": "1745459443018",
+ "buildStep": {
+  "cmdId": "09959f0f-babb-47dd-b6d3-656721f64a07",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:2048\nsc=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:2048\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:43 2025",
+ "timestampMillis": "1745459443018",
+ "status": {
+  "cmdId": "09959f0f-babb-47dd-b6d3-656721f64a07",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:56 2025",
+ "timestampMillis": "1745459456741",
+ "status": {
+  "cmdId": "09959f0f-babb-47dd-b6d3-656721f64a07",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:50:56 2025",
+ "timestampMillis": "1745459456750",
+ "buildStep": {
+  "cmdId": "0617de8a-b91e-4fe8-a54d-ccf16aaf7659",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:56 2025",
+ "timestampMillis": "1745459456750",
+ "status": {
+  "cmdId": "0617de8a-b91e-4fe8-a54d-ccf16aaf7659",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459462",
+ "status": {
+  "cmdId": "0617de8a-b91e-4fe8-a54d-ccf16aaf7659",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459469",
+ "buildStep": {
+  "cmdId": "3817c570-871d-451e-ba7d-4f46fc18711a",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459469",
+ "status": {
+  "cmdId": "3817c570-871d-451e-ba7d-4f46fc18711a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459802",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459804",
+ "status": {
+  "cmdId": "3817c570-871d-451e-ba7d-4f46fc18711a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459812",
+ "buildStep": {
+  "cmdId": "57cc2c90-a3e4-4923-921a-2ab31bff95d4",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel\nmisc=BinaryName=heat3d\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:50:59 2025",
+ "timestampMillis": "1745459459812",
+ "status": {
+  "cmdId": "57cc2c90-a3e4-4923-921a-2ab31bff95d4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 04:51:00 2025",
+ "timestampMillis": "1745459460985",
+ "buildStep": {
+  "cmdId": "c57844b7-337d-4905-bb1e-ba3a0a454ff1",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:51:00 2025",
+ "timestampMillis": "1745459460985",
+ "status": {
+  "cmdId": "c57844b7-337d-4905-bb1e-ba3a0a454ff1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu Apr 24 04:51:09 2025",
+ "timestampMillis": "1745459469518",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:51:09 2025",
+ "timestampMillis": "1745459469520",
+ "buildStep": {
+  "cmdId": "09097ba2-8cff-44d9-8ec9-d333abef98d7",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:51:09 2025",
+ "timestampMillis": "1745459469521",
+ "status": {
+  "cmdId": "09097ba2-8cff-44d9-8ec9-d333abef98d7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:51:43 2025",
+ "timestampMillis": "1745459503333",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:51:43 2025",
+ "timestampMillis": "1745459503439",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 05:07:20 2025",
+ "timestampMillis": "1745460440045",
+ "buildStep": {
+  "cmdId": "24ddc258-a8f7-4bd1-963f-3bdcce40debc",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 05:07:20 2025",
+ "timestampMillis": "1745460440045",
+ "status": {
+  "cmdId": "24ddc258-a8f7-4bd1-963f-3bdcce40debc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 05:07:20 2025",
+ "timestampMillis": "1745460440046",
+ "buildStep": {
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 05:07:20 2025",
+ "timestampMillis": "1745460440047",
+ "status": {
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:40:29 2025",
+ "timestampMillis": "1745466029894",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:41:59 2025",
+ "timestampMillis": "1745466119152",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:41:59 2025",
+ "timestampMillis": "1745466119155",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:47:32 2025",
+ "timestampMillis": "1745466452764",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 06:47:32 2025",
+ "timestampMillis": "1745466452767",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577456",
+ "status": {
+  "cmdId": "09097ba2-8cff-44d9-8ec9-d333abef98d7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577639",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577642",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577645",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577649",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577653",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577656",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577660",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577664",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577669",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577677",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577681",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577684",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577691",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577695",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577803",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577806",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577809",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577813",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577816",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577819",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577823",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577826",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577830",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577833",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577837",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_datamover_outerloop_0_1_0_synth_1_ulp_inst_0_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577840",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_kernel_outerloop_0_1_0_synth_1_ulp_inst_0_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577844",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577847",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577852",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577863",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577872",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577875",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577885",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577893",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577896",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "b53c0759-4240-4a69-bb8b-f7a67e2b45b9"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577921",
+ "status": {
+  "cmdId": "c57844b7-337d-4905-bb1e-ba3a0a454ff1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577940",
+ "status": {
+  "cmdId": "57cc2c90-a3e4-4923-921a-2ab31bff95d4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577948",
+ "buildStep": {
+  "cmdId": "7ad3c233-3c3c-493c-8d91-133974f2a796",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577949",
+ "status": {
+  "cmdId": "7ad3c233-3c3c-493c-8d91-133974f2a796",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577965",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577972",
+ "buildStep": {
+  "cmdId": "69b1e77b-1fb2-4ee3-8bfe-4d326fe59d65",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.rtd -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:22:57 2025",
+ "timestampMillis": "1745468577972",
+ "status": {
+  "cmdId": "69b1e77b-1fb2-4ee3-8bfe-4d326fe59d65",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580228",
+ "status": {
+  "cmdId": "69b1e77b-1fb2-4ee3-8bfe-4d326fe59d65",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580229",
+ "buildStep": {
+  "cmdId": "7f366082-6b18-49b7-80cb-81c7dd1948eb",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580230",
+ "status": {
+  "cmdId": "7f366082-6b18-49b7-80cb-81c7dd1948eb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580235",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580237",
+ "status": {
+  "cmdId": "7f366082-6b18-49b7-80cb-81c7dd1948eb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580237",
+ "buildStep": {
+  "cmdId": "d99912af-9413-4d83-adfc-3686051c2168",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580238",
+ "status": {
+  "cmdId": "d99912af-9413-4d83-adfc-3686051c2168",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580241",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580242",
+ "status": {
+  "cmdId": "d99912af-9413-4d83-adfc-3686051c2168",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580247",
+ "status": {
+  "cmdId": "7ad3c233-3c3c-493c-8d91-133974f2a796",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580254",
+ "buildStep": {
+  "cmdId": "bc363b00-0390-41ce-8b7f-41243f3f31ea",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580254",
+ "status": {
+  "cmdId": "bc363b00-0390-41ce-8b7f-41243f3f31ea",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580498",
+ "status": {
+  "cmdId": "bc363b00-0390-41ce-8b7f-41243f3f31ea",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580505",
+ "buildStep": {
+  "cmdId": "3e94ab7d-87c1-43e6-b502-f7fc5cb99b4b",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin.info --input /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/int/heat3d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580505",
+ "status": {
+  "cmdId": "3e94ab7d-87c1-43e6-b502-f7fc5cb99b4b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580838",
+ "status": {
+  "cmdId": "3e94ab7d-87c1-43e6-b502-f7fc5cb99b4b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580846",
+ "buildStep": {
+  "cmdId": "8a62fd7e-4793-430b-aaf9-9d4536cbd15a",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580846",
+ "status": {
+  "cmdId": "8a62fd7e-4793-430b-aaf9-9d4536cbd15a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580849",
+ "status": {
+  "cmdId": "8a62fd7e-4793-430b-aaf9-9d4536cbd15a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:00 2025",
+ "timestampMillis": "1745468580917",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/system_estimate_heat3d.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:01 2025",
+ "timestampMillis": "1745468581529",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/v++_link_heat3d_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:01 2025",
+ "timestampMillis": "1745468581531",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/v++_link_heat3d_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 07:23:01 2025",
+ "timestampMillis": "1745468581536",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 07:23:01 2025",
+ "timestampMillis": "1745468581540",
+ "status": {
+  "cmdId": "9b74fbf6-ae50-4b34-85a2-01303e4705ec",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
