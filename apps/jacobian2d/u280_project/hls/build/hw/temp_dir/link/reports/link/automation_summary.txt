@@ -1,0 +1,281 @@
+====================================================================
+Version:    xcd v2022.2 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Thu May 15 19:46:48 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: kernel_outerloop_0_1
+Kernel: kernel_outerloop_0
+Base Address: 0x810000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_outerloop_0_2
+Kernel: kernel_outerloop_0
+Base Address: 0xc00000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_outerloop_0_3
+Kernel: kernel_outerloop_0
+Base Address: 0x1000000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: datamover_outerloop_0_1
+Kernel: datamover_outerloop_0
+Base Address: 0x800000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: buffer_kernel_outerloop_0_3_arg1_axis_out/M_AXIS
+Destination Pin: datamover_outerloop_0_1/arg1_axis_in
+
+Source Pin: SLR0/M02_AXI
+Destination Pin: datamover_outerloop_0_1/s_axi_control
+
+Source Pin: buffer_datamover_outerloop_0_1_arg0_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_1/arg0_axis_in
+
+Source Pin: SLR0/M01_AXI
+Destination Pin: kernel_outerloop_0_1/s_axi_control
+
+Source Pin: buffer_kernel_outerloop_0_1_arg1_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_2/arg0_axis_in
+
+Source Pin: SLR1/M01_AXI
+Destination Pin: kernel_outerloop_0_2/s_axi_control
+
+Source Pin: buffer_kernel_outerloop_0_2_arg1_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_3/arg0_axis_in
+
+Source Pin: SLR2/M01_AXI
+Destination Pin: kernel_outerloop_0_3/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: datamover_outerloop_0_1/arg0_axis_out
+Destination Pin: buffer_datamover_outerloop_0_1_arg0_axis_out/S_AXIS
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem0
+Destination Pin: hmss_0/S01_AXI
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem1
+Destination Pin: hmss_0/S02_AXI
+
+Source Pin: kernel_outerloop_0_1/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_1_arg1_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_2/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_2_arg1_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_3/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_3_arg1_axis_out/S_AXIS
+
+3. Clock Connections
+====================
+
+Compute Unit: datamover_outerloop_0_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: datamover_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_2
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_2/ap_clk
+
+Compute Unit: kernel_outerloop_0_3
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_3/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: datamover_outerloop_0_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: datamover_outerloop_0_1/ap_rst_n
+Associated Clock Pin: datamover_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_1/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_2
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_2/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_2/ap_clk
+
+Compute Unit: kernel_outerloop_0_3
+Source Pin: proc_sys_reset_kernel_slr2/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_3/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_3/ap_clk
+
+5. SLR Utilization per Compute Unit
+===================================
+
+Compute Unit: kernel_outerloop_0_1
++------------+--------+------+------+--------+--------+--------+
+| Site Type  |   SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+--------+------+------+--------+--------+--------+
+| LUT        | 135918 |    0 |    0 |  30.91 |   0.00 |   0.00 |
+| LUTAsLogic | 131912 |    0 |    0 |  30.00 |   0.00 |   0.00 |
+| LUTAsMem   |   4006 |    0 |    0 |   1.95 |   0.00 |   0.00 |
+| REG        | 256301 |    0 |    0 |  29.15 |   0.00 |   0.00 |
+| CARRY8     |   6034 |    0 |    0 |  10.98 |   0.00 |   0.00 |
+| F7MUX      |      4 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| F8MUX      |      1 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |     60 |    0 |    0 |   8.93 |   0.00 |   0.00 |
+| URAM       |     28 |    0 |    0 |   8.75 |   0.00 |   0.00 |
+| DSPs       |   2422 |    0 |    0 |  84.10 |   0.00 |   0.00 |
++------------+--------+------+------+--------+--------+--------+
+
+Compute Unit: kernel_outerloop_0_2
++------------+------+--------+------+--------+--------+--------+
+| Site Type  | SLR0 |   SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+--------+------+--------+--------+--------+
+| LUT        |    0 | 134437 |    0 |   0.00 |  31.12 |   0.00 |
+| LUTAsLogic |    0 | 130431 |    0 |   0.00 |  30.19 |   0.00 |
+| LUTAsMem   |    0 |   4006 |    0 |   0.00 |   2.03 |   0.00 |
+| REG        |    0 | 256158 |    0 |   0.00 |  29.65 |   0.00 |
+| CARRY8     |    0 |   6034 |    0 |   0.00 |  11.17 |   0.00 |
+| F7MUX      |    0 |      4 |    0 |   0.00 |   0.00 |   0.00 |
+| F8MUX      |    0 |      1 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    0 |     60 |    0 |   0.00 |   8.93 |   0.00 |
+| URAM       |    0 |     28 |    0 |   0.00 |   8.75 |   0.00 |
+| DSPs       |    0 |   2422 |    0 |   0.00 |  78.84 |   0.00 |
++------------+------+--------+------+--------+--------+--------+
+
+Compute Unit: kernel_outerloop_0_3
++------------+------+------+--------+--------+--------+--------+
+| Site Type  | SLR0 | SLR1 |   SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+------+--------+--------+--------+--------+
+| LUT        |    0 |    0 | 136017 |   0.00 |   0.00 |  31.49 |
+| LUTAsLogic |    0 |    0 | 132011 |   0.00 |   0.00 |  30.56 |
+| LUTAsMem   |    0 |    0 |   4006 |   0.00 |   0.00 |   2.03 |
+| REG        |    0 |    0 | 256654 |   0.00 |   0.00 |  29.71 |
+| CARRY8     |    0 |    0 |   6034 |   0.00 |   0.00 |  11.17 |
+| F7MUX      |    0 |    0 |      4 |   0.00 |   0.00 |   0.00 |
+| F8MUX      |    0 |    0 |      1 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    0 |    0 |     60 |   0.00 |   0.00 |   8.93 |
+| URAM       |    0 |    0 |     28 |   0.00 |   0.00 |   8.75 |
+| DSPs       |    0 |    0 |   2422 |   0.00 |   0.00 |  78.84 |
++------------+------+------+--------+--------+--------+--------+
+
+Compute Unit: datamover_outerloop_0_1
++------------+------+-------+------+--------+--------+--------+
+| Site Type  | SLR0 |  SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+-------+------+--------+--------+--------+
+| LUT        |    0 |  7894 |    0 |   0.00 |   1.83 |   0.00 |
+| LUTAsLogic |    0 |  6097 |    0 |   0.00 |   1.41 |   0.00 |
+| LUTAsMem   |    0 |  1797 |    0 |   0.00 |   0.91 |   0.00 |
+| REG        |    0 | 13968 |    0 |   0.00 |   1.62 |   0.00 |
+| CARRY8     |    0 |   144 |    0 |   0.00 |   0.27 |   0.00 |
+| F7MUX      |    0 |   765 |    0 |   0.00 |   0.35 |   0.00 |
+| F8MUX      |    0 |     0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |     0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    0 |  15.5 |    0 |   0.00 |   2.31 |   0.00 |
+| URAM       |    0 |     0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |    0 |     1 |    0 |   0.00 |   0.03 |   0.00 |
++------------+------+-------+------+--------+--------+--------+
+
+6. Compute Unit Utilization per SLR
+===================================
+
+SLR0
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| LUT        |               135918 |                    0 |                    0 |                       0 |    439680 |
+| LUTAsLogic |               131912 |                    0 |                    0 |                       0 |    439680 |
+| LUTAsMem   |                 4006 |                    0 |                    0 |                       0 |    205440 |
+| REG        |               256301 |                    0 |                    0 |                       0 |    879360 |
+| CARRY8     |                 6034 |                    0 |                    0 |                       0 |     54960 |
+| F7MUX      |                    4 |                    0 |                    0 |                       0 |    219840 |
+| F8MUX      |                    1 |                    0 |                    0 |                       0 |    109920 |
+| F9MUX      |                    0 |                    0 |                    0 |                       0 |     54960 |
+| BRAM       |                   60 |                    0 |                    0 |                       0 |       672 |
+| URAM       |                   28 |                    0 |                    0 |                       0 |       320 |
+| DSPs       |                 2422 |                    0 |                    0 |                       0 |      2880 |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+
+SLR1
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| LUT        |                    0 |               134437 |                    0 |                    7894 |    439680 |
+| LUTAsLogic |                    0 |               130431 |                    0 |                    6097 |    439680 |
+| LUTAsMem   |                    0 |                 4006 |                    0 |                    1797 |    205440 |
+| REG        |                    0 |               256158 |                    0 |                   13968 |    879360 |
+| CARRY8     |                    0 |                 6034 |                    0 |                     144 |     54960 |
+| F7MUX      |                    0 |                    4 |                    0 |                     765 |    219840 |
+| F8MUX      |                    0 |                    1 |                    0 |                       0 |    109920 |
+| F9MUX      |                    0 |                    0 |                    0 |                       0 |     54960 |
+| BRAM       |                    0 |                   60 |                    0 |                    15.5 |       672 |
+| URAM       |                    0 |                   28 |                    0 |                       0 |       320 |
+| DSPs       |                    0 |                 2422 |                    0 |                       1 |      2880 |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+
+SLR2
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+| LUT        |                    0 |                    0 |               136017 |                       0 |    439680 |
+| LUTAsLogic |                    0 |                    0 |               132011 |                       0 |    439680 |
+| LUTAsMem   |                    0 |                    0 |                 4006 |                       0 |    205440 |
+| REG        |                    0 |                    0 |               256654 |                       0 |    879360 |
+| CARRY8     |                    0 |                    0 |                 6034 |                       0 |     54960 |
+| F7MUX      |                    0 |                    0 |                    4 |                       0 |    219840 |
+| F8MUX      |                    0 |                    0 |                    1 |                       0 |    109920 |
+| F9MUX      |                    0 |                    0 |                    0 |                       0 |     54960 |
+| BRAM       |                    0 |                    0 |                   60 |                       0 |       672 |
+| URAM       |                    0 |                    0 |                   28 |                       0 |       320 |
+| DSPs       |                    0 |                    0 |                 2422 |                       0 |      2880 |
++------------+----------------------+----------------------+----------------------+-------------------------+-----------+
+
