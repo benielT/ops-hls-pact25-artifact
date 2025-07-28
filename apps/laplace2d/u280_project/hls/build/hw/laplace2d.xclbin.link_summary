@@ -1,0 +1,1360 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 20 01:08:46 2025",
+ "timestampMillis": "1747692526953",
+ "buildStep": {
+  "cmdId": "3fc3fd22-a8d7-4bc8-92eb-f0e2a54371cd",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/laplace2d.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "hls/build/hw/laplace2d.xclbin",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/host/xrt.cfg",
+    "content": "[connectivity]\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:4096\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg0_axis_in:4096\nstream_connect=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg0_axis_in:4096\nstream_connect=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:4096\n\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:08:46 2025",
+ "timestampMillis": "1747692526956",
+ "status": {
+  "cmdId": "3fc3fd22-a8d7-4bc8-92eb-f0e2a54371cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue May 20 01:08:51 2025",
+ "timestampMillis": "1747692531658",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "laplace2d",
+    "file": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1",
+     "kernel_outerloop_0_2",
+     "kernel_outerloop_0_3"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 01:08:51 2025",
+ "timestampMillis": "1747692531985",
+ "buildStep": {
+  "cmdId": "c210d9bc-a182-49e8-baaf-acfc786f5a7f",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "nk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\nsc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:4096\nsc=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg0_axis_in:4096\nsc=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg0_axis_in:4096\nsc=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:4096\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:08:51 2025",
+ "timestampMillis": "1747692531985",
+ "status": {
+  "cmdId": "c210d9bc-a182-49e8-baaf-acfc786f5a7f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:15 2025",
+ "timestampMillis": "1747692555109",
+ "status": {
+  "cmdId": "c210d9bc-a182-49e8-baaf-acfc786f5a7f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 01:09:15 2025",
+ "timestampMillis": "1747692555117",
+ "buildStep": {
+  "cmdId": "6fd19624-a329-4407-8837-88d14b7c5be1",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:15 2025",
+ "timestampMillis": "1747692555118",
+ "status": {
+  "cmdId": "6fd19624-a329-4407-8837-88d14b7c5be1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565551",
+ "status": {
+  "cmdId": "6fd19624-a329-4407-8837-88d14b7c5be1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565559",
+ "buildStep": {
+  "cmdId": "cb5579f7-b5ed-443e-8604-0efe05999837",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565559",
+ "status": {
+  "cmdId": "cb5579f7-b5ed-443e-8604-0efe05999837",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565829",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565832",
+ "status": {
+  "cmdId": "cb5579f7-b5ed-443e-8604-0efe05999837",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565842",
+ "buildStep": {
+  "cmdId": "f8276b44-ef8e-4baa-9008-b88c13674d1e",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-s",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental\nmisc=BinaryName=laplace2d\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:3:kernel_outerloop_0_1,kernel_outerloop_0_2,kernel_outerloop_0_3\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:25 2025",
+ "timestampMillis": "1747692565843",
+ "status": {
+  "cmdId": "f8276b44-ef8e-4baa-9008-b88c13674d1e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 20 01:09:26 2025",
+ "timestampMillis": "1747692566957",
+ "buildStep": {
+  "cmdId": "f11bf9c1-d2fc-4483-9621-8b95463e6e3e",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:26 2025",
+ "timestampMillis": "1747692566957",
+ "status": {
+  "cmdId": "f11bf9c1-d2fc-4483-9621-8b95463e6e3e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Tue May 20 01:09:31 2025",
+ "timestampMillis": "1747692571301",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 01:09:31 2025",
+ "timestampMillis": "1747692571304",
+ "buildStep": {
+  "cmdId": "656617b6-d492-4d02-b524-3773ec222b5a",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:09:31 2025",
+ "timestampMillis": "1747692571305",
+ "status": {
+  "cmdId": "656617b6-d492-4d02-b524-3773ec222b5a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 01:10:09 2025",
+ "timestampMillis": "1747692609083",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 20 01:30:25 2025",
+ "timestampMillis": "1747693825003",
+ "buildStep": {
+  "cmdId": "41c56589-bb86-49f5-abb7-8bcf65740029",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:30:25 2025",
+ "timestampMillis": "1747693825004",
+ "status": {
+  "cmdId": "41c56589-bb86-49f5-abb7-8bcf65740029",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue May 20 01:30:25 2025",
+ "timestampMillis": "1747693825004",
+ "buildStep": {
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 01:30:25 2025",
+ "timestampMillis": "1747693825005",
+ "status": {
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 07:38:03 2025",
+ "timestampMillis": "1747715883226",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 07:44:47 2025",
+ "timestampMillis": "1747716287684",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 07:44:47 2025",
+ "timestampMillis": "1747716287688",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:06:57 2025",
+ "timestampMillis": "1747717617671",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:06:57 2025",
+ "timestampMillis": "1747717617675",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265656",
+ "status": {
+  "cmdId": "656617b6-d492-4d02-b524-3773ec222b5a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265916",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265920",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265923",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265931",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265934",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265938",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265941",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265945",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265949",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265952",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265956",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265960",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265964",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265970",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265978",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_1_0_synth_1_ulp_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265981",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_2_0_synth_1_ulp_kernel_outerloop_0_2_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265984",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_3_0_synth_1_ulp_kernel_outerloop_0_3_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:25 2025",
+ "timestampMillis": "1747719265989",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266031",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266067",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266071",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266110",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266149",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266152",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "ae9c3dc4-690f-459e-8b8b-56ac7013d42a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266179",
+ "status": {
+  "cmdId": "f11bf9c1-d2fc-4483-9621-8b95463e6e3e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266204",
+ "status": {
+  "cmdId": "f8276b44-ef8e-4baa-9008-b88c13674d1e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266214",
+ "buildStep": {
+  "cmdId": "8283967d-515c-416d-9cd0-19ddb451ed73",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266215",
+ "status": {
+  "cmdId": "8283967d-515c-416d-9cd0-19ddb451ed73",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266227",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266232",
+ "buildStep": {
+  "cmdId": "d382b6fc-af50-4c60-8cec-ba2f72170685",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.rtd -o /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:26 2025",
+ "timestampMillis": "1747719266232",
+ "status": {
+  "cmdId": "d382b6fc-af50-4c60-8cec-ba2f72170685",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275501",
+ "status": {
+  "cmdId": "d382b6fc-af50-4c60-8cec-ba2f72170685",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275502",
+ "buildStep": {
+  "cmdId": "b1b27c48-68d2-4403-a762-73750f93e560",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275502",
+ "status": {
+  "cmdId": "b1b27c48-68d2-4403-a762-73750f93e560",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275511",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275512",
+ "status": {
+  "cmdId": "b1b27c48-68d2-4403-a762-73750f93e560",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275512",
+ "buildStep": {
+  "cmdId": "b4da135f-3b2d-4455-b3a8-97bd78b810e5",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275513",
+ "status": {
+  "cmdId": "b4da135f-3b2d-4455-b3a8-97bd78b810e5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275517",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275518",
+ "status": {
+  "cmdId": "b4da135f-3b2d-4455-b3a8-97bd78b810e5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275524",
+ "status": {
+  "cmdId": "8283967d-515c-416d-9cd0-19ddb451ed73",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275534",
+ "buildStep": {
+  "cmdId": "ebf27fae-8ddc-4eba-812e-ee667894de21",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/laplace2d.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275534",
+ "status": {
+  "cmdId": "ebf27fae-8ddc-4eba-812e-ee667894de21",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275950",
+ "status": {
+  "cmdId": "ebf27fae-8ddc-4eba-812e-ee667894de21",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275957",
+ "buildStep": {
+  "cmdId": "89d97157-c4df-4d29-8a82-c23be6836a64",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin.info --input /home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/laplace2d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:35 2025",
+ "timestampMillis": "1747719275957",
+ "status": {
+  "cmdId": "89d97157-c4df-4d29-8a82-c23be6836a64",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276733",
+ "status": {
+  "cmdId": "89d97157-c4df-4d29-8a82-c23be6836a64",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276741",
+ "buildStep": {
+  "cmdId": "c05a902c-82f2-41d0-af4f-bc5b72686a9a",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276741",
+ "status": {
+  "cmdId": "c05a902c-82f2-41d0-af4f-bc5b72686a9a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276744",
+ "status": {
+  "cmdId": "c05a902c-82f2-41d0-af4f-bc5b72686a9a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276847",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/system_estimate_laplace2d.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276865",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276869",
+ "status": {
+  "cmdId": "3fc3fd22-a8d7-4bc8-92eb-f0e2a54371cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276958",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/v++_link_laplace2d_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue May 20 08:34:36 2025",
+ "timestampMillis": "1747719276960",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/laplace2d_fpga_experimental/hls/build/hw/temp_dir/link/v++_link_laplace2d_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
