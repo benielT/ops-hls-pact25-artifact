@@ -1,5 +1,5 @@
 
-// Auto-generated at 2025-07-28 23:42:14.230208 by ops-translator
+// Auto-generated at 2025-07-29 02:35:15.275970 by ops-translator
 /*
 * Open source copyright declaration based on BSD open source template:
 * http://www.opensource.org/licenses/bsd-license.php
@@ -264,7 +264,7 @@ int main(int argc, const char **argv)
     //iterative stencil loop
     for (unsigned int bat = 0; bat < batches; bat++)
     {
-        printf("Launching poisson calculation: %d x %d mesh\n", size[0], size[1]);
+        printf("Launching jacobian3d calculation: %d x %d x %d mesh\n", size[0], size[1], size[2]);
 #ifdef PROFILE
         auto main_loop_start_clk_point = std::chrono::high_resolution_clock::now();
 #endif

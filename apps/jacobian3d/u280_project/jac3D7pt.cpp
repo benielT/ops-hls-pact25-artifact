@@ -258,7 +258,7 @@ int main(int argc, const char **argv)
     //iterative stencil loop
     for (unsigned int bat = 0; bat < batches; bat++)
     {
-        ops_printf("Launching poisson calculation: %d x %d mesh\n", size[0], size[1]);
+        ops_printf("Launching jacobian3d calculation: %d x %d x %d mesh\n", size[0], size[1], size[2]);
 #ifdef PROFILE
         auto main_loop_start_clk_point = std::chrono::high_resolution_clock::now();
 #endif
