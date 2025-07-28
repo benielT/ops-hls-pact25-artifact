@@ -1,0 +1,1318 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 15 00:23:19 2025",
+ "timestampMillis": "1747257799043",
+ "buildStep": {
+  "cmdId": "98a09b62-2ff0-4acf-a665-2fa9b24c159a",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/blackscholes.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "128",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "hls/build/hw/blackscholes.xclbin",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/host/xrt.cfg",
+    "content": "[connectivity]\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:1024\nstream_connect=datamover_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_1.arg1_axis_in:1024\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg1_axis_in:1024\nstream_connect=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg1_axis_in:1024\nstream_connect=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:1024\nstream_connect=datamover_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_1.arg2_axis_in:1024\nstream_connect=kernel_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_2.arg2_axis_in:1024\nstream_connect=kernel_outerloop_0_2.arg2_axis_out:kernel_outerloop_0_3.arg2_axis_in:1024\nstream_connect=kernel_outerloop_0_3.arg2_axis_out:datamover_outerloop_0_1.arg2_axis_in:1024\nstream_connect=datamover_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_1.arg3_axis_in:1024\nstream_connect=kernel_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_2.arg3_axis_in:1024\nstream_connect=kernel_outerloop_0_2.arg3_axis_out:kernel_outerloop_0_3.arg3_axis_in:1024\nstream_connect=kernel_outerloop_0_3.arg3_axis_out:datamover_outerloop_0_1.arg3_axis_in:1024\nstream_connect=kernel_outerloop_0_1.arg4_axis_out:kernel_outerloop_0_2.arg0_axis_in:1024\nstream_connect=kernel_outerloop_0_2.arg4_axis_out:kernel_outerloop_0_3.arg0_axis_in:1024\nstream_connect=kernel_outerloop_0_3.arg4_axis_out:datamover_outerloop_0_1.arg4_axis_in:1024\n\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\nsp=datamover_outerloop_0_1.arg2:HBM[2]\nsp=datamover_outerloop_0_1.arg3:HBM[3]\nsp=datamover_outerloop_0_1.arg4:HBM[4]\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:23:19 2025",
+ "timestampMillis": "1747257799044",
+ "status": {
+  "cmdId": "98a09b62-2ff0-4acf-a665-2fa9b24c159a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu May 15 00:23:24 2025",
+ "timestampMillis": "1747257804758",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "blackscholes",
+    "file": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1",
+     "kernel_outerloop_0_2",
+     "kernel_outerloop_0_3"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 00:23:25 2025",
+ "timestampMillis": "1747257805130",
+ "buildStep": {
+  "cmdId": "ddd6a459-b502-4dc8-9d46-3d94d0dbb37d",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "nk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\nsc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:1024\nsc=datamover_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_1.arg1_axis_in:1024\nsc=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg1_axis_in:1024\nsc=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg1_axis_in:1024\nsc=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:1024\nsc=datamover_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_1.arg2_axis_in:1024\nsc=kernel_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_2.arg2_axis_in:1024\nsc=kernel_outerloop_0_2.arg2_axis_out:kernel_outerloop_0_3.arg2_axis_in:1024\nsc=kernel_outerloop_0_3.arg2_axis_out:datamover_outerloop_0_1.arg2_axis_in:1024\nsc=datamover_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_1.arg3_axis_in:1024\nsc=kernel_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_2.arg3_axis_in:1024\nsc=kernel_outerloop_0_2.arg3_axis_out:kernel_outerloop_0_3.arg3_axis_in:1024\nsc=kernel_outerloop_0_3.arg3_axis_out:datamover_outerloop_0_1.arg3_axis_in:1024\nsc=kernel_outerloop_0_1.arg4_axis_out:kernel_outerloop_0_2.arg0_axis_in:1024\nsc=kernel_outerloop_0_2.arg4_axis_out:kernel_outerloop_0_3.arg0_axis_in:1024\nsc=kernel_outerloop_0_3.arg4_axis_out:datamover_outerloop_0_1.arg4_axis_in:1024\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\nsp=datamover_outerloop_0_1.arg2:HBM[2]\nsp=datamover_outerloop_0_1.arg3:HBM[3]\nsp=datamover_outerloop_0_1.arg4:HBM[4]\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:23:25 2025",
+ "timestampMillis": "1747257805130",
+ "status": {
+  "cmdId": "ddd6a459-b502-4dc8-9d46-3d94d0dbb37d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:00 2025",
+ "timestampMillis": "1747257840209",
+ "status": {
+  "cmdId": "ddd6a459-b502-4dc8-9d46-3d94d0dbb37d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 00:24:00 2025",
+ "timestampMillis": "1747257840217",
+ "buildStep": {
+  "cmdId": "7fbf599c-51c8-4af5-8a6c-03c9349f250f",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:00 2025",
+ "timestampMillis": "1747257840218",
+ "status": {
+  "cmdId": "7fbf599c-51c8-4af5-8a6c-03c9349f250f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860531",
+ "status": {
+  "cmdId": "7fbf599c-51c8-4af5-8a6c-03c9349f250f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860541",
+ "buildStep": {
+  "cmdId": "ba9eaded-0b78-4721-83c9-1ece30aff2a0",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860541",
+ "status": {
+  "cmdId": "ba9eaded-0b78-4721-83c9-1ece30aff2a0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860824",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860828",
+ "status": {
+  "cmdId": "ba9eaded-0b78-4721-83c9-1ece30aff2a0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860839",
+ "buildStep": {
+  "cmdId": "8ccd5461-4014-4549-bd5e-728bbb4855b8",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-s",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental\nmisc=BinaryName=blackscholes\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:3:kernel_outerloop_0_1,kernel_outerloop_0_2,kernel_outerloop_0_3\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:20 2025",
+ "timestampMillis": "1747257860839",
+ "status": {
+  "cmdId": "8ccd5461-4014-4549-bd5e-728bbb4855b8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 15 00:24:21 2025",
+ "timestampMillis": "1747257861944",
+ "buildStep": {
+  "cmdId": "3ca47eda-bd5d-41c0-9ec6-b93c5f95aa59",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:21 2025",
+ "timestampMillis": "1747257861944",
+ "status": {
+  "cmdId": "3ca47eda-bd5d-41c0-9ec6-b93c5f95aa59",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu May 15 00:24:26 2025",
+ "timestampMillis": "1747257866321",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 00:24:26 2025",
+ "timestampMillis": "1747257866323",
+ "buildStep": {
+  "cmdId": "d34ca0c7-0ffe-4eb6-b1fa-231bff3267fe",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:24:26 2025",
+ "timestampMillis": "1747257866324",
+ "status": {
+  "cmdId": "d34ca0c7-0ffe-4eb6-b1fa-231bff3267fe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 00:25:05 2025",
+ "timestampMillis": "1747257905928",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 15 00:35:00 2025",
+ "timestampMillis": "1747258500118",
+ "buildStep": {
+  "cmdId": "846cdc75-0870-4765-9023-a80e08099fe3",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:35:00 2025",
+ "timestampMillis": "1747258500119",
+ "status": {
+  "cmdId": "846cdc75-0870-4765-9023-a80e08099fe3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 15 00:35:00 2025",
+ "timestampMillis": "1747258500119",
+ "buildStep": {
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 00:35:00 2025",
+ "timestampMillis": "1747258500120",
+ "status": {
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 06:57:08 2025",
+ "timestampMillis": "1747281428386",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 07:03:04 2025",
+ "timestampMillis": "1747281784440",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 07:03:04 2025",
+ "timestampMillis": "1747281784444",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 08:56:36 2025",
+ "timestampMillis": "1747288596854",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208475",
+ "status": {
+  "cmdId": "d34ca0c7-0ffe-4eb6-b1fa-231bff3267fe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208544",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208547",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208551",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208554",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208557",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208561",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208564",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208568",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208572",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208578",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208581",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208584",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208591",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208595",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208778",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_datamover_outerloop_0_1_0_synth_1_ulp_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208782",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208820",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208857",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208860",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208899",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208927",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208930",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "4c8a6fc2-dae3-4cce-b381-28e800dede1e"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208957",
+ "status": {
+  "cmdId": "3ca47eda-bd5d-41c0-9ec6-b93c5f95aa59",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208983",
+ "status": {
+  "cmdId": "8ccd5461-4014-4549-bd5e-728bbb4855b8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208992",
+ "buildStep": {
+  "cmdId": "932abfda-2084-4eda-95c0-a60d1786b3ef",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:28 2025",
+ "timestampMillis": "1747290208992",
+ "status": {
+  "cmdId": "932abfda-2084-4eda-95c0-a60d1786b3ef",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:29 2025",
+ "timestampMillis": "1747290209003",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:29 2025",
+ "timestampMillis": "1747290209008",
+ "buildStep": {
+  "cmdId": "b2d09f3f-d2ff-4fc5-bb52-ccc650904ea7",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.rtd -o /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:29 2025",
+ "timestampMillis": "1747290209009",
+ "status": {
+  "cmdId": "b2d09f3f-d2ff-4fc5-bb52-ccc650904ea7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229075",
+ "status": {
+  "cmdId": "b2d09f3f-d2ff-4fc5-bb52-ccc650904ea7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229076",
+ "buildStep": {
+  "cmdId": "55d222b9-1a6c-432b-9541-ad653e5de131",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.rtd",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229077",
+ "status": {
+  "cmdId": "55d222b9-1a6c-432b-9541-ad653e5de131",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229088",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229089",
+ "status": {
+  "cmdId": "55d222b9-1a6c-432b-9541-ad653e5de131",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229089",
+ "buildStep": {
+  "cmdId": "103b1c95-e69a-4f42-8c24-583f73e2d09c",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229089",
+ "status": {
+  "cmdId": "103b1c95-e69a-4f42-8c24-583f73e2d09c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229093",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229095",
+ "status": {
+  "cmdId": "103b1c95-e69a-4f42-8c24-583f73e2d09c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229099",
+ "status": {
+  "cmdId": "932abfda-2084-4eda-95c0-a60d1786b3ef",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229108",
+ "buildStep": {
+  "cmdId": "ba209ece-2699-4056-b0fb-9a0ab7e65b1d",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/blackscholes.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229108",
+ "status": {
+  "cmdId": "ba209ece-2699-4056-b0fb-9a0ab7e65b1d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229525",
+ "status": {
+  "cmdId": "ba209ece-2699-4056-b0fb-9a0ab7e65b1d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229532",
+ "buildStep": {
+  "cmdId": "5f4bc9e2-7df4-4e54-88f2-5d3f20e38149",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin.info --input /home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/blackscholes.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:49 2025",
+ "timestampMillis": "1747290229533",
+ "status": {
+  "cmdId": "5f4bc9e2-7df4-4e54-88f2-5d3f20e38149",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230337",
+ "status": {
+  "cmdId": "5f4bc9e2-7df4-4e54-88f2-5d3f20e38149",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230346",
+ "buildStep": {
+  "cmdId": "580a2a03-0695-45da-b8c1-aa22245355cd",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230346",
+ "status": {
+  "cmdId": "580a2a03-0695-45da-b8c1-aa22245355cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230349",
+ "status": {
+  "cmdId": "580a2a03-0695-45da-b8c1-aa22245355cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230459",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/system_estimate_blackscholes.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230478",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230482",
+ "status": {
+  "cmdId": "98a09b62-2ff0-4acf-a665-2fa9b24c159a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230572",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/v++_link_blackscholes_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 15 09:23:50 2025",
+ "timestampMillis": "1747290230573",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/blackscholes_fpga_experimental/hls/build/hw/temp_dir/link/v++_link_blackscholes_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
