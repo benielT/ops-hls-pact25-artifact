@@ -12,7 +12,7 @@ include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hip
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hdf5
 
 PLATFORM=xilinx_vck5000_gen4x8_xdma_2_202210_1
-HLS_TARGET_MODE=sw_emu
+HLS_TARGET_MODE=hw
 HLS_JOBS=64
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile_hls.mk
 
