@@ -1,0 +1,4 @@
+WARNING:root:OPS FORCE SOA not set
+WARNING:root:output location is not set selecting default path: /home/x_thileeb/repos/ops-hls-pact25-artifact/apps/jacobian3d/vck5000_project
+WARNING:root:Expected string literal
+WARNING:root:only FPGA vitis HLS mode selected
