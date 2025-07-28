@@ -1,0 +1,115 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/heat3d.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Apr 28 21:40:16 2025",
+ "timestampMillis": "1745865616099",
+ "buildStep": {
+  "cmdId": "aee26908-603d-4a43-b0e7-e60b4d5f6003",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/heat3d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "./hls/build/hw/heat3d.xsa",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/host/xrt.cfg",
+    "content": "[connectivity]\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:1024\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg0_axis_in:1024\nstream_connect=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg0_axis_in:1024\nstream_connect=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:1024\n\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 28 21:40:16 2025",
+ "timestampMillis": "1745865616100",
+ "status": {
+  "cmdId": "aee26908-603d-4a43-b0e7-e60b4d5f6003",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Apr 28 21:40:18 2025",
+ "timestampMillis": "1745865618714",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Apr 28 21:40:18 2025",
+ "timestampMillis": "1745865618719",
+ "status": {
+  "cmdId": "aee26908-603d-4a43-b0e7-e60b4d5f6003",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Apr 28 21:40:18 2025",
+ "timestampMillis": "1745865618790",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/reports/link/v++_link_heat3d_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Apr 28 21:40:18 2025",
+ "timestampMillis": "1745865618790",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/link/v++_link_heat3d_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
