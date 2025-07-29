@@ -1,0 +1,15 @@
+Timestamp,Power (W)
+1745491126257,36
+1745491131206,36
+1745491136205,48
+1745491140707,48
+1745491145708,48
+1745491150706,48
+1745491155706,47
+1745491160705,47
+1745491165706,48
+1745491170209,48
+1745491175206,48
+1745491180207,48
+1745491185265,36
+Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/poisson2d_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/poisson2d.xclbin -sizex=300 -sizey=300 -iters=60060 -piter=1000
