@@ -1,0 +1,1704 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/pw_advect3d.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:28 2025",
+ "timestampMillis": "1749244948026",
+ "buildStep": {
+  "cmdId": "63af14ed-4fc8-4e8d-a9bb-7f944a2ea08c",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/pw_advect3d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "128",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "./hls/build/hw/pw_advect3d.xsa",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/host/xrt.cfg",
+    "content": "[connectivity]\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_1.arg1_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_1.arg2_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg2_axis_out:datamover_outerloop_0_1.arg2_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_1.arg3_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg3_axis_out:datamover_outerloop_0_1.arg3_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg4_axis_out:kernel_outerloop_0_1.arg4_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg4_axis_out:datamover_outerloop_0_1.arg4_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg5_axis_out:kernel_outerloop_0_1.arg5_axis_in:16\nstream_connect=datamover_outerloop_0_1.arg6_axis_out:kernel_outerloop_0_1.arg6_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg7_axis_out:datamover_outerloop_0_1.arg7_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg8_axis_out:datamover_outerloop_0_1.arg8_axis_in:16\nstream_connect=kernel_outerloop_0_1.arg9_axis_out:datamover_outerloop_0_1.arg9_axis_in:16\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:28 2025",
+ "timestampMillis": "1749244948027",
+ "status": {
+  "cmdId": "63af14ed-4fc8-4e8d-a9bb-7f944a2ea08c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jun  6 21:22:34 2025",
+ "timestampMillis": "1749244954955",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "pw_advect3d",
+    "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:35 2025",
+ "timestampMillis": "1749244955288",
+ "buildStep": {
+  "cmdId": "626d6f95-7d3e-4548-bc16-b083ce22f201",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16\nsc=datamover_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_1.arg1_axis_in:16\nsc=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16\nsc=datamover_outerloop_0_1.arg2_axis_out:kernel_outerloop_0_1.arg2_axis_in:16\nsc=kernel_outerloop_0_1.arg2_axis_out:datamover_outerloop_0_1.arg2_axis_in:16\nsc=datamover_outerloop_0_1.arg3_axis_out:kernel_outerloop_0_1.arg3_axis_in:16\nsc=kernel_outerloop_0_1.arg3_axis_out:datamover_outerloop_0_1.arg3_axis_in:16\nsc=datamover_outerloop_0_1.arg4_axis_out:kernel_outerloop_0_1.arg4_axis_in:16\nsc=kernel_outerloop_0_1.arg4_axis_out:datamover_outerloop_0_1.arg4_axis_in:16\nsc=datamover_outerloop_0_1.arg5_axis_out:kernel_outerloop_0_1.arg5_axis_in:16\nsc=datamover_outerloop_0_1.arg6_axis_out:kernel_outerloop_0_1.arg6_axis_in:16\nsc=kernel_outerloop_0_1.arg7_axis_out:datamover_outerloop_0_1.arg7_axis_in:16\nsc=kernel_outerloop_0_1.arg8_axis_out:datamover_outerloop_0_1.arg8_axis_in:16\nsc=kernel_outerloop_0_1.arg9_axis_out:datamover_outerloop_0_1.arg9_axis_in:16\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:35 2025",
+ "timestampMillis": "1749244955289",
+ "status": {
+  "cmdId": "626d6f95-7d3e-4548-bc16-b083ce22f201",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:49 2025",
+ "timestampMillis": "1749244969986",
+ "status": {
+  "cmdId": "626d6f95-7d3e-4548-bc16-b083ce22f201",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:49 2025",
+ "timestampMillis": "1749244969997",
+ "buildStep": {
+  "cmdId": "84689138-1eea-4975-b683-2283331bb4a3",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:49 2025",
+ "timestampMillis": "1749244969997",
+ "status": {
+  "cmdId": "84689138-1eea-4975-b683-2283331bb4a3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:53 2025",
+ "timestampMillis": "1749244973827",
+ "status": {
+  "cmdId": "84689138-1eea-4975-b683-2283331bb4a3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:53 2025",
+ "timestampMillis": "1749244973836",
+ "buildStep": {
+  "cmdId": "e37ffe73-c087-4e07-a62f-5c590ef6fcc8",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:53 2025",
+ "timestampMillis": "1749244973836",
+ "status": {
+  "cmdId": "e37ffe73-c087-4e07-a62f-5c590ef6fcc8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jun  6 21:22:54 2025",
+ "timestampMillis": "1749244974114",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:54 2025",
+ "timestampMillis": "1749244974117",
+ "status": {
+  "cmdId": "e37ffe73-c087-4e07-a62f-5c590ef6fcc8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:54 2025",
+ "timestampMillis": "1749244974127",
+ "buildStep": {
+  "cmdId": "050d6944-3d88-41ad-bbeb-38e2cb689997",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental\nmisc=BinaryName=pw_advect3d\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:54 2025",
+ "timestampMillis": "1749244974127",
+ "status": {
+  "cmdId": "050d6944-3d88-41ad-bbeb-38e2cb689997",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jun  6 21:22:55 2025",
+ "timestampMillis": "1749244975140",
+ "buildStep": {
+  "cmdId": "c3c65cab-9a65-4dec-8d8c-e3c7aa299850",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:22:55 2025",
+ "timestampMillis": "1749244975140",
+ "status": {
+  "cmdId": "c3c65cab-9a65-4dec-8d8c-e3c7aa299850",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Jun  6 21:23:02 2025",
+ "timestampMillis": "1749244982360",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jun  6 21:23:02 2025",
+ "timestampMillis": "1749244982362",
+ "buildStep": {
+  "cmdId": "b4b2cf11-b4cf-42de-ace7-bf886bea9c6c",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:23:02 2025",
+ "timestampMillis": "1749244982362",
+ "status": {
+  "cmdId": "b4b2cf11-b4cf-42de-ace7-bf886bea9c6c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jun  6 21:23:37 2025",
+ "timestampMillis": "1749245017489",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jun  6 21:23:37 2025",
+ "timestampMillis": "1749245017653",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jun  6 21:40:00 2025",
+ "timestampMillis": "1749246000473",
+ "buildStep": {
+  "cmdId": "4f11e2bf-83da-4fec-a2bf-a3dd49e8a126",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:40:00 2025",
+ "timestampMillis": "1749246000473",
+ "status": {
+  "cmdId": "4f11e2bf-83da-4fec-a2bf-a3dd49e8a126",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jun  6 21:40:00 2025",
+ "timestampMillis": "1749246000474",
+ "buildStep": {
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jun  6 21:40:00 2025",
+ "timestampMillis": "1749246000475",
+ "status": {
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 01:25:26 2025",
+ "timestampMillis": "1749259526548",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 01:26:47 2025",
+ "timestampMillis": "1749259607346",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 01:26:47 2025",
+ "timestampMillis": "1749259607349",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 01:46:55 2025",
+ "timestampMillis": "1749260815115",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798098",
+ "status": {
+  "cmdId": "b4b2cf11-b4cf-42de-ace7-bf886bea9c6c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798289",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798293",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798296",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798299",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798302",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798305",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798309",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798312",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798315",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798318",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798320",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798324",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798327",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798333",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798428",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798432",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798436",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798439",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798442",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_noc_kernel0_0_synth_1_ulp_inst_0_axi_noc_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798445",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798448",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798451",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798455",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798457",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798460",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798464",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798467",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_kernel_outerloop_0_1_0_synth_1_ulp_inst_0_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798470",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_datamover_outerloop_0_1_0_synth_1_ulp_inst_0_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798473",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798476",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg2_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg2_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798479",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg3_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg3_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798482",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg4_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg4_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798484",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg5_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg5_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798488",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg6_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg6_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798491",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798494",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg2_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg2_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798497",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg3_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg3_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798500",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg4_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg4_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798503",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg7_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg7_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798506",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg8_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg8_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798509",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg9_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg9_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798513",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798522",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798529",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798533",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798541",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798549",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798552",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "a3d85de5-6cbb-4c5f-ab2e-e2119ad9d579"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798579",
+ "status": {
+  "cmdId": "c3c65cab-9a65-4dec-8d8c-e3c7aa299850",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798594",
+ "status": {
+  "cmdId": "050d6944-3d88-41ad-bbeb-38e2cb689997",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798606",
+ "buildStep": {
+  "cmdId": "8c3fad30-a6d3-4936-9718-f7aa3975d21e",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798606",
+ "status": {
+  "cmdId": "8c3fad30-a6d3-4936-9718-f7aa3975d21e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798625",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798631",
+ "buildStep": {
+  "cmdId": "b84888f3-1779-4de5-987d-6f5b117456ce",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.rtd -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:19:58 2025",
+ "timestampMillis": "1749262798632",
+ "status": {
+  "cmdId": "b84888f3-1779-4de5-987d-6f5b117456ce",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801897",
+ "status": {
+  "cmdId": "b84888f3-1779-4de5-987d-6f5b117456ce",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801898",
+ "buildStep": {
+  "cmdId": "68252127-83b1-4e93-b1e0-b7d5960ffb71",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801899",
+ "status": {
+  "cmdId": "68252127-83b1-4e93-b1e0-b7d5960ffb71",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801910",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801912",
+ "status": {
+  "cmdId": "68252127-83b1-4e93-b1e0-b7d5960ffb71",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801912",
+ "buildStep": {
+  "cmdId": "870f3fd1-1754-4eec-81db-965f57b6d551",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801913",
+ "status": {
+  "cmdId": "870f3fd1-1754-4eec-81db-965f57b6d551",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801917",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801919",
+ "status": {
+  "cmdId": "870f3fd1-1754-4eec-81db-965f57b6d551",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801926",
+ "status": {
+  "cmdId": "8c3fad30-a6d3-4936-9718-f7aa3975d21e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801933",
+ "buildStep": {
+  "cmdId": "848b9216-d9b0-4687-a5fe-514e3392797e",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:01 2025",
+ "timestampMillis": "1749262801933",
+ "status": {
+  "cmdId": "848b9216-d9b0-4687-a5fe-514e3392797e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802124",
+ "status": {
+  "cmdId": "848b9216-d9b0-4687-a5fe-514e3392797e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802130",
+ "buildStep": {
+  "cmdId": "90c41d22-96da-481b-b7b7-bd7491702884",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin.info --input /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/link/int/pw_advect3d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802131",
+ "status": {
+  "cmdId": "90c41d22-96da-481b-b7b7-bd7491702884",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802404",
+ "status": {
+  "cmdId": "90c41d22-96da-481b-b7b7-bd7491702884",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802411",
+ "buildStep": {
+  "cmdId": "0a5ffbcf-d847-4cfc-a089-62e92c2fc9e0",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802411",
+ "status": {
+  "cmdId": "0a5ffbcf-d847-4cfc-a089-62e92c2fc9e0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802414",
+ "status": {
+  "cmdId": "0a5ffbcf-d847-4cfc-a089-62e92c2fc9e0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:02 2025",
+ "timestampMillis": "1749262802484",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/system_estimate_pw_advect3d.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:03 2025",
+ "timestampMillis": "1749262803025",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/reports/link/v++_link_pw_advect3d_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:03 2025",
+ "timestampMillis": "1749262803026",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/v++_link_pw_advect3d_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun  7 02:20:03 2025",
+ "timestampMillis": "1749262803032",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/pw_advection_fpga_experimental/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun  7 02:20:03 2025",
+ "timestampMillis": "1749262803037",
+ "status": {
+  "cmdId": "63af14ed-4fc8-4e8d-a9bb-7f944a2ea08c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

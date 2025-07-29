@@ -1,0 +1,267 @@
+
+
+================================================================
+== Vitis HLS Report for 'kernel_outerloop_0'
+================================================================
+* Date:           Fri Jun  6 21:20:42 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.240 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                                               |                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |                    Instance                   |               Module               |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +-----------------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+----------+
+        |grp_kernel_outerloop_0_dataflow_region_fu_284  |kernel_outerloop_0_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        +-----------------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_218_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|      70|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |      608|  1560|   305743|   73478|    0|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|      54|    -|
+|Register         |        -|     -|       70|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |      608|  1560|   305813|   73602|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |       31|    79|       16|       8|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+------------------------------------+---------+------+--------+-------+-----+
+    |                    Instance                   |               Module               | BRAM_18K|  DSP |   FF   |  LUT  | URAM|
+    +-----------------------------------------------+------------------------------------+---------+------+--------+-------+-----+
+    |control_s_axi_U                                |control_s_axi                       |        0|     0|     376|    552|    0|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284  |kernel_outerloop_0_dataflow_region  |      608|  1560|  305367|  72926|    0|
+    +-----------------------------------------------+------------------------------------+---------+------+--------+-------+-----+
+    |Total                                          |                                    |      608|  1560|  305743|  73478|    0|
+    +-----------------------------------------------+------------------------------------+---------+------+--------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                            Variable Name                           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |i_4_fu_425_p2                                                       |         +|   0|  0|  32|          32|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg1_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg2_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg3_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg4_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg7_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg8_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_arg9_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln218_fu_431_p2                                                |      icmp|   0|  0|  16|          32|          32|
+    |ap_block_state1                                                     |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4                                                     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_284_ap_done       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_284_ap_ready      |        or|   0|  0|   2|           1|           1|
+    +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                               |          |   0|  0|  70|          75|          44|
+    +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                         |   6|          5|    1|          5|
+    |ap_done                           |   2|          2|    1|          2|
+    |arg0_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg1_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg2_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg3_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg4_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg5_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |arg6_axis_in_TREADY_int_regslice  |   2|          2|    1|          2|
+    |i_fu_208                          |  32|          2|   32|         64|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  54|         23|   41|         85|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------+----+----+-----+-----------+
+    |                                Name                                | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                           |   4|   0|    4|          0|
+    |ap_done_reg                                                         |   1|   0|    1|          0|
+    |ap_rst_n_inv                                                        |   1|   0|    1|          0|
+    |ap_rst_reg_1                                                        |   1|   0|    1|          0|
+    |ap_rst_reg_2                                                        |   1|   0|    1|          0|
+    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_284_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_284_ap_ready  |   1|   0|    1|          0|
+    |grp_kernel_outerloop_0_dataflow_region_fu_284_ap_start_reg          |   1|   0|    1|          0|
+    |i_fu_208                                                            |  32|   0|   32|          0|
+    |total_bytes_reg_503                                                 |  27|   0|   32|          5|
+    +--------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                               |  70|   0|   75|          5|
+    +--------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+------------------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   |      Source Object     |    C Type    |
++-----------------------+-----+-----+---------------+------------------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|                 control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|                 control|        scalar|
+|s_axi_control_AWADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_WVALID   |   in|    1|          s_axi|                 control|        scalar|
+|s_axi_control_WREADY   |  out|    1|          s_axi|                 control|        scalar|
+|s_axi_control_WDATA    |   in|   32|          s_axi|                 control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|                 control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|                 control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|                 control|        scalar|
+|s_axi_control_ARADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_RVALID   |  out|    1|          s_axi|                 control|        scalar|
+|s_axi_control_RREADY   |   in|    1|          s_axi|                 control|        scalar|
+|s_axi_control_RDATA    |  out|   32|          s_axi|                 control|        scalar|
+|s_axi_control_RRESP    |  out|    2|          s_axi|                 control|        scalar|
+|s_axi_control_BVALID   |  out|    1|          s_axi|                 control|        scalar|
+|s_axi_control_BREADY   |   in|    1|          s_axi|                 control|        scalar|
+|s_axi_control_BRESP    |  out|    2|          s_axi|                 control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|      kernel_outerloop_0|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|      kernel_outerloop_0|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|      kernel_outerloop_0|  return value|
+|arg0_axis_in_TDATA     |   in|  256|           axis|   arg0_axis_in_V_data_V|       pointer|
+|arg0_axis_in_TVALID    |   in|    1|           axis|   arg0_axis_in_V_last_V|       pointer|
+|arg0_axis_in_TREADY    |  out|    1|           axis|   arg0_axis_in_V_last_V|       pointer|
+|arg0_axis_in_TLAST     |   in|    1|           axis|   arg0_axis_in_V_last_V|       pointer|
+|arg0_axis_in_TKEEP     |   in|   32|           axis|   arg0_axis_in_V_keep_V|       pointer|
+|arg0_axis_in_TSTRB     |   in|   32|           axis|   arg0_axis_in_V_strb_V|       pointer|
+|arg1_axis_in_TDATA     |   in|  256|           axis|   arg1_axis_in_V_data_V|       pointer|
+|arg1_axis_in_TVALID    |   in|    1|           axis|   arg1_axis_in_V_last_V|       pointer|
+|arg1_axis_in_TREADY    |  out|    1|           axis|   arg1_axis_in_V_last_V|       pointer|
+|arg1_axis_in_TLAST     |   in|    1|           axis|   arg1_axis_in_V_last_V|       pointer|
+|arg1_axis_in_TKEEP     |   in|   32|           axis|   arg1_axis_in_V_keep_V|       pointer|
+|arg1_axis_in_TSTRB     |   in|   32|           axis|   arg1_axis_in_V_strb_V|       pointer|
+|arg1_axis_out_TDATA    |  out|  256|           axis|  arg1_axis_out_V_data_V|       pointer|
+|arg1_axis_out_TVALID   |  out|    1|           axis|  arg1_axis_out_V_last_V|       pointer|
+|arg1_axis_out_TREADY   |   in|    1|           axis|  arg1_axis_out_V_last_V|       pointer|
+|arg1_axis_out_TLAST    |  out|    1|           axis|  arg1_axis_out_V_last_V|       pointer|
+|arg1_axis_out_TKEEP    |  out|   32|           axis|  arg1_axis_out_V_keep_V|       pointer|
+|arg1_axis_out_TSTRB    |  out|   32|           axis|  arg1_axis_out_V_strb_V|       pointer|
+|arg2_axis_in_TDATA     |   in|  256|           axis|   arg2_axis_in_V_data_V|       pointer|
+|arg2_axis_in_TVALID    |   in|    1|           axis|   arg2_axis_in_V_last_V|       pointer|
+|arg2_axis_in_TREADY    |  out|    1|           axis|   arg2_axis_in_V_last_V|       pointer|
+|arg2_axis_in_TLAST     |   in|    1|           axis|   arg2_axis_in_V_last_V|       pointer|
+|arg2_axis_in_TKEEP     |   in|   32|           axis|   arg2_axis_in_V_keep_V|       pointer|
+|arg2_axis_in_TSTRB     |   in|   32|           axis|   arg2_axis_in_V_strb_V|       pointer|
+|arg2_axis_out_TDATA    |  out|  256|           axis|  arg2_axis_out_V_data_V|       pointer|
+|arg2_axis_out_TVALID   |  out|    1|           axis|  arg2_axis_out_V_last_V|       pointer|
+|arg2_axis_out_TREADY   |   in|    1|           axis|  arg2_axis_out_V_last_V|       pointer|
+|arg2_axis_out_TLAST    |  out|    1|           axis|  arg2_axis_out_V_last_V|       pointer|
+|arg2_axis_out_TKEEP    |  out|   32|           axis|  arg2_axis_out_V_keep_V|       pointer|
+|arg2_axis_out_TSTRB    |  out|   32|           axis|  arg2_axis_out_V_strb_V|       pointer|
+|arg3_axis_in_TDATA     |   in|  256|           axis|   arg3_axis_in_V_data_V|       pointer|
+|arg3_axis_in_TVALID    |   in|    1|           axis|   arg3_axis_in_V_last_V|       pointer|
+|arg3_axis_in_TREADY    |  out|    1|           axis|   arg3_axis_in_V_last_V|       pointer|
+|arg3_axis_in_TLAST     |   in|    1|           axis|   arg3_axis_in_V_last_V|       pointer|
+|arg3_axis_in_TKEEP     |   in|   32|           axis|   arg3_axis_in_V_keep_V|       pointer|
+|arg3_axis_in_TSTRB     |   in|   32|           axis|   arg3_axis_in_V_strb_V|       pointer|
+|arg3_axis_out_TDATA    |  out|  256|           axis|  arg3_axis_out_V_data_V|       pointer|
+|arg3_axis_out_TVALID   |  out|    1|           axis|  arg3_axis_out_V_last_V|       pointer|
+|arg3_axis_out_TREADY   |   in|    1|           axis|  arg3_axis_out_V_last_V|       pointer|
+|arg3_axis_out_TLAST    |  out|    1|           axis|  arg3_axis_out_V_last_V|       pointer|
+|arg3_axis_out_TKEEP    |  out|   32|           axis|  arg3_axis_out_V_keep_V|       pointer|
+|arg3_axis_out_TSTRB    |  out|   32|           axis|  arg3_axis_out_V_strb_V|       pointer|
+|arg4_axis_in_TDATA     |   in|  256|           axis|   arg4_axis_in_V_data_V|       pointer|
+|arg4_axis_in_TVALID    |   in|    1|           axis|   arg4_axis_in_V_last_V|       pointer|
+|arg4_axis_in_TREADY    |  out|    1|           axis|   arg4_axis_in_V_last_V|       pointer|
+|arg4_axis_in_TLAST     |   in|    1|           axis|   arg4_axis_in_V_last_V|       pointer|
+|arg4_axis_in_TKEEP     |   in|   32|           axis|   arg4_axis_in_V_keep_V|       pointer|
+|arg4_axis_in_TSTRB     |   in|   32|           axis|   arg4_axis_in_V_strb_V|       pointer|
+|arg4_axis_out_TDATA    |  out|  256|           axis|  arg4_axis_out_V_data_V|       pointer|
+|arg4_axis_out_TVALID   |  out|    1|           axis|  arg4_axis_out_V_last_V|       pointer|
+|arg4_axis_out_TREADY   |   in|    1|           axis|  arg4_axis_out_V_last_V|       pointer|
+|arg4_axis_out_TLAST    |  out|    1|           axis|  arg4_axis_out_V_last_V|       pointer|
+|arg4_axis_out_TKEEP    |  out|   32|           axis|  arg4_axis_out_V_keep_V|       pointer|
+|arg4_axis_out_TSTRB    |  out|   32|           axis|  arg4_axis_out_V_strb_V|       pointer|
+|arg5_axis_in_TDATA     |   in|  256|           axis|   arg5_axis_in_V_data_V|       pointer|
+|arg5_axis_in_TVALID    |   in|    1|           axis|   arg5_axis_in_V_last_V|       pointer|
+|arg5_axis_in_TREADY    |  out|    1|           axis|   arg5_axis_in_V_last_V|       pointer|
+|arg5_axis_in_TLAST     |   in|    1|           axis|   arg5_axis_in_V_last_V|       pointer|
+|arg5_axis_in_TKEEP     |   in|   32|           axis|   arg5_axis_in_V_keep_V|       pointer|
+|arg5_axis_in_TSTRB     |   in|   32|           axis|   arg5_axis_in_V_strb_V|       pointer|
+|arg6_axis_in_TDATA     |   in|  256|           axis|   arg6_axis_in_V_data_V|       pointer|
+|arg6_axis_in_TVALID    |   in|    1|           axis|   arg6_axis_in_V_last_V|       pointer|
+|arg6_axis_in_TREADY    |  out|    1|           axis|   arg6_axis_in_V_last_V|       pointer|
+|arg6_axis_in_TLAST     |   in|    1|           axis|   arg6_axis_in_V_last_V|       pointer|
+|arg6_axis_in_TKEEP     |   in|   32|           axis|   arg6_axis_in_V_keep_V|       pointer|
+|arg6_axis_in_TSTRB     |   in|   32|           axis|   arg6_axis_in_V_strb_V|       pointer|
+|arg7_axis_out_TDATA    |  out|  256|           axis|  arg7_axis_out_V_data_V|       pointer|
+|arg7_axis_out_TVALID   |  out|    1|           axis|  arg7_axis_out_V_last_V|       pointer|
+|arg7_axis_out_TREADY   |   in|    1|           axis|  arg7_axis_out_V_last_V|       pointer|
+|arg7_axis_out_TLAST    |  out|    1|           axis|  arg7_axis_out_V_last_V|       pointer|
+|arg7_axis_out_TKEEP    |  out|   32|           axis|  arg7_axis_out_V_keep_V|       pointer|
+|arg7_axis_out_TSTRB    |  out|   32|           axis|  arg7_axis_out_V_strb_V|       pointer|
+|arg8_axis_out_TDATA    |  out|  256|           axis|  arg8_axis_out_V_data_V|       pointer|
+|arg8_axis_out_TVALID   |  out|    1|           axis|  arg8_axis_out_V_last_V|       pointer|
+|arg8_axis_out_TREADY   |   in|    1|           axis|  arg8_axis_out_V_last_V|       pointer|
+|arg8_axis_out_TLAST    |  out|    1|           axis|  arg8_axis_out_V_last_V|       pointer|
+|arg8_axis_out_TKEEP    |  out|   32|           axis|  arg8_axis_out_V_keep_V|       pointer|
+|arg8_axis_out_TSTRB    |  out|   32|           axis|  arg8_axis_out_V_strb_V|       pointer|
+|arg9_axis_out_TDATA    |  out|  256|           axis|  arg9_axis_out_V_data_V|       pointer|
+|arg9_axis_out_TVALID   |  out|    1|           axis|  arg9_axis_out_V_last_V|       pointer|
+|arg9_axis_out_TREADY   |   in|    1|           axis|  arg9_axis_out_V_last_V|       pointer|
+|arg9_axis_out_TLAST    |  out|    1|           axis|  arg9_axis_out_V_last_V|       pointer|
+|arg9_axis_out_TKEEP    |  out|   32|           axis|  arg9_axis_out_V_keep_V|       pointer|
+|arg9_axis_out_TSTRB    |  out|   32|           axis|  arg9_axis_out_V_strb_V|       pointer|
++-----------------------+-----+-----+---------------+------------------------+--------------+
+
