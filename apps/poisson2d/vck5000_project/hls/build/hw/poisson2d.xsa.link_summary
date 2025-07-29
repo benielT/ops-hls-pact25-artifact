@@ -1,0 +1,1550 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/poisson2d.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 01:32:48 2025",
+ "timestampMillis": "1745447568689",
+ "buildStep": {
+  "cmdId": "efd5249e-0309-4e53-9714-136b26b8b7ce",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/poisson2d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "./hls/build/hw/poisson2d.xsa",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/host/xrt.cfg",
+    "content": "[connectivity]\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16384\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16384\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:32:48 2025",
+ "timestampMillis": "1745447568690",
+ "status": {
+  "cmdId": "efd5249e-0309-4e53-9714-136b26b8b7ce",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Apr 24 01:32:55 2025",
+ "timestampMillis": "1745447575699",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "poisson2d",
+    "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:32:56 2025",
+ "timestampMillis": "1745447576094",
+ "buildStep": {
+  "cmdId": "86b602de-007e-463e-b53b-f26b853879fb",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:16384\nsc=kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:16384\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:32:56 2025",
+ "timestampMillis": "1745447576094",
+ "status": {
+  "cmdId": "86b602de-007e-463e-b53b-f26b853879fb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:10 2025",
+ "timestampMillis": "1745447590853",
+ "status": {
+  "cmdId": "86b602de-007e-463e-b53b-f26b853879fb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:33:10 2025",
+ "timestampMillis": "1745447590862",
+ "buildStep": {
+  "cmdId": "630522f6-1434-45db-9744-75432a1f4419",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:10 2025",
+ "timestampMillis": "1745447590863",
+ "status": {
+  "cmdId": "630522f6-1434-45db-9744-75432a1f4419",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593492",
+ "status": {
+  "cmdId": "630522f6-1434-45db-9744-75432a1f4419",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593501",
+ "buildStep": {
+  "cmdId": "3dfb299b-828b-4c2e-81d6-07ab094ebb4f",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593501",
+ "status": {
+  "cmdId": "3dfb299b-828b-4c2e-81d6-07ab094ebb4f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593853",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593855",
+ "status": {
+  "cmdId": "3dfb299b-828b-4c2e-81d6-07ab094ebb4f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593864",
+ "buildStep": {
+  "cmdId": "8d9a75c4-3184-4669-9ab3-76de3a775375",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2\nmisc=BinaryName=poisson2d\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:13 2025",
+ "timestampMillis": "1745447593864",
+ "status": {
+  "cmdId": "8d9a75c4-3184-4669-9ab3-76de3a775375",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 01:33:15 2025",
+ "timestampMillis": "1745447595041",
+ "buildStep": {
+  "cmdId": "73221c8a-c3c8-4cc4-9a64-e4f60c708510",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:15 2025",
+ "timestampMillis": "1745447595041",
+ "status": {
+  "cmdId": "73221c8a-c3c8-4cc4-9a64-e4f60c708510",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Thu Apr 24 01:33:23 2025",
+ "timestampMillis": "1745447603285",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:33:23 2025",
+ "timestampMillis": "1745447603287",
+ "buildStep": {
+  "cmdId": "cf1b5573-f204-4f0b-8334-e2427bbb6c19",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:33:23 2025",
+ "timestampMillis": "1745447603289",
+ "status": {
+  "cmdId": "cf1b5573-f204-4f0b-8334-e2427bbb6c19",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:33:56 2025",
+ "timestampMillis": "1745447636695",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:33:56 2025",
+ "timestampMillis": "1745447636796",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 01:53:15 2025",
+ "timestampMillis": "1745448795817",
+ "buildStep": {
+  "cmdId": "123c4252-9b43-4656-ad69-8869c7a82786",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:53:15 2025",
+ "timestampMillis": "1745448795818",
+ "status": {
+  "cmdId": "123c4252-9b43-4656-ad69-8869c7a82786",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 01:53:15 2025",
+ "timestampMillis": "1745448795819",
+ "buildStep": {
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:53:15 2025",
+ "timestampMillis": "1745448795820",
+ "status": {
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 03:50:46 2025",
+ "timestampMillis": "1745455846413",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 03:52:55 2025",
+ "timestampMillis": "1745455975503",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 03:52:55 2025",
+ "timestampMillis": "1745455975506",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:00:24 2025",
+ "timestampMillis": "1745456424959",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:00:24 2025",
+ "timestampMillis": "1745456424963",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953222",
+ "status": {
+  "cmdId": "cf1b5573-f204-4f0b-8334-e2427bbb6c19",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953445",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953455",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953462",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953470",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953478",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953484",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953490",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953496",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953503",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953510",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953516",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953522",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953531",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:33 2025",
+ "timestampMillis": "1745458953547",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954122",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954128",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954135",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954143",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954151",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_noc_kernel0_0_synth_1_ulp_inst_0_axi_noc_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954159",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954167",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954175",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954187",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954194",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954202",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954211",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_datamover_outerloop_0_1_0_synth_1_ulp_inst_0_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954217",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_kernel_outerloop_0_1_0_synth_1_ulp_inst_0_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954222",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_synth_1_ulp_inst_0_buffer_datamover_outerloop_0_1_arg0_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954227",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/syn/ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954234",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954248",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954260",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954265",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954279",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954293",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954300",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "48210539-3822-4c8b-8ec9-b4097e4d22c0"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954339",
+ "status": {
+  "cmdId": "73221c8a-c3c8-4cc4-9a64-e4f60c708510",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954362",
+ "status": {
+  "cmdId": "8d9a75c4-3184-4669-9ab3-76de3a775375",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954376",
+ "buildStep": {
+  "cmdId": "6fab21f5-6482-40e6-90a4-ef8d7a48d4be",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954376",
+ "status": {
+  "cmdId": "6fab21f5-6482-40e6-90a4-ef8d7a48d4be",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954415",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954430",
+ "buildStep": {
+  "cmdId": "924fa8b2-fb72-405e-b189-e4eeb10c1dcd",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.rtd -o /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.rtd",
+   "-o",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:34 2025",
+ "timestampMillis": "1745458954431",
+ "status": {
+  "cmdId": "924fa8b2-fb72-405e-b189-e4eeb10c1dcd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956689",
+ "status": {
+  "cmdId": "924fa8b2-fb72-405e-b189-e4eeb10c1dcd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956690",
+ "buildStep": {
+  "cmdId": "5904457e-dce4-485d-832d-54715326d199",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.rtd",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956690",
+ "status": {
+  "cmdId": "5904457e-dce4-485d-832d-54715326d199",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956695",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956696",
+ "status": {
+  "cmdId": "5904457e-dce4-485d-832d-54715326d199",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956697",
+ "buildStep": {
+  "cmdId": "dedc8bda-0ce7-4cc6-9472-f13f09cfb045",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956697",
+ "status": {
+  "cmdId": "dedc8bda-0ce7-4cc6-9472-f13f09cfb045",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956701",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956702",
+ "status": {
+  "cmdId": "dedc8bda-0ce7-4cc6-9472-f13f09cfb045",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956708",
+ "status": {
+  "cmdId": "6fab21f5-6482-40e6-90a4-ef8d7a48d4be",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956716",
+ "buildStep": {
+  "cmdId": "7134e0ad-46f0-4591-b38a-94ef8964b527",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.rtd --append-section :JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956717",
+ "status": {
+  "cmdId": "7134e0ad-46f0-4591-b38a-94ef8964b527",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956940",
+ "status": {
+  "cmdId": "7134e0ad-46f0-4591-b38a-94ef8964b527",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956948",
+ "buildStep": {
+  "cmdId": "ccc31247-8bc9-459a-8ff3-007f7bd8d942",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin.info --input /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/link/int/poisson2d.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:36 2025",
+ "timestampMillis": "1745458956948",
+ "status": {
+  "cmdId": "ccc31247-8bc9-459a-8ff3-007f7bd8d942",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:37 2025",
+ "timestampMillis": "1745458957309",
+ "status": {
+  "cmdId": "ccc31247-8bc9-459a-8ff3-007f7bd8d942",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 04:42:37 2025",
+ "timestampMillis": "1745458957316",
+ "buildStep": {
+  "cmdId": "d4c87398-6814-4704-82d0-c9fe172b8a92",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:37 2025",
+ "timestampMillis": "1745458957317",
+ "status": {
+  "cmdId": "d4c87398-6814-4704-82d0-c9fe172b8a92",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:37 2025",
+ "timestampMillis": "1745458957320",
+ "status": {
+  "cmdId": "d4c87398-6814-4704-82d0-c9fe172b8a92",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:37 2025",
+ "timestampMillis": "1745458957408",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/system_estimate_poisson2d.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:38 2025",
+ "timestampMillis": "1745458958098",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/reports/link/v++_link_poisson2d_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:38 2025",
+ "timestampMillis": "1745458958099",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/v++_link_poisson2d_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 04:42:38 2025",
+ "timestampMillis": "1745458958104",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 04:42:38 2025",
+ "timestampMillis": "1745458958108",
+ "status": {
+  "cmdId": "efd5249e-0309-4e53-9714-136b26b8b7ce",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

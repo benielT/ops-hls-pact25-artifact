@@ -1,0 +1,248 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/datamover_outerloop_0.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 24 01:16:02 2025",
+ "timestampMillis": "1745446562119",
+ "buildStep": {
+  "cmdId": "a3fe97c3-c40d-4dab-9700-d35e62740388",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/",
+   "--compile",
+   "-I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/",
+   "-I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/",
+   "-I./hls/device/include/",
+   "-k",
+   "datamover_outerloop_0",
+   "-o",
+   "hls/build/hw/datamover_outerloop_0.xo",
+   "hls/device/src/datamover_outerloop_0.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:16:02 2025",
+ "timestampMillis": "1745446562120",
+ "status": {
+  "cmdId": "a3fe97c3-c40d-4dab-9700-d35e62740388",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Apr 24 01:16:05 2025",
+ "timestampMillis": "1745446565770",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/device/src/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 24 01:16:05 2025",
+ "timestampMillis": "1745446565776",
+ "buildStep": {
+  "cmdId": "e9f9b06b-2ca1-4c6b-9b79-4e85b697ba72",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:16:05 2025",
+ "timestampMillis": "1745446565776",
+ "status": {
+  "cmdId": "e9f9b06b-2ca1-4c6b-9b79-4e85b697ba72",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:16:59 2025",
+ "timestampMillis": "1745446619810",
+ "status": {
+  "cmdId": "e9f9b06b-2ca1-4c6b-9b79-4e85b697ba72",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620388",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/datamover_outerloop_0.design.xml",
+  "name": "datamover_outerloop_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620389",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/.message_syn.xml",
+  "name": "datamover_outerloop_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620397",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/reports/datamover_outerloop_0/hls_reports/datamover_outerloop_0_csynth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620398",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/syn/report/datamover_outerloop_0_csynth.xml",
+  "name": "datamover_outerloop_0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620411",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/reports/datamover_outerloop_0/system_estimate_datamover_outerloop_0.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620890",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/reports/datamover_outerloop_0/v++_compile_datamover_outerloop_0_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620891",
+ "report": {
+  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/poisson_fpga_experimental/opt_kernel_step_2/hls/build/hw/temp_dir/v++_compile_datamover_outerloop_0_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 24 01:17:00 2025",
+ "timestampMillis": "1745446620896",
+ "status": {
+  "cmdId": "a3fe97c3-c40d-4dab-9700-d35e62740388",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
