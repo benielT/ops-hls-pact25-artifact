@@ -1,0 +1,12 @@
+Timestamp,Power (W)
+1745522061341,35
+1745522065796,35
+1745522070798,37
+1745522075797,37
+1745522080796,37
+1745522085798,37
+1745522090797,37
+1745522095296,37
+1745522100296,37
+1745522105296,37
+Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d.xclbin -sizex=50 -sizey=50 -sizez=30 -iters=1800 -piter=50
