@@ -112,7 +112,7 @@ for params in "${parameter_sets[@]}"; do
 
     if [ -f "${PROFILE_FILE}" ]; then
         # Construct the new filename for the profile directory
-        new_filename="${PROFILE_DIR}/${sizex}_${PROFILE_FILE}"
+        new_filename="${PROFILE_DIR}/${sizex}_${sizey}_${sizez}_${PROFILE_FILE}"
         echo "Moving '${PROFILE_FILE}' to '${new_filename}'"
         mv "${PROFILE_FILE}" "${new_filename}"
     else

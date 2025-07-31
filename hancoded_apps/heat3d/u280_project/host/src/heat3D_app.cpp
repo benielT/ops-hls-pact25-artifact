@@ -11,7 +11,7 @@
 
 //#define DEBUG_VERBOSE
 //#define VERIFICATION
-//#define MULTI_SLR
+#define MULTI_SLR
 #define FPGA_RUN_ONLY
 
 int main(int argc, char **argv)
@@ -65,7 +65,17 @@ int main(int argc, char **argv)
             gridData.batch = atoi ( argv[n] + 7 ); continue;
         }
     }
+#ifdef PROFILE
+    std::string profile_filename = "perf_profile.csv";
 
+    std::ofstream fstream;
+    fstream.open(profile_filename, std::ios::out | std::ios::trunc);
+
+    if (!fstream.is_open()) {
+        std::cerr << "Error: Could not open the file " << profile_filename << std::endl;
+        return 1; // Indicate an error occurred
+    }
+#endif
     printf("Grid: %dx%dx%d , %d iterations, %d batches\n", gridData.logical_size_x, gridData.logical_size_y, gridData.logical_size_z, gridData.num_iter, gridData.batch);
 
     //adding halo
@@ -388,6 +398,19 @@ int main(int argc, char **argv)
 	std::cout << "      |--> kernels_runtime: " << kernels_runtime << " us" << std::endl;
 	std::cout << "============================================="  << std::endl << std::endl;
 
+#ifdef PROFILE
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_size," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
+    fstream << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.num_iter << "," << 1 << "," << 1 << "," << runtime_init \
+                << "," << kernels_runtime << "," << kernels_runtime + runtime_init + h_to_d_runtime + d_to_h_runtime << std::endl;
+    fstream.close();
+
+    if (fstream.good()) { // Check if operations were successful after closing
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1; // Indicate an error occurred
+    }
+#endif
     free(grid_u1_cpu);
     free(grid_u2_cpu);
     free(grid_u1_d);
