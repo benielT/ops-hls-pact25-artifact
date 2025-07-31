@@ -6,7 +6,7 @@
 #include "blackscholes_cpu.h"
 
 //#define DEBUG_VERBOSE
-#define MULTI_SLR
+// #define MULTI_SLR
 #define FPGA_RUN_ONLY
 
 #ifndef FPGA_RUN_ONLY
@@ -234,9 +234,11 @@ int main(int argc, char **argv)
 	unsigned int total_SLR = 1;
 #endif
 
-	unsigned int number_of_process_grid_per_SLR = 22;
+	unsigned int number_of_process_grid_per_SLR = 48;
 	unsigned int total_process_grids_per_iter =  total_SLR * number_of_process_grid_per_SLR * 2;
 	unsigned int num_iter = gridProp.num_iter/total_process_grids_per_iter;
+    std::cout << "num_iter: " << num_iter << std::endl;
+
 	//set Kernel arguments
 	int narg = 0;
 	OCL_CHECK(err, err = krnl_slr0.setArg(narg++, gridProp.logical_size_x));
