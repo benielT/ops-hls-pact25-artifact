@@ -54,8 +54,8 @@ bin/$(HLS_TARGET_MODE)/app_device.xclbin: $(DEVICE_SRC_FILES) $(CONFIG_FILE)
 
 	@if [ -n "$(OPS_HLS_XSA_PLATFORM)" ]; then \
 		echo "Building XSA platform"; \
-		$(VPP) -s -O3 $(VPP_FLAGS) --temp_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/  --log_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/logs/ --link --config $(CONFIG_FILE) -o ./bin/$(HLS_TARGET_MODE)/$(APP).xsa  ${patsubst %.cpp, %.xo, ${patsubst ./device/src/%, ./bin/$(HLS_TARGET_MODE)/%, $(shell ls ./device/src/*.cpp)}}; \
-		$(VPP) -s -O3 --target $(HLS_TARGET_MODE) --platform $(PLATFORM) --temp_dir  bin/$(HLS_TARGET_MODE)/temp_dir/link/ --log_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/logs/ --package  ./bin/$(HLS_TARGET_MODE)/$(APP).xsa -o "$@"; \
+		$(VPP) -s -O3 $(VPP_FLAGS) --temp_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/  --log_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/logs/ --link --config $(CONFIG_FILE) -o ./bin/$(HLS_TARGET_MODE)/app_device.xsa  ${patsubst %.cpp, %.xo, ${patsubst ./device/src/%, ./bin/$(HLS_TARGET_MODE)/%, $(shell ls ./device/src/*.cpp)}}; \
+		$(VPP) -s -O3 --target $(HLS_TARGET_MODE) --platform $(PLATFORM) --temp_dir  bin/$(HLS_TARGET_MODE)/temp_dir/link/ --log_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/logs/ --package  ./bin/$(HLS_TARGET_MODE)/app_device.xsa -o "$@"; \
 	else \
 		echo "Building non-XSA platform"; \
 		$(VPP) -s -O3 $(VPP_FLAGS) --temp_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/  --log_dir bin/$(HLS_TARGET_MODE)/temp_dir/link/logs/ --link --config $(CONFIG_FILE) -o "$@"  ${patsubst %.cpp, %.xo, ${patsubst ./device/src/%, ./bin/$(HLS_TARGET_MODE)/%, $(shell ls ./device/src/*.cpp)}}; \

@@ -35,8 +35,7 @@ if [[ "${TARGET_MODE}" == "hw" ]]; then
         )
 else
     parameter_sets=(
-            "100,132,5"
-            "200,132,5"
+            "100,132,1"
             # Add more parameter sets here as needed
         )
 fi
