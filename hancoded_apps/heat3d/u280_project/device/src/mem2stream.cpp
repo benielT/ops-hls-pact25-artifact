@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include "heat3D_common.h"
 #include "stencil.h"
-#include "stencil.cpp"
 
 // coalesced memory access at 512 bit to get maximum out of memory bandwidth
 // Single pipelined loop below will be mapped to single memory transfer

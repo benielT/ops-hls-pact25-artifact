@@ -3,7 +3,6 @@
 #include <ap_axi_sdata.h>
 #include <math.h>
 #include "stencil.h"
-#include "stencil.cpp"
 
 void process_SLR(hls::stream <t_pkt> &in, hls::stream<t_pkt> &out, const int xdim0, const unsigned short size_x,
 		const unsigned int size_y, const unsigned int size_z, const unsigned short batches, const float calcParam_K)
