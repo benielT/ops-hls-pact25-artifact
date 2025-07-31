@@ -84,3 +84,5 @@ run_hls_host:
 clean:
 	rm -rf ./bin
 	rm -rf ./profile_data
+	rm -rf .Xil
+	@if [ -f xcd.log ]; then rm xcd.log; fi
