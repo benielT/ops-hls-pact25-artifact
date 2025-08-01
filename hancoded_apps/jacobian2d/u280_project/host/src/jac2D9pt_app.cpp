@@ -6,8 +6,8 @@
 #include <math.h>
 #include "xcl2.hpp"
 #include <chrono>
+#include "common.h"
 #include "stencil_cpu.h"
-
 
 
 /******************************************************************************
@@ -20,7 +20,7 @@ int main(int argc, char **argv)
   struct Grid_Parameter data_g;
   data_g.logical_size_x = 20;
   data_g.logical_size_y = 20;
-  data_g.batch =2;
+  data_g.batch =1;
 
   // number of iterations
   int n_iter = 10;
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
     }
     pch = strstr(argv[n], "-iters=");
     if(pch != NULL) {
-      n_iter = atoi ( argv[n] + 7 ); continue;
+      data_g.num_iter = atoi ( argv[n] + 7 ); continue;
     }
 
     pch = strstr(argv[n], "-batch=");
@@ -47,6 +47,19 @@ int main(int argc, char **argv)
 	}
   }
 
+#ifdef PROFILE
+    std::string profile_filename = "perf_profile.csv";
+
+    std::ofstream fstream;
+    fstream.open(profile_filename, std::ios::out | std::ios::trunc);
+
+    if (!fstream.is_open()) {
+        std::cerr << "Error: Could not open the file " << profile_filename << std::endl;
+        return 1; // Indicate an error occurred
+    }
+#endif
+
+  n_iter = data_g.num_iter / (2 * TOTAL_P_STAGE);
   printf("Grid: %dx%d , %d iterations, %d batches\n", data_g.logical_size_x, data_g.logical_size_y, n_iter, data_g.batch);
 
   // adding boundary
@@ -167,6 +180,20 @@ int main(int argc, char **argv)
   float bandwidth = (data_g.logical_size_x * data_g.logical_size_y * sizeof(float) * 4.0 * n_iter * data_g.batch)/(elapsed.count() * 1000 * 1000 * 1000);
 //  printf("\nMean Square error is  %f\n\n", error/(data_g.logical_size_x * data_g.logical_size_y));
   printf("\nOPS Bandwidth is %f\n", bandwidth);
+
+#ifdef PROFILE
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
+    fstream << data_g.logical_size_x << "," << data_g.logical_size_y << "," << 1 << "," << data_g.num_iter << "," << 1 << "," << 0.0 \
+                << "," << elapsed.count() << "," << elapsed.count() << std::endl;
+    fstream.close();
+
+    if (fstream.good()) { // Check if operations were successful after closing
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1; // Indicate an error occurred
+    }
+#endif
 
   free(grid_u1);
   free(grid_u2);

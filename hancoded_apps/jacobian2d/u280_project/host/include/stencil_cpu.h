@@ -17,6 +17,7 @@ struct Grid_Parameter{
 	unsigned int grid_size_x;
 	unsigned int grid_size_y;
 
+    unsigned int num_iter;
 	unsigned int batch;
 
 };
