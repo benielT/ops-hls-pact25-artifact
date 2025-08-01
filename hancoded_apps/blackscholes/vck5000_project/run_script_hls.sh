@@ -16,12 +16,12 @@ echo "runscript TARGET MODE: ${TARGET_MODE}, PLATFORM: ${PLATFORM}"
 
 PROFILE_DIR=./profile_data/${TARGET_MODE}/
 PROFILE_FILE=perf_profile.csv
-DEVICE_BDF=0000:c1:00.1
+DEVICE_BDF=0000:81:00.1
 
 
 if [[ "${TARGET_MODE}" == "hw" ]]; then
     parameter_sets=(
-            "100,60000,100"
+            # "100,60000,100"
             "150,60000,100"
             "200,60000,100"
             "500,60000,100"
@@ -104,7 +104,7 @@ for params in "${parameter_sets[@]}"; do
             elif [[ "$line" != grid_x,* ]]; then
                 # Replace the 6th column (batch_id) with extracted batch_id
                 # This assumes CSV columns are fixed and in same order
-                updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$6 = b; print}')
+                updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$5 = b; print}')
                 echo "$updated_line" >> ${PROFILE_FILE}
             fi
         done < "$file"
