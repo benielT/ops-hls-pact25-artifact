@@ -399,8 +399,8 @@ int main(int argc, char **argv)
 	std::cout << "============================================="  << std::endl << std::endl;
 
 #ifdef PROFILE
-    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_size," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
-    fstream << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.num_iter << "," << 1 << "," << 1 << "," << runtime_init \
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
+    fstream << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.num_iter << "," << 1 << "," << runtime_init \
                 << "," << kernels_runtime << "," << kernels_runtime + runtime_init + h_to_d_runtime + d_to_h_runtime << std::endl;
     fstream.close();
 

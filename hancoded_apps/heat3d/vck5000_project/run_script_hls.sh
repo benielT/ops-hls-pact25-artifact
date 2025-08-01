@@ -102,7 +102,7 @@ for params in "${parameter_sets[@]}"; do
             elif [[ "$line" != grid_x,* ]]; then
                 # Replace the 6th column (batch_id) with extracted batch_id
                 # This assumes CSV columns are fixed and in same order
-                updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$6 = b; print}')
+                updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$5 = b; print}')
                 echo "$updated_line" >> ${PROFILE_FILE}
             fi
         done < "$file"

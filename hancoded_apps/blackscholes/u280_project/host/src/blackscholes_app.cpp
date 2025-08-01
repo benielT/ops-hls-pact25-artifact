@@ -407,8 +407,8 @@ int main(int argc, char **argv)
 	std::cout << "============================================="  << std::endl << std::endl;
 
 #ifdef PROFILE
-    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_size," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
-    fstream << gridProp.logical_size_x << "," << 1 << "," << 1 << "," << gridProp.num_iter << "," << 1 << "," << 1 << "," << init_grid_runtime \
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
+    fstream << gridProp.logical_size_x << "," << 1 << "," << 1 << "," << gridProp.num_iter << "," << 1 << "," << init_grid_runtime \
                 << "," << kernels_runtime << "," << kernels_runtime + init_grid_runtime + h_to_d_runtime + d_to_h_runtime << std::endl;
     fstream.close();
 

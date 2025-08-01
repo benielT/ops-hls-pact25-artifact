@@ -1,7 +1,7 @@
 
 PLATFORM=xilinx_vck5000_gen4x8_xdma_2_202210_1
-HLS_TARGET_MODE=sw_emu
-HLS_JOBS=16
+HLS_TARGET_MODE=hw
+HLS_JOBS=32
 HLS_IP_CACHE_DIR = $(shell pwd)/../../IP_CACHE
 include ../../Makefile_hls.mk
 
