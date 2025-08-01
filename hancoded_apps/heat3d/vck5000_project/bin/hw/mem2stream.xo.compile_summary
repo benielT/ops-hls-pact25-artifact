@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/mem2stream.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 02:07:21 2025",
+ "timestampMillis": "1754003241257",
+ "buildStep": {
+  "cmdId": "7fb29591-7378-46ec-b3f6-8aa0545f147b",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/mem2stream.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_mem2stream -o bin/hw/mem2stream.xo ./device/src/mem2stream.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/",
+   "--log_dir",
+   "bin/hw/temp_dir/",
+   "--compile",
+   "-I./device/include",
+   "-I./common/include",
+   "-k",
+   "stencil_mem2stream",
+   "-o",
+   "bin/hw/mem2stream.xo",
+   "./device/src/mem2stream.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:07:21 2025",
+ "timestampMillis": "1754003241258",
+ "status": {
+  "cmdId": "7fb29591-7378-46ec-b3f6-8aa0545f147b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 02:07:24 2025",
+ "timestampMillis": "1754003244860",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_mem2stream",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/mem2stream.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/device/src/mem2stream.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 02:07:24 2025",
+ "timestampMillis": "1754003244866",
+ "buildStep": {
+  "cmdId": "f14fccc6-b944-4c00-a666-cdbf3b15a241",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/stencil_mem2stream.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/stencil_mem2stream.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:07:24 2025",
+ "timestampMillis": "1754003244867",
+ "status": {
+  "cmdId": "f14fccc6-b944-4c00-a666-cdbf3b15a241",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280279",
+ "status": {
+  "cmdId": "f14fccc6-b944-4c00-a666-cdbf3b15a241",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280676",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/stencil_mem2stream/solution/.autopilot/db/stencil_mem2stream.design.xml",
+  "name": "stencil_mem2stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280678",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/stencil_mem2stream/solution/.autopilot/db/.message_syn.xml",
+  "name": "stencil_mem2stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280685",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/mem2stream/hls_reports/stencil_mem2stream_csynth.rpt",
+  "name": "stencil_mem2stream",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280685",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/mem2stream/stencil_mem2stream/stencil_mem2stream/solution/syn/report/stencil_mem2stream_csynth.xml",
+  "name": "stencil_mem2stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:00 2025",
+ "timestampMillis": "1754003280697",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/mem2stream/system_estimate_mem2stream.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:01 2025",
+ "timestampMillis": "1754003281059",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/mem2stream/v++_compile_mem2stream_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:08:01 2025",
+ "timestampMillis": "1754003281060",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/v++_compile_mem2stream_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:08:01 2025",
+ "timestampMillis": "1754003281063",
+ "status": {
+  "cmdId": "7fb29591-7378-46ec-b3f6-8aa0545f147b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

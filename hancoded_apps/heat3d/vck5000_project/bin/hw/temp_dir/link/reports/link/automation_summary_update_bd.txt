@@ -1,0 +1,80 @@
+====================================================================
+Version:    xcd v2022.1 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 02:17:33 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: stencil_SLR_1
+Kernel: stencil_SLR
+Base Address: 
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: stencil_mem2stream_1
+Kernel: stencil_mem2stream
+Base Address: 
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: buffer_stencil_mem2stream_1_out_r/M_AXIS
+Destination Pin: stencil_SLR_1/in_r
+
+Source Pin: axi_ic_user/M01_AXI
+Destination Pin: stencil_SLR_1/s_axi_control
+
+Source Pin: buffer_stencil_SLR_1_out_r/M_AXIS
+Destination Pin: stencil_mem2stream_1/in_r
+
+Source Pin: axi_ic_user/M02_AXI
+Destination Pin: stencil_mem2stream_1/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: stencil_SLR_1/out_r
+Destination Pin: buffer_stencil_SLR_1_out_r/S_AXIS
+
+Source Pin: stencil_mem2stream_1/m_axi_gmem0
+Destination Pin: axi_noc_kernel0/S00_AXI
+
+Source Pin: stencil_mem2stream_1/m_axi_gmem1
+Destination Pin: axi_noc_kernel0/S01_AXI
+
+Source Pin: stencil_mem2stream_1/out_r
+Destination Pin: buffer_stencil_mem2stream_1_out_r/S_AXIS
+
+3. Clock Connections
+====================
+
+Compute Unit: stencil_SLR_1
+Clock ID: 0
+Clock Frequency: 299.996999 MHz
+Source Port: /blp_s_aclk_kernel_00
+Destination Pin: stencil_SLR_1/ap_clk
+
+Compute Unit: stencil_mem2stream_1
+Clock ID: 0
+Clock Frequency: 299.996999 MHz
+Source Port: /blp_s_aclk_kernel_00
+Destination Pin: stencil_mem2stream_1/ap_clk
+
+4. Reset Connections
+====================
+
+Compute Unit: stencil_SLR_1
+Source Pin: reset_controllers/peripheral_aresetn
+Destination Pin: stencil_SLR_1/ap_rst_n
+Associated Clock Pin: stencil_SLR_1/ap_clk
+
+Compute Unit: stencil_mem2stream_1
+Source Pin: reset_controllers/peripheral_aresetn
+Destination Pin: stencil_mem2stream_1/ap_rst_n
+Associated Clock Pin: stencil_mem2stream_1/ap_clk
+

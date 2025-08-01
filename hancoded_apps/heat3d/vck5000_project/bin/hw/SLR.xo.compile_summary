@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/SLR.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 02:08:12 2025",
+ "timestampMillis": "1754003292184",
+ "buildStep": {
+  "cmdId": "0e3d511e-3398-4180-a9fe-354413cdb38e",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/SLR.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_SLR -o bin/hw/SLR.xo ./device/src/SLR.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/",
+   "--log_dir",
+   "bin/hw/temp_dir/",
+   "--compile",
+   "-I./device/include",
+   "-I./common/include",
+   "-k",
+   "stencil_SLR",
+   "-o",
+   "bin/hw/SLR.xo",
+   "./device/src/SLR.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:08:12 2025",
+ "timestampMillis": "1754003292185",
+ "status": {
+  "cmdId": "0e3d511e-3398-4180-a9fe-354413cdb38e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 02:08:15 2025",
+ "timestampMillis": "1754003295797",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/SLR.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/device/src/SLR.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 02:08:15 2025",
+ "timestampMillis": "1754003295802",
+ "buildStep": {
+  "cmdId": "f196a722-9abf-44d6-99d9-c5f396c2f69c",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/stencil_SLR.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/stencil_SLR.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:08:15 2025",
+ "timestampMillis": "1754003295803",
+ "status": {
+  "cmdId": "f196a722-9abf-44d6-99d9-c5f396c2f69c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:16:07 2025",
+ "timestampMillis": "1754003767939",
+ "status": {
+  "cmdId": "f196a722-9abf-44d6-99d9-c5f396c2f69c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:09 2025",
+ "timestampMillis": "1754003769535",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/stencil_SLR/solution/.autopilot/db/stencil_SLR.design.xml",
+  "name": "stencil_SLR",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:09 2025",
+ "timestampMillis": "1754003769536",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/stencil_SLR/solution/.autopilot/db/.message_syn.xml",
+  "name": "stencil_SLR",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:09 2025",
+ "timestampMillis": "1754003769542",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/SLR/hls_reports/stencil_SLR_csynth.rpt",
+  "name": "stencil_SLR",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:09 2025",
+ "timestampMillis": "1754003769543",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/SLR/stencil_SLR/stencil_SLR/solution/syn/report/stencil_SLR_csynth.xml",
+  "name": "stencil_SLR",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:09 2025",
+ "timestampMillis": "1754003769603",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/SLR/system_estimate_SLR.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:11 2025",
+ "timestampMillis": "1754003771162",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/reports/SLR/v++_compile_SLR_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 02:16:11 2025",
+ "timestampMillis": "1754003771163",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/heat3d/vck5000_project/bin/hw/temp_dir/v++_compile_SLR_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 02:16:11 2025",
+ "timestampMillis": "1754003771167",
+ "status": {
+  "cmdId": "0e3d511e-3398-4180-a9fe-354413cdb38e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
