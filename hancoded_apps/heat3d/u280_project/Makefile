@@ -86,3 +86,4 @@ clean:
 	rm -rf ./profile_data
 	rm -rf .Xil
 	@if [ -f xcd.log ]; then rm xcd.log; fi
+	@if [ -f xrc.log ]; then rm xrc.log; fi

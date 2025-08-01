@@ -400,7 +400,7 @@ int main(int argc, char **argv)
 
 #ifdef PROFILE
     fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
-    fstream << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.logical_size_x << "," << gridData.num_iter << "," << 1 << "," << runtime_init \
+    fstream << gridData.logical_size_x << "," << gridData.logical_size_y << "," << gridData.logical_size_z << "," << gridData.num_iter << "," << 1 << "," << runtime_init \
                 << "," << kernels_runtime << "," << kernels_runtime + runtime_init + h_to_d_runtime + d_to_h_runtime << std::endl;
     fstream.close();
 
