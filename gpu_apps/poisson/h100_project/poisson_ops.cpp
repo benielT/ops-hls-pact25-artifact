@@ -202,8 +202,8 @@ int main(int argc, char **argv)
 
 #ifdef PROFILE
     fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "batch_size," << "init_time," << "main_time," << "total_time" << std::endl;
-    fstream << logical_size_x << "," << logical_size_y << "," << 1 << "," << n_iter << "," << 1 << "," << num_systems << init_grid_runtime \
-                << "," << kernel_runtime << "," << wall_time_us << std::endl;
+    fstream << logical_size_x << "," << logical_size_y << "," << 1 << "," << n_iter << "," << 1 << "," << num_systems << "," << init_grid_runtime/num_systems   \
+                << "," << kernel_runtime/num_systems << "," << wall_time_us/num_systems << std::endl;
     fstream.close();
 
     if (fstream.good()) {
