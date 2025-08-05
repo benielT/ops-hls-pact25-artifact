@@ -1,0 +1,734 @@
+
+// Auto-generated at 2025-08-06 00:03:58.547797 by ops-translator
+
+void ops_init_backend();
+
+
+/*
+* Open source copyright declaration based on BSD open source template:
+* http://www.opensource.org/licenses/bsd-license.php
+*
+* This file is part of the OPS distribution.
+*
+* Copyright (c) 2013, Mike Giles and others. Please see the AUTHORS file in
+* the main source directory for a full list of copyright holders.
+* All rights reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are permitted provided that the following conditions are met:
+* * Redistributions of source code must retain the above copyright
+* notice, this list of conditions and the following disclaimer.
+* * Redistributions in binary form must reproduce the above copyright
+* notice, this list of conditions and the following disclaimer in the
+* documentation and/or other materials provided with the distribution.
+* * The name of Mike Giles may not be used to endorse or promote products
+* derived from this software without specific prior written permission.
+*
+* THIS SOFTWARE IS PROVIDED BY Mike Giles ''AS IS'' AND ANY
+* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL Mike Giles BE LIABLE FOR ANY
+* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/** @brief Test application for 1D fpga blackscholes application based on OPS-DSL
+  * @author Beniel Thileepan
+  * @details
+  *
+  *  This version is based on C/C++ and uses the OPS prototype highlevel domain
+  *  specific API for developing multi-block Structured mesh applications.
+  *  Coded in C API.
+  */
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <chrono>
+#include <random>
+#include "blackscholes_utils.h"
+#include "blackscholes_cpu.h"
+#define BATCH_MODE
+
+#ifdef BATCH_MODE
+    #define OPS_2D
+#else
+    #define OPS_1D
+#endif
+// #define OPS_HLS_V2
+// #define OPS_FPGA
+// #define VERIFICATION
+// #define DEBUG_VERBOSE
+#define PROFILE
+// #define POWER_PROFILE
+
+#include "ops_lib_core.h"
+#include "blackscholes_kernels.h"
+/* ops_par_loop declarations */
+
+void ops_par_loop_ops_krnl_zero_init(char const *, ops_block, int, int*, ops_arg);
+
+void ops_par_loop_ops_krnl_const_init(char const *, ops_block, int, int*, ops_arg, ops_arg);
+
+void ops_par_loop_ops_krnl_interior_init(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg);
+
+void ops_par_loop_ops_krnl_copy(char const *, ops_block, int, int*, ops_arg, ops_arg);
+
+void ops_par_loop_ops_krnl_calc_coefficient(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
+void ops_par_loop_ops_krnl_blackscholes(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
+
+#ifdef BATCH_MODE
+    #ifdef VERIFICATION
+        #undef VERIFICATION
+    #endif
+#endif
+#ifdef PROFILE
+    #include <chrono>
+#endif
+
+extern const unsigned short mem_vector_factor;
+
+int main(int argc, char **argv)
+{
+#ifdef BATCH_MODE
+    std::cout << "Batched" << std::endl;
+#endif
+    // OPS initialisation
+    ops_init(argc,argv,1);
+	ops_init_backend();
+
+
+	GridParameter gridProp;
+	gridProp.logical_size_x = 180;
+	gridProp.logical_size_y = 1;
+	gridProp.batch = 1;
+	gridProp.num_iter = 6000;
+
+    	// setting grid parameters given by user
+	const char* pch;
+
+#ifdef POWER_PROFILE
+    unsigned int power_iter = 1;
+    #ifdef PROFILE
+    std::cerr << "POWER_PROFILE cannot be enabled with PROFILE" << std::endl;
+    exit(-1);
+    #endif
+#endif
+	for ( int n = 1; n < argc; n++ )
+	{
+		pch = strstr(argv[n], "-sizex=");
+
+		if(pch != NULL)
+		{
+			gridProp.logical_size_x = atoi ( argv[n] + 7 ); continue;
+		}
+
+		pch = strstr(argv[n], "-iters=");
+
+		if(pch != NULL)
+		{
+			gridProp.num_iter = atoi ( argv[n] + 7 ); continue;
+		}
+		pch = strstr(argv[n], "-batch=");
+
+		if(pch != NULL)
+		{
+			gridProp.batch = atoi ( argv[n] + 7 ); continue;
+		}
+#ifdef POWER_PROFILE
+        pch = strstr(argv[n], "-piter=");
+        if(pch != NULL) {
+            power_iter = atoi ( argv[n] + 7 ); continue;
+        }
+        //overide batches
+    #ifndef BATCH_MODE
+        gridProp.batch = 1;
+    #endif
+#endif
+	}
+    printf("Grid: %dx1 , %d iterations, %d batches\n", gridProp.logical_size_x, gridProp.num_iter, gridProp.batch);
+
+#ifdef BATCH_MODE
+    unsigned short batch = gridProp.batch;
+    gridProp.batch = 1;
+#endif
+
+	//adding halo
+	gridProp.act_size_x = gridProp.logical_size_x+2;
+	gridProp.act_size_y = 1;
+
+	//padding each row as multiple of vectorization factor
+    #ifdef OPS_FPGA
+	gridProp.grid_size_x = (gridProp.act_size_x % mem_vector_factor) != 0 ?
+			(gridProp.act_size_x/mem_vector_factor + 1) * mem_vector_factor :
+			gridProp.act_size_x;
+    #else
+    gridProp.grid_size_x = gridProp.act_size_x;
+    #endif
+	gridProp.grid_size_y = gridProp.act_size_y;
+
+	//allocating memory buffer
+	// unsigned int data_size_bytes = gridProp.grid_size_x * gridProp.grid_size_y * sizeof(float) * gridProp.batch;
+
+	// if(data_size_bytes >= 4000000000)
+	// {
+	// 	std::cerr << "Maximum buffer size is exceeded!" << std::endl;
+	// 	return -1;
+	// }
+
+#ifdef PROFILE
+	double init_cpu_runtime[gridProp.batch];
+	double main_loop_cpu_runtime[gridProp.batch];
+	double init_runtime[gridProp.batch];
+	double main_loop_runtime[gridProp.batch];
+#endif
+	std::vector<blackscholesParameter> calcParam(gridProp.batch); //multiple blackscholes calculations
+
+	//First calculation for test value
+
+	calcParam[0].spot_price = 16;
+	calcParam[0].strike_price = 10;
+	calcParam[0].time_to_maturity = 0.25;
+	calcParam[0].volatility = 0.4;
+	calcParam[0].risk_free_rate = 0.1;
+	calcParam[0].N = gridProp.num_iter;
+	calcParam[0].K = gridProp.logical_size_x;
+	calcParam[0].SMaxFactor = 3;
+	calcParam[0].delta_t = calcParam[0].time_to_maturity / calcParam[0].N;
+	calcParam[0].delta_S = calcParam[0].strike_price * calcParam[0].SMaxFactor/ (calcParam[0].K);
+	calcParam[0].stable = stencil_stability(calcParam[0]);
+
+	std::random_device dev;
+	std::mt19937 rndGen(dev());
+	std::uniform_real_distribution<> dis(0.0, 0.05);
+
+    #ifndef BATCH_MODE
+	for (int i = 1; i < gridProp.batch; i++)
+	{
+		calcParam[i].spot_price = 16 + dis(rndGen);
+		calcParam[i].strike_price = 10 + dis(rndGen);
+		calcParam[i].time_to_maturity = 0.25 + dis(rndGen);
+		calcParam[i].volatility = 0.4 + dis(rndGen);
+		calcParam[i].risk_free_rate = 0.1 + dis(rndGen);
+		calcParam[i].N = gridProp.num_iter;
+		calcParam[i].K = gridProp.logical_size_x;
+		calcParam[i].SMaxFactor = 3;
+		calcParam[i].delta_t = calcParam[i].time_to_maturity / calcParam[i].N;
+		calcParam[i].delta_S = calcParam[i].strike_price * calcParam[i].SMaxFactor/ (calcParam[i].K);
+		calcParam[i].stable = stencil_stability(calcParam[i]);
+
+		if (not calcParam[i].stable)
+		{
+			std::cerr << "Calc job: " << i << " is unstable" << std::endl;
+		}
+	}
+    #else
+    unsigned short bat = 0;
+    #endif
+
+	//ops_block
+#ifdef BATCH_MODE
+    ops_block grid = ops_decl_block(2, "grid_augmented");
+#else
+	ops_block grid = ops_decl_block(1, "grid");
+#endif
+	//ops_data
+#ifdef BATCH_MODE
+    int size[] = {static_cast<int>(gridProp.logical_size_x), static_cast<int>(batch)};
+	int base[] = {0,0};
+	int d_m[] = {-1,0};
+	int d_p[] = {1,0};
+#else
+	int size[] = {static_cast<int>(gridProp.logical_size_x)};
+	int base[] = {0};
+	int d_m[] = {-1};
+	int d_p[] = {1};
+#endif
+    ops_printf("Batched Grid size: %dx%d\n", size[0], size[1]);
+
+	ops_dat dat_current[gridProp.batch]; // = ops_decl_dat(grid, 1, size, base, d_m, d_p, current,"float", "dat_current");
+	ops_dat dat_next[gridProp.batch];// = ops_decl_dat(grid, 1, size, base, d_m, d_p, next,"float", "dat_next");
+	ops_dat dat_a[gridProp.batch]; // = ops_decl_dat(grid, 1, size, base, d_m, d_p, a, "float", "dat_a");
+	ops_dat dat_b[gridProp.batch]; // = ops_decl_dat(grid, 1, size, base, d_m, d_p, b, "float", "dat_b");
+	ops_dat dat_c[gridProp.batch]; // = ops_decl_dat(grid, 1, size, base, d_m, d_p, c, "float", "dat_c");
+
+#ifdef VERIFICATION
+    float * grid_u1_cpu[gridProp.batch]; // = (float*) aligned_alloc(4096, data_size_bytes);
+	float * grid_u2_cpu[gridProp.batch]; // = (float*) aligned_alloc(4096, data_size_bytes);
+#endif
+	//Allocation
+#ifndef BATCH_MODE
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+#endif
+		float *current = nullptr, *next = nullptr;
+		float *a = nullptr, *b = nullptr, *c = nullptr;
+#ifndef BATCH_MODE
+		std::string name = std::string("current_") + std::to_string(bat);
+		dat_current[bat] = ops_decl_dat(grid,1, size, base, d_m, d_p, current,"float", name.c_str());
+		name = std::string("next_") + std::to_string(bat);
+		dat_next[bat] = ops_decl_dat(grid, 1, size, base, d_m, d_p, next,"float", name.c_str());
+		name = std::string("a_") + std::to_string(bat);
+		dat_a[bat] = ops_decl_dat(grid, 1, size, base, d_m, d_p, a, "float", name.c_str());
+		name = std::string("b_") + std::to_string(bat);
+		dat_b[bat] = ops_decl_dat(grid, 1, size, base, d_m, d_p, a, "float", name.c_str());
+		name = std::string("x_") + std::to_string(bat);
+		dat_c[bat] = ops_decl_dat(grid, 1, size, base, d_m, d_p, a, "float", name.c_str());
+#else
+        std::string name = std::string("current_") + std::to_string(bat);
+		dat_current[bat] = ops_decl_dat(grid, 2, size, base, d_m, d_p, current,"float", name.c_str());
+		name = std::string("next_") + std::to_string(bat);
+		dat_next[bat] = ops_decl_dat(grid, 2, size, base, d_m, d_p, next,"float", name.c_str());
+		name = std::string("a_") + std::to_string(bat);
+		dat_a[bat] = ops_decl_dat(grid, 2, size, base, d_m, d_p, a, "float", name.c_str());
+		name = std::string("b_") + std::to_string(bat);
+		dat_b[bat] = ops_decl_dat(grid, 2, size, base, d_m, d_p, a, "float", name.c_str());
+		name = std::string("x_") + std::to_string(bat);
+		dat_c[bat] = ops_decl_dat(grid, 2, size, base, d_m, d_p, a, "float", name.c_str());
+#endif
+
+#ifdef VERIFICATION
+		grid_u1_cpu[bat] = (float*) aligned_alloc(4096, data_size_bytes);
+		grid_u2_cpu[bat] = (float*) aligned_alloc(4096, data_size_bytes);
+#endif
+#ifndef BATCH_MODE
+	}
+#endif
+
+#ifdef VERIFICATION
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+	#ifdef PROFILE
+		auto init_start_clk_point = std::chrono::high_resolution_clock::now();
+	#endif
+
+		intialize_grid(grid_u1_cpu[bat], gridProp, calcParam[bat]);
+		copy_grid(grid_u1_cpu[bat], grid_u2_cpu[bat], gridProp);
+
+	#ifdef PROFILE
+		auto init_stop_clk_point = std::chrono::high_resolution_clock::now();
+		init_cpu_runtime[bat] = std::chrono::duration<double, std::micro> (init_stop_clk_point - init_start_clk_point).count();
+	#endif
+	}
+	
+	#ifdef DEBUG_VERBOSE
+	std::cout << std::endl;
+	std::cout << "*********************************************"  << std::endl;
+	std::cout << "**            intial grid values           **"  << std::endl;
+	std::cout << "*********************************************"  << std::endl;
+
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+		std::cout << "Batch [" << bat << "]" << std::endl;
+		for (unsigned int i = 0; i < gridProp.act_size_x; i++)
+		{
+			std::cout << "index: " << i << " initial_val: " << grid_u1_cpu[bat][i]<< std::endl;
+		}
+	}
+	std::cout << "============================================="  << std::endl << std::endl;
+	#endif
+#endif
+	//defining the stencils
+#ifndef BATCH_MODE
+	int s1d_3pt[] = {-1, 0, 1};
+	int s1d_1pt[] = {0};
+
+	ops_stencil S1D_3pt = ops_decl_stencil(1, 3, s1d_3pt, "3pt");
+	ops_stencil S1D_1pt = ops_decl_stencil(1, 1, s1d_1pt, "1pt");
+#else
+    int s1d_3pt[] = {-1,0, 0,0, 1,0};
+	int s1d_1pt[] = {0,0};
+
+	ops_stencil S1D_3pt = ops_decl_stencil(2, 3, s1d_3pt, "3pt");
+	ops_stencil S1D_1pt = ops_decl_stencil(2, 1, s1d_1pt, "1pt");
+#endif
+	//partition
+	ops_partition("1D_BLOCK_DECOMPOSE");
+    ops_diagnostic_output();
+
+#ifndef BATCH_MODE
+	int lower_Pad_range[] = {-1,0};
+	int upper_pad_range[] = {gridProp.logical_size_x, gridProp.logical_size_x + 1};
+	int interior_range[] = {0, gridProp.logical_size_x};
+	int full_range[] = {-1, gridProp.logical_size_x + 1};
+#else
+	int lower_Pad_range[] = {-1,0, 0,gridProp.batch};
+	int upper_pad_range[] = {gridProp.logical_size_x,gridProp.logical_size_x + 1, 0, gridProp.batch};
+	int interior_range[] = {0,gridProp.logical_size_x, 0,gridProp.batch};
+	int full_range[] = {-1,gridProp.logical_size_x + 1, 0,gridProp.batch};
+#endif
+
+#ifdef BATCH_MODE
+    // ops_par_loop_blocks_all(gridProp.batch);
+#endif
+	//initializing data
+    #ifdef POWER_PROFILE
+    for (unsigned int p = 0; p < power_iter; p++)
+    {
+#endif
+#ifndef BATCH_MODE
+	for (int bat = 0; bat < gridProp.batch; bat++)
+	{
+#endif
+         ops_printf("Launching blackscholes calculation: %d x mesh\n", gridProp.grid_size_x);
+#ifdef PROFILE
+		auto grid_init_start_clk_point = std::chrono::high_resolution_clock::now();
+#endif
+
+#ifndef BATCH_MODE
+		ops_par_loop(ops_krnl_zero_init, "ops_zero_init", grid, 1, lower_Pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#else
+        ops_par_loop_ops_krnl_zero_init("ops_zero_init", grid, 2, lower_Pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#endif
+		
+		float sMax = calcParam[bat].SMaxFactor * calcParam[bat].strike_price;
+
+#ifndef BATCH_MODE
+		ops_par_loop(ops_krnl_const_init, "ops_const_init", grid, 1, upper_pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&sMax, 1, "float", OPS_READ));
+#else
+    ops_par_loop_ops_krnl_const_init("ops_const_init", grid, 2, upper_pad_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&sMax, 1, "float", OPS_READ));
+#endif
+		float* delta_s = &calcParam[bat].delta_S;
+		float* strike_price = &calcParam[bat].strike_price;
+
+#ifndef BATCH_MODE
+		ops_par_loop(ops_krnl_interior_init, "interior_init", grid, 1, interior_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_idx(),
+				ops_arg_gbl(delta_s, 1, "float", OPS_READ),
+				ops_arg_gbl(strike_price, 1,"float", OPS_READ));
+#else
+        ops_par_loop_ops_krnl_interior_init("interior_init", grid, 2, interior_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_idx(),
+				ops_arg_gbl(delta_s, 1, "float", OPS_READ),
+				ops_arg_gbl(strike_price, 1,"float", OPS_READ));
+#endif
+#ifndef BATCH_MODE
+		ops_par_loop(ops_krnl_copy, "init_dat_next", grid, 1, full_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_READ),
+				ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#else
+        ops_par_loop_ops_krnl_copy("init_dat_next", grid, 2, full_range,
+				ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_READ),
+				ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#endif
+		//blackscholes calc
+		float alpha = calcParam[bat].volatility * calcParam[bat].volatility * calcParam[bat].delta_t;
+		float beta = calcParam[bat].risk_free_rate * calcParam[bat].delta_t;
+
+#ifndef BATCH_MODE
+		ops_par_loop(ops_krnl_calc_coefficient, "calc_coefficient", grid, 1, interior_range,
+				ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&(alpha), 1, "float", OPS_READ),
+				ops_arg_gbl(&(beta), 1 , "float", OPS_READ),
+				ops_arg_idx());
+#else
+        ops_par_loop_ops_krnl_calc_coefficient("calc_coefficient", grid, 2, interior_range,
+				ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_WRITE),
+				ops_arg_gbl(&(alpha), 1, "float", OPS_READ),
+				ops_arg_gbl(&(beta), 1 , "float", OPS_READ),
+				ops_arg_idx());
+#endif
+#ifdef VERIFICATION
+        float* current_raw = (float*)ops_dat_get_raw_pointer(dat_current[bat], 0, S1D_1pt, OPS_HOST);
+		float* next_raw = (float*)ops_dat_get_raw_pointer(dat_next[bat], 0, S1D_1pt, OPS_HOST);
+        float* a_raw = (float*)ops_dat_get_raw_pointer(dat_a[bat], 0, S1D_1pt, OPS_HOST);
+        float* b_raw = (float*)ops_dat_get_raw_pointer(dat_b[bat], 0, S1D_1pt, OPS_HOST);
+        float* c_raw = (float*)ops_dat_get_raw_pointer(dat_c[bat], 0, S1D_1pt, OPS_HOST);
+
+    #ifdef DEBUG_VERBOSE
+
+		printGrid2D<float>(next_raw, dat_next[bat].originalProperty, "next after init");
+		printGrid2D<float>(a_raw, dat_a[bat].originalProperty, "coeff a after init");
+        printGrid2D<float>(a_raw, dat_b[bat].originalProperty, "coeff b after init");
+        printGrid2D<float>(a_raw, dat_c[bat].originalProperty, "coeff c after init");
+	#endif
+#endif
+
+#ifdef PROFILE
+		auto grid_init_stop_clk_point = std::chrono::high_resolution_clock::now();
+		init_runtime[bat] = std::chrono::duration<double, std::micro>(grid_init_stop_clk_point - grid_init_start_clk_point).count();
+		auto blackscholes_calc_start_clk_point = grid_init_stop_clk_point;
+#endif
+#ifndef OPS_FPGA
+		for (int iter = 0 ; iter < calcParam[bat].N; iter++)
+		{
+#ifndef BATCH_MODE
+			ops_par_loop(ops_krnl_blackscholes, "blackscholes_1", grid, 1, interior_range,
+					ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE),
+					ops_arg_dat(dat_current[bat], 1, S1D_3pt, "float", OPS_READ),
+					ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_READ));
+
+                    
+            ops_par_loop(ops_krnl_copy, "copy_1", grid, 1, interior_range,
+                    ops_arg_dat(dat_next[bat], 1, S1D_3pt, "float", OPS_READ),
+                    ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#else
+			ops_par_loop_ops_krnl_blackscholes("blackscholes_1", grid, 2, interior_range,
+					ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE),
+					ops_arg_dat(dat_current[bat], 1, S1D_3pt, "float", OPS_READ),
+					ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_READ));
+
+                    
+            ops_par_loop_ops_krnl_copy("copy_1", grid, 2, interior_range,
+                    ops_arg_dat(dat_next[bat], 1, S1D_3pt, "float", OPS_READ),
+                    ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE));
+#endif
+		}
+#else
+        ops_iter_par_loop("ops_iter_par_loop_0", calcParam[bat].N,
+			ops_par_loop(ops_krnl_blackscholes, "blackscholes_1", grid, 1, interior_range,
+					ops_arg_dat(dat_next[bat], 1, S1D_1pt, "float", OPS_WRITE),
+					ops_arg_dat(dat_current[bat], 1, S1D_3pt, "float", OPS_READ),
+					ops_arg_dat(dat_a[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_b[bat], 1, S1D_1pt, "float", OPS_READ),
+					ops_arg_dat(dat_c[bat], 1, S1D_1pt, "float", OPS_READ)),
+            // ops_par_copy<float>(dat_current[bat], dat_next[bat])
+            ops_par_loop(ops_krnl_copy, "copy_1", grid, 1, interior_range,
+                    ops_arg_dat(dat_next[bat], 1, S1D_3pt, "float", OPS_READ),
+                    ops_arg_dat(dat_current[bat], 1, S1D_1pt, "float", OPS_WRITE))
+            );
+#endif
+
+#ifdef PROFILE
+     #ifndef OPS_FPGA
+		auto blackscholes_calc_stop_clk_point = std::chrono::high_resolution_clock::now();
+		main_loop_runtime[bat] = std::chrono::duration<double, std::micro>(blackscholes_calc_stop_clk_point - blackscholes_calc_start_clk_point).count();
+    #else
+		main_loop_runtime[bat] = ops_hls_get_execution_runtime<std::chrono::microseconds>(std::string("ops_iter_par_loop_0"));
+    #endif
+#endif  
+#ifndef BATCH_MODE
+}
+#endif
+#ifdef POWER_PROFILE
+    }
+#endif
+    // ops_par_loop_blocks_end();
+
+#ifdef VERIFICATION
+    for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+    { 
+	#ifdef PROFILE
+		auto naive_start_clk_point = std::chrono::high_resolution_clock::now();
+	#endif
+		//golden computation
+		bs_explicit1(grid_u1_cpu[bat], grid_u2_cpu[bat], gridProp, calcParam[bat]);
+		copy_grid(grid_u1_cpu[bat], grid_u2_cpu[bat], gridProp);
+
+	
+	#ifdef PROFILE
+		auto naive_stop_clk_point = std::chrono::high_resolution_clock::now();
+		main_loop_cpu_runtime[bat] = std::chrono::duration<double, std::micro> (naive_stop_clk_point - naive_start_clk_point).count(); 
+	#endif
+	}
+
+	std::cout << std::endl;
+	std::cout << "*********************************************"  << std::endl;
+	std::cout << "**      Debug info after calculations      **"  << std::endl;
+	std::cout << "*********************************************"  << std::endl;
+
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+		//explicit blackscholes test
+    	float direct_calc_value = test_blackscholes_call_option(calcParam[bat]);
+
+		float* current_raw = (float*)ops_dat_get_raw_pointer(dat_current[bat], 0, S1D_1pt, OPS_HOST);
+		float* next_raw = (float*)ops_dat_get_raw_pointer(dat_next[bat], 0, S1D_1pt, OPS_HOST);
+
+	#ifdef DEBUG_VERBOSE
+
+		printGrid2D<float>(next_raw, dat_next[bat].originalProperty, "next after computation");
+		printGrid2D<float>(grid_u2_cpu[bat], dat_next[bat].originalProperty, "next_Acpu after computation");
+	#endif
+        if(verify(next_raw, grid_u2_cpu[bat], size, d_m, d_p, full_range))
+            std::cout << "[BATCH - " << bat << "] verification of current after calculation" << "[PASSED]" << std::endl;
+        else
+            std::cout << "[BATCH - " << bat << "] verification of current after calculation" << "[FAILED]" << std::endl;
+		std::cout << "[BATCH - " << bat << "] call option price from cpu direct calc method: " << direct_calc_value << std::endl;	
+		std::cout << "[BATCH - " << bat << "] call option price from cpu explicit iter method: " << get_call_option(grid_u2_cpu[bat], calcParam[bat]) << std::endl;
+		std::cout << "[BATCH - " << bat << "] call option price from ops explicit method: " << get_call_option(next_raw, calcParam[bat]) << std::endl;
+	}
+	std::cout << "============================================="  << std::endl << std::endl;
+#endif
+	
+	    //cleaning
+    for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+    {
+        ops_free_dat(dat_current[bat]);
+        ops_free_dat(dat_next[bat]);
+        ops_free_dat(dat_a[bat]);
+        ops_free_dat(dat_b[bat]);
+		ops_free_dat(dat_c[bat]);
+#ifdef VERIFICATION
+        free(grid_u1_cpu[bat]);
+        free(grid_u2_cpu[bat]);
+#endif
+    }
+//	for (int i = 0; i < gridProp.logical_size_x; i++)
+//	{
+//		std::cout << "idx: " << i << ", dat_current: " << grid_ops_result[i] << std::endl;
+//	}
+//	ops_print_dat_to_txtfile_core(dat_current, "dat_current.txt");
+//	ops_print_dat_to_txtfile_core(dat_next, "dat_next.txt");
+	
+#ifdef PROFILE
+    ops_timing_output(std::cout);
+	std::cout << std::endl;
+	std::cout << "******************************************************" << std::endl;
+	std::cout << "**                runtime summary                   **" << std::endl;
+	std::cout << "******************************************************" << std::endl;
+
+	double avg_main_loop_runtime = 0;
+	double max_main_loop_runtime = 0;
+	double min_main_loop_runtime = 0;
+	double avg_init_runtime = 0;
+	double max_init_runtime = 0;
+	double min_init_runtime = 0;
+	double main_loop_std = 0;
+	double init_std = 0;
+	double total_std = 0;
+
+	#ifdef VERIFICATION
+	double cpu_avg_main_loop_runtime = 0;
+	double cpu_max_main_loop_runtime = 0;
+	double cpu_min_main_loop_runtime = 0;
+	double cpu_avg_init_runtime = 0;
+	double cpu_max_init_runtime = 0;
+	double cpu_min_init_runtime = 0;
+	double cpu_main_loop_std = 0;
+	double cpu_init_std = 0;
+	double cpu_total_std = 0;
+	#endif
+
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+		std::cout << "run: "<< bat << "| total runtime (DEVICE): " << main_loop_runtime[bat] + init_runtime[bat] << "(us)" << std::endl;
+		std::cout << "     |--> init runtime: " << init_runtime[bat] << "(us)" << std::endl;
+		std::cout << "     |--> main loop runtime: " << main_loop_runtime[bat] << "(us)" << std::endl;
+	#ifdef VERIFICATION	
+		std::cout << "| total runtime (CPU-golden): " << main_loop_cpu_runtime[bat] + init_cpu_runtime[bat] << "(us)" << std::endl;
+		std::cout << "     |--> init runtime: " << init_cpu_runtime[bat] << "(us)" << std::endl;
+		std::cout << "     |--> main loop runtime: " << main_loop_cpu_runtime[bat] << "(us)" << std::endl;
+	#endif
+		avg_init_runtime += init_runtime[bat];
+		avg_main_loop_runtime += main_loop_runtime[bat];
+	#ifdef VERIFICATION
+		cpu_avg_init_runtime += init_cpu_runtime[bat];
+		cpu_avg_main_loop_runtime += main_loop_cpu_runtime[bat];
+	#endif
+
+		if (bat == 0)
+		{
+			max_main_loop_runtime = main_loop_runtime[bat];
+			min_main_loop_runtime = main_loop_runtime[bat];
+			max_init_runtime = init_runtime[bat];
+			min_init_runtime = init_runtime[bat];
+	#ifdef VERIFICATION
+			cpu_max_main_loop_runtime = main_loop_cpu_runtime[bat];
+			cpu_min_main_loop_runtime = main_loop_cpu_runtime[bat];
+			cpu_max_init_runtime = init_cpu_runtime[bat];
+			cpu_min_init_runtime = init_cpu_runtime[bat];
+	#endif
+		}
+		else
+		{
+			max_main_loop_runtime = std::max(max_main_loop_runtime, main_loop_runtime[bat]);
+			min_main_loop_runtime = std::min(min_main_loop_runtime, main_loop_runtime[bat]);
+			max_init_runtime = std::max(max_init_runtime, init_runtime[bat]);
+			min_init_runtime = std::min(min_init_runtime, init_runtime[bat]);
+	#ifdef VERIFICATION
+			cpu_max_main_loop_runtime = std::max(cpu_max_main_loop_runtime, main_loop_cpu_runtime[bat]);
+			cpu_min_main_loop_runtime = std::min(cpu_min_main_loop_runtime, main_loop_cpu_runtime[bat]);
+			cpu_max_init_runtime = std::max(cpu_max_init_runtime, init_cpu_runtime[bat]);
+			cpu_min_init_runtime = std::min(cpu_min_init_runtime, init_cpu_runtime[bat]);
+	#endif
+		}
+	}
+
+	avg_init_runtime /= gridProp.batch;
+	avg_main_loop_runtime /= gridProp.batch;
+
+	#ifdef VERIFICATION
+	cpu_avg_init_runtime /= gridProp.batch;
+	cpu_avg_main_loop_runtime /= gridProp.batch;
+	#endif
+
+	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
+	{
+		main_loop_std += std::pow(main_loop_runtime[bat] - avg_main_loop_runtime, 2);
+		init_std += std::pow(init_runtime[bat] - avg_init_runtime, 2);
+		total_std += std::pow(main_loop_runtime[bat] + init_runtime[bat] - avg_init_runtime - avg_main_loop_runtime, 2);
+	#ifdef VERIFICATION
+		cpu_main_loop_std += std::pow(main_loop_cpu_runtime[bat] - cpu_avg_main_loop_runtime, 2);
+		cpu_init_std += std::pow(init_cpu_runtime[bat] - cpu_avg_init_runtime, 2);
+		cpu_total_std += std::pow(main_loop_cpu_runtime[bat] + init_cpu_runtime[bat] - cpu_avg_init_runtime - cpu_avg_main_loop_runtime, 2);
+	#endif
+	}
+
+	main_loop_std = std::sqrt(main_loop_std / gridProp.batch);
+	init_std = std::sqrt(init_std / gridProp.batch);
+	total_std = std::sqrt(total_std / gridProp.batch);
+	#ifdef VERIFICATION
+	cpu_main_loop_std = std::sqrt(cpu_main_loop_std / gridProp.batch);
+	cpu_init_std = std::sqrt(cpu_init_std / gridProp.batch);
+	cpu_total_std = std::sqrt(cpu_total_std / gridProp.batch);
+	#endif
+	std::cout << "Total runtime - DEVICE (AVG): " << avg_main_loop_runtime + avg_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << avg_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << avg_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Total runtime - DEVICE (MIN): " << min_main_loop_runtime + min_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << min_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << min_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Total runtime - DEVICE (MAX): " << max_main_loop_runtime + max_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << max_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << max_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Standard Deviation init - DEVICE: " << init_std << std::endl;
+	std::cout << "Standard Deviation main loop - DEVICE: " << main_loop_std << std::endl;
+	std::cout << "Standard Deviation total - DEVICE: " << total_std << std::endl;
+	#ifdef VERIFICATION
+	std::cout << "Total runtime - CPU (AVG): " << cpu_avg_main_loop_runtime + cpu_avg_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << cpu_avg_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << cpu_avg_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Total runtime - CPU (MIN): " << cpu_min_main_loop_runtime + cpu_min_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << cpu_min_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << cpu_min_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Total runtime - CPU (MAX): " << cpu_max_main_loop_runtime + cpu_max_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> init runtime: " << cpu_max_init_runtime << "(us)" << std::endl;
+	std::cout << "     |--> main loop runtime: " << cpu_max_main_loop_runtime << "(us)" << std::endl;
+	std::cout << "Standard Deviation init - CPU: " << cpu_init_std << std::endl;
+	std::cout << "Standard Deviation main loop - CPU: " << cpu_main_loop_std << std::endl;
+	std::cout << "Standard Deviation total - CPU: " << cpu_total_std << std::endl;
+	#endif
+	std::cout << "======================================================" << std::endl;
+#endif
+
+	//Finalizing the OPS library
+
+    ops_exit();
+
+ 	std::cout << "Exit properly" << std::endl;
+    return 0;
+}
