@@ -1,0 +1,1346 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:14:07 2025",
+ "timestampMillis": "1754079247559",
+ "buildStep": {
+  "cmdId": "7abd4c86-41ed-4e33-9fd1-e0d0b14474e2",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/link/ --log_dir bin/hw/temp_dir/link/logs/ --link --config stencil_3_SLR_u280.cfg -o bin/hw/app_device.xclbin ./bin/hw/mem2Stream.xo ./bin/hw/SLR.xo ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/link/",
+   "--log_dir",
+   "bin/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "stencil_3_SLR_u280.cfg",
+   "-o",
+   "bin/hw/app_device.xclbin",
+   "./bin/hw/mem2Stream.xo",
+   "./bin/hw/SLR.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/stencil_3_SLR_u280.cfg",
+    "content": "[connectivity]\nnk=stencil_SLR:1:stencil_SLR_1\nnk=stencil_SLR:1:stencil_SLR_2\nnk=stencil_SLR:1:stencil_SLR_3\n\nstream_connect=stencil_mem2Stream_1.out:stencil_SLR_1.in:4096\nstream_connect=stencil_mem2Stream_1.out_a:stencil_SLR_1.a_in:4096\nstream_connect=stencil_mem2Stream_1.out_b:stencil_SLR_1.b_in:4096\nstream_connect=stencil_mem2Stream_1.out_c:stencil_SLR_1.c_in:4096\nstream_connect=stencil_SLR_1.out:stencil_SLR_2.in:4096\nstream_connect=stencil_SLR_1.a_out:stencil_SLR_2.a_in:4096\nstream_connect=stencil_SLR_1.b_out:stencil_SLR_2.b_in:4096\nstream_connect=stencil_SLR_1.c_out:stencil_SLR_2.c_in:4096\nstream_connect=stencil_SLR_2.out:stencil_SLR_3.in:4096\nstream_connect=stencil_SLR_2.a_out:stencil_SLR_3.a_in:4096\nstream_connect=stencil_SLR_2.b_out:stencil_SLR_3.b_in:4096\nstream_connect=stencil_SLR_2.c_out:stencil_SLR_3.c_in:4096\nstream_connect=stencil_SLR_3.out:stencil_mem2Stream_1.in:4096\nstream_connect=stencil_SLR_3.a_out:stencil_mem2Stream_1.in_a:4096\nstream_connect=stencil_SLR_3.b_out:stencil_mem2Stream_1.in_b:4096\nstream_connect=stencil_SLR_3.c_out:stencil_mem2Stream_1.in_c:4096\n\nsp=stencil_mem2Stream_1.arg0:HBM[0]\nsp=stencil_mem2Stream_1.arg1:HBM[1]\nsp=stencil_mem2Stream_1.arg_a:HBM[2]\nsp=stencil_mem2Stream_1.arg_b:HBM[3]\nsp=stencil_mem2Stream_1.arg_c:HBM[4]\n\nslr=stencil_mem2Stream_1:SLR0\nslr=stencil_SLR_1:SLR0\nslr=stencil_SLR_2:SLR1\nslr=stencil_SLR_3:SLR2\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:14:07 2025",
+ "timestampMillis": "1754079247560",
+ "status": {
+  "cmdId": "7abd4c86-41ed-4e33-9fd1-e0d0b14474e2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 23:14:13 2025",
+ "timestampMillis": "1754079253414",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "app_device",
+    "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_mem2Stream",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/mem2Stream.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/stencil_mem2Stream/stencil_mem2Stream/cpu_sources/mem2Stream.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_mem2Stream_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/SLR.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/stencil_SLR/stencil_SLR/cpu_sources/SLR.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_SLR_1",
+     "stencil_SLR_2",
+     "stencil_SLR_3"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:14:13 2025",
+ "timestampMillis": "1754079253821",
+ "buildStep": {
+  "cmdId": "4302f75c-89df-4948-9739-1f347230216c",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/mem2Stream.xo --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/SLR.xo -keep --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/mem2Stream.xo",
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/SLR.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "nk=stencil_SLR:1:stencil_SLR_1\nnk=stencil_SLR:1:stencil_SLR_2\nnk=stencil_SLR:1:stencil_SLR_3\nsc=stencil_mem2Stream_1.out:stencil_SLR_1.in:4096\nsc=stencil_mem2Stream_1.out_a:stencil_SLR_1.a_in:4096\nsc=stencil_mem2Stream_1.out_b:stencil_SLR_1.b_in:4096\nsc=stencil_mem2Stream_1.out_c:stencil_SLR_1.c_in:4096\nsc=stencil_SLR_1.out:stencil_SLR_2.in:4096\nsc=stencil_SLR_1.a_out:stencil_SLR_2.a_in:4096\nsc=stencil_SLR_1.b_out:stencil_SLR_2.b_in:4096\nsc=stencil_SLR_1.c_out:stencil_SLR_2.c_in:4096\nsc=stencil_SLR_2.out:stencil_SLR_3.in:4096\nsc=stencil_SLR_2.a_out:stencil_SLR_3.a_in:4096\nsc=stencil_SLR_2.b_out:stencil_SLR_3.b_in:4096\nsc=stencil_SLR_2.c_out:stencil_SLR_3.c_in:4096\nsc=stencil_SLR_3.out:stencil_mem2Stream_1.in:4096\nsc=stencil_SLR_3.a_out:stencil_mem2Stream_1.in_a:4096\nsc=stencil_SLR_3.b_out:stencil_mem2Stream_1.in_b:4096\nsc=stencil_SLR_3.c_out:stencil_mem2Stream_1.in_c:4096\nsp=stencil_mem2Stream_1.arg0:HBM[0]\nsp=stencil_mem2Stream_1.arg1:HBM[1]\nsp=stencil_mem2Stream_1.arg_a:HBM[2]\nsp=stencil_mem2Stream_1.arg_b:HBM[3]\nsp=stencil_mem2Stream_1.arg_c:HBM[4]\nslr=stencil_mem2Stream_1:SLR0\nslr=stencil_SLR_1:SLR0\nslr=stencil_SLR_2:SLR1\nslr=stencil_SLR_3:SLR2\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:14:13 2025",
+ "timestampMillis": "1754079253821",
+ "status": {
+  "cmdId": "4302f75c-89df-4948-9739-1f347230216c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:14:51 2025",
+ "timestampMillis": "1754079291315",
+ "status": {
+  "cmdId": "4302f75c-89df-4948-9739-1f347230216c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:14:51 2025",
+ "timestampMillis": "1754079291321",
+ "buildStep": {
+  "cmdId": "c89066e2-f34a-4f94-81b9-cefbc2f56acd",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:14:51 2025",
+ "timestampMillis": "1754079291321",
+ "status": {
+  "cmdId": "c89066e2-f34a-4f94-81b9-cefbc2f56acd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:13 2025",
+ "timestampMillis": "1754079313686",
+ "status": {
+  "cmdId": "c89066e2-f34a-4f94-81b9-cefbc2f56acd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:15:13 2025",
+ "timestampMillis": "1754079313696",
+ "buildStep": {
+  "cmdId": "5e33b24b-4f12-4638-b655-de15078282a8",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:13 2025",
+ "timestampMillis": "1754079313697",
+ "status": {
+  "cmdId": "5e33b24b-4f12-4638-b655-de15078282a8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:15:14 2025",
+ "timestampMillis": "1754079314002",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:14 2025",
+ "timestampMillis": "1754079314004",
+ "status": {
+  "cmdId": "5e33b24b-4f12-4638-b655-de15078282a8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:15:14 2025",
+ "timestampMillis": "1754079314013",
+ "buildStep": {
+  "cmdId": "6daa9dda-d9a4-4579-828b-b86a9d435b44",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_mem2Stream_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-s",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_mem2Stream_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project\nmisc=BinaryName=app_device\n\n[connectivity]\nnk=stencil_mem2Stream:1:stencil_mem2Stream_1\nnk=stencil_SLR:3:stencil_SLR_1,stencil_SLR_2,stencil_SLR_3\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:14 2025",
+ "timestampMillis": "1754079314013",
+ "status": {
+  "cmdId": "6daa9dda-d9a4-4579-828b-b86a9d435b44",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:15:15 2025",
+ "timestampMillis": "1754079315153",
+ "buildStep": {
+  "cmdId": "dff2004b-e6a9-4206-9de6-bc0003efb765",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_mem2Stream_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:15 2025",
+ "timestampMillis": "1754079315153",
+ "status": {
+  "cmdId": "dff2004b-e6a9-4206-9de6-bc0003efb765",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Aug  1 23:15:19 2025",
+ "timestampMillis": "1754079319617",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:15:19 2025",
+ "timestampMillis": "1754079319619",
+ "buildStep": {
+  "cmdId": "8cf102a9-1112-45da-bfda-0093f311c1dc",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:15:19 2025",
+ "timestampMillis": "1754079319622",
+ "status": {
+  "cmdId": "8cf102a9-1112-45da-bfda-0093f311c1dc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:16:04 2025",
+ "timestampMillis": "1754079364382",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:52:38 2025",
+ "timestampMillis": "1754081558194",
+ "buildStep": {
+  "cmdId": "2d1486f0-ec63-4cf1-a115-e7614576ea50",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:52:38 2025",
+ "timestampMillis": "1754081558194",
+ "status": {
+  "cmdId": "2d1486f0-ec63-4cf1-a115-e7614576ea50",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:52:38 2025",
+ "timestampMillis": "1754081558195",
+ "buildStep": {
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:52:38 2025",
+ "timestampMillis": "1754081558195",
+ "status": {
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 08:19:22 2025",
+ "timestampMillis": "1754111962126",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 08:25:16 2025",
+ "timestampMillis": "1754112316254",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 08:25:16 2025",
+ "timestampMillis": "1754112316257",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:16:38 2025",
+ "timestampMillis": "1754118998920",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:05 2025",
+ "timestampMillis": "1754120585914",
+ "status": {
+  "cmdId": "8cf102a9-1112-45da-bfda-0093f311c1dc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586002",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586005",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586008",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586015",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586019",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586023",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586027",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586031",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586035",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586039",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586043",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586047",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586053",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586056",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586271",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/syn/ulp_stencil_SLR_1_0_synth_1_ulp_stencil_SLR_1_0_utilization_synth.rpt",
+  "name": "stencil_SLR",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586275",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/syn/ulp_stencil_SLR_2_0_synth_1_ulp_stencil_SLR_2_0_utilization_synth.rpt",
+  "name": "stencil_SLR",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586277",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/syn/ulp_stencil_SLR_3_0_synth_1_ulp_stencil_SLR_3_0_utilization_synth.rpt",
+  "name": "stencil_SLR",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586282",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586326",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586366",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586369",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586413",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586452",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586455",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "548ad984-11fa-442c-beea-ceaffd5d8c13"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586482",
+ "status": {
+  "cmdId": "dff2004b-e6a9-4206-9de6-bc0003efb765",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586511",
+ "status": {
+  "cmdId": "6daa9dda-d9a4-4579-828b-b86a9d435b44",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586523",
+ "buildStep": {
+  "cmdId": "2d6ce0be-0dd9-45c0-a702-36f14d1ffffe",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586524",
+ "status": {
+  "cmdId": "2d6ce0be-0dd9-45c0-a702-36f14d1ffffe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586537",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586542",
+ "buildStep": {
+  "cmdId": "55a5d78b-ea33-44f6-8302-5c1e21d0ffb9",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.rtd -o /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:06 2025",
+ "timestampMillis": "1754120586543",
+ "status": {
+  "cmdId": "55a5d78b-ea33-44f6-8302-5c1e21d0ffb9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606116",
+ "status": {
+  "cmdId": "55a5d78b-ea33-44f6-8302-5c1e21d0ffb9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606118",
+ "buildStep": {
+  "cmdId": "0dfdf29d-5697-4287-b97a-1c229c5e55c2",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606118",
+ "status": {
+  "cmdId": "0dfdf29d-5697-4287-b97a-1c229c5e55c2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606129",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606131",
+ "status": {
+  "cmdId": "0dfdf29d-5697-4287-b97a-1c229c5e55c2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606131",
+ "buildStep": {
+  "cmdId": "215779d6-2c8f-4929-ae6b-3009621693ad",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606132",
+ "status": {
+  "cmdId": "215779d6-2c8f-4929-ae6b-3009621693ad",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606136",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606137",
+ "status": {
+  "cmdId": "215779d6-2c8f-4929-ae6b-3009621693ad",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606141",
+ "status": {
+  "cmdId": "2d6ce0be-0dd9-45c0-a702-36f14d1ffffe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606150",
+ "buildStep": {
+  "cmdId": "c98fc75a-0736-4fa0-8c2f-5eed45d65182",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.rtd --append-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606150",
+ "status": {
+  "cmdId": "c98fc75a-0736-4fa0-8c2f-5eed45d65182",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606561",
+ "status": {
+  "cmdId": "c98fc75a-0736-4fa0-8c2f-5eed45d65182",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606568",
+ "buildStep": {
+  "cmdId": "3e723b0f-ffed-4a70-bcbe-46b19ea955e8",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin.info --input /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:26 2025",
+ "timestampMillis": "1754120606568",
+ "status": {
+  "cmdId": "3e723b0f-ffed-4a70-bcbe-46b19ea955e8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607344",
+ "status": {
+  "cmdId": "3e723b0f-ffed-4a70-bcbe-46b19ea955e8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607351",
+ "buildStep": {
+  "cmdId": "b828b81b-744b-4525-9897-e6f362687be0",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607351",
+ "status": {
+  "cmdId": "b828b81b-744b-4525-9897-e6f362687be0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607354",
+ "status": {
+  "cmdId": "b828b81b-744b-4525-9897-e6f362687be0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607480",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/system_estimate_app_device.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607496",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607500",
+ "status": {
+  "cmdId": "7abd4c86-41ed-4e33-9fd1-e0d0b14474e2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607588",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/reports/link/v++_link_app_device_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 10:43:27 2025",
+ "timestampMillis": "1754120607589",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/link/v++_link_app_device_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

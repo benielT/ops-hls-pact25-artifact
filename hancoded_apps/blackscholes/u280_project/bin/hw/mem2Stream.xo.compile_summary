@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/mem2Stream.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:09:52 2025",
+ "timestampMillis": "1754078992113",
+ "buildStep": {
+  "cmdId": "d9177da4-ade7-4b6f-9e2e-9c5506d73470",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/mem2Stream.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_mem2Stream -o bin/hw/mem2Stream.xo ./device/src/mem2Stream.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/",
+   "--log_dir",
+   "bin/hw/temp_dir/",
+   "--compile",
+   "-I./device/include",
+   "-I./common/include",
+   "-k",
+   "stencil_mem2Stream",
+   "-o",
+   "bin/hw/mem2Stream.xo",
+   "./device/src/mem2Stream.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:09:52 2025",
+ "timestampMillis": "1754078992114",
+ "status": {
+  "cmdId": "d9177da4-ade7-4b6f-9e2e-9c5506d73470",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 23:09:54 2025",
+ "timestampMillis": "1754078994735",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_mem2Stream",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/mem2Stream.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/device/src/mem2Stream.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:09:54 2025",
+ "timestampMillis": "1754078994742",
+ "buildStep": {
+  "cmdId": "76685d41-27eb-486f-ab09-c81307f65f5c",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/stencil_mem2Stream.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/stencil_mem2Stream.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:09:54 2025",
+ "timestampMillis": "1754078994742",
+ "status": {
+  "cmdId": "76685d41-27eb-486f-ab09-c81307f65f5c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:10:52 2025",
+ "timestampMillis": "1754079052453",
+ "status": {
+  "cmdId": "76685d41-27eb-486f-ab09-c81307f65f5c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053268",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/stencil_mem2Stream/solution/.autopilot/db/stencil_mem2Stream.design.xml",
+  "name": "stencil_mem2Stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053269",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/stencil_mem2Stream/solution/.autopilot/db/.message_syn.xml",
+  "name": "stencil_mem2Stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053277",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/reports/mem2Stream/hls_reports/stencil_mem2Stream_csynth.rpt",
+  "name": "stencil_mem2Stream",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053278",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/mem2Stream/stencil_mem2Stream/stencil_mem2Stream/solution/syn/report/stencil_mem2Stream_csynth.xml",
+  "name": "stencil_mem2Stream",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053302",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/reports/mem2Stream/system_estimate_mem2Stream.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053706",
+ "status": {
+  "cmdId": "d9177da4-ade7-4b6f-9e2e-9c5506d73470",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053792",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/reports/mem2Stream/v++_compile_mem2Stream_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:10:53 2025",
+ "timestampMillis": "1754079053794",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/blackscholes/u280_project/bin/hw/temp_dir/v++_compile_mem2Stream_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
