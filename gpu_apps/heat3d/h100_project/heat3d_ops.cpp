@@ -444,7 +444,7 @@ int main(int argc, const char** argv)
         main_loop_runtime[bat] = main_loop_runtime[bat]/n_sys;
         init_runtime[bat] = init_runtime[bat]/n_sys;
 #endif
-        fstream << imax << "," << jmax << "," << 1 << "," << iter_max << "," << bat << "," << n_sys << "," << init_runtime[bat]  \
+        fstream << imax << "," << jmax << "," << kmax << "," << iter_max << "," << bat << "," << n_sys << "," << init_runtime[bat]  \
                 << "," << main_loop_runtime[bat] << "," << (main_loop_runtime[bat] + init_runtime[bat]) << std::endl;
 
 		std::cout << "run: "<< bat << "| total runtime: " << main_loop_runtime[bat] + init_runtime[bat] << "(us)" << std::endl;
