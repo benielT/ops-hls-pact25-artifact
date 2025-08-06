@@ -98,7 +98,7 @@ for params in "${parameter_sets[@]}"; do
             fi
             if [ -f "${POWER_PROFILE_FILE}" ]; then
                 # Construct the new filename for the profile directory
-                new_filename="${POWER_PROFILE_DIR}/${bsize}/${sizex}_${sizey}_${POWER_PROFILE_FILE}"
+                new_filename="${POWER_PROFILE_DIR}/${bsize}-batch/${sizex}_${sizey}_${POWER_PROFILE_FILE}"
                 echo "Moving '${POWER_PROFILE_FILE}' to '${new_filename}'"
                 mv "${POWER_PROFILE_FILE}" "${new_filename}"
             else
@@ -123,7 +123,7 @@ for params in "${parameter_sets[@]}"; do
         fi
     done
 
-    if [[! "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
+    if [[ ! "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
         i2=0
         for file in ./temp_prof/*_${PROFILE_FILE}; do
             batch_id=$(basename "$file" | grep -oE '^[0-9]+')
@@ -145,7 +145,7 @@ for params in "${parameter_sets[@]}"; do
 
         if [ -f "${PROFILE_FILE}" ]; then
             # Construct the new filename for the profile directory
-            new_filename="${PROFILE_DIR}/${bsize}/${sizex}_${sizey}_${PROFILE_FILE}"
+            new_filename="${PROFILE_DIR}/${bsize}-batch/${sizex}_${sizey}_${PROFILE_FILE}"
             echo "Moving '${PROFILE_FILE}' to '${new_filename}'"
             mv "${PROFILE_FILE}" "${new_filename}"
         else
