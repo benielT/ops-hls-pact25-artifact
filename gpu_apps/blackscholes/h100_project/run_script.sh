@@ -20,7 +20,7 @@ if [[ ! "cuda" == *"${TARGETS}"* ]]; then
 fi
 
 PROFILE_DIR=./profile_data/runtime/
-POWER_PROFILE_DIR=./profile_data/power/
+POWER_PROFILE_DIR=./profile_data/power
 PROFILE_FILE=perf_profile.csv
 POWER_PROFILE_FILE=nvidia_smi_log.csv 
 
@@ -90,7 +90,7 @@ for params in "${parameter_sets[@]}"; do
         echo "-----------------------------------------------------------------"
 
         if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
-            ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -iters="${iters}" -batch="${bsize}" OPS_BATCH_SIZE_X=1000
+            ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -iters="${iters}" -batch="${bsize}" OPS_BLOCK_SIZE_X=64 OPS_BLOCK_SIZE_Y=16
 
             if [ ! -d "${POWER_PROFILE_DIR}/${bsize}-batch" ]; then
                 echo "Directory '${POWER_PROFILE_DIR}/${bsize}-batch' does not exist. Creating it..."
@@ -105,7 +105,7 @@ for params in "${parameter_sets[@]}"; do
                 echo "Warning: Output file '${POWER_PROFILE_FILE}' not found after the run."
             fi
         else
-            ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -iters="${iters}" -batch="${bsize}" OPS_BATCH_SIZE_X=1000
+            ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -iters="${iters}" -batch="${bsize}" OPS_BLOCK_SIZE_X=64 OPS_BLOCK_SIZE_Y=16
 
 
             if [ ! -d "${PROFILE_DIR}/${bsize}-batch" ]; then
