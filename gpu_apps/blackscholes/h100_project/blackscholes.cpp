@@ -46,6 +46,7 @@
 #include <stdlib.h>
 #include <chrono>
 #include <random>
+#include <fstream>
 #include "blackscholes_utils.h"
 #include "blackscholes_cpu.h"
 #define BATCH_MODE
@@ -59,7 +60,6 @@
 // #define OPS_FPGA
 // #define VERIFICATION
 // #define DEBUG_VERBOSE
-#define PROFILE
 // #define POWER_PROFILE
 
 #include <ops_seq_v2.h>
@@ -132,6 +132,18 @@ int main(int argc, char **argv)
     #endif
 #endif
 	}
+
+#ifdef PROFILE
+    std::string profile_filename = "perf_profile.csv";
+
+    std::ofstream fstream;
+    fstream.open(profile_filename, std::ios::out | std::ios::trunc);
+
+    if (!fstream.is_open()) {
+        std::cerr << "Error: Could not open the file " << profile_filename << std::endl;
+        return 1; // Indicate an error occurred
+    }
+#endif
     printf("Grid: %dx1 , %d iterations, %d batches\n", gridProp.logical_size_x, gridProp.num_iter, gridProp.batch);
 
 #ifdef BATCH_MODE
@@ -590,6 +602,8 @@ int main(int argc, char **argv)
 	double init_std = 0;
 	double total_std = 0;
 
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "batch_size," << "init_time," << "main_time," << "total_time" << std::endl; 
+
 	#ifdef VERIFICATION
 	double cpu_avg_main_loop_runtime = 0;
 	double cpu_max_main_loop_runtime = 0;
@@ -604,6 +618,13 @@ int main(int argc, char **argv)
 
 	for (unsigned int bat = 0; bat < gridProp.batch; bat++)
 	{
+#ifndef BATCH_MODE
+        fstream << gridProp.logical_size_x << "," << 1 << "," << 1 << "," << calcParam[bat].N << "," << bat << "," << 1 << "," << init_runtime[bat] \
+                << "," << main_loop_runtime[bat] << "," << main_loop_runtime[bat] + init_runtime[bat] << std::endl;
+#else
+        fstream << gridProp.logical_size_x << "," << 1 << "," << 1 << "," << calcParam[bat].N << "," << bat << "," << 1 << "," << init_runtime[bat]/batch \
+                << "," << main_loop_runtime[bat]/batch << "," << main_loop_runtime[bat]/batch + init_runtime[bat]/batch << std::endl;
+#endif
 		std::cout << "run: "<< bat << "| total runtime (DEVICE): " << main_loop_runtime[bat] + init_runtime[bat] << "(us)" << std::endl;
 		std::cout << "     |--> init runtime: " << init_runtime[bat] << "(us)" << std::endl;
 		std::cout << "     |--> main loop runtime: " << main_loop_runtime[bat] << "(us)" << std::endl;
@@ -702,10 +723,18 @@ int main(int argc, char **argv)
 	std::cout << "Standard Deviation total - CPU: " << cpu_total_std << std::endl;
 	#endif
 	std::cout << "======================================================" << std::endl;
+
+    fstream.close();
+
+    if (fstream.good()) { // Check if operations were successful after closing
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1; // Indicate an error occurred
+    }
 #endif
 
 	//Finalizing the OPS library
-
     ops_exit();
 
  	std::cout << "Exit properly" << std::endl;

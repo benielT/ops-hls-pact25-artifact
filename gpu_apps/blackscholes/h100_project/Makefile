@@ -35,7 +35,7 @@ include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app
 ########  PRFOFILE OPTIONS (ONLY ENABLE ONE OPTION) ######
 
 #Enable if wanted to profile
-CXXFLAGS += -DPROFILE
+CXXFLAGS +=-DPROFILE
 #Enable if wanted to power_profile
 # CXXFLAGS += -DPOWER_PROFILE
 
