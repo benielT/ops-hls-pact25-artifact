@@ -92,9 +92,9 @@ for params in "${parameter_sets[@]}"; do
         if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
             ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${bsize}" OPS_BATCH_SIZE_X=64 OPS_BATCH_SIZE_Y=16
 
-            if [ ! -d "${POWER_PROFILE_DIR}/${bsize}" ]; then
-                echo "Directory '${POWER_PROFILE_DIR}/${bsize}' does not exist. Creating it..."
-                mkdir -p "${POWER_PROFILE_DIR}/${bsize}"
+            if [ ! -d "${POWER_PROFILE_DIR}/${bsize}-batch" ]; then
+                echo "Directory '${POWER_PROFILE_DIR}/${bsize}-batch' does not exist. Creating it..."
+                mkdir -p "${POWER_PROFILE_DIR}/${bsize}-batch"
             fi
             if [ -f "${POWER_PROFILE_FILE}" ]; then
                 # Construct the new filename for the profile directory
@@ -108,9 +108,9 @@ for params in "${parameter_sets[@]}"; do
             ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${bsize}" OPS_BATCH_SIZE_X=64 OPS_BATCH_SIZE_Y=16 
 
 
-            if [ ! -d "${PROFILE_DIR}/${bsize}" ]; then
-                echo "Directory '${PROFILE_DIR}/${bsize}' does not exist. Creating it..."
-                mkdir -p "${PROFILE_DIR}/${bsize}"
+            if [ ! -d "${PROFILE_DIR}/${bsize}-batch" ]; then
+                echo "Directory '${PROFILE_DIR}/${bsize}-batch' does not exist. Creating it..."
+                mkdir -p "${PROFILE_DIR}/${bsize}-batch"
             fi
             if [ -f "${PROFILE_FILE}" ]; then
                 # Construct the new filename for the profile directory
