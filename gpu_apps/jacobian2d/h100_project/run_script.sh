@@ -88,7 +88,7 @@ for params in "${parameter_sets[@]}"; do
     echo "-----------------------------------------------------------------"
 
     if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
-        ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -n_sys="${bsize}" -batch="${batch}" OPS_BATCH_SIZE_X=64 OPS_BATCH_SIZE_Y=16
+        ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -n_sys="${bsize}" -batch="${batch}" OPS_BLOCK_SIZE_X=64 OPS_BLOCK_SIZE_Y=16
 
         if [ ! -d "${POWER_PROFILE_DIR}/${bsize}-batch" ]; then
             echo "Directory '${POWER_PROFILE_DIR}/${bsize}-batch' does not exist. Creating it..."
@@ -103,7 +103,7 @@ for params in "${parameter_sets[@]}"; do
             echo "Warning: Output file '${POWER_PROFILE_FILE}' not found after the run."
         fi
     else
-        ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -n_sys="${bsize}" -batch="${batch}" OPS_BATCH_SIZE_X=64 OPS_BATCH_SIZE_Y=16 
+        ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -n_sys="${bsize}" -batch="${batch}" OPS_BLOCK_SIZE_X=64 OPS_BLOCK_SIZE_Y=16 
 
 
         if [ ! -d "${PROFILE_DIR}/${bsize}-batch" ]; then
@@ -121,35 +121,35 @@ for params in "${parameter_sets[@]}"; do
     fi
    
 
-    if [[ ! "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
-        # i2=0
-        # for file in ./temp_prof/*_${PROFILE_FILE}; do
-        #     batch_id=$(basename "$file" | grep -oE '^[0-9]+')
-        #     #Read file line-by-line
-        #     while IFS= read -r line || [ -n "$line" ]; do
-        #         if $first_file; then
-        #             echo "$line" > ${PROFILE_FILE}
-        #             first_file=false
-        #         elif [[ "$line" != grid_x,* ]]; then
-        #             # Replace the 6th column (batch_id) with extracted batch_id
-        #             # This assumes CSV columns are fixed and in same order
-        #             updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$5 = b; print}')
-        #             echo "$updated_line" >> ${PROFILE_FILE}
-        #         fi
-        #     done < "$file"
-        # done
+    # if [[ ! "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
+    #     i2=0
+    #     for file in ./temp_prof/*_${PROFILE_FILE}; do
+    #         batch_id=$(basename "$file" | grep -oE '^[0-9]+')
+    #         #Read file line-by-line
+    #         while IFS= read -r line || [ -n "$line" ]; do
+    #             if $first_file; then
+    #                 echo "$line" > ${PROFILE_FILE}
+    #                 first_file=false
+    #             elif [[ "$line" != grid_x,* ]]; then
+    #                 # Replace the 6th column (batch_id) with extracted batch_id
+    #                 # This assumes CSV columns are fixed and in same order
+    #                 updated_line=$(echo "$line" | awk -F',' -v b="$batch_id" 'BEGIN {OFS=","} {$5 = b; print}')
+    #                 echo "$updated_line" >> ${PROFILE_FILE}
+    #             fi
+    #         done < "$file"
+    #     done
 
-        # rm -rf ./temp_prof
+    #     rm -rf ./temp_prof
 
-        if [ -f "${PROFILE_FILE}" ]; then
-            # Construct the new filename for the profile directory
-            new_filename="${PROFILE_DIR}/${bsize}-batch/${sizex}_${sizey}_${PROFILE_FILE}"
-            echo "Moving '${PROFILE_FILE}' to '${new_filename}'"
-            mv "${PROFILE_FILE}" "${new_filename}"
-        else
-            echo "Warning: Output merged file: '${PROFILE_FILE}' not found after the run."
-        fi
-    fi
+    #     if [ -f "${PROFILE_FILE}" ]; then
+    #         # Construct the new filename for the profile directory
+    #         new_filename="${PROFILE_DIR}/${bsize}-batch/${sizex}_${sizey}_${PROFILE_FILE}"
+    #         echo "Moving '${PROFILE_FILE}' to '${new_filename}'"
+    #         mv "${PROFILE_FILE}" "${new_filename}"
+    #     else
+    #         echo "Warning: Output merged file: '${PROFILE_FILE}' not found after the run."
+    #     fi
+    # fi
 done
 
 echo "-----------------------------------------------------------------"
