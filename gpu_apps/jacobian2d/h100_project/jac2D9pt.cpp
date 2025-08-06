@@ -39,7 +39,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
+#include <fstream>
 extern const unsigned short mem_vector_factor;
 
 // OPS header file
@@ -48,7 +48,7 @@ extern const unsigned short mem_vector_factor;
 // #define OPS_CPP_API
 #define OPS_HLS_V2
 // #define OPS_FPGA
-#define PROFILE
+// #define PROFILE
 #define BATCHING
 // #define POWER_PROFILE
 #include "user_types.h"
@@ -143,6 +143,16 @@ int main(int argc, const char **argv)
 #ifdef PROFILE
 	double init_runtime[batched_batches];
 	double main_loop_runtime[batched_batches];
+
+    std::string profile_filename = "perf_profile.csv";
+
+    std::ofstream fstream;
+    fstream.open(profile_filename, std::ios::out | std::ios::trunc);
+
+    if (!fstream.is_open()) {
+        std::cerr << "Error: Could not open the file " << profile_filename << std::endl;
+        return 1; // Indicate an error occurred
+    }
 #endif
 
     //The 2D block
@@ -384,8 +394,19 @@ int main(int argc, const char **argv)
 	double init_std = 0;
 	double total_std = 0;
 
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "batch_size," << "init_time," << "main_time," << "total_time" << std::endl; 
+    
+
 	for (unsigned int bat = 0; bat < batched_batches; bat++)
 	{
+    #ifdef BATCHING
+        std::cout << "[WARNING] runtime is devided by he batch_size: " << nsys << std::endl;
+        main_loop_runtime[bat] = main_loop_runtime[bat]/nsys;
+        init_runtime[bat] = init_runtime[bat]/nsys;
+    #endif
+        fstream << imax << "," << jmax << "," << 1 << "," << iter_max << "," << bat << "," << nsys << "," << init_runtime[bat]  \
+                << "," << main_loop_runtime[bat] << "," << (main_loop_runtime[bat] + init_runtime[bat]) << std::endl;
+
 		std::cout << "run: "<< bat << "| total runtime: " << main_loop_runtime[bat] + init_runtime[bat] << "(us)" << std::endl;
 		std::cout << "     |--> init runtime: " << init_runtime[bat] << "(us)" << std::endl;
 		std::cout << "     |--> main loop runtime: " << main_loop_runtime[bat] << "(us)" << std::endl;
@@ -435,8 +456,16 @@ int main(int argc, const char **argv)
 	std::cout << "Standard Deviation main loop: " << main_loop_std << std::endl;
 	std::cout << "Standard Deviation total: " << total_std << std::endl;
 	std::cout << "======================================================" << std::endl;
-#endif
 
+    fstream.close();
+
+    if (fstream.good()) { // Check if operations were successful after closing
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1; // Indicate an error occurred
+    }
+#endif
     ops_exit();
 
     std::cout << "Exit properly" << std::endl;
