@@ -65,3 +65,4 @@ if [ -f ${OPS_INSTALL_PATH}/../ops_translator/ops_venv/bin/activate ]; then
     source ${OPS_INSTALL_PATH}/../ops_translator/ops_venv/bin/activate
 else
     source ${OPS_INSTALL_PATH}/../ops_translator/setup_venv.sh
+fi
