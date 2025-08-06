@@ -1,4 +1,4 @@
-// Auto-generated at 2025-08-06 01:16:40.507549 by ops-translator
+// Auto-generated at 2025-08-06 12:35:43.468666 by ops-translator
 
 __constant__ int dims_ops_krnl_calc_coefficient[6][1];
 static int dims_ops_krnl_calc_coefficient_h[6][1] = {{0}};
