@@ -8,7 +8,7 @@
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.common
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.mpi
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.cuda
-# include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hip
+include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hip
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hdf5
 
 
@@ -31,9 +31,6 @@ OPS_TARGET_CONFIG_FILE= ./config.json
 
 TARGETS=seq cuda #hls #tiled openmp mpi mpi_tiled mpi_openmp cuda mpi_cuda mpi_cuda_tiled hip mpi_hip mpi_hip_tiled ompoffload mpi_ompoffload mpi_ompoffload_tiled sycl mpi_sycl mpi_sycl_tiled openacc mpi_openacc mpi_openacc_tiled
 
-#include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app_legacy
-include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app
-
 ########  PRFOFILE OPTIONS (ONLY ENABLE ONE OPTION) ######
 
 #Enable if wanted to profile
@@ -41,6 +38,10 @@ CXXFLAGS += -DPROFILE
 #Enable if wanted to power_profile
 # CXXFLAGS += -DPOWER_PROFILE
 
-.PHONY: run_hls_app
-run_hls_app: run_script.sh
+#include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app_legacy
+include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app
+
+
+.PHONY: run_app
+run_app: run_script.sh
 	bash ./run_script.sh $(APP) $(TARGETS) $(CXXFLAGS)

@@ -1,3 +1,8 @@
+
+// Auto-generated at 2025-08-06 23:23:50.535574 by ops-translator
+
+void ops_init_backend();
+
 /*
 * Open source copyright declaration based on BSD open source template:
 * http://www.opensource.org/licenses/bsd-license.php
@@ -41,8 +46,20 @@
 #include <fstream>
 
 float dx,dy,dz, invdx, invdy, invdz;
+#pragma acc declare create(dx)
+#pragma acc declare create(dy)
+#pragma acc declare create(dz)
+#pragma acc declare create(invdx)
+#pragma acc declare create(invdy)
+#pragma acc declare create(invdz)
 int pml_width;
+#pragma acc declare create(pml_width)
 int half_order, order, nx, ny, nz;
+#pragma acc declare create(nx)
+#pragma acc declare create(ny)
+#pragma acc declare create(nz)
+#pragma acc declare create(half_order)
+#pragma acc declare create(order)
 #include "coeffs8.h"
 // OPS header file
 // #define OPS_SOA
@@ -51,8 +68,20 @@ int half_order, order, nx, ny, nz;
 // #define OPS_FPGA
 // #define PROFILE
 // #define VERIFICATION
-#include <ops_seq_v2.h>
+#include "ops_lib_core.h"
 #include "rtm_kernel.h"
+/* ops_par_loop declarations */
+
+void ops_par_loop_rtm_kernel_populate(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
+void ops_par_loop_kernel_copy(char const *, ops_block, int, int*, ops_arg, ops_arg);
+
+void ops_par_loop_fd3d_pml_kernel1(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
+void ops_par_loop_fd3d_pml_kernel2(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
+void ops_par_loop_fd3d_pml_kernel3(char const *, ops_block, int, int*, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg, ops_arg);
+
 
 #ifdef PROFILE 
     #include <chrono>
@@ -72,6 +101,8 @@ int main(int argc, const char** argv)
 
   // OPS initialisation  
   ops_init(argc,argv,1);
+	ops_init_backend();
+
 //   OPS_instance::getOPSInstance()->OPS_soa = 1;
 
   //Mesh
@@ -147,22 +178,34 @@ int main(int argc, const char** argv)
   invdy = 1/dy;
   invdz = 1/dz;
   pml_width = 10;
-  ops_decl_const("dx",1,"float",&dx);
-  ops_decl_const("dy",1,"float",&dy);
-  ops_decl_const("dz",1,"float",&dz);
-  ops_decl_const("invdx",1,"float",&invdx);
-  ops_decl_const("invdy",1,"float",&invdy);
-  ops_decl_const("invdz",1,"float",&invdz);
-  ops_decl_const("nx",1,"int",&nx);
-  ops_decl_const("ny",1,"int",&ny);
-  ops_decl_const("nz",1,"int",&nz);
-  ops_decl_const("pml_width",1,"int",&pml_width);
+  ops_decl_const2("dx",1,"float",&dx);
+#pragma acc update device(dx)
+  ops_decl_const2("dy",1,"float",&dy);
+#pragma acc update device(dy)
+  ops_decl_const2("dz",1,"float",&dz);
+#pragma acc update device(dz)
+  ops_decl_const2("invdx",1,"float",&invdx);
+#pragma acc update device(invdx)
+  ops_decl_const2("invdy",1,"float",&invdy);
+#pragma acc update device(invdy)
+  ops_decl_const2("invdz",1,"float",&invdz);
+#pragma acc update device(invdz)
+  ops_decl_const2("nx",1,"int",&nx);
+#pragma acc update device(nx)
+  ops_decl_const2("ny",1,"int",&ny);
+#pragma acc update device(ny)
+  ops_decl_const2("nz",1,"int",&nz);
+#pragma acc update device(nz)
+  ops_decl_const2("pml_width",1,"int",&pml_width);
+#pragma acc update device(pml_width)
   //int ncoeffs = (ORDER+1)*(ORDER+1);
   //ops_decl_const("coeffs",ncoeffs,"double",&coeffs[0][0]);
   half_order = HALF_ORDER;
-  ops_decl_const("half_order",1,"int",&half_order);
+  ops_decl_const2("half_order",1,"int",&half_order);
+#pragma acc update device(half_order)
   order = ORDER;
-  ops_decl_const("order",1,"int",&order);
+  ops_decl_const2("order",1,"int",&order);
+#pragma acc update device(order)
 
   //declare blocks
   ops_block blocks[batches];
@@ -324,7 +367,7 @@ int main(int argc, const char** argv)
 #ifdef PROFILE
         auto init_start_clk_point =  std::chrono::high_resolution_clock::now();
 #endif    
-        ops_par_loop(rtm_kernel_populate, "kernel_populate", blocks[bat],  3 ,  full_range, 
+        ops_par_loop_rtm_kernel_populate("kernel_populate", blocks[bat],  3 ,  full_range, 
                 ops_arg_gbl(&disps[0], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[1], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[2], 1, "int", OPS_READ),
@@ -332,19 +375,19 @@ int main(int argc, const char** argv)
                 ops_arg_dat(rho[bat], 1, S3D_000, "float", OPS_WRITE),
                 ops_arg_dat(mu[bat], 1, S3D_000, "float", OPS_WRITE),
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_WRITE));
-        ops_par_loop(kernel_copy, "copy_yy_1", blocks[bat],  3 ,  full_range,
+        ops_par_loop_kernel_copy("copy_yy_1", blocks[bat],  3 ,  full_range,
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_READ), 
                 ops_arg_dat(yy_1[bat], 1, S3D_000, "float", OPS_WRITE));
-        ops_par_loop(kernel_copy, "copy_yy_2", blocks[bat],  3 ,  full_range,
+        ops_par_loop_kernel_copy("copy_yy_2", blocks[bat],  3 ,  full_range,
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_READ), 
                 ops_arg_dat(yy_2[bat], 1, S3D_000, "float", OPS_WRITE));
-        ops_par_loop(kernel_copy, "copy_yy_3", blocks[bat],  3 ,  full_range,
+        ops_par_loop_kernel_copy("copy_yy_3", blocks[bat],  3 ,  full_range,
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_READ), 
                 ops_arg_dat(yy_3[bat], 1, S3D_000, "float", OPS_WRITE));
-        ops_par_loop(kernel_copy, "copy_yy_4", blocks[bat],  3 ,  full_range,
+        ops_par_loop_kernel_copy("copy_yy_4", blocks[bat],  3 ,  full_range,
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_READ), 
                 ops_arg_dat(yy_4[bat], 1, S3D_000, "float", OPS_WRITE));
-        ops_par_loop(kernel_copy, "copy_yy_5", blocks[bat],  3 ,  full_range,
+        ops_par_loop_kernel_copy("copy_yy_5", blocks[bat],  3 ,  full_range,
                 ops_arg_dat(yy_0[bat], 1, S3D_000, "float", OPS_READ), 
                 ops_arg_dat(yy_5[bat], 1, S3D_000, "float", OPS_WRITE));
         // ops_par_loop(rtm_kernel_populate, "copy_yy_sum_1", blocks[bat],  3 ,  full_range,
@@ -389,7 +432,7 @@ int main(int argc, const char** argv)
 #endif
 #ifndef OPS_FPGA
         for (int iter = 0; iter < n_iter; iter++) {
-            ops_par_loop(fd3d_pml_kernel1, "fd3d_pml_kernel1", blocks[bat], 3, internal_range,
+            ops_par_loop_fd3d_pml_kernel1("fd3d_pml_kernel1", blocks[bat], 3, internal_range,
                 ops_arg_gbl(&disps[0], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[1], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[2], 1, "int", OPS_READ),
@@ -419,7 +462,7 @@ int main(int argc, const char** argv)
                 ops_arg_dat(yy_sum_5[bat], 1, S3D_000, "float", OPS_WRITE));
             
 
-            ops_par_loop(fd3d_pml_kernel2, "fd3d_pml_kernel2", blocks[bat], 3, internal_range,
+            ops_par_loop_fd3d_pml_kernel2("fd3d_pml_kernel2", blocks[bat], 3, internal_range,
                 ops_arg_gbl(&disps[0], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[1], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[2], 1, "int", OPS_READ),
@@ -454,7 +497,7 @@ int main(int argc, const char** argv)
                 ops_arg_dat(yy_sum_4[bat], 1, S3D_000, "float", OPS_RW),
                 ops_arg_dat(yy_sum_5[bat], 1, S3D_000, "float", OPS_RW));
 
-            ops_par_loop(fd3d_pml_kernel2, "fd3d_pml_kernel2", blocks[bat], 3, internal_range,
+            ops_par_loop_fd3d_pml_kernel2("fd3d_pml_kernel2", blocks[bat], 3, internal_range,
                 ops_arg_gbl(&disps[0], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[1], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[2], 1, "int", OPS_READ),
@@ -489,7 +532,7 @@ int main(int argc, const char** argv)
                 ops_arg_dat(yy_sum_4[bat], 1, S3D_000, "float", OPS_RW),
                 ops_arg_dat(yy_sum_5[bat], 1, S3D_000, "float", OPS_RW));
 
-            ops_par_loop(fd3d_pml_kernel3, "fd3d_pml_kernel3", blocks[bat], 3, internal_range,
+            ops_par_loop_fd3d_pml_kernel3("fd3d_pml_kernel3", blocks[bat], 3, internal_range,
                 ops_arg_gbl(&disps[0], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[1], 1, "int", OPS_READ),
                 ops_arg_gbl(&disps[2], 1, "int", OPS_READ),

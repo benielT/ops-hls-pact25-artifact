@@ -45,18 +45,18 @@ if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
 else
     parameter_sets=(
             "30,30,30,1800,2"
-            # "30,30,50,1800,2"
-            # "50,50,16,1800,2"
-            # "50,50,30,1800,2"
-            # "50,50,50,1800,2"
-            # "75,75,75,1800,2"
-            # "100,100,100,1800,2"
-            # "125,125,125,1800,2"
-            # "150,150,150,1800,2"
-            # "175,175,175,1800,2"
-            # "200,200,200,1800,2"
-            # "225,225,225,1800,2"
-            # "250,250,250,1800,2"
+            "30,30,50,1800,2"
+            "50,50,16,1800,2"
+            "50,50,30,1800,2"
+            "50,50,50,1800,2"
+            "75,75,75,1800,2"
+            "100,100,100,1800,2"
+            "125,125,125,1800,2"
+            "150,150,150,1800,2"
+            "175,175,175,1800,2"
+            "200,200,200,1800,2"
+            "225,225,225,1800,2"
+            "250,250,250,1800,2"
             # Add more parameter sets here as needed
         )
 fi
@@ -82,7 +82,7 @@ for params in "${parameter_sets[@]}"; do
     echo "-----------------------------------------------------------------"
 
     if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
-        ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -sizez="${sizez}" -iters="${iters}" -batch="${batch}" OPS_BLOCK_SIZE_X=10 OPS_BLOCK_SIZE_Y=10 OPS_BLOCK_SIZE_Z=10
+        ${POWER_PROFILE_SCRIPT} ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -sizez="${sizez}" -iters="${iters}" -batch="${batch}" OPS_BLOCK_SIZE_X=10 OPS_BLOCK_SIZE_Y=1 OPS_BLOCK_SIZE_Z=1
 
         if [ ! -d "${POWER_PROFILE_DIR}" ]; then
             echo "Directory '${POWER_PROFILE_DIR}' does not exist. Creating it..."
@@ -97,7 +97,7 @@ for params in "${parameter_sets[@]}"; do
             echo "Warning: Output file '${POWER_PROFILE_FILE}' not found after the run."
         fi
     else
-        ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -sizez="${sizez}" -iters="${iters}" -batch="${batch}" OPS_BLOCK_SIZE_X=10 OPS_BLOCK_SIZE_Y=10 OPS_BLOCK_SIZE_Z=10
+        ${SCRIPT_DIR}/${APP}_cuda -sizex="${sizex}" -sizey="${sizey}" -sizez="${sizez}" -iters="${iters}" -batch="${batch}" OPS_BLOCK_SIZE_X=10 OPS_BLOCK_SIZE_Y=1 OPS_BLOCK_SIZE_Z=1
 
 
         if [ ! -d "${PROFILE_DIR}" ]; then
