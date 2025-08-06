@@ -37,12 +37,12 @@ include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app
 ########  PRFOFILE OPTIONS (ONLY ENABLE ONE OPTION) ######
 
 #Enable if wanted to profile
-# CXXFLAGS += -DPROFILE
+CXXFLAGS += -DPROFILE
 #Enable if wanted to power_profile
-CXXFLAGS += -DPOWER_PROFILE
+# CXXFLAGS += -DPOWER_PROFILE
 
-.PHONY: run_hls_app
-run_hls_app: run_script.sh
+.PHONY: run_app
+run_app: run_script.sh
 	bash ./run_script.sh $(APP) $(TARGETS) $(CXXFLAGS)
 
 .PHONY: clean 
