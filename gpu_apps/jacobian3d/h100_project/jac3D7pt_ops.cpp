@@ -436,6 +436,15 @@ int main(int argc, const char** argv)
 	std::cout << "Standard Deviation main loop: " << main_loop_std << std::endl;
 	std::cout << "Standard Deviation total: " << total_std << std::endl;
 	std::cout << "======================================================" << std::endl;
+
+    fstream.close();
+
+    if (fstream.good()) {
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1;
+    }
 #endif
 
     ops_exit();
