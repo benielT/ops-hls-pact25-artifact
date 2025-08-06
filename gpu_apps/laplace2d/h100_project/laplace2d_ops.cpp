@@ -9,6 +9,7 @@ void ops_init_backend();
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <fstream>
 
 int imax, jmax;
 float pi  = 2.0 * asin(1.0);
@@ -46,9 +47,7 @@ void ops_par_loop_copy(char const *, ops_block, int , int*,
 #include "laplace_kernels.h"
 #include "laplace2d_cpu_verification.hpp"
 
-#define OPS_HLS_V2
 
-#define PROFILE
 
 #define BATCH_MODE
 
@@ -129,6 +128,16 @@ int main(int argc, char **argv)
     double init_runtime;
     double main_loop_runtime;
     #endif
+
+    std::string profile_filename = "perf_profile.csv";
+
+    std::ofstream fstream;
+    fstream.open(profile_filename, std::ios::out | std::ios::trunc);
+
+    if (!fstream.is_open()) {
+        std::cerr << "Error: Could not open the file " << profile_filename << std::endl;
+        return 1;
+    }
 #endif
 
 #ifndef BATCH_MODE
@@ -375,7 +384,10 @@ int main(int argc, char **argv)
 	std::cout << "**                runtime summary                   **" << std::endl;
 	std::cout << "******************************************************" << std::endl;
 
-#ifndef BATCH_MODE
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "batch_size," << "init_time," << "main_time," << "total_time" << std::endl;
+
+
+    #ifndef BATCH_MODE
 	double avg_main_loop_runtime = 0;
 	double max_main_loop_runtime = 0;
 	double min_main_loop_runtime = 0;
@@ -436,12 +448,26 @@ int main(int argc, char **argv)
 	std::cout << "Standard Deviation init: " << init_std << std::endl;
 	std::cout << "Standard Deviation main loop: " << main_loop_std << std::endl;
 	std::cout << "Standard Deviation total: " << total_std << std::endl;
-#endif
+        #endif
 	std::cout << "Total runtime : " << main_loop_runtime + init_runtime << "(us)" << std::endl;
 	std::cout << "     |--> init runtime: " << init_runtime << "(us)" << std::endl;
 	std::cout << "     |--> main loop runtime: " << main_loop_runtime << "(us)" << std::endl;
 
 	std::cout << "======================================================" << std::endl;
+
+    #ifdef BATCH_MODE
+        fstream << imax << "," << jmax << "," << 1 << "," << iter_max << "," << 1 << "," << batches << "," << init_runtime / batches \
+                << "," << main_loop_runtime / batches << "," << (main_loop_runtime + init_runtime) / batches << std::endl;
+    #endif
+
+    fstream.close();
+
+    if (fstream.good()) {
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1;
+    }
 #endif
 
     ops_exit();
