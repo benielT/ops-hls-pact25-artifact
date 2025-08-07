@@ -1,4 +1,4 @@
-## GPU benchmark applications 
+## Code genertated HLS benchmark applications 
 
 This subsection contains FPGA benchmark application OPS source codes, generated HLS device/host source codes, compiled artifacts and profiling data.
 
@@ -39,7 +39,7 @@ VCK5000 specific specs:
 
 ### Getting started 
 
-The code generated HLS applications are organized into sperate project based on the target platform, containing it's own OPS source code, generated HLS codes, prebuild host binary, prebuild FPGA xcl biniaries and generated profile data, etc. following mannerg given bellow.
+The code generated HLS applications are organized into sperate project based on the target platform, containing it's own OPS source code, generated HLS codes, prebuild host binary, prebuild FPGA xcl biniaries and generated profile data, etc. following manner given bellow.
 
 <pre> codegen_apps/ 
     ├── README.md 
@@ -62,7 +62,7 @@ The code generated HLS applications are organized into sperate project based on 
     │   │   │ ....
     │   │   ├── config_u280.json
     │   │   ├── Makefile 
-    │   │   └── run_script.sh 
+    │   │   └── run_script_hls.sh 
     │   └── vck5000_project/
     ├── app_2/
     │  .... </pre>
@@ -90,7 +90,7 @@ Runtime profile data recoreded as ```*_perf_profile.csv``` where the prefix will
 
 Power profile data recorded as ```*_hls_power_profile.csv``` where the prefix will be grid dimensions. These power usage data is extracted using ```xbuitil``` via OPS support script, [power_profile_hls.sh](../OPS/scripts/power_profile_hls.sh) called by the ```run_script.sh``` in each project.
 
-Additionally, OPS packaged with support scripts to generate profile summaries, which are added as artifacts. Further details in section []() how to run these support scripts to generate summeries.
+Additionally, OPS packaged with support scripts to generate profile summaries, which are added as artifacts. Further details in section [Build OPS/Secrion 4](#4-run-profile-scripts-for-data-summaries) how to run these support scripts to generate summeries.
 
 ### Build OPS
 #### 1. Setup environment
