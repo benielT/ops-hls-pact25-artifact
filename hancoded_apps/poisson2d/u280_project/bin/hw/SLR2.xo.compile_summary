@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/SLR2.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:29:00 2025",
+ "timestampMillis": "1754080140277",
+ "buildStep": {
+  "cmdId": "a8b221ce-5d0e-4ea2-9437-c125634b47db",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/SLR2.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_SLR2 -o bin/hw/SLR2.xo ./device/src/SLR2.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/",
+   "--log_dir",
+   "bin/hw/temp_dir/",
+   "--compile",
+   "-I./device/include",
+   "-I./common/include",
+   "-k",
+   "stencil_SLR2",
+   "-o",
+   "bin/hw/SLR2.xo",
+   "./device/src/SLR2.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:29:00 2025",
+ "timestampMillis": "1754080140277",
+ "status": {
+  "cmdId": "a8b221ce-5d0e-4ea2-9437-c125634b47db",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 23:29:03 2025",
+ "timestampMillis": "1754080143241",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR2",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/SLR2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/device/src/SLR2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:29:03 2025",
+ "timestampMillis": "1754080143247",
+ "buildStep": {
+  "cmdId": "959dee90-a294-4e75-80ee-54f9ab48a286",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/stencil_SLR2.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/stencil_SLR2.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:29:03 2025",
+ "timestampMillis": "1754080143248",
+ "status": {
+  "cmdId": "959dee90-a294-4e75-80ee-54f9ab48a286",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:37:05 2025",
+ "timestampMillis": "1754080625790",
+ "status": {
+  "cmdId": "959dee90-a294-4e75-80ee-54f9ab48a286",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:07 2025",
+ "timestampMillis": "1754080627130",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/stencil_SLR2/solution/.autopilot/db/stencil_SLR2.design.xml",
+  "name": "stencil_SLR2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:07 2025",
+ "timestampMillis": "1754080627131",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/stencil_SLR2/solution/.autopilot/db/.message_syn.xml",
+  "name": "stencil_SLR2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:07 2025",
+ "timestampMillis": "1754080627137",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/reports/SLR2/hls_reports/stencil_SLR2_csynth.rpt",
+  "name": "stencil_SLR2",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:07 2025",
+ "timestampMillis": "1754080627137",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/SLR2/stencil_SLR2/stencil_SLR2/solution/syn/report/stencil_SLR2_csynth.xml",
+  "name": "stencil_SLR2",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:07 2025",
+ "timestampMillis": "1754080627173",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/reports/SLR2/system_estimate_SLR2.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:37:08 2025",
+ "timestampMillis": "1754080628230",
+ "status": {
+  "cmdId": "a8b221ce-5d0e-4ea2-9437-c125634b47db",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:08 2025",
+ "timestampMillis": "1754080628308",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/reports/SLR2/v++_compile_SLR2_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:37:08 2025",
+ "timestampMillis": "1754080628309",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/poisson2d/u280_project/bin/hw/temp_dir/v++_compile_SLR2_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
