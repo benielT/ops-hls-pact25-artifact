@@ -10,6 +10,7 @@
 #include "stencil_cpu.h"
 
 #define MULTI_SLR
+#define PROFILE
 
 /******************************************************************************
 * Main program
@@ -189,18 +190,21 @@ int main(int argc, char **argv)
 
 	OCL_CHECK(err, err=event.wait());
 
-	uint64_t endns0 = OCL_CHECK(err, event_krnl0.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
-	uint64_t startns0 = OCL_CHECK(err, event_krnl0.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
-#ifndef MULTI_SLR
+	uint64_t endns0 = OCL_CHECK(err, event.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
+	uint64_t startns0 = OCL_CHECK(err, event.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
+// #ifndef MULTI_SLR
 	uint64_t nsduration = endns0 - startns0;
-#else
-	uint64_t endns1 = OCL_CHECK(err, event_krnl1.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
-	uint64_t startns1 = OCL_CHECK(err, event_krnl1.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
-	uint64_t endns2 = OCL_CHECK(err, event_krnl2.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
-	uint64_t startns2 = OCL_CHECK(err, event_krnl2.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
+// #else
+//     OCL_CHECK(err, err=event_krnl1.wait());
+//     OCL_CHECK(err, err=event_krnl2.wait());
 
-	uint64_t nsduration = std::max(std::max(endns0, endns1), endns2) - std::min(std::min(startns0, startns1), startns2);
-#endif
+// 	uint64_t endns1 = OCL_CHECK(err, event_krnl1.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
+// 	uint64_t startns1 = OCL_CHECK(err, event_krnl1.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
+// 	uint64_t endns2 = OCL_CHECK(err, event_krnl2.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
+// 	uint64_t startns2 = OCL_CHECK(err, event_krnl2.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
+
+// 	uint64_t nsduration = std::max(std::max(endns0, endns1), endns2) - std::min(std::min(startns0, startns1), startns2);
+// #endif
 
 	double k_time = nsduration/(1000000000.0);
 	double k_time_us = nsduration/1000.0;

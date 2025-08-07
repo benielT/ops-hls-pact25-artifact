@@ -1,0 +1,126 @@
+===============================================================================
+Version:    v++ v2022.2 (64-bit)
+Build:      SW Build 3671529 on 2022-10-13-17:52:11
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 23:22:42 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             SLR1
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name   Type  Target              OpenCL Library  Compute Units
+------------  ----  ------------------  --------------  -------------
+stencil_SLR1  c     fpga0:OCL_REGION_0  SLR1            1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     SLR1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit    Kernel Name   Module Name                                 Target Frequency  Estimated Frequency
+--------------  ------------  ------------------------------------------  ----------------  -------------------
+stencil_SLR1_1  stencil_SLR1  entry_proc                                  300.300293        821.692688
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry9_proc               300.300293        436.490631
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_89_1      300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                               300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile10_Pipeline_VITIS_LOOP_162_1    300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile10                              300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_111_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_111                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_212_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_212                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_313_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_313                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_101_1     300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                               300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4_Pipeline_VITIS_LOOP_89_1    300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4                             300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_514_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_514                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_615_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_615                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_716_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_716                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_817_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_817                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  process_tile_918_Pipeline_VITIS_LOOP_162_1  300.300293        426.985474
+stencil_SLR1_1  stencil_SLR1  process_tile_918                            300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10_Pipeline_VITIS_LOOP_101_1  300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10                            300.300293        789.265991
+stencil_SLR1_1  stencil_SLR1  process_SLR                                 300.300293        411.015198
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                                300.300293        411.015198
+
+Latency Information
+Compute Unit    Kernel Name   Module Name                                 Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------  ------------  ------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+stencil_SLR1_1  stencil_SLR1  entry_proc                                  0               0              0             0               0 ns             0 ns            0 ns
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry9_proc               5               5              5             5               16.665 ns        16.665 ns       16.665 ns
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_89_1      1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                               1204 ~ 3604228  1204           3604228       3604228         4.013 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  process_tile10_Pipeline_VITIS_LOOP_162_1    2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile10                              2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_111_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_111                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_212_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_212                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_313_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_313                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_101_1     1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                               1204 ~ 3604228  1204           3604228       3604228         4.013 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4_Pipeline_VITIS_LOOP_89_1    1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4                             1204 ~ 3604228  1204           3604228       3604228         4.013 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_514_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_514                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_615_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_615                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_716_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_716                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_817_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_817                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_918_Pipeline_VITIS_LOOP_162_1  2429 ~ 7208477  2429           7208477       7208477         8.096 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  process_tile_918                            2431 ~ 7208479  2431           7208479       7208479         8.103 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10_Pipeline_VITIS_LOOP_101_1  1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10                            1204 ~ 3604228  1204           3604228       3604228         4.013 us         12.013 ms       12.013 ms
+stencil_SLR1_1  stencil_SLR1  process_SLR                                 2432 ~ 7208480  2548           7208596       7208596         8.492 us         24.026 ms       24.026 ms
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                                undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit    Kernel Name   Module Name                                 FF      LUT     DSP  BRAM  URAM
+--------------  ------------  ------------------------------------------  ------  ------  ---  ----  ----
+stencil_SLR1_1  stencil_SLR1  entry_proc                                  2       29      0    0     0
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry9_proc               792     424     0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_89_1      291     119     0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                               296     177     0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile10_Pipeline_VITIS_LOOP_162_1    20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile10                              20895   13573   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_111_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_111                            21015   13627   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_212_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_212                            21015   13627   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_313_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_313                            21015   13564   0    16    24
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_101_1     35      119     0    0     0
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                               72      170     0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4_Pipeline_VITIS_LOOP_89_1    291     119     0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_4                             296     177     0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_514_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_514                            20895   13573   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_615_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_615                            21015   13627   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_716_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_716                            21015   13627   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_817_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_817                            21015   13627   0    16    24
+stencil_SLR1_1  stencil_SLR1  process_tile_918_Pipeline_VITIS_LOOP_162_1  20807   13377   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_tile_918                            21015   13564   0    16    24
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10_Pipeline_VITIS_LOOP_101_1  35      119     0    0     0
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_10                            72      170     0    0     0
+stencil_SLR1_1  stencil_SLR1  process_SLR                                 199283  128861  0    144   216
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                                199685  129402  0    144   216
+-------------------------------------------------------------------------------
