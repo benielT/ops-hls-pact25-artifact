@@ -16,14 +16,14 @@ echo "runscript TARGET MODE: ${TARGET_MODE}, PLATFORM: ${PLATFORM}"
 
 PROFILE_DIR=./profile_data/${TARGET_MODE}/
 PROFILE_FILE=perf_profile.csv
-DEVICE_BDF=0000:c1:00.1
+DEVICE_BDF=0000:81:00.1
 
 
 if [[ "${TARGET_MODE}" == "hw" ]]; then
     parameter_sets=(
-            "30,30,30,60004,50"
-            "50,50,50,60004,50"
-            "100,100,100,60004,20" 
+            "30,30,30,60004,10"
+            "50,50,50,60004,10"
+            "100,100,100,60004,10" 
             "150,150,150,60004,10"
             "200,200,200,60004,5"
             "250,250,250,60004,3"

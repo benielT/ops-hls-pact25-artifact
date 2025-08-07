@@ -1,0 +1,117 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/app_device.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Aug  2 01:22:00 2025",
+ "timestampMillis": "1754086920548",
+ "buildStep": {
+  "cmdId": "caceadfe-87e3-481e-a116-a6fb250027cd",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/package/package.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --temp_dir bin/hw/temp_dir/link/ --log_dir bin/hw/temp_dir/link/logs/ --package ./bin/hw/app_device.xsa -o bin/hw/app_device.xclbin ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--temp_dir",
+   "bin/hw/temp_dir/link/",
+   "--log_dir",
+   "bin/hw/temp_dir/link/logs/",
+   "--package",
+   "./bin/hw/app_device.xsa",
+   "-o",
+   "bin/hw/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:22:00 2025",
+ "timestampMillis": "1754086920549",
+ "status": {
+  "cmdId": "caceadfe-87e3-481e-a116-a6fb250027cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Aug  2 01:22:04 2025",
+ "timestampMillis": "1754086924881",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_PACKAGE",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "app_device",
+    "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/app_device.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:22:05 2025",
+ "timestampMillis": "1754086925252",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/package/v++_package_app_device_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:22:05 2025",
+ "timestampMillis": "1754086925253",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/v++_package_app_device_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:22:05 2025",
+ "timestampMillis": "1754086925256",
+ "status": {
+  "cmdId": "caceadfe-87e3-481e-a116-a6fb250027cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

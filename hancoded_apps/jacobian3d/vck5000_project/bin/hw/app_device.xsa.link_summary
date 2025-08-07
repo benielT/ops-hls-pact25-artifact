@@ -1,0 +1,1494 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/app_device.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:20 2025",
+ "timestampMillis": "1754080040227",
+ "buildStep": {
+  "cmdId": "ac922bd1-0057-43ba-a92c-ef0840e801c2",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/link/ --log_dir bin/hw/temp_dir/link/logs/ --link --config stencil_vck5000.ini -o ./bin/hw/app_device.xsa ./bin/hw/Read_Write.xo ./bin/hw/SLR0.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/link/",
+   "--log_dir",
+   "bin/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "stencil_vck5000.ini",
+   "-o",
+   "./bin/hw/app_device.xsa",
+   "./bin/hw/Read_Write.xo",
+   "./bin/hw/SLR0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/stencil_vck5000.ini",
+    "content": "[connectivity]\n\nstream_connect=stencil_Read_Write_1.out:stencil_SLR0_1.in\nstream_connect=stencil_SLR0_1.out:stencil_Read_Write_1.in\n\nslr=stencil_Read_Write_1:SLR0\nslr=stencil_SLR0_1:SLR0\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:20 2025",
+ "timestampMillis": "1754080040228",
+ "status": {
+  "cmdId": "ac922bd1-0057-43ba-a92c-ef0840e801c2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 23:27:26 2025",
+ "timestampMillis": "1754080046040",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "app_device",
+    "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_Read_Write",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/Read_Write.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/stencil_Read_Write/stencil_Read_Write/cpu_sources/Read_Write.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_Read_Write_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR0",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/SLR0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/stencil_SLR0/stencil_SLR0/cpu_sources/SLR0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_SLR0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:26 2025",
+ "timestampMillis": "1754080046285",
+ "buildStep": {
+  "cmdId": "24f63afd-eb03-49fe-9bee-d6bd0472e37d",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/Read_Write.xo --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/SLR0.xo -keep --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/Read_Write.xo",
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/SLR0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=stencil_Read_Write_1.out:stencil_SLR0_1.in\nsc=stencil_SLR0_1.out:stencil_Read_Write_1.in\nslr=stencil_Read_Write_1:SLR0\nslr=stencil_SLR0_1:SLR0\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:26 2025",
+ "timestampMillis": "1754080046286",
+ "status": {
+  "cmdId": "24f63afd-eb03-49fe-9bee-d6bd0472e37d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:39 2025",
+ "timestampMillis": "1754080059186",
+ "status": {
+  "cmdId": "24f63afd-eb03-49fe-9bee-d6bd0472e37d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:39 2025",
+ "timestampMillis": "1754080059193",
+ "buildStep": {
+  "cmdId": "c98856d7-afd3-41c8-9380-e214aadcdbac",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:39 2025",
+ "timestampMillis": "1754080059193",
+ "status": {
+  "cmdId": "c98856d7-afd3-41c8-9380-e214aadcdbac",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061469",
+ "status": {
+  "cmdId": "c98856d7-afd3-41c8-9380-e214aadcdbac",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061475",
+ "buildStep": {
+  "cmdId": "a468824d-fdb8-46f3-9b91-357ce2f7f2bc",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061475",
+ "status": {
+  "cmdId": "a468824d-fdb8-46f3-9b91-357ce2f7f2bc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061770",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061773",
+ "status": {
+  "cmdId": "a468824d-fdb8-46f3-9b91-357ce2f7f2bc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061781",
+ "buildStep": {
+  "cmdId": "8fdffaa4-621f-46e1-b778-ca31643f7726",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE -s --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_Read_Write_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_Read_Write_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project\nmisc=BinaryName=app_device\n\n[connectivity]\nnk=stencil_Read_Write:1:stencil_Read_Write_1\nnk=stencil_SLR0:1:stencil_SLR0_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:41 2025",
+ "timestampMillis": "1754080061782",
+ "status": {
+  "cmdId": "8fdffaa4-621f-46e1-b778-ca31643f7726",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:42 2025",
+ "timestampMillis": "1754080062912",
+ "buildStep": {
+  "cmdId": "6d4bb05a-b622-4f2f-9430-e9522da0e00d",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE -s --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_Read_Write_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:42 2025",
+ "timestampMillis": "1754080062912",
+ "status": {
+  "cmdId": "6d4bb05a-b622-4f2f-9430-e9522da0e00d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Aug  1 23:27:51 2025",
+ "timestampMillis": "1754080071054",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:27:51 2025",
+ "timestampMillis": "1754080071056",
+ "buildStep": {
+  "cmdId": "9da70a3a-29f1-4efc-a60b-aa87fd4ef2e2",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:27:51 2025",
+ "timestampMillis": "1754080071057",
+ "status": {
+  "cmdId": "9da70a3a-29f1-4efc-a60b-aa87fd4ef2e2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:28:29 2025",
+ "timestampMillis": "1754080109568",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:28:29 2025",
+ "timestampMillis": "1754080109664",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:42:32 2025",
+ "timestampMillis": "1754080952510",
+ "buildStep": {
+  "cmdId": "2db45593-3d3a-4fa8-8cfc-b1eae4e40243",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:42:32 2025",
+ "timestampMillis": "1754080952510",
+ "status": {
+  "cmdId": "2db45593-3d3a-4fa8-8cfc-b1eae4e40243",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:42:32 2025",
+ "timestampMillis": "1754080952511",
+ "buildStep": {
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:42:32 2025",
+ "timestampMillis": "1754080952511",
+ "status": {
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 00:47:31 2025",
+ "timestampMillis": "1754084851097",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 00:48:17 2025",
+ "timestampMillis": "1754084897710",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 00:48:17 2025",
+ "timestampMillis": "1754084897713",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 00:51:36 2025",
+ "timestampMillis": "1754085096999",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896051",
+ "status": {
+  "cmdId": "9da70a3a-29f1-4efc-a60b-aa87fd4ef2e2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896230",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896233",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896236",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896239",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896242",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896245",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896248",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896251",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896254",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896257",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896260",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896263",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896266",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896276",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896368",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896372",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896375",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896378",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896381",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896384",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896387",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896390",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896393",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896396",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896399",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_stencil_Read_Write_1_0_synth_1_ulp_inst_0_stencil_Read_Write_1_0_utilization_synth.rpt",
+  "name": "stencil_Read_Write",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896402",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_stencil_SLR0_1_0_synth_1_ulp_inst_0_stencil_SLR0_1_0_utilization_synth.rpt",
+  "name": "stencil_SLR0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896406",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896418",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896427",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896430",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896441",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896451",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896454",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "89ced336-976a-4d0a-b52c-77b0f56a4f76"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896486",
+ "status": {
+  "cmdId": "6d4bb05a-b622-4f2f-9430-e9522da0e00d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896506",
+ "status": {
+  "cmdId": "8fdffaa4-621f-46e1-b778-ca31643f7726",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896512",
+ "buildStep": {
+  "cmdId": "0d4e527b-7585-4820-ad66-205df2629c5d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896512",
+ "status": {
+  "cmdId": "0d4e527b-7585-4820-ad66-205df2629c5d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896520",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896526",
+ "buildStep": {
+  "cmdId": "e5354afc-3fbe-4be6-a0bc-a99e1a65c39e",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd -o /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:36 2025",
+ "timestampMillis": "1754086896526",
+ "status": {
+  "cmdId": "e5354afc-3fbe-4be6-a0bc-a99e1a65c39e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898473",
+ "status": {
+  "cmdId": "e5354afc-3fbe-4be6-a0bc-a99e1a65c39e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898474",
+ "buildStep": {
+  "cmdId": "e1fd74e8-1489-47f2-ad68-0e084110363d",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898474",
+ "status": {
+  "cmdId": "e1fd74e8-1489-47f2-ad68-0e084110363d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898479",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898481",
+ "status": {
+  "cmdId": "e1fd74e8-1489-47f2-ad68-0e084110363d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898481",
+ "buildStep": {
+  "cmdId": "d736a94d-aac6-47cd-9d7f-068e576244ce",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898481",
+ "status": {
+  "cmdId": "d736a94d-aac6-47cd-9d7f-068e576244ce",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898485",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898486",
+ "status": {
+  "cmdId": "d736a94d-aac6-47cd-9d7f-068e576244ce",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898491",
+ "status": {
+  "cmdId": "0d4e527b-7585-4820-ad66-205df2629c5d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898498",
+ "buildStep": {
+  "cmdId": "964e4cb3-bbce-4858-b474-27484d35794b",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd --append-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898499",
+ "status": {
+  "cmdId": "964e4cb3-bbce-4858-b474-27484d35794b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898649",
+ "status": {
+  "cmdId": "964e4cb3-bbce-4858-b474-27484d35794b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898654",
+ "buildStep": {
+  "cmdId": "b1f1dfcc-e912-4ce3-bf2a-46f8bde38ede",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin.info --input /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898654",
+ "status": {
+  "cmdId": "b1f1dfcc-e912-4ce3-bf2a-46f8bde38ede",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898860",
+ "status": {
+  "cmdId": "b1f1dfcc-e912-4ce3-bf2a-46f8bde38ede",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898867",
+ "buildStep": {
+  "cmdId": "b3d6e10f-9c72-40e6-ac17-e0e0e64acd7d",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898867",
+ "status": {
+  "cmdId": "b3d6e10f-9c72-40e6-ac17-e0e0e64acd7d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898870",
+ "status": {
+  "cmdId": "b3d6e10f-9c72-40e6-ac17-e0e0e64acd7d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:38 2025",
+ "timestampMillis": "1754086898911",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/system_estimate_app_device.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:39 2025",
+ "timestampMillis": "1754086899364",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/reports/link/v++_link_app_device_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:39 2025",
+ "timestampMillis": "1754086899364",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/v++_link_app_device_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  2 01:21:39 2025",
+ "timestampMillis": "1754086899368",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  2 01:21:39 2025",
+ "timestampMillis": "1754086899372",
+ "status": {
+  "cmdId": "ac922bd1-0057-43ba-a92c-ef0840e801c2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

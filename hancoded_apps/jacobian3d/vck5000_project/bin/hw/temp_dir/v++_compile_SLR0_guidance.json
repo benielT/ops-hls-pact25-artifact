@@ -1,0 +1,3269 @@
+{
+ "session": {
+  "name": "v++_compile_SLR0",
+  "uuid": "2a1ca16e-976a-4679-a74f-1f4be441be28",
+  "description": "v++  -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_SLR0 -o bin/hw/SLR0.xo ./device/src/SLR0.cpp ",
+  "timestamp": "0",
+  "report_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/reports/SLR0/v++_compile_SLR0_guidance.html",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "proto_file": {
+   "scheme": "FILE",
+   "host": "",
+   "port": 0,
+   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/bin/hw/temp_dir/v++_compile_SLR0_guidance.pb",
+   "query": "",
+   "fragment": "",
+   "media_type": "",
+   "encoding": "",
+   "data": ""
+  },
+  "build_target": "",
+  "config_files": []
+ },
+ "violation_count": 36,
+ "waived_count": 0,
+ "affirmation_count": 0,
+ "violations": {
+  "hashmap": {
+   "1": {
+    "id": 1,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Static scalars and arrays declared inside a dataflow region will be treated like local variables (!%1!)\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Static scalars and arrays declared inside a dataflow region will be treated like local variables (%REF)\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=13",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-111 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-111.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "1": "stencil_SLR0",
+     "2": "Throughput",
+     "0": "Accelerator"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "2": {
+    "id": 2,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (!%1!)\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (%REF)\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=43",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-114 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-114.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "3": {
+    "id": 3,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "There are a total of 17 such instances of non-canonical statements in the dataflow region (!%1!)\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "There are a total of 17 such instances of non-canonical statements in the dataflow region (%REF)\n"
+       },
+       {
+        "ref": {
+         "type": "CHANNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=43",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 214-169 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-169.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "1": "stencil_SLR0",
+     "2": "Throughput",
+     "0": "Accelerator"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "4": {
+    "id": 4,
+    "severity": "SEV_WARNING",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Dataflow form checks found 3 issue(s) in file /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Dataflow form checks found 3 issue(s) in file /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-471 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-471.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "5": {
+    "id": 5,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_89_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_89_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "6": {
+    "id": 6,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile15_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile15_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "7": {
+    "id": 7,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "8": {
+    "id": 8,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_116_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_116_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "9": {
+    "id": 9,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "10": {
+    "id": 10,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_217_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_217_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Kernel",
+     "0": "Accelerator",
+     "1": "stencil_SLR0"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "11": {
+    "id": 11,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "2": "Throughput",
+     "0": "Accelerator",
+     "1": "stencil_SLR0"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "12": {
+    "id": 12,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_318_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_318_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "13": {
+    "id": 13,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "14": {
+    "id": 14,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_419_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_419_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "15": {
+    "id": 15,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "16": {
+    "id": 16,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_520_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_520_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "17": {
+    "id": 17,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "18": {
+    "id": 18,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_621_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_621_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "1": "stencil_SLR0",
+     "2": "Kernel",
+     "0": "Accelerator"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "19": {
+    "id": 19,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "20": {
+    "id": 20,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_722_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_722_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "21": {
+    "id": 21,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "22": {
+    "id": 22,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_823_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_823_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "23": {
+    "id": 23,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "24": {
+    "id": 24,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_924_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_924_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "25": {
+    "id": 25,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "26": {
+    "id": 26,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_1025_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_1025_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "27": {
+    "id": 27,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "28": {
+    "id": 28,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_1126_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_1126_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "29": {
+    "id": 29,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "30": {
+    "id": 30,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_1227_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_1227_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "31": {
+    "id": 31,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "32": {
+    "id": 32,
+    "severity": "SEV_WARNING",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "The II Violation in module 'process_tile_1328_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', !%1!-\u003e!%2!) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "The II Violation in module 'process_tile_1328_Pipeline_VITIS_LOOP_162_1' (loop 'VITIS_LOOP_162_1'): Unable to schedule 'load' operation ('window_2_V_load', %REF-\u003e%REF) on array 'window_2_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'window_2_V'.\n"
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "stencil.h",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/include/stencil.h",
+          "query": "",
+          "fragment": "line=196",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       },
+       {
+        "ref": {
+         "type": "KERNEL",
+         "name": "SLR0.cpp",
+         "id": 0,
+         "uuid": "",
+         "url": {
+          "scheme": "FILE",
+          "host": "",
+          "port": 0,
+          "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian3d/vck5000_project/device/src/SLR0.cpp",
+          "query": "",
+          "fragment": "line=48",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "report_type": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "!%0!",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "See here for more help on vitis_hls 200-885 guidance.",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-885.html",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "33": {
+    "id": 33,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 2, Depth = 15, loop 'VITIS_LOOP_162_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "34": {
+    "id": 34,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Throughput",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_101_1'\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_101_1'\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Throughput"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "35": {
+    "id": 35,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "**** Loop Constraint Status: All loop constraints were satisfied.\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "**** Loop Constraint Status: All loop constraints were satisfied.\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "36": {
+    "id": 36,
+    "severity": "SEV_ADVISORY",
+    "rule_key": "Kernel",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "build_target": "",
+    "expects": "",
+    "details": {
+     "text": "**** Estimated Fmax: 428.54 MHz\n",
+     "args": {
+      "arg": [
+       {
+        "string_val": "**** Estimated Fmax: 428.54 MHz\n"
+       }
+      ]
+     }
+    },
+    "resolution": {
+     "text": "",
+     "args": {
+      "arg": [
+       {
+        "uri": {
+         "link_text": "Vitis HLS User Guide (UG1399)",
+         "url": {
+          "scheme": "HTTP",
+          "host": "www.xilinx.com",
+          "port": 0,
+          "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+          "query": "",
+          "fragment": "",
+          "media_type": "",
+          "encoding": "",
+          "data": ""
+         },
+         "docgen_filename": ""
+        },
+        "string_val": ""
+       }
+      ]
+     }
+    },
+    "categories": {
+     "0": "Accelerator",
+     "1": "stencil_SLR0",
+     "2": "Kernel"
+    },
+    "extended_categories": {},
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ },
+ "specs_violated": {
+  "hashmap": {
+   "Kernel": {
+    "key": "Kernel",
+    "full_name": "HLS Kernel Related",
+    "owner": "HLS",
+    "raw_msg": "%s",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "0": "Accelerator",
+     "1": "Kernel",
+     "2": "Kernel"
+    },
+    "resolution_msg": "",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   },
+   "Throughput": {
+    "key": "Throughput",
+    "full_name": "HLS Throughput Related",
+    "owner": "HLS",
+    "raw_msg": "%s",
+    "msg_abbrev": "",
+    "msg_id": "0",
+    "categories": {
+     "1": "Kernel",
+     "2": "Throughput",
+     "0": "Accelerator"
+    },
+    "resolution_msg": "",
+    "examples": {
+     "uri": [
+      {
+       "link_text": "Vitis HLS User Guide (UG1399)",
+       "url": {
+        "scheme": "HTTP",
+        "host": "www.xilinx.com",
+        "port": 0,
+        "path": "/cgi-bin/docs/rdoc?v=2022.1;d=ug1399-vitis-hls.pdf;",
+        "query": "",
+        "fragment": "",
+        "media_type": "",
+        "encoding": "",
+        "data": ""
+       },
+       "docgen_filename": ""
+      }
+     ]
+    },
+    "severity": "SEV_ADVISORY",
+    "disposition": "ENABLED",
+    "expects": "",
+    "affirm_msg": "",
+    "dynamic_categories": {
+     "0": false,
+     "1": true,
+     "2": false
+    },
+    "extensible_categories": [],
+    "impact": "IMPACT_UNKNOWN",
+    "group": ""
+   }
+  }
+ }
+}
+
