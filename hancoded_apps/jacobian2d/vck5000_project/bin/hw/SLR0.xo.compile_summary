@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/SLR0.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug  1 23:16:33 2025",
+ "timestampMillis": "1754079393886",
+ "buildStep": {
+  "cmdId": "08e52c9e-ff6d-446d-aeae-d64f545fc088",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/SLR0.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 32 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/ --log_dir bin/hw/temp_dir/ --compile -I./device/include -I./common/include -k stencil_SLR0 -o bin/hw/SLR0.xo ./device/src/SLR0.cpp ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "32",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/",
+   "--log_dir",
+   "bin/hw/temp_dir/",
+   "--compile",
+   "-I./device/include",
+   "-I./common/include",
+   "-k",
+   "stencil_SLR0",
+   "-o",
+   "bin/hw/SLR0.xo",
+   "./device/src/SLR0.cpp"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:16:33 2025",
+ "timestampMillis": "1754079393887",
+ "status": {
+  "cmdId": "08e52c9e-ff6d-446d-aeae-d64f545fc088",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug  1 23:16:37 2025",
+ "timestampMillis": "1754079397449",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR0",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/SLR0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/device/src/SLR0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug  1 23:16:37 2025",
+ "timestampMillis": "1754079397455",
+ "buildStep": {
+  "cmdId": "5dc914c4-1b81-49b5-9f1e-0b1583ddf0c2",
+  "name": "vitis_hls",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/stencil_SLR0.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/stencil_SLR0.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:16:37 2025",
+ "timestampMillis": "1754079397456",
+ "status": {
+  "cmdId": "5dc914c4-1b81-49b5-9f1e-0b1583ddf0c2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:18:49 2025",
+ "timestampMillis": "1754079529265",
+ "status": {
+  "cmdId": "5dc914c4-1b81-49b5-9f1e-0b1583ddf0c2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:49 2025",
+ "timestampMillis": "1754079529996",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/stencil_SLR0/solution/.autopilot/db/stencil_SLR0.design.xml",
+  "name": "stencil_SLR0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:49 2025",
+ "timestampMillis": "1754079529997",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/stencil_SLR0/solution/.autopilot/db/.message_syn.xml",
+  "name": "stencil_SLR0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530004",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/reports/SLR0/hls_reports/stencil_SLR0_csynth.rpt",
+  "name": "stencil_SLR0",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530004",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/SLR0/stencil_SLR0/stencil_SLR0/solution/syn/report/stencil_SLR0_csynth.xml",
+  "name": "stencil_SLR0",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530020",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/reports/SLR0/system_estimate_SLR0.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530619",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/reports/SLR0/v++_compile_SLR0_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530621",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/hancoded_apps/jacobian2d/vck5000_project/bin/hw/temp_dir/v++_compile_SLR0_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug  1 23:18:50 2025",
+ "timestampMillis": "1754079530625",
+ "status": {
+  "cmdId": "08e52c9e-ff6d-446d-aeae-d64f545fc088",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

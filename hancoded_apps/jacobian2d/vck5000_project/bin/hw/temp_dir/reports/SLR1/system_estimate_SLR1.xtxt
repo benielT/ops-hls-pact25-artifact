@@ -1,0 +1,111 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 23:21:48 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             SLR1
+Target Device:           xilinx:vck5000:gen4x8_xdma_2:202210.1
+Target Clock:            299.996999MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name   Type  Target              OpenCL Library  Compute Units
+------------  ----  ------------------  --------------  -------------
+stencil_SLR1  c     fpga0:OCL_REGION_0  SLR1            1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     SLR1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit    Kernel Name   Module Name                               Target Frequency  Estimated Frequency
+--------------  ------------  ----------------------------------------  ----------------  -------------------
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry42_proc            300.300293        518.941345
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_72_1    300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                             300.300293        636.942627
+stencil_SLR1_1  stencil_SLR1  process_grid_Pipeline_VITIS_LOOP_132_1    300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid                              300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_1_Pipeline_VITIS_LOOP_132_1  300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_1                            300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_2_Pipeline_VITIS_LOOP_132_1  300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_2                            300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_82_1    300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                             300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3_Pipeline_VITIS_LOOP_72_1  300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3                           300.300293        636.942627
+stencil_SLR1_1  stencil_SLR1  process_grid_4_Pipeline_VITIS_LOOP_132_1  300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_4                            300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_5_Pipeline_VITIS_LOOP_132_1  300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_5                            300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_6_Pipeline_VITIS_LOOP_132_1  300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  process_grid_6                            300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7_Pipeline_VITIS_LOOP_82_1  300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7                           300.300293        734.753906
+stencil_SLR1_1  stencil_SLR1  process_SLR                               300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  dataflow_in_loop_VITIS_LOOP_87_1          300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  dataflow_parent_loop_proc                 300.300293        443.06601
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                              300.300293        443.06601
+
+Latency Information
+Compute Unit    Kernel Name   Module Name                               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------  ------------  ----------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry42_proc            5               5              5             5               16.665 ns        16.665 ns       16.665 ns
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_72_1    42 ~ 4202498    42             4202498       4202498         0.140 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                             44 ~ 4202500    44             4202500       4202500         0.147 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  process_grid_Pipeline_VITIS_LOOP_132_1    16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid                              18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  process_grid_1_Pipeline_VITIS_LOOP_132_1  16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid_1                            18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  process_grid_2_Pipeline_VITIS_LOOP_132_1  16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid_2                            18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_82_1    42 ~ 4202498    42             4202498       4202498         0.140 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                             44 ~ 4202500    44             4202500       4202500         0.147 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3_Pipeline_VITIS_LOOP_72_1  42 ~ 4202498    42             4202498       4202498         0.140 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3                           44 ~ 4202500    44             4202500       4202500         0.147 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  process_grid_4_Pipeline_VITIS_LOOP_132_1  16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid_4                            18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  process_grid_5_Pipeline_VITIS_LOOP_132_1  16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid_5                            18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  process_grid_6_Pipeline_VITIS_LOOP_132_1  16 ~ 527        16             527           527             53.328 ns        1.756 us        1.756 us
+stencil_SLR1_1  stencil_SLR1  process_grid_6                            18 ~ 529        18             529           529             59.994 ns        1.763 us        1.763 us
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7_Pipeline_VITIS_LOOP_82_1  42 ~ 4202498    42             4202498       4202498         0.140 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7                           44 ~ 4202500    44             4202500       4202500         0.147 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  process_SLR                               45 ~ 4202501    84             4202540       4202540         0.280 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  dataflow_in_loop_VITIS_LOOP_87_1          45 ~ 4202501    84             4202540       4202540         0.280 us         14.007 ms       14.007 ms
+stencil_SLR1_1  stencil_SLR1  dataflow_parent_loop_proc                 undef           undef          undef         undef           undef            undef           undef
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                              undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit    Kernel Name   Module Name                               FF     LUT    DSP  BRAM  URAM
+--------------  ------------  ----------------------------------------  -----  -----  ---  ----  ----
+stencil_SLR1_1  stencil_SLR1  process_SLR_Block_entry42_proc            419    396    0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_Pipeline_VITIS_LOOP_72_1    291    126    0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256                             296    138    0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_Pipeline_VITIS_LOOP_132_1    5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid                              6079   1806   0    0     8
+stencil_SLR1_1  stencil_SLR1  process_grid_1_Pipeline_VITIS_LOOP_132_1  5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_1                            6175   1816   0    0     8
+stencil_SLR1_1  stencil_SLR1  process_grid_2_Pipeline_VITIS_LOOP_132_1  5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_2                            6175   1806   0    0     8
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_Pipeline_VITIS_LOOP_82_1    35     126    0    0     0
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis                             72     138    0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3_Pipeline_VITIS_LOOP_72_1  291    126    0    0     0
+stencil_SLR1_1  stencil_SLR1  axis2_fifo256_3                           296    138    0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_4_Pipeline_VITIS_LOOP_132_1  5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_4                            6079   1806   0    0     8
+stencil_SLR1_1  stencil_SLR1  process_grid_5_Pipeline_VITIS_LOOP_132_1  5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_5                            6175   1816   0    0     8
+stencil_SLR1_1  stencil_SLR1  process_grid_6_Pipeline_VITIS_LOOP_132_1  5990   1729   0    0     0
+stencil_SLR1_1  stencil_SLR1  process_grid_6                            6175   1806   0    0     8
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7_Pipeline_VITIS_LOOP_82_1  35     126    0    0     0
+stencil_SLR1_1  stencil_SLR1  fifo256_2axis_7                           72     138    0    0     0
+stencil_SLR1_1  stencil_SLR1  process_SLR                               43731  13768  0    0     48
+stencil_SLR1_1  stencil_SLR1  dataflow_in_loop_VITIS_LOOP_87_1          43731  13768  0    0     48
+stencil_SLR1_1  stencil_SLR1  dataflow_parent_loop_proc                 44149  14003  0    0     48
+stencil_SLR1_1  stencil_SLR1  stencil_SLR1                              44468  14387  0    0     48
+-------------------------------------------------------------------------------
