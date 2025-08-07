@@ -1,0 +1,281 @@
+====================================================================
+Version:    xcd v2022.2 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 08:38:21 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: stencil_SLR_1
+Kernel: stencil_SLR
+Base Address: 0x800000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: stencil_SLR_2
+Kernel: stencil_SLR
+Base Address: 0xc00000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: stencil_SLR_3
+Kernel: stencil_SLR
+Base Address: 0x1000000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: stencil_mem2stream_1
+Kernel: stencil_mem2stream
+Base Address: 0x810000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: buffer_stencil_mem2stream_1_out_r/M_AXIS
+Destination Pin: stencil_SLR_1/in_r
+
+Source Pin: SLR0/M01_AXI
+Destination Pin: stencil_SLR_1/s_axi_control
+
+Source Pin: buffer_stencil_SLR_1_out_r/M_AXIS
+Destination Pin: stencil_SLR_2/in_r
+
+Source Pin: SLR1/M01_AXI
+Destination Pin: stencil_SLR_2/s_axi_control
+
+Source Pin: buffer_stencil_SLR_2_out_r/M_AXIS
+Destination Pin: stencil_SLR_3/in_r
+
+Source Pin: SLR2/M01_AXI
+Destination Pin: stencil_SLR_3/s_axi_control
+
+Source Pin: buffer_stencil_SLR_3_out_r/M_AXIS
+Destination Pin: stencil_mem2stream_1/in_r
+
+Source Pin: SLR0/M02_AXI
+Destination Pin: stencil_mem2stream_1/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: stencil_SLR_1/out_r
+Destination Pin: buffer_stencil_SLR_1_out_r/S_AXIS
+
+Source Pin: stencil_SLR_2/out_r
+Destination Pin: buffer_stencil_SLR_2_out_r/S_AXIS
+
+Source Pin: stencil_SLR_3/out_r
+Destination Pin: buffer_stencil_SLR_3_out_r/S_AXIS
+
+Source Pin: stencil_mem2stream_1/m_axi_gmem0
+Destination Pin: hmss_0/S01_AXI
+
+Source Pin: stencil_mem2stream_1/m_axi_gmem1
+Destination Pin: hmss_0/S02_AXI
+
+Source Pin: stencil_mem2stream_1/out_r
+Destination Pin: buffer_stencil_mem2stream_1_out_r/S_AXIS
+
+3. Clock Connections
+====================
+
+Compute Unit: stencil_SLR_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: stencil_SLR_1/ap_clk
+
+Compute Unit: stencil_SLR_2
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: stencil_SLR_2/ap_clk
+
+Compute Unit: stencil_SLR_3
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: stencil_SLR_3/ap_clk
+
+Compute Unit: stencil_mem2stream_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Requested Kernel Clock Frequency: 300.000000 MHz
+Achieved Kernel Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: stencil_mem2stream_1/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: stencil_SLR_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: stencil_SLR_1/ap_rst_n
+Associated Clock Pin: stencil_SLR_1/ap_clk
+
+Compute Unit: stencil_SLR_2
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: stencil_SLR_2/ap_rst_n
+Associated Clock Pin: stencil_SLR_2/ap_clk
+
+Compute Unit: stencil_SLR_3
+Source Pin: proc_sys_reset_kernel_slr2/peripheral_aresetn
+Destination Pin: stencil_SLR_3/ap_rst_n
+Associated Clock Pin: stencil_SLR_3/ap_clk
+
+Compute Unit: stencil_mem2stream_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: stencil_mem2stream_1/ap_rst_n
+Associated Clock Pin: stencil_mem2stream_1/ap_clk
+
+5. SLR Utilization per Compute Unit
+===================================
+
+Compute Unit: stencil_SLR_1
++------------+--------+------+------+--------+--------+--------+
+| Site Type  |   SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+--------+------+------+--------+--------+--------+
+| LUT        | 124280 |    0 |    0 |  28.27 |   0.00 |   0.00 |
+| LUTAsLogic | 113372 |    0 |    0 |  25.79 |   0.00 |   0.00 |
+| LUTAsMem   |  10908 |    0 |    0 |   5.31 |   0.00 |   0.00 |
+| REG        | 214785 |    0 |    0 |  24.43 |   0.00 |   0.00 |
+| CARRY8     |   6067 |    0 |    0 |  11.04 |   0.00 |   0.00 |
+| F7MUX      |   2094 |    0 |    0 |   0.95 |   0.00 |   0.00 |
+| F8MUX      |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    296 |    0 |    0 |  44.05 |   0.00 |   0.00 |
+| URAM       |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |   2126 |    0 |    0 |  73.82 |   0.00 |   0.00 |
++------------+--------+------+------+--------+--------+--------+
+
+Compute Unit: stencil_SLR_2
++------------+------+--------+------+--------+--------+--------+
+| Site Type  | SLR0 |   SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+--------+------+--------+--------+--------+
+| LUT        |    0 | 124821 |    0 |   0.00 |  28.89 |   0.00 |
+| LUTAsLogic |    0 | 113913 |    0 |   0.00 |  26.37 |   0.00 |
+| LUTAsMem   |    0 |  10908 |    0 |   0.00 |   5.52 |   0.00 |
+| REG        |    0 | 213386 |    0 |   0.00 |  24.70 |   0.00 |
+| CARRY8     |    0 |   6067 |    0 |   0.00 |  11.24 |   0.00 |
+| F7MUX      |    0 |   2094 |    0 |   0.00 |   0.97 |   0.00 |
+| F8MUX      |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    0 |    296 |    0 |   0.00 |  44.05 |   0.00 |
+| URAM       |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |    0 |   2126 |    0 |   0.00 |  69.21 |   0.00 |
++------------+------+--------+------+--------+--------+--------+
+
+Compute Unit: stencil_SLR_3
++------------+------+------+--------+--------+--------+--------+
+| Site Type  | SLR0 | SLR1 |   SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+------+--------+--------+--------+--------+
+| LUT        |    0 |    0 | 124689 |   0.00 |   0.00 |  28.86 |
+| LUTAsLogic |    0 |    0 | 113781 |   0.00 |   0.00 |  26.34 |
+| LUTAsMem   |    0 |    0 |  10908 |   0.00 |   0.00 |   5.52 |
+| REG        |    0 |    0 | 214623 |   0.00 |   0.00 |  24.84 |
+| CARRY8     |    0 |    0 |   6067 |   0.00 |   0.00 |  11.24 |
+| F7MUX      |    0 |    0 |   2094 |   0.00 |   0.00 |   0.97 |
+| F8MUX      |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    0 |    0 |    296 |   0.00 |   0.00 |  44.05 |
+| URAM       |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |    0 |    0 |   2126 |   0.00 |   0.00 |  69.21 |
++------------+------+------+--------+--------+--------+--------+
+
+Compute Unit: stencil_mem2stream_1
++------------+-------+------+------+--------+--------+--------+
+| Site Type  |  SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+-------+------+------+--------+--------+--------+
+| LUT        |  8612 |    0 |    0 |   1.96 |   0.00 |   0.00 |
+| LUTAsLogic |  5060 |    0 |    0 |   1.15 |   0.00 |   0.00 |
+| LUTAsMem   |  3552 |    0 |    0 |   1.73 |   0.00 |   0.00 |
+| REG        | 12293 |    0 |    0 |   1.40 |   0.00 |   0.00 |
+| CARRY8     |   169 |    0 |    0 |   0.31 |   0.00 |   0.00 |
+| F7MUX      |   939 |    0 |    0 |   0.43 |   0.00 |   0.00 |
+| F8MUX      |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    31 |    0 |    0 |   4.61 |   0.00 |   0.00 |
+| URAM       |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |     9 |    0 |    0 |   0.31 |   0.00 |   0.00 |
++------------+-------+------+------+--------+--------+--------+
+
+6. Compute Unit Utilization per SLR
+===================================
+
+SLR0
++------------+---------------+---------------+---------------+----------------------+-----------+
+| Site Type  | stencil_SLR_1 | stencil_SLR_2 | stencil_SLR_3 | stencil_mem2stream_1 | Available |
++------------+---------------+---------------+---------------+----------------------+-----------+
+| LUT        |        124280 |             0 |             0 |                 8612 |    439680 |
+| LUTAsLogic |        113372 |             0 |             0 |                 5060 |    439680 |
+| LUTAsMem   |         10908 |             0 |             0 |                 3552 |    205440 |
+| REG        |        214785 |             0 |             0 |                12293 |    879360 |
+| CARRY8     |          6067 |             0 |             0 |                  169 |     54960 |
+| F7MUX      |          2094 |             0 |             0 |                  939 |    219840 |
+| F8MUX      |             0 |             0 |             0 |                    0 |    109920 |
+| F9MUX      |             0 |             0 |             0 |                    0 |     54960 |
+| BRAM       |           296 |             0 |             0 |                   31 |       672 |
+| URAM       |             0 |             0 |             0 |                    0 |       320 |
+| DSPs       |          2126 |             0 |             0 |                    9 |      2880 |
++------------+---------------+---------------+---------------+----------------------+-----------+
+
+SLR1
++------------+---------------+---------------+---------------+----------------------+-----------+
+| Site Type  | stencil_SLR_1 | stencil_SLR_2 | stencil_SLR_3 | stencil_mem2stream_1 | Available |
++------------+---------------+---------------+---------------+----------------------+-----------+
+| LUT        |             0 |        124821 |             0 |                    0 |    439680 |
+| LUTAsLogic |             0 |        113913 |             0 |                    0 |    439680 |
+| LUTAsMem   |             0 |         10908 |             0 |                    0 |    205440 |
+| REG        |             0 |        213386 |             0 |                    0 |    879360 |
+| CARRY8     |             0 |          6067 |             0 |                    0 |     54960 |
+| F7MUX      |             0 |          2094 |             0 |                    0 |    219840 |
+| F8MUX      |             0 |             0 |             0 |                    0 |    109920 |
+| F9MUX      |             0 |             0 |             0 |                    0 |     54960 |
+| BRAM       |             0 |           296 |             0 |                    0 |       672 |
+| URAM       |             0 |             0 |             0 |                    0 |       320 |
+| DSPs       |             0 |          2126 |             0 |                    0 |      2880 |
++------------+---------------+---------------+---------------+----------------------+-----------+
+
+SLR2
++------------+---------------+---------------+---------------+----------------------+-----------+
+| Site Type  | stencil_SLR_1 | stencil_SLR_2 | stencil_SLR_3 | stencil_mem2stream_1 | Available |
++------------+---------------+---------------+---------------+----------------------+-----------+
+| LUT        |             0 |             0 |        124689 |                    0 |    439680 |
+| LUTAsLogic |             0 |             0 |        113781 |                    0 |    439680 |
+| LUTAsMem   |             0 |             0 |         10908 |                    0 |    205440 |
+| REG        |             0 |             0 |        214623 |                    0 |    879360 |
+| CARRY8     |             0 |             0 |          6067 |                    0 |     54960 |
+| F7MUX      |             0 |             0 |          2094 |                    0 |    219840 |
+| F8MUX      |             0 |             0 |             0 |                    0 |    109920 |
+| F9MUX      |             0 |             0 |             0 |                    0 |     54960 |
+| BRAM       |             0 |             0 |           296 |                    0 |       672 |
+| URAM       |             0 |             0 |             0 |                    0 |       320 |
+| DSPs       |             0 |             0 |          2126 |                    0 |      2880 |
++------------+---------------+---------------+---------------+----------------------+-----------+
+
