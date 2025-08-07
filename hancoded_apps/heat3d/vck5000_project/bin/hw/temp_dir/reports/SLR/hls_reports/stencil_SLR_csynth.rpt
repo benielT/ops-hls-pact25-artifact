@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'stencil_SLR'
+================================================================
+* Date:           Fri Aug  1 02:13:45 2025
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        stencil_SLR
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------+-------------+---------+---------+----------+-----------+------+---------+----------+
+        |                        |             |  Latency (cycles) |  Latency (absolute)  |    Interval    | Pipeline |
+        |        Instance        |    Module   |   min   |   max   |    min   |    max    |  min |   max   |   Type   |
+        +------------------------+-------------+---------+---------+----------+-----------+------+---------+----------+
+        |grp_process_SLR_fu_128  |process_SLR  |     1565|  3604589|  5.216 us|  12.014 ms|  1219|  3604243|  dataflow|
+        +------------------------+-------------+---------+---------+----------+-----------+------+---------+----------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) |    Iteration   |  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |     Latency    |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_79_1  |        ?|        ?|  1568 ~ 3604592|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+---------+--------+-----+
+|       Name      | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++-----------------+---------+------+---------+--------+-----+
+|DSP              |        -|     -|        -|       -|    -|
+|Expression       |        -|     -|        0|      56|    -|
+|FIFO             |        -|     -|        -|       -|    -|
+|Instance         |     1776|  1741|   196915|   91356|    0|
+|Memory           |        -|     -|        -|       -|    -|
+|Multiplexer      |        -|     -|        -|      42|    -|
+|Register         |        -|     -|      155|       -|    -|
++-----------------+---------+------+---------+--------+-----+
+|Total            |     1776|  1741|   197070|   91454|    0|
++-----------------+---------+------+---------+--------+-----+
+|Available        |     1934|  1968|  1799680|  899840|  463|
++-----------------+---------+------+---------+--------+-----+
+|Utilization (%)  |       91|    88|       10|      10|    0|
++-----------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------+---------------+---------+------+--------+-------+-----+
+    |        Instance        |     Module    | BRAM_18K|  DSP |   FF   |  LUT  | URAM|
+    +------------------------+---------------+---------+------+--------+-------+-----+
+    |control_s_axi_U         |control_s_axi  |        0|     0|     302|    488|    0|
+    |grp_process_SLR_fu_128  |process_SLR    |     1776|  1741|  196613|  90868|    0|
+    +------------------------+---------------+---------+------+--------+-------+-----+
+    |Total                   |               |     1776|  1741|  196915|  91356|    0|
+    +------------------------+---------------+---------+------+--------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |              Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |i_2_fu_188_p2                            |         +|   0|  0|  32|          32|           1|
+    |grp_process_SLR_fu_128_out_r_TREADY      |       and|   0|  0|   2|           1|           1|
+    |icmp_ln79_fu_194_p2                      |      icmp|   0|  0|  16|          32|          32|
+    |ap_block_state1                          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_process_SLR_fu_128_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_process_SLR_fu_128_ap_ready  |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                    |          |   0|  0|  56|          68|          37|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                 |   6|          6|    1|          6|
+    |ap_done                   |   2|          2|    1|          2|
+    |i_fu_82                   |  32|          2|   32|         64|
+    |in_r_TREADY_int_regslice  |   2|          2|    1|          2|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     |  42|         12|   35|         74|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |   5|   0|    5|          0|
+    |ap_done_reg                                  |   1|   0|    1|          0|
+    |ap_rst_n_inv                                 |   1|   0|    1|          0|
+    |ap_rst_reg_1                                 |   1|   0|    1|          0|
+    |ap_rst_reg_2                                 |   1|   0|    1|          0|
+    |ap_sync_reg_grp_process_SLR_fu_128_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_process_SLR_fu_128_ap_ready  |   1|   0|    1|          0|
+    |empty_417_reg_236                            |  16|   0|   16|          0|
+    |empty_reg_231                                |  16|   0|   16|          0|
+    |grp_process_SLR_fu_128_ap_start_reg          |   1|   0|    1|          0|
+    |i_fu_82                                      |  32|   0|   32|          0|
+    |shl_ln79_reg_241                             |  31|   0|   32|          1|
+    |trunc_ln56_1_reg_221                         |  16|   0|   16|          0|
+    |trunc_ln56_2_reg_226                         |  16|   0|   16|          0|
+    |trunc_ln56_reg_216                           |  16|   0|   16|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        | 155|   0|  156|          1|
+    +---------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+---------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|    Protocol   |  Source Object |    C Type    |
++-----------------------+-----+-----+---------------+----------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|          s_axi|         control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|          s_axi|         control|        scalar|
+|s_axi_control_AWADDR   |   in|    7|          s_axi|         control|        scalar|
+|s_axi_control_WVALID   |   in|    1|          s_axi|         control|        scalar|
+|s_axi_control_WREADY   |  out|    1|          s_axi|         control|        scalar|
+|s_axi_control_WDATA    |   in|   32|          s_axi|         control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|          s_axi|         control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|          s_axi|         control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|          s_axi|         control|        scalar|
+|s_axi_control_ARADDR   |   in|    7|          s_axi|         control|        scalar|
+|s_axi_control_RVALID   |  out|    1|          s_axi|         control|        scalar|
+|s_axi_control_RREADY   |   in|    1|          s_axi|         control|        scalar|
+|s_axi_control_RDATA    |  out|   32|          s_axi|         control|        scalar|
+|s_axi_control_RRESP    |  out|    2|          s_axi|         control|        scalar|
+|s_axi_control_BVALID   |  out|    1|          s_axi|         control|        scalar|
+|s_axi_control_BREADY   |   in|    1|          s_axi|         control|        scalar|
+|s_axi_control_BRESP    |  out|    2|          s_axi|         control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_chain|     stencil_SLR|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_chain|     stencil_SLR|  return value|
+|interrupt              |  out|    1|  ap_ctrl_chain|     stencil_SLR|  return value|
+|in_r_TDATA             |   in|  256|           axis|   in_r_V_data_V|       pointer|
+|in_r_TVALID            |   in|    1|           axis|   in_r_V_last_V|       pointer|
+|in_r_TREADY            |  out|    1|           axis|   in_r_V_last_V|       pointer|
+|in_r_TLAST             |   in|    1|           axis|   in_r_V_last_V|       pointer|
+|in_r_TKEEP             |   in|   32|           axis|   in_r_V_keep_V|       pointer|
+|in_r_TSTRB             |   in|   32|           axis|   in_r_V_strb_V|       pointer|
+|out_r_TDATA            |  out|  256|           axis|  out_r_V_data_V|       pointer|
+|out_r_TVALID           |  out|    1|           axis|  out_r_V_last_V|       pointer|
+|out_r_TREADY           |   in|    1|           axis|  out_r_V_last_V|       pointer|
+|out_r_TLAST            |  out|    1|           axis|  out_r_V_last_V|       pointer|
+|out_r_TKEEP            |  out|   32|           axis|  out_r_V_keep_V|       pointer|
+|out_r_TSTRB            |  out|   32|           axis|  out_r_V_strb_V|       pointer|
++-----------------------+-----+-----+---------------+----------------+--------------+
+
