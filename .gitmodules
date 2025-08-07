@@ -2,3 +2,7 @@
 	path = OPS
 	url = https://github.com/benielT/OPS.git
 	branch = pact25
+[submodule "OPS_batched"]
+	path = OPS_batched
+	url = https://github.com/OP-DSL/OPS.git
+	branch = feature/batched
