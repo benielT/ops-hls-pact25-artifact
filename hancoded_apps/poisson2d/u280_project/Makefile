@@ -1,6 +1,6 @@
 
 PLATFORM=xilinx_u280_gen3x16_xdma_1_202211_1
-HLS_TARGET_MODE=sw_emu
+HLS_TARGET_MODE=hw
 HLS_JOBS=32
 HLS_IP_CACHE_DIR = $(shell pwd)/../../IP_CACHE
 include ../../Makefile_hls.mk
@@ -17,11 +17,8 @@ HOST_INC = -I$(HOST_DIR)/include -I$(COMMON_DIR)/include
 HOST_SRC_DIR = $(HOST_DIR)/src
 COMMON_SRC_DIR = $(COMMON_DIR)/src
 
-PROFILE=1 #enable if profiling needed
+HOST_INC+=-DPROFILE #enable if profiling needed
 
-ifdef PROFILE
-	HOST_INC+=-DPROFILE
-endif
 
 HOST_SRC_FILES = $(wildcard $(HOST_SRC_DIR)/*.cpp) 
 HOST_SRC_FILES += $(wildcard $(COMMON_SRC_DIR)/*.cpp)

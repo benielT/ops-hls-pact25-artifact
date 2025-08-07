@@ -181,6 +181,20 @@ int main(int argc, char **argv)
 //  printf("\nMean Square error is  %f\n\n", error/(data_g.logical_size_x * data_g.logical_size_y));
   printf("\nOPS Bandwidth is %f\n", bandwidth);
 
+#ifdef PROFILE
+    fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
+    fstream << data_g.logical_size_x << "," << data_g.logical_size_y << "," << 1 << "," << data_g.num_iter << "," << 1 << "," << 0.0 \
+                << "," << elapsed.count() << "," << elapsed.count() << std::endl;
+    fstream.close();
+
+    if (fstream.good()) { // Check if operations were successful after closing
+        std::cout << "Successfully wrote data to " << profile_filename << std::endl;
+    } else {
+            std::cerr << "Error occurred during writing to " << profile_filename << std::endl;
+            return 1; // Indicate an error occurred
+    }
+#endif
+
   free(grid_u1);
   free(grid_u2);
   free(grid_u1_d);

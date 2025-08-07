@@ -189,8 +189,8 @@ int main(int argc, char **argv)
 
 	OCL_CHECK(err, err=event.wait());
 
-	uint64_t endns0 = OCL_CHECK(err, event_krnl0.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
-	uint64_t startns0 = OCL_CHECK(err, event_krnl0.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
+	uint64_t endns0 = OCL_CHECK(err, event.getProfilingInfo<CL_PROFILING_COMMAND_END>(&err));
+	uint64_t startns0 = OCL_CHECK(err, event.getProfilingInfo<CL_PROFILING_COMMAND_START>(&err));
 #ifndef MULTI_SLR
 	uint64_t nsduration = endns0 - startns0;
 #else

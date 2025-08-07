@@ -1,0 +1,81 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 23:18:06 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             Read_Write
+Target Device:           xilinx:vck5000:gen4x8_xdma_2:202210.1
+Target Clock:            299.996999MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name         Type  Target              OpenCL Library  Compute Units
+------------------  ----  ------------------  --------------  -------------
+stencil_Read_Write  c     fpga0:OCL_REGION_0  Read_Write      1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     Read_Write
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit          Kernel Name         Module Name                                      Target Frequency  Estimated Frequency
+--------------------  ------------------  -----------------------------------------------  ----------------  -------------------
+stencil_Read_Write_1  stencil_Read_Write  entry_proc                                       300.300293        1326.25989
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_Block_entry6_proc              300.300293        462.107208
+stencil_Read_Write_1  stencil_Read_Write  read_tile_Pipeline_VITIS_LOOP_16_1               300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  read_tile                                        300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_28_1  300.300293        523.834473
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256                           300.300293        483.325287
+stencil_Read_Write_1  stencil_Read_Write  fifo256_2axis                                    300.300293        498.007996
+stencil_Read_Write_1  stencil_Read_Write  axis2_fifo256                                    300.300293        498.007996
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_43_1  300.300293        714.796265
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512                           300.300293        483.325287
+stencil_Read_Write_1  stencil_Read_Write  write_tile_Pipeline_VITIS_LOOP_59_1              300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  write_tile                                       300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite                                300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_dataflow                       300.300293        411.015198
+stencil_Read_Write_1  stencil_Read_Write  stencil_Read_Write                               300.300293        411.015198
+
+Latency Information
+Compute Unit          Kernel Name         Module Name                                      Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+--------------------  ------------------  -----------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+stencil_Read_Write_1  stencil_Read_Write  entry_proc                                       0               0              0             0               0 ns             0 ns            0 ns
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_Block_entry6_proc              5               5              5             5               16.665 ns        16.665 ns       16.665 ns
+stencil_Read_Write_1  stencil_Read_Write  read_tile_Pipeline_VITIS_LOOP_16_1               undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  read_tile                                        undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_28_1  undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256                           undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  fifo256_2axis                                    1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_Read_Write_1  stencil_Read_Write  axis2_fifo256                                    1202 ~ 3604226  1202           3604226       3604226         4.006 us         12.013 ms       12.013 ms
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_43_1  undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512                           undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  write_tile_Pipeline_VITIS_LOOP_59_1              undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  write_tile                                       undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite                                undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_dataflow                       undef           undef          undef         undef           undef            undef           undef
+stencil_Read_Write_1  stencil_Read_Write  stencil_Read_Write                               undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit          Kernel Name         Module Name                                      FF     LUT    DSP  BRAM  URAM
+--------------------  ------------------  -----------------------------------------------  -----  -----  ---  ----  ----
+stencil_Read_Write_1  stencil_Read_Write  entry_proc                                       3      8      0    0     0
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_Block_entry6_proc              181    242    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  read_tile_Pipeline_VITIS_LOOP_16_1               549    118    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  read_tile                                        683    359    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_28_1  294    274    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_512_256                           363    320    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  fifo256_2axis                                    35     128    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  axis2_fifo256                                    291    128    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_43_1  806    265    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  stream_convert_256_512                           844    311    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  write_tile_Pipeline_VITIS_LOOP_59_1              549    124    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  write_tile                                       777    371    0    0     0
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite                                6614   3511   0    30    0
+stencil_Read_Write_1  stencil_Read_Write  process_ReadWrite_dataflow                       6614   3511   0    30    0
+stencil_Read_Write_1  stencil_Read_Write  stencil_Read_Write                               11821  12457  0    30    0
+-------------------------------------------------------------------------------

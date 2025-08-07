@@ -1,0 +1,99 @@
+====================================================================
+Version:    xcd v2022.1 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Aug  2 01:54:37 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: kernel_SLR2_1
+Kernel: kernel_SLR2
+Base Address: 0x20200020000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_SLR2_2
+Kernel: kernel_SLR2
+Base Address: 0x20200030000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_Read_Write_1
+Kernel: kernel_Read_Write
+Base Address: 0x20200010000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+Compute Unit to Compute Unit
+----------------------------
+Source Pin: kernel_Read_Write_1/out_r
+Destination Pin: kernel_SLR2_1/in_r
+
+Source Pin: kernel_SLR2_2/out_r
+Destination Pin: kernel_Read_Write_1/in_r
+
+Source Pin: kernel_SLR2_1/out_r
+Destination Pin: kernel_SLR2_2/in_r
+
+IP to Compute Unit
+------------------
+Source Pin: axi_ic_user/M03_AXI
+Destination Pin: kernel_Read_Write_1/s_axi_control
+
+Source Pin: axi_ic_user/M01_AXI
+Destination Pin: kernel_SLR2_1/s_axi_control
+
+Source Pin: axi_ic_user/M02_AXI
+Destination Pin: kernel_SLR2_2/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: kernel_Read_Write_1/m_axi_gmem0
+Destination Pin: axi_noc_kernel0/S00_AXI
+
+Source Pin: kernel_Read_Write_1/m_axi_gmem1
+Destination Pin: axi_noc_kernel0/S01_AXI
+
+3. Clock Connections
+====================
+
+Compute Unit: kernel_Read_Write_1
+Clock ID: 0
+Clock Frequency: 299.996999 MHz
+Source Port: /blp_s_aclk_kernel_00
+Destination Pin: kernel_Read_Write_1/ap_clk
+
+Compute Unit: kernel_SLR2_1
+Clock ID: 0
+Clock Frequency: 299.996999 MHz
+Source Port: /blp_s_aclk_kernel_00
+Destination Pin: kernel_SLR2_1/ap_clk
+
+Compute Unit: kernel_SLR2_2
+Clock ID: 0
+Clock Frequency: 299.996999 MHz
+Source Port: /blp_s_aclk_kernel_00
+Destination Pin: kernel_SLR2_2/ap_clk
+
+4. Reset Connections
+====================
+
+Compute Unit: kernel_Read_Write_1
+Source Pin: reset_controllers/peripheral_aresetn
+Destination Pin: kernel_Read_Write_1/ap_rst_n
+Associated Clock Pin: kernel_Read_Write_1/ap_clk
+
+Compute Unit: kernel_SLR2_1
+Source Pin: reset_controllers/peripheral_aresetn
+Destination Pin: kernel_SLR2_1/ap_rst_n
+Associated Clock Pin: kernel_SLR2_1/ap_clk
+
+Compute Unit: kernel_SLR2_2
+Source Pin: reset_controllers/peripheral_aresetn
+Destination Pin: kernel_SLR2_2/ap_rst_n
+Associated Clock Pin: kernel_SLR2_2/ap_clk
+

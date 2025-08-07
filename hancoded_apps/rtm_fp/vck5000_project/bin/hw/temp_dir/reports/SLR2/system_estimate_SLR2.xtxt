@@ -1,0 +1,81 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 23:22:28 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             SLR2
+Target Device:           xilinx:vck5000:gen4x8_xdma_2:202210.1
+Target Clock:            299.996999MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+kernel_SLR2  c     fpga0:OCL_REGION_0  SLR2            1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     SLR2
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit   Kernel Name  Module Name                                     Target Frequency  Estimated Frequency
+-------------  -----------  ----------------------------------------------  ----------------  -------------------
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2_Block_entry4_proc              300.300293        505.816895
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256_Pipeline_VITIS_LOOP_132_1         300.300293        736.919678
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256                                   300.300293        579.038818
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1_Pipeline_VITIS_LOOP_120_1  300.300293        429.922607
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1                            300.300293        429.922607
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2_Pipeline_VITIS_LOOP_120_1  300.300293        429.922607
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2                            300.300293        429.922607
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3_Pipeline_VITIS_LOOP_120_1  300.300293        431.778931
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3                            300.300293        431.778931
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4_Pipeline_VITIS_LOOP_101_1  300.300293        431.778931
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4                            300.300293        431.778931
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis_Pipeline_VITIS_LOOP_145_1         300.300293        736.919678
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis                                   300.300293        736.919678
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2                                300.300293        429.922607
+kernel_SLR2_1  kernel_SLR2  kernel_SLR2                                     300.300293        429.922607
+
+Latency Information
+Compute Unit   Kernel Name  Module Name                                     Start Interval       Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+-------------  -----------  ----------------------------------------------  -------------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2_Block_entry4_proc              7                    7              7             7               23.331 ns        23.331 ns       23.331 ns
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256_Pipeline_VITIS_LOOP_132_1         8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256                                   8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1_Pipeline_VITIS_LOOP_120_1  16855 ~ 4227127      16855          4227127       4227127         56.178 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1                            16857 ~ 4227129      16857          4227129       4227129         56.184 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2_Pipeline_VITIS_LOOP_120_1  16855 ~ 4227127      16855          4227127       4227127         56.178 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2                            16857 ~ 4227129      16857          4227129       4227129         56.184 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3_Pipeline_VITIS_LOOP_120_1  16855 ~ 4227127      16855          4227127       4227127         56.178 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3                            16857 ~ 4227129      16857          4227129       4227129         56.184 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4_Pipeline_VITIS_LOOP_101_1  16855 ~ 4227127      16855          4227127       4227127         56.178 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4                            16857 ~ 4227129      16857          4227129       4227129         56.184 us        14.089 ms       14.089 ms
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis_Pipeline_VITIS_LOOP_145_1         8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis                                   8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2                                16858 ~ 4227130      17023          4227295       4227295         56.738 us        14.090 ms       14.090 ms
+kernel_SLR2_1  kernel_SLR2  kernel_SLR2                                     170253 ~ 4227297003  170252         4227297002    4227297002      0.567 ms         14.090 sec      14.090 sec
+
+Area Information
+Compute Unit   Kernel Name  Module Name                                     FF     LUT    DSP  BRAM  URAM
+-------------  -----------  ----------------------------------------------  -----  -----  ---  ----  ----
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2_Block_entry4_proc              438    364    0    0     0
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256_Pipeline_VITIS_LOOP_132_1         290    119    0    0     0
+kernel_SLR2_1  kernel_SLR2  axis2_fifo256                                   296    133    0    0     0
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1_Pipeline_VITIS_LOOP_120_1  18348  13604  0    0     0
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k1                            18521  13815  0    64    32
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2_Pipeline_VITIS_LOOP_120_1  21069  14267  0    0     0
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k2                            21449  14498  0    64    48
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3_Pipeline_VITIS_LOOP_120_1  16401  11859  0    0     0
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k3                            16781  12090  0    36    36
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4_Pipeline_VITIS_LOOP_101_1  14499  11432  0    0     0
+kernel_SLR2_1  kernel_SLR2  derives_calc_ytep_k4                            14878  11635  0    36    28
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis_Pipeline_VITIS_LOOP_145_1         34     119    0    0     0
+kernel_SLR2_1  kernel_SLR2  fifo256_2axis                                   71     131    0    0     0
+kernel_SLR2_1  kernel_SLR2  process_rtm_SLR2                                79820  55131  0    200   144
+kernel_SLR2_1  kernel_SLR2  kernel_SLR2                                     80205  55649  0    200   144
+-------------------------------------------------------------------------------

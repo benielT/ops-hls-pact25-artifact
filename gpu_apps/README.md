@@ -23,7 +23,7 @@ The OPS and OPS_batched are included as git submodule. For clone relevent submod
 * [OPS-DSL/tridsolver](https://github.com/OP-DSL/tridsolver)(optional)
 
 #### Benchmarked System Specs:
-* Processor           : AMD EPYC 9334 32-Core Processor - 2x
+* Processor           : AMD EPYC 9334 (32-Core) - 2x
 * Memory              : 384GB RAM
 * NVIDIA-SMI version  : 560.35.03
 * NVML version        : 560.35
@@ -78,7 +78,7 @@ which will call "run_script.sh" inside each projects. <b>To run without building
 
 Each project contain our benchmarked profile data under ```profile_data``` with following structure:
 
-<pre> gpu_app/ 
+<pre> gpu_app/h100_project/ 
     ├── profile_data/ 
     │   ├── runtime/ 
     │   │   ├── 1-batch/
@@ -109,7 +109,7 @@ Sample setup script, [source_demos_nvhpc_23_7_ops.sh](../scripts/source_demos_nv
         
         source $OPS_HLS_ARTIFACT_DIR/scripts/source_demos_nvhpc_23_7_ops.sh
 
-NOTE: you can have your own environment setup script. But follow above as guide. For further info about OPS setup check: [OPS/README.md](../OPS/README.md).
+NOTE: you can have your own environment setup script. But follow above script as guide. For further info about OPS setup check: [OPS/README.md](../OPS/README.md).
 
 #### Setup OPS_batched environment
 
@@ -121,17 +121,17 @@ If proper setup completed as in step 1. Then, you'll be able to check ```echo $O
 
 Verify proper installation by check whether ```libops_cuda.a``` available inside ```OPS/ops/c/lib/pgi/``` or ```OPS_batched/ops/c/lib/pgi/```.
 
-NOTE: Strongly build both OPS and OPS_batched as either of one need based on the applications. You can easily swith inbetween OPS or OPS_batched with setup scripts.
+NOTE: Strongly recomment to build both OPS and OPS_batched both of them needed to verify all applications. You can easily switch between OPS or OPS_batched with setup scripts.
 
 ### Build + Run Apps
 
-If the [Build OPS\OPS_batched](#build-opsops_batched), you will be able to run prebuild binaries if your test environment is similar to our [benchmarked system](#benchmarked-system-specs). 
+If the [Build OPS\OPS_batched](#build-opsops_batched) complated, you will be able to run prebuild binaries if your test environment is similar to our [benchmarked system](#benchmarked-system-specs). 
 
 #### 1. Source relevent OPS version environment setup script
 
 Make sure you source correct OPS version as in [Getting Started](#getting-started). For example, [poisson2d](./poisson2d/h100_project/) app requires OPS_batched. Therefore source OPS_batched source [source_demos_nvhpc_23_7_ops_batch.sh](../scripts/source_demos_nvhpc_23_7_ops_batch.sh) or your custom OPS_batched source file.
 
-try running app as in [step 3](#3-run-application). If this step not working it might be due to pre-build binary incompatibility (proceed to next section).
+Try running app as in [step 3](#3-run-application). If this step not working it might be due to pre-build binary incompatibility (proceed to next section).
 
 #### 2. Clean and build application
 
@@ -147,7 +147,7 @@ By defauit apps will have Makefile with ```CXXFLAGS += -DPROFILE```, which indic
 
         make run_app
 
-which will call ```run_script.sh``` inside the application project. You can add custom run paramenters in the run_script. If sucessfully ran, you'll have verbose and profile data inside ```profile_data/runtime/```. 
+which will call ```run_script.sh``` inside the application project. You can add custom run paramenters in the run_script. If sucessfully ran, you'll have profile data inside ```profile_data/runtime/```. 
 
 ##### Power Profile
 

@@ -1,0 +1,84 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug  1 23:19:48 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             Read_Write
+Target Device:           xilinx:vck5000:gen4x8_xdma_2:202210.1
+Target Clock:            299.996999MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name        Type  Target              OpenCL Library  Compute Units
+-----------------  ----  ------------------  --------------  -------------
+kernel_Read_Write  c     fpga0:OCL_REGION_0  Read_Write      1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     Read_Write
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit         Kernel Name        Module Name                                       Target Frequency  Estimated Frequency
+-------------------  -----------------  ------------------------------------------------  ----------------  -------------------
+kernel_Read_Write_1  kernel_Read_Write  entry_proc                                        300.300293        1326.25989
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0_Block_entry1_proc                    300.300293        518.941345
+kernel_Read_Write_1  kernel_Read_Write  read_row_Pipeline_VITIS_LOOP_77_1                 300.300293        411.015198
+kernel_Read_Write_1  kernel_Read_Write  read_row                                          300.300293        411.015198
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_90_1   300.300293        480.769257
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256                            300.300293        480.769257
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis_Pipeline_VITIS_LOOP_126_1           300.300293        736.919678
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis                                     300.300293        736.919678
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256_Pipeline_VITIS_LOOP_114_1           300.300293        736.919678
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256                                     300.300293        636.942627
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_103_1  300.300293        480.769257
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512                            300.300293        480.769257
+kernel_Read_Write_1  kernel_Read_Write  write_row_Pipeline_VITIS_LOOP_143_1               300.300293        411.015198
+kernel_Read_Write_1  kernel_Read_Write  write_row                                         300.300293        411.015198
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0                                      300.300293        411.015198
+kernel_Read_Write_1  kernel_Read_Write  kernel_Read_Write                                 300.300293        411.015198
+
+Latency Information
+Compute Unit         Kernel Name        Module Name                                       Start Interval       Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+-------------------  -----------------  ------------------------------------------------  -------------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+kernel_Read_Write_1  kernel_Read_Write  entry_proc                                        0                    0              0             0               0 ns             0 ns            0 ns
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0_Block_entry1_proc                    5                    5              5             5               16.665 ns        16.665 ns       16.665 ns
+kernel_Read_Write_1  kernel_Read_Write  read_row_Pipeline_VITIS_LOOP_77_1                 4203 ~ 1056771       4203           1056771       1056771         14.009 us        3.522 ms        3.522 ms
+kernel_Read_Write_1  kernel_Read_Write  read_row                                          2 ~ 1056843          2              528423        1056843         6.666 ns         1.761 ms        3.522 ms
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_90_1   8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256                            8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis_Pipeline_VITIS_LOOP_126_1           8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis                                     8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256_Pipeline_VITIS_LOOP_114_1           8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256                                     8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_103_1  8402 ~ 2113538       8402           2113538       2113538         28.004 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512                            8404 ~ 2113540       8404           2113540       2113540         28.011 us        7.044 ms        7.044 ms
+kernel_Read_Write_1  kernel_Read_Write  write_row_Pipeline_VITIS_LOOP_143_1               4203 ~ 1056771       4203           1056771       1056771         14.009 us        3.522 ms        3.522 ms
+kernel_Read_Write_1  kernel_Read_Write  write_row                                         2 ~ 1056842          2              528422        1056842         6.666 ns         1.761 ms        3.522 ms
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0                                      8405 ~ 2113541       8477           2113613       2113613         28.254 us        7.045 ms        7.045 ms
+kernel_Read_Write_1  kernel_Read_Write  kernel_Read_Write                                 169593 ~ 4227231003  169592         4227231002    4227231002      0.565 ms         14.089 sec      14.089 sec
+
+Area Information
+Compute Unit         Kernel Name        Module Name                                       FF     LUT     DSP  BRAM  URAM
+-------------------  -----------------  ------------------------------------------------  -----  ------  ---  ----  ----
+kernel_Read_Write_1  kernel_Read_Write  entry_proc                                        3      8       0    0     0
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0_Block_entry1_proc                    140    164     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  read_row_Pipeline_VITIS_LOOP_77_1                 550    126     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  read_row                                          716    369     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256_Pipeline_VITIS_LOOP_90_1   294    262     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_512_256                            331    278     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis_Pipeline_VITIS_LOOP_126_1           34     119     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  fifo256_2axis                                     71     131     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256_Pipeline_VITIS_LOOP_114_1           290    119     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  axis2_fifo256                                     296    133     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512_Pipeline_VITIS_LOOP_103_1  294    136     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  stream_convert_256_512                            330    150     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  write_row_Pipeline_VITIS_LOOP_143_1               550    128     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  write_row                                         778    375     0    0     0
+kernel_Read_Write_1  kernel_Read_Write  process_SLR0                                      6208   3198    0    30    0
+kernel_Read_Write_1  kernel_Read_Write  kernel_Read_Write                                 17011  205185  0    30    0
+-------------------------------------------------------------------------------
