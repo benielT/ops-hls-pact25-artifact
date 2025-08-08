@@ -1,4 +1,4 @@
-// Auto-generated at 2025-08-06 12:35:43.292795 by ops-translator
+// Auto-generated at 2025-08-08 15:43:35.539995 by ops-translator
 
 __constant__ int dims_ops_krnl_const_init[2][1];
 static int dims_ops_krnl_const_init_h[2][1] = {{0}};
