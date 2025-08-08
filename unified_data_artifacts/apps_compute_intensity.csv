@@ -1,0 +1,8 @@
+Benchmark,FLOP_per_cell
+blackscholes,5
+poisson2d,6
+laplace2d,4
+jacobian2d,17
+jacobian3d,13
+heat3d,10
+pw_advection,57
