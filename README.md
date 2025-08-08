@@ -61,3 +61,14 @@ This environment variable will be useful to track relative paths.
 Setup environment and target requirements. Check the setup guidline in each sub-section README.md. 
 
 ## Contact Us
+
+If any support is needed related to OPS-HLS, please contact:
+beniel.thileepan@warwick.ac.uk
+
+## License
+
+This repository's original code is licensed under the MIT License — see [LICENSE](LICENSE).
+
+It also includes third-party components under different terms:
+
+- [OPS](./OPS), [OPS_batched](./OPS_batched) — BSD 3-Clause License (see [OPS/LICENSE](./OPS/LICENSE)).
