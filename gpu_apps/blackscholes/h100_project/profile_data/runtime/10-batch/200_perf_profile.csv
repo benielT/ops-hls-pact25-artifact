@@ -1,0 +1,3 @@
+grid_x,grid_y,grid_z,iters,batch_id,batch_size,init_time,main_time,total_time
+200,1,1,60000,1,1,272.612,46274.6,46547.2
+200,1,1,60000,2,1,251.112,45691.7,45942.8
