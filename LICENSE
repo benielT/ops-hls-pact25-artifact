@@ -21,6 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 This project includes third-party code:
-* [OPS] - © Gihan Mudalige, Istvan Reguly, Mike Giles, and others, licensed under the BSD 3-Clause License.
-  See OPS/LICENSE for details.
-* [OPS_batched] - False under the above OPS/LICENSE, as it is a branch of OPS.
+* [OPS] - © Gihan Mudalige, Istvan Reguly, Mike Giles, and others, licensed 
+  under the BSD 3-Clause License. See OPS/LICENSE for details.
+* [OPS_batched] - False under the above OPS/LICENSE, as it is a branch of 
+  OPS.
