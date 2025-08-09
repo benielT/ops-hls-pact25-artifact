@@ -16,7 +16,8 @@ source /opt/xilinx/xrt/setup.sh
 
 # 2: ############# CPATH and INCLUDE SETUP #############
 
-export CPATH=/usr/include/x86_64-linux-gnu/
+export CPATH=
+#/usr/include/x86_64-linux-gnu/
 VIVADO_INCLUDE_PATH=/tools/Xilinx/Vivado/2022.1/include/
 VITIS_INCLUDE_PATH=/tools/Xilinx/Vitis/2022.1/include/
 VITIS_HLS_INCLUDE_PATH=/tools/Xilinx/Vitis_HLS/2022.1/include/
