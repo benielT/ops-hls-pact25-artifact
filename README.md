@@ -1,5 +1,7 @@
 # OPS HLS Benchmark artifacts
 
+[![DOI](https://zenodo.org/badge/1027688133.svg)](https://doi.org/10.5281/zenodo.16785478)
+
 This contains benchmark applications and results that we used for our publication in PACT25 conference. The artifact structured into code-generated FPGA applications, hand-codedd FPGA applications, GPU applications and contains utility scripts. Please follow through the getting started of this section for instructions to setup OPS. Each OPS application (ie. poisson2d) will have sperate project for each target to maintain reproducability and ease of setups though the source codes are identical with exception to batched GPU OPS application where you'll find slight differences in OPS-API as we are using OPS_batched APIs which is not yet merged to the current version of OPS.
 
 ## Getting Started
