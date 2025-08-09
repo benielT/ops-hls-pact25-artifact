@@ -1,4 +1,4 @@
-iterations,batch_size,grid,runtime(us),num_elements,FLOP_per_cell,throughput(GFLOP/S),power_batch,avg_power(W),power_elapsed_time(ms),total_energy(kJ),energy_per_batch(kJ),est_energy_for_10k_batches(kJ)
+iterations,batch_size,grid,runtime(us),num_elements,FLOP_per_cell,throughput(GFLOP/S),power_batch,avg_power(W),power_elapsed_time(ms),total_energy(kJ),energy_per_batch(kJ),est_energy_for_1000_batches(kJ)
 60000,1,100x100,406065.65,10000,18,26.59668455,1,60.26,888,0.05351088,0.05351088,53.51088
 60000,1,200x100,412891.55,20000,18,52.3139793,1,82.45,830,0.0684335,0.0684335,68.4335
 60000,1,200x200,406783.75,40000,18,106.1989325,1,84.454,777,0.065620758,0.065620758,65.620758
