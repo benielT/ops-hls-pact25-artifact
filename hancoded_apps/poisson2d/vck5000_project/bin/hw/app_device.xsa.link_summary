@@ -1,0 +1,1546 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/app_device.xsa.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:19 2025",
+ "timestampMillis": "1754700199023",
+ "buildStep": {
+  "cmdId": "9325928f-db48-4327-8af8-8829a1a78ecc",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ --xp vivado_param:project.ensureVersalHasCIPS=false --xp vivado_param:bd.enableAutoConnectionsInNoc=1 --xp vivado_param:constr.restoreXDEFConstraintsASTCL=1 --xp vivado_param:ips.enableSLRParameter=4  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/../../IP_CACHE --temp_dir bin/hw/temp_dir/link/ --log_dir bin/hw/temp_dir/link/logs/ --link --config stencil_vck5000.ini -o ./bin/hw/app_device.xsa ./bin/hw/SLR0.xo ./bin/hw/SLR1.xo ./bin/hw/SLR2.xo ",
+  "args": [
+   "--xp",
+   "vivado_param:project.ensureVersalHasCIPS=false",
+   "--xp",
+   "vivado_param:bd.enableAutoConnectionsInNoc=1",
+   "--xp",
+   "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+   "--xp",
+   "vivado_param:ips.enableSLRParameter=4",
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--hls.jobs",
+   "128",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/../../IP_CACHE",
+   "--temp_dir",
+   "bin/hw/temp_dir/link/",
+   "--log_dir",
+   "bin/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "stencil_vck5000.ini",
+   "-o",
+   "./bin/hw/app_device.xsa",
+   "./bin/hw/SLR0.xo",
+   "./bin/hw/SLR1.xo",
+   "./bin/hw/SLR2.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/stencil_vck5000.ini",
+    "content": "[connectivity]\nstream_connect=stencil_SLR0_1.out:stencil_SLR1_1.in1\nstream_connect=stencil_SLR1_1.out1:stencil_SLR2_1.in\nstream_connect=stencil_SLR2_1.out:stencil_SLR1_1.in2\nstream_connect=stencil_SLR1_1.out2:stencil_SLR0_1.in\n\nslr=stencil_SLR0_1:SLR0\nslr=stencil_SLR1_1:SLR0\nslr=stencil_SLR2_1:SLR0"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:19 2025",
+ "timestampMillis": "1754700199025",
+ "status": {
+  "cmdId": "9325928f-db48-4327-8af8-8829a1a78ecc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Aug  9 03:43:27 2025",
+ "timestampMillis": "1754700207510",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "app_device",
+    "file": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR0",
+     "file": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/stencil_SLR0/stencil_SLR0/cpu_sources/SLR0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_SLR0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR1",
+     "file": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR1.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/stencil_SLR1/stencil_SLR1/cpu_sources/SLR1.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_SLR1_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stencil_SLR2",
+     "file": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR2.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/stencil_SLR2/stencil_SLR2/cpu_sources/SLR2.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "stencil_SLR2_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:27 2025",
+ "timestampMillis": "1754700207931",
+ "buildStep": {
+  "cmdId": "9b72e78f-3b64-43dd-aafe-a98e56fabd90",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR0.xo --xo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR1.xo --xo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR2.xo -keep --config /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR1.xo",
+   "--xo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/SLR2.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "sc=stencil_SLR0_1.out:stencil_SLR1_1.in1\nsc=stencil_SLR1_1.out1:stencil_SLR2_1.in\nsc=stencil_SLR2_1.out:stencil_SLR1_1.in2\nsc=stencil_SLR1_1.out2:stencil_SLR0_1.in\nslr=stencil_SLR0_1:SLR0\nslr=stencil_SLR1_1:SLR0\nslr=stencil_SLR2_1:SLR0\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:27 2025",
+ "timestampMillis": "1754700207931",
+ "status": {
+  "cmdId": "9b72e78f-3b64-43dd-aafe-a98e56fabd90",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:44 2025",
+ "timestampMillis": "1754700224430",
+ "status": {
+  "cmdId": "9b72e78f-3b64-43dd-aafe-a98e56fabd90",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:44 2025",
+ "timestampMillis": "1754700224438",
+ "buildStep": {
+  "cmdId": "823ec0ed-0ec0-44fa-be0d-10a915f8335f",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:44 2025",
+ "timestampMillis": "1754700224439",
+ "status": {
+  "cmdId": "823ec0ed-0ec0-44fa-be0d-10a915f8335f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:46 2025",
+ "timestampMillis": "1754700226660",
+ "status": {
+  "cmdId": "823ec0ed-0ec0-44fa-be0d-10a915f8335f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:46 2025",
+ "timestampMillis": "1754700226668",
+ "buildStep": {
+  "cmdId": "478ce241-f9e6-43b9-9bc4-6dae2e4fd1c3",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:46 2025",
+ "timestampMillis": "1754700226668",
+ "status": {
+  "cmdId": "478ce241-f9e6-43b9-9bc4-6dae2e4fd1c3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 03:43:47 2025",
+ "timestampMillis": "1754700227004",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:47 2025",
+ "timestampMillis": "1754700227007",
+ "status": {
+  "cmdId": "478ce241-f9e6-43b9-9bc4-6dae2e4fd1c3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:47 2025",
+ "timestampMillis": "1754700227016",
+ "buildStep": {
+  "cmdId": "913f85f2-5c4d-4585-859a-f6fd45283e0c",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/../../IP_CACHE -s --output_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR2_1_0 --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR1_1_0 --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0 --messageDb /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/../../IP_CACHE",
+   "-s",
+   "--output_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR2_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR1_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project\nmisc=BinaryName=app_device\n\n[connectivity]\nnk=stencil_SLR0:1:stencil_SLR0_1\nnk=stencil_SLR1:1:stencil_SLR1_1\nnk=stencil_SLR2:1:stencil_SLR2_1\n\n[vivado]\nparam=project.ensureVersalHasCIPS=false\nparam=bd.enableAutoConnectionsInNoc=1\nparam=constr.restoreXDEFConstraintsASTCL=1\nparam=ips.enableSLRParameter=4\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:47 2025",
+ "timestampMillis": "1754700227017",
+ "status": {
+  "cmdId": "913f85f2-5c4d-4585-859a-f6fd45283e0c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:48 2025",
+ "timestampMillis": "1754700228094",
+ "buildStep": {
+  "cmdId": "f1e1b5e9-be88-4c9a-8471-3599acf0b409",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/../../IP_CACHE -s --output_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR2_1_0 --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR1_1_0 --iprepo /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_stencil_SLR0_1_0 --messageDb /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:48 2025",
+ "timestampMillis": "1754700228094",
+ "status": {
+  "cmdId": "f1e1b5e9-be88-4c9a-8471-3599acf0b409",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Sat Aug  9 03:43:56 2025",
+ "timestampMillis": "1754700236096",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 03:43:56 2025",
+ "timestampMillis": "1754700236099",
+ "buildStep": {
+  "cmdId": "10188113-8a2c-4ccd-90f0-462c04f10c77",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:43:56 2025",
+ "timestampMillis": "1754700236100",
+ "status": {
+  "cmdId": "10188113-8a2c-4ccd-90f0-462c04f10c77",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 03:44:32 2025",
+ "timestampMillis": "1754700272679",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "DEBUG_IP_LAYOUT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 03:44:32 2025",
+ "timestampMillis": "1754700272785",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Aug  9 03:58:07 2025",
+ "timestampMillis": "1754701087832",
+ "buildStep": {
+  "cmdId": "fe6505db-2245-4f63-8b7f-80dae4ad1fbf",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:58:07 2025",
+ "timestampMillis": "1754701087833",
+ "status": {
+  "cmdId": "fe6505db-2245-4f63-8b7f-80dae4ad1fbf",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Aug  9 03:58:07 2025",
+ "timestampMillis": "1754701087833",
+ "buildStep": {
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 03:58:07 2025",
+ "timestampMillis": "1754701087834",
+ "status": {
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 05:45:37 2025",
+ "timestampMillis": "1754707537532",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 05:47:17 2025",
+ "timestampMillis": "1754707637349",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 05:47:17 2025",
+ "timestampMillis": "1754707637352",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 05:53:27 2025",
+ "timestampMillis": "1754708007101",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 05:53:27 2025",
+ "timestampMillis": "1754708007104",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275272",
+ "status": {
+  "cmdId": "10188113-8a2c-4ccd-90f0-462c04f10c77",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275384",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275387",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275391",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275394",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275398",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275401",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275405",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275411",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275415",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275418",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275422",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275428",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275432",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275435",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275626",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_dbg_hub_0_synth_1_ulp_inst_0_axi_dbg_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275630",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_gpio_null_user_0_synth_1_ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275633",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_0_synth_1_ulp_inst_0_axi_ic_user_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275636",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_ic_user_extend_0_synth_1_ulp_inst_0_axi_ic_user_extend_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275640",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_axi_sc_plram_0_synth_1_ulp_inst_0_axi_sc_plram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275643",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_0_synth_1_ulp_inst_0_plram_ctrl_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275646",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_plram_ctrl_bram_0_synth_1_ulp_inst_0_plram_ctrl_bram_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275649",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel0_0_synth_1_ulp_inst_0_reset_sync_kernel0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275653",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_kernel1_0_synth_1_ulp_inst_0_reset_sync_kernel1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275656",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_reset_sync_fixed_0_synth_1_ulp_inst_0_reset_sync_fixed_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275659",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_stencil_SLR0_1_0_synth_1_ulp_inst_0_stencil_SLR0_1_0_utilization_synth.rpt",
+  "name": "stencil_SLR0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275663",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_stencil_SLR1_1_0_synth_1_ulp_inst_0_stencil_SLR1_1_0_utilization_synth.rpt",
+  "name": "stencil_SLR1",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275666",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/syn/ulp_inst_0_stencil_SLR2_1_0_synth_1_ulp_inst_0_stencil_SLR2_1_0_utilization_synth.rpt",
+  "name": "stencil_SLR2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275670",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275684",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275695",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275698",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275708",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275717",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275720",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "4d2c78dd-203d-4bed-947d-b0a306d9443a"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275749",
+ "status": {
+  "cmdId": "f1e1b5e9-be88-4c9a-8471-3599acf0b409",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275769",
+ "status": {
+  "cmdId": "913f85f2-5c4d-4585-859a-f6fd45283e0c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275783",
+ "buildStep": {
+  "cmdId": "3885f198-d83e-4fba-bd98-eb9b3482e69c",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275783",
+ "status": {
+  "cmdId": "3885f198-d83e-4fba-bd98-eb9b3482e69c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275811",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275820",
+ "buildStep": {
+  "cmdId": "0885cfe0-c4ae-4e9e-a801-ce1781a671ef",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd -o /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "-o",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:15 2025",
+ "timestampMillis": "1754710275820",
+ "status": {
+  "cmdId": "0885cfe0-c4ae-4e9e-a801-ce1781a671ef",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277719",
+ "status": {
+  "cmdId": "0885cfe0-c4ae-4e9e-a801-ce1781a671ef",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277720",
+ "buildStep": {
+  "cmdId": "a3d7a322-7f32-41a1-b1f5-ebfa0c95ec07",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277721",
+ "status": {
+  "cmdId": "a3d7a322-7f32-41a1-b1f5-ebfa0c95ec07",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277729",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277731",
+ "status": {
+  "cmdId": "a3d7a322-7f32-41a1-b1f5-ebfa0c95ec07",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277731",
+ "buildStep": {
+  "cmdId": "3c43f608-e805-4564-8572-75c8020dafa2",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277731",
+ "status": {
+  "cmdId": "3c43f608-e805-4564-8572-75c8020dafa2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277735",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277736",
+ "status": {
+  "cmdId": "3c43f608-e805-4564-8572-75c8020dafa2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277741",
+ "status": {
+  "cmdId": "3885f198-d83e-4fba-bd98-eb9b3482e69c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277750",
+ "buildStep": {
+  "cmdId": "c0b66a0d-4f64-4086-b4db-fa94cdda073f",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd --append-section :JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/partial.pdi",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1",
+   "--output",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277751",
+ "status": {
+  "cmdId": "c0b66a0d-4f64-4086-b4db-fa94cdda073f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277961",
+ "status": {
+  "cmdId": "c0b66a0d-4f64-4086-b4db-fa94cdda073f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277968",
+ "buildStep": {
+  "cmdId": "763fbe38-c12b-426d-82a9-d6b6dd8b757b",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin.info --input /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/link/int/app_device.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:17 2025",
+ "timestampMillis": "1754710277968",
+ "status": {
+  "cmdId": "763fbe38-c12b-426d-82a9-d6b6dd8b757b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:18 2025",
+ "timestampMillis": "1754710278274",
+ "status": {
+  "cmdId": "763fbe38-c12b-426d-82a9-d6b6dd8b757b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Aug  9 06:31:18 2025",
+ "timestampMillis": "1754710278281",
+ "buildStep": {
+  "cmdId": "4a567e18-88e6-47d4-8e85-2f27543a68ba",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:18 2025",
+ "timestampMillis": "1754710278281",
+ "status": {
+  "cmdId": "4a567e18-88e6-47d4-8e85-2f27543a68ba",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:18 2025",
+ "timestampMillis": "1754710278283",
+ "status": {
+  "cmdId": "4a567e18-88e6-47d4-8e85-2f27543a68ba",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:18 2025",
+ "timestampMillis": "1754710278373",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/system_estimate_app_device.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:19 2025",
+ "timestampMillis": "1754710279000",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/reports/link/v++_link_app_device_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:19 2025",
+ "timestampMillis": "1754710279001",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/v++_link_app_device_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Aug  9 06:31:19 2025",
+ "timestampMillis": "1754710279005",
+ "report": {
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/hancoded_apps/poisson2d/vck5000_project/bin/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Aug  9 06:31:19 2025",
+ "timestampMillis": "1754710279009",
+ "status": {
+  "cmdId": "9325928f-db48-4327-8af8-8829a1a78ecc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
