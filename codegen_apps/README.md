@@ -115,7 +115,7 @@ If the [Build OPS](#build-ops) is completed, you will be able to run prebuild bi
 
 #### 1. Source the relevant environment setup script
 
-Make sure you source the correct Vitis setup. Our prebuild binaries are on Vitis 2022.2 for U280 and Vitis 2022.1 for VCK5000. You must have the platforms as mentioned in [benchmarked system specs](#benchmarked-system-specs), and you might need the same (or compatible) XRT driver in order to run these prebuild binaries/xcl_binaries.
+Make sure you source the correct Vitis setup. Our prebuild binaries are on Vitis 2022.2 for U280 and Vitis 2022.1 for VCK5000 and U55c ([details of prebuild-binary supported Vitis toolchain](#pre-build-binary-details)). You must have the platforms as mentioned in [benchmarked system specs](#benchmarked-system-specs), and you might need the same (or compatible) XRT driver in order to run these prebuild binaries/xcl_binaries.
 
 Try running the app as in [step 3](#3-run-application). If this step does not work, it might be due to pre-built binary incompatibility (proceed to the next section).
 
@@ -178,6 +178,33 @@ NOTE: ```<power_batch_size_need_to_be_estimated>``` is the required batch size y
 
 
 ### Appendix
+
+#### Pre-build binary details 
+
+* Black-Scholes
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* Laplace2d
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* Jacobian2d
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* Poisson2d
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* Heat3d
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* Jacobian3d
+    * U280 - Vitis2022.2
+    * VCK5000 - Vitis 2022.1
+* RTM_FP
+    * U55c - Vitis2022.1
+    * VCK5000 - Vitis 2022.1
+* PW_advection
+    * VCK5000 - Vitis 2022.1
+
 
 #### OPS-translator config file for HLS target
 
