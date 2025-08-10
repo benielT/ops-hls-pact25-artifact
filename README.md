@@ -46,7 +46,7 @@ NOTE: There's no universal setup for this benchmark as our benchmark is on heter
 
 ### Step 1: Update Sub-Modules
 
-We have included relevent OPS branches as git submodules ([OPS](./OPS),[OPS_batched](./OPS_batched)) herewith this repository. Please run,
+We have included relevent OPS branches as git submodules ([OPS](./OPS), [OPS_batched](./OPS_batched)) herewith this repository. Please run,
 
         git submodule update --recursive
         
