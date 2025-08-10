@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/1027688133.svg)](https://doi.org/10.5281/zenodo.16785478)
 
-The repository contains benchmark applications and results from work carried out in ongoing work, "Automatic Code-Generation for Accelerating Structured-Mesh-Based Explicit Numerical Solvers on FPGAs", to be published in the PACT25 conference. The artifact is organized into (1) code-generated FPGA applications, (2) hand-coded FPGA applications, and (3) GPU applications,  along with data artifacts and utility scripts. 
+The repository contains benchmark applications and results from work carried out in ongoing work, "[Automatic Code-Generation for Accelerating Structured-Mesh-Based Explicit Numerical Solvers on FPGAs](#publication)", to be published in the PACT25 conference. The artifact is organized into (1) code-generated FPGA applications, (2) hand-coded FPGA applications, and (3) GPU applications,  along with data artifacts and utility scripts. 
 
 Our work is a derivative work on OPS-DSL, which is a mandatory dependency; together with each type of application mentioned above requires additional dependencies and setups. 
 Please follow the Getting Started section of this document for instructions to set up OPS and the common environment setups. Afterwards, please follow the README.md files inside each application type (ie gpu_apps, codgen_apps & handcoded_apps) for properly setting up and running applications. 
@@ -89,3 +89,7 @@ This repository's original code is licensed under the MIT License — see [LICEN
 It also includes third-party components under different terms:
 
 - [OPS](./OPS), [OPS_batched](./OPS_batched) — BSD 3-Clause License (see [OPS/LICENSE](./OPS/LICENSE)).
+
+## Publication
+
+B. Thileepan, S.A. Fahmy, and G.R. Mudalige. (2025). Automatic Code-Generation for Accelerating Structured-Mesh-Based Explicit Numerical Solvers on FPGAs. To appear in the International Conference on Parallel Architectures and Compilation Techniques (PACT '25) Nov 03–06, 2025, Irvine, California, USA. ACM, New York, NY, USA.
