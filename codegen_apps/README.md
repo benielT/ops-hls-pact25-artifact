@@ -105,7 +105,13 @@ NOTE: You can have your own environment setup script. But follow the above scrip
 
 If the proper setup is completed, as in step 1. Then, you'll be able to check ```echo $OPS_INSTALL_PATH``` which will point to [OPS/ops](../OPS/ops/) or [OPS_batched/ops](../OPS_batched/ops/). Additionally, Python virtual environment [OPS/ops_translator/ops_venv](../OPS/ops_translator/ops_venv/) should have been created without any error if it is the first time. 
 
-If the above verification passes properly, go to: ```cd $OPS_INSTALL_PATH/hls``` and run ```make```.
+If the above verification passes properly, go to: 
+
+    cd $OPS_INSTALL_PATH/hls
+    
+and run
+
+    make
 
 Verify proper installation by checking whether ```libops_hls.a``` and ```libops_seq.a``` are available inside ```OPS/ops/hls/lib/gnu/```.
 
