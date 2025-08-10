@@ -2,7 +2,12 @@
 
 [![DOI](https://zenodo.org/badge/1027688133.svg)](https://doi.org/10.5281/zenodo.16785478)
 
-This contains benchmark applications and results that we used for our publication in the PACT25 conference. The artifact is structured into code-generated FPGA applications, hand-coded FPGA applications, and GPU applications, and it contains utility scripts. Please follow the Getting Started section of this document for instructions to set up OPS. Each OPS application (ie, poisson2d) will have a separate project for each target to maintain reproducability and ease of setups, though the source codes are identical, with the exception to batched GPU OPS application where you'll find slight differences in OPS-API as we are using OPS_batched APIs which is not yet merged to the current version of OPS.
+The repository contains benchmark applications and results from work carried out in ongoing work, "Automatic Code-Generation for Accelerating Structured-Mesh-Based Explicit Numerical Solvers on FPGAs", to be published in the PACT25 conference. The artifact is organized into (1) code-generated FPGA applications, (2) hand-coded FPGA applications, and (3) GPU applications,  along with data artifacts and utility scripts. 
+
+Our work is a derivative work on OPS-DSL, which is a mandatory dependency; together with each type of application mentioned above requires additional dependencies and setups. 
+Please follow the Getting Started section of this document for instructions to set up OPS and the common environment setups. Afterwards, please follow the README.md files inside each application type (ie gpu_apps, codgen_apps & handcoded_apps) for properly setting up and running applications. 
+
+Each OPS application (ie, poisson2d) will have a separate project for each target to maintain reproducability and ease of setups, though the source codes are identical, with the exception to batched GPU OPS application where you'll find slight differences in OPS-API as we are using OPS_batched APIs which is not yet merged to the current version of OPS.
 
 ## Getting Started
 
@@ -46,7 +51,7 @@ NOTE: There's no universal setup for this benchmark as our benchmark is on heter
 
 ### Step 1: Update Sub-Modules
 
-We have included relevent OPS branches as git submodules ([OPS](./OPS), [OPS_batched](./OPS_batched)) herewith this repository. Please run,
+We have included relevant OPS branches as git submodules ([OPS](./OPS), [OPS_batched](./OPS_batched)) herewith this repository. Please run,
 
         git submodule update --recursive
         
