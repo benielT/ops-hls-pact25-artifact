@@ -120,25 +120,30 @@ void bs_explicit1(float* current, float *next, GridParameter& gridData, blacksch
 		ck[j] = 0.5 * (alpha * index * index + beta * index);
 	}
 
-	for (unsigned int i = 0; i <  computeParam.N; i+=2)
-	{
-		for (unsigned int j = 1; j < gridData.act_size_x - 1; j++) //excluding ghost
-		{
-			next[j] = ak[j] * current[j - 1]
-								+ bk[j] * current[j]
-								+ ck[j] * current[j + 1];
-		}
+    for (unsigned int bat = 0; bat < gridData.batch_size; bat++)
+    {
+        unsigned int offset = bat * gridData.grid_size_x;
 
-		for (unsigned int j = 1; j < gridData.act_size_x - 1; j++) //excluding ghost
-		{
-			current[j]	= ak[j] * next[j - 1]
-								+ bk[j] * next[j]
-								+ ck[j] * next[j + 1];
+        for (unsigned int i = 0; i <  computeParam.N; i+=2)
+        {
+            for (unsigned int j = 1; j < gridData.act_size_x - 1; j++) //excluding ghost
+            {
+                next[offset + j] = ak[j] * current[offset + j - 1]
+                                    + bk[j] * current[offset + j]
+                                    + ck[j] * current[offset + j + 1];
+            }
 
-//				std::cout << "grid_id: " << j << " ak: " << ak[j] << " bk: " << bk[j] << " ck: " << ck[j] << " current(j-1): " << current[offset + (j - 1)]
-//						<< " current(j): " << 	current[offset + j] << " current(j+1): "	<< current[offset + (j + 1)] << std::endl;
-		}
-	}
+            for (unsigned int j = 1; j < gridData.act_size_x - 1; j++) //excluding ghost
+            {
+                current[offset + j]	= ak[j] * next[offset + j - 1]
+                                    + bk[j] * next[offset + j]
+                                    + ck[j] * next[offset + j + 1];
+
+    //				std::cout << "grid_id: " << j << " ak: " << ak[j] << " bk: " << bk[j] << " ck: " << ck[j] << " current(j-1): " << current[offset + (j - 1)]
+    //						<< " current(j): " << 	current[offset + j] << " current(j+1): "	<< current[offset + (j + 1)] << std::endl;
+            }
+        }
+    }   
 }
 
 float cubicInterpolate(float p0, float p1, float p2, float p3, float x)
@@ -146,9 +151,10 @@ float cubicInterpolate(float p0, float p1, float p2, float p3, float x)
 	return (p1 + 0.5 * x*(p2 - p0 + x*(2.0*p0 - 5.0*p1 + 4.0*p2 - p3 + x*(3.0*(p1 - p2) + p3 - p0))));
 }
 //get the exact call option pricing for given spot price and strike price
-float get_call_option(float* data, blackscholesParameter& computeParam)
+float get_call_option(float* data, blackscholesParameter& computeParam, int sub_batch_id, int grid_size_x)
 {
 	float index 	= (float)computeParam.spot_price / ((float) computeParam.strike_price * computeParam.SMaxFactor) * computeParam.K;
+    index += grid_size_x * sub_batch_id;
 	unsigned int indexLower 	= (int)std::floor(index);
 	unsigned int indexUpper 	= indexLower + 1;
 
@@ -162,9 +168,10 @@ float get_call_option(float* data, blackscholesParameter& computeParam)
 	return option_price;
 }
 
-float get_call_option_cubic(float* data, blackscholesParameter& computeParam)
+float get_call_option_cubic(float* data, blackscholesParameter& computeParam, int sub_batch_id, int grid_size_x)
 {
 	float index 	= (float)computeParam.spot_price / ((float) computeParam.strike_price * computeParam.SMaxFactor) * computeParam.K;
+    index += grid_size_x * sub_batch_id;
 	unsigned int indexLower 	= (int)std::floor(index);
 	unsigned int indexUpper 	= indexLower + 1;
 
@@ -297,7 +304,7 @@ double square_error(float* current, float* next, struct GridParameter gridData)
 {
 	double sum = 0;
 
-	for(unsigned int bat = 0; bat < gridData.batch; bat++)
+	for(unsigned int bat = 0; bat < gridData.batch_size; bat++)
 	{
 		int offset = bat * gridData.grid_size_x* gridData.grid_size_y;
 
@@ -323,7 +330,7 @@ double square_error(float* current, float* next, struct GridParameter gridData)
 
 int copy_grid(float* grid_s, float* grid_d, GridParameter gridData)
 {
-    for(unsigned int bat = 0; bat < gridData.batch; bat++)
+    for(unsigned int bat = 0; bat < gridData.batch_size; bat++)
     {
     	int offset = bat * gridData.grid_size_x * gridData.grid_size_y;
 
@@ -340,31 +347,34 @@ int copy_grid(float* grid_s, float* grid_d, GridParameter gridData)
 
 void intialize_grid(float* grid, GridParameter gridProp, blackscholesParameter& computeParam)
 {
-	float sMax = computeParam.strike_price * computeParam.SMaxFactor;
+    float sMax = computeParam.strike_price * computeParam.SMaxFactor;
 
-	for (unsigned int i = 0; i < gridProp.act_size_y; i++)
-	{
-		for (unsigned int j = 0; j < gridProp.act_size_x; j++)
-		{
-			if (j == 0)
-			{
-				grid[i * gridProp.grid_size_x + j] = 0;
-			}
-			else if (j == gridProp.act_size_x -1)
-			{
-				grid[i * gridProp.grid_size_x + j] = sMax;
-			}
-			else
-			{
-				grid[i * gridProp.grid_size_x + j] = std::max(j*computeParam.delta_S - computeParam.strike_price, (float)0);
-			}
-//				std::cout << "grid_id: " << offset + i * gridData.grid_size_x + j << " val: " << grid[offset + i * gridData.grid_size_x + j] << std::endl;
-		}
-	}
-
+    for (unsigned int bat = 0; bat < gridProp.batch_size; bat++)
+    {
+        unsigned int offset = bat * gridProp.grid_size_x;
+        for (unsigned int i = 0; i < gridProp.act_size_y; i++)
+        {
+            for (unsigned int j = 0; j < gridProp.act_size_x; j++)
+            {
+                if (j == 0)
+                {
+                    grid[i * gridProp.grid_size_x + j + offset] = 0;
+                }
+                else if (j == gridProp.act_size_x -1)
+                {
+                    grid[i * gridProp.grid_size_x + j + offset] = sMax;
+                }
+                else
+                {
+                    grid[i * gridProp.grid_size_x + j + offset] = std::max(j*computeParam.delta_S - computeParam.strike_price, (float)0);
+                }
+    //				std::cout << "grid_id: " << offset + i * gridData.grid_size_x + j << " val: " << grid[offset + i * gridData.grid_size_x + j] << std::endl;
+            }
+        }
+    }
 }
 
-bool verify(float * grid_data1, float *  grid_data2, int size[1], int d_m[1], int d_p[1], int range[2])
+bool verify(float * grid_data1, float *  grid_data2, int size[1], int d_m[1], int d_p[1], int range[2], int batch_size)
 {
     bool passed = true;
 #ifdef OPS_FPGA
@@ -373,17 +383,21 @@ bool verify(float * grid_data1, float *  grid_data2, int size[1], int d_m[1], in
     int grid_size_x = size[0] - d_m[0] + d_p[0];
 #endif
 
-	for (int i = range[0] - d_m[0]; i < range[1] - d_m[0]; i++)
-	{
-		int index = i;
+    for (int bat = 0; bat < batch_size; bat++)
+    {
+        unsigned int offset = bat * grid_size_x;
 
-		if (abs(grid_data1[index] - grid_data2[index]) > EPSILON)
-		{
-			std::cerr << "[ERROR] value Mismatch index: (" << i << "), grid_data1: "
-					<< grid_data1[index] << ", and grid_data2: " << grid_data2[index] << std::endl;
-			passed = false;
-		}
-	}
+        for (int i = range[0] - d_m[0]; i < range[1] - d_m[0]; i++)
+        {
+            int index = i;
 
+            if (abs(grid_data1[offset + index] - grid_data2[offset + index]) > EPSILON)
+            {
+                std::cerr << "[ERROR] value Mismatch batch: " << bat << ", index: (" << i << "), grid_data1: "
+                        << grid_data1[offset + index] << ", and grid_data2: " << grid_data2[offset + index] << std::endl;
+                passed = false;
+            }
+        }
+    }
     return passed;
 }
