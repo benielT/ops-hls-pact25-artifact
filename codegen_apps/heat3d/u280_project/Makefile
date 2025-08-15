@@ -12,7 +12,7 @@ include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hip
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.hdf5
 
 PLATFORM=xilinx_u280_gen3x16_xdma_1_202211_1
-HLS_TARGET_MODE=hw
+HLS_TARGET_MODE=sw_emu
 HLS_JOBS=64
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile_hls.mk
 
@@ -35,7 +35,6 @@ OPS_TARGET_CONFIG_FILE= ./config_u280.json
 
 
 TARGETS=hls
-
 ########  PRFOFILE OPTIONS (ONLY ENABLE ONE OPTION) ######
 
 #Enable if wanted to profile
@@ -45,7 +44,20 @@ CXXFLAGS += -DPROFILE
 
 ########  VERIIFICATION OPTIONS  ######
 #Enable if wanted to verify
-# CXXFLAGS += -DVERIFICATION
+CXXFLAGS += -DVERIFICATION
+
+######## ASYN_DISPATCH OPTION ########
+#Enable if wanted to use asynchronous dispatch
+# CXXFLAGS += -DASYNC_DISPATCH
+
+######## BATCHING OPTION ########
+# Enable if wanted to use batching
+CXXFLAGS += -DBATCHING
+
+########  DEBUG OPTIONS  ######
+#Enable if wanted to debug
+# CXXFLAGS += -DDEBUG_LOG
+# VPP_FLAGS += -DDEBUG_LOG
 
 #include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app_legacy
 include $(OPS_INSTALL_PATH)/../makefiles/Makefile.c_app

@@ -20,6 +20,7 @@ struct GridParameter
     unsigned int grid_size_z;
 
 	unsigned int batch;
+    int batch_size;
 	unsigned int num_iter;
 };
 
