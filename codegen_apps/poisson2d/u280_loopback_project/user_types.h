@@ -6,6 +6,6 @@
 #define OPS_FUN_PREFIX
 #endif
 
-static inline OPS_FUN_PREFIX double myfun(double a, double b) {
+static inline OPS_FUN_PREFIX float myfun(float a, float b) {
   return a*b+1.0;
 }

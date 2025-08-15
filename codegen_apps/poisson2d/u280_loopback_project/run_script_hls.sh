@@ -124,7 +124,8 @@ else
     else
         if [[ "${PLATFORM}" == *"u280"* ]]; then
             parameter_sets=(
-                "30,30,162,1"
+                "5,5,162,1,1"
+                "5,5,162,4,2"
                 # Add more parameter sets here as needed
             )
         else
@@ -139,9 +140,9 @@ fi
 echo "Running application '${APP_NAME}' in '${TARGET_MODE}' mode with hardcoded parameters:"
 
 for params in "${parameter_sets[@]}"; do
-    IFS=',' read -r sizex sizey iters batch <<< "$params"
+    IFS=',' read -r sizex sizey iters batch bsize <<< "$params"
 
-    if [[ -z "$sizex" || -z "$sizey" || -z "$iters" || -z "$batch" ]]; then
+    if [[ -z "$sizex" || -z "$sizey" || -z "$iters" || -z "$batch" || -z "$bsize" ]]; then
         echo "Warning: Skipping invalid parameter set: $params"
         continue
     fi
@@ -156,21 +157,21 @@ for params in "${parameter_sets[@]}"; do
 
 
     echo "-----------------------------------------------------------------"
-    echo "Running with sizex=${sizex}, sizey=${sizey}, iters=${iters}, batch=${batch}"
+    echo "Running with sizex=${sizex}, sizey=${sizey}, iters=${iters}, batch=${batch}, bsize=${bsize}"
     echo "-----------------------------------------------------------------"
 
 
     if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
         echo "Running HW mode with power profiling"
-            ${OPS_INSTALL_PATH}/../scripts/power_profile_hls.sh ${DEVICE_BDF} ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -piter="${batch}"
+            ${OPS_INSTALL_PATH}/../scripts/power_profile_hls.sh ${DEVICE_BDF} ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -piter="${batch}" -bsize="${bsize}"
 
     else
         if [[ $TARGET_MODE == sw_emu || $TARGET_MODE == hw_emu ]]; then
             echo "Running in emulation mode with ${TARGET_MODE}"
-            XCL_EMULATION_MODE=${TARGET_MODE} ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${batch}"
+            XCL_EMULATION_MODE=${TARGET_MODE} ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${batch}" -bsize="${bsize}"
         else
             echo "Running HW mode"
-            ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${batch}"
+            ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}_host ${SCRIPT_DIR}/hls/build/${TARGET_MODE}/${APP_NAME}.xclbin -sizex="${sizex}" -sizey="${sizey}" -iters="${iters}" -batch="${batch}" -bsize="${bsize}"
         fi
     fi
 
@@ -180,7 +181,7 @@ for params in "${parameter_sets[@]}"; do
     fi
     if [ -f "${PROFILE_FILE}" ]; then
         # Construct the new filename for the profile directory
-        new_filename="${PROFILE_DIR}/${sizex}_${sizey}_${PROFILE_FILE}"
+        new_filename="${PROFILE_DIR}/${sizex}_${sizey}_${bsize}_${PROFILE_FILE}"
         echo "Moving '${PROFILE_FILE}' to '${new_filename}'"
         mv "${PROFILE_FILE}" "${new_filename}"
     else
@@ -188,7 +189,7 @@ for params in "${parameter_sets[@]}"; do
     fi
     if [ -f "${POWER_PROFILE_FILE}" ]; then
         # Construct the new filename for the profile directory
-        new_filename="${PROFILE_DIR}/${sizex}_${sizey}_${POWER_PROFILE_FILE}"
+        new_filename="${PROFILE_DIR}/${sizex}_${sizey}_${bsize}_${POWER_PROFILE_FILE}"
         echo "Moving '${POWER_PROFILE_FILE}' to '${new_filename}'"
         mv "${POWER_PROFILE_FILE}" "${new_filename}"
     else
