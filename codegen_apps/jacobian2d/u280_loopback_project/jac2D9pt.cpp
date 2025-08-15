@@ -60,7 +60,6 @@ extern const unsigned short mem_vector_factor;
 #endif
 
 #ifdef POWER_PROFILE
-    unsigned int power_iter = 1;
     #ifdef PROFILE
     std::cerr << "POWER_PROFILE cannot be enabled with PROFILE" << std::endl;
     exit(-1);
@@ -82,6 +81,7 @@ int main(int argc, const char **argv)
     int jmax = 20;
     unsigned int iter_max = 135;
     unsigned int batches = 1;
+    int batch_size = 1;
 #ifdef POWER_PROFILE
     unsigned int power_iter = 1;
 #endif
@@ -108,6 +108,17 @@ int main(int argc, const char **argv)
         if(pch != NULL) {
             batches = atoi ( argv[n] + 7 ); continue;
         }
+#ifdef BATCHING
+        pch = strstr(argv[n], "-bsize=");
+        if(pch != NULL) {
+            batch_size = atoi ( argv[n] + 7 );
+            if(batch_size < 1) {
+                std::cerr << "Batch size must be greater than 0" << std::endl;
+                exit(-1);
+            }
+            continue;
+        }
+#endif
 #ifdef POWER_PROFILE
         pch = strstr(argv[n], "-piter=");
         if(pch != NULL) {
@@ -116,7 +127,28 @@ int main(int argc, const char **argv)
         batches = 1;
 #endif
     }
-
+#ifdef BATCHING
+    #ifndef POWER_PROFILE
+    if(batches % batch_size != 0) {
+        std::cerr << "Batch size must divide the number of batches evenly" << std::endl;
+        exit(-1);
+    }
+    batches /= batch_size;
+    std::cout << "Batching enabled, number of batches: " << batches << ", batch size: " << batch_size << std::endl;
+    #endif
+#endif
+#ifdef POWER_PROFILE
+    #ifdef BATCHING
+            if(power_iter % batch_size != 0) {
+                    std::cerr << "Batch size must divide the number of power batches evenly" << std::endl;
+                    exit(-1);
+            }
+            std::cout << "Total power iterations: " << power_iter << std::endl;
+            std::cout << "Power profiling enabled, number of power iterations per batch: " << power_iter / batch_size << std::endl;
+            power_iter = power_iter / batch_size;
+    #endif 
+            std::cout << "Power profiling enabled, number of power iterations: " << power_iter << std::endl;
+#endif
 #ifdef PROFILE
 	double init_runtime[batches];
 	double main_loop_runtime[batches];
@@ -138,7 +170,11 @@ int main(int argc, const char **argv)
     for (unsigned int bat = 0; bat < batches; bat++)
     {
         std::string name = std::string("batch_") + std::to_string(bat);
+#ifndef BATCHING
         blocks[bat] = ops_decl_block(2, name.c_str());
+#else
+        blocks[bat] = ops_decl_block_batch(2, name.c_str(), batch_size);
+#endif
     }
 
 
@@ -185,10 +221,10 @@ int main(int argc, const char **argv)
         name = std::string("ref_") + std::to_string(bat);
         ref[bat] = ops_decl_dat(blocks[bat], 1, size, base, d_m, d_p, temp, "float", name.c_str());
 #ifdef VERIFICATION
-        u_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y);
-        u2_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y);
-        f_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y);
-        ref_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y);
+        u_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y * batch_size);
+        u2_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y * batch_size);
+        f_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y * batch_size);
+        ref_cpu[bat] = (float*)malloc(sizeof(float) * grid_size_x * grid_size_y * batch_size);
 #endif
     }
 
@@ -203,9 +239,9 @@ int main(int argc, const char **argv)
         auto init_start_clk_point =  std::chrono::high_resolution_clock::now();
 #endif
 #ifdef VERIFICATION
-        initialise_grid(u_cpu[bat], size, d_m, d_p, full_range);
+        initialise_grid(u_cpu[bat], size, d_m, d_p, full_range, batch_size);
         // printGrid2D(u_cpu[bat], u[bat].originalProperty, "u_CPU after init");
-        copy_grid(u2_cpu[bat], u_cpu[bat], size, d_m, d_p, full_range);
+        copy_grid(u2_cpu[bat], u_cpu[bat], size, d_m, d_p, full_range, batch_size);
 
         ops_dat_fetch_data(u[bat], 0, (char*)u_cpu[bat]);
 
@@ -234,12 +270,12 @@ int main(int argc, const char **argv)
 
         // printGrid2D(u_raw, u[bat].originalProperty, "test");
 
-        if(verify(u_raw, u_cpu[bat], size, d_m, d_p, full_range))
+        if(verify(u_raw, u_cpu[bat], size, d_m, d_p, full_range, batch_size))
             std::cout << "[BATCH - " << bat << "] verification of u after initiation" << "[PASSED]" << std::endl;
         else
             std::cout << "[BATCH - " << bat << "] verification of u after initiation" << "[FAILED]" << std::endl;
 
-        if(verify(u2_raw, u2_cpu[bat], size, d_m, d_p, full_range))
+        if(verify(u2_raw, u2_cpu[bat], size, d_m, d_p, full_range, batch_size))
             std::cout << "[BATCH - " << bat << "] verification of u2 after initiation" << "[PASSED]" << std::endl;
         else
             std::cout << "[BATCH - " << bat << "] verification of u2 after initiation" << "[FAILED]" << std::endl;
@@ -271,11 +307,9 @@ int main(int argc, const char **argv)
                     ops_arg_dat(u[bat], 1, S2D_00, "float", OPS_WRITE));
         }
 #ifdef PROFILE
-        auto main_loop_end_clk_point = std::chrono::high_resolution_clock::now();
     #ifndef OPS_FPGA
+        auto main_loop_end_clk_point = std::chrono::high_resolution_clock::now();
         main_loop_runtime[bat] = std::chrono::duration<double, std::micro>(main_loop_end_clk_point - main_loop_start_clk_point).count();
-    #else
-        main_loop_runtime[bat] = ops_hls_get_execution_runtime<std::chrono::microseconds>(std::string("isl0"));
     #endif
 #endif
     }
@@ -292,19 +326,21 @@ int main(int argc, const char **argv)
 
         for (int iter = 0; iter < iter_max; iter++)
         {
-            stencil_computation(u_cpu[bat], u2_cpu[bat], size, d_m, d_p, internal_range);
-            copy_grid(u_cpu[bat], u2_cpu[bat], size, d_m, d_p, internal_range);
+            stencil_computation(u_cpu[bat], u2_cpu[bat], size, d_m, d_p, internal_range, batch_size);
+            copy_grid(u_cpu[bat], u2_cpu[bat], size, d_m, d_p, internal_range, batch_size);
         }
 
 		// printGrid2D<float>(u_raw, u[bat].originalProperty, "u after computation");
 		// printGrid2D<float>(u_cpu[bat], u[bat].originalProperty, "u_Acpu after computation");
 
+        // Uncomment this if datamover_mode == 1
         // if(verify(u_raw, u_cpu[bat], size, d_m, d_p, full_range))
         //     std::cout << "[BATCH - " << bat << "] verification of u after calculation" << "[PASSED]" << std::endl;
         // else
         //     std::cout << "[BATCH - " << bat << "] verification of u after calculation" << "[FAILED]" << std::endl;
 
-        if(verify(u2_raw, u2_cpu[bat], size, d_m, d_p, full_range))
+        // Uncomment this if datamover_mode == 2
+        if(verify(u2_raw, u2_cpu[bat], size, d_m, d_p, full_range, batch_size))
             std::cout << "[BATCH - " << bat << "] verification of u2 after calculation" << "[PASSED]" << std::endl;
         else
             std::cout << "[BATCH - " << bat << "] verification of u2 after calculation" << "[FAILED]" << std::endl;
@@ -344,11 +380,18 @@ int main(int argc, const char **argv)
 	double total_std = 0;
 
     fstream << "grid_x," << "grid_y," << "grid_z," << "iters," << "batch_size," << "batch_id," << "init_time," << "main_time," << "total_time" << std::endl; 
-
+    
 	for (unsigned int bat = 0; bat < batches; bat++)
 	{
+    #ifdef OPS_FPGA
+        main_loop_runtime[bat] = ops_hls_get_execution_runtime<std::chrono::microseconds>(std::string("isl0"), bat);
+    #endif
+        main_loop_runtime[bat] /= batch_size;
+        init_runtime[bat] /= batch_size;
+    
         fstream << imax << "," << jmax << "," << 1 << "," << iter_max << "," << 1 << "," << bat << "," << init_runtime[bat] \
         << "," << main_loop_runtime[bat] << "," << main_loop_runtime[bat] + init_runtime[bat] << std::endl;
+        std::cout << "[WARNING] The runtime is averaged over the batch size of " << batch_size << std::endl;
 
 		std::cout << "run: "<< bat << "| total runtime: " << main_loop_runtime[bat] + init_runtime[bat] << "(us)" << std::endl;
 		std::cout << "     |--> init runtime: " << init_runtime[bat] << "(us)" << std::endl;
@@ -399,6 +442,9 @@ int main(int argc, const char **argv)
 	std::cout << "Standard Deviation main loop: " << main_loop_std << std::endl;
 	std::cout << "Standard Deviation total: " << total_std << std::endl;
 	std::cout << "======================================================" << std::endl;
+
+    fstream << "args: " << "-sizex=" << imax << " -sizey=" << jmax << " -iters=" << iter_max << " -batch=" << batches << " -bsize=" << batch_size << std::endl;
+    fstream.close();
 
     fstream.close();
 
