@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 23:42:13.794204 by ops-translator
+// Auto-generated at 2025-08-16 01:04:09.593987 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -21,17 +21,23 @@ void ops_par_loop_kernel_populate(ops::hls::Block dummyBlock, int dim, int* ops_
     constexpr int arg0_0_stencil_offset[] = { 0, 0, 0 };
     getGrid(arg0);
 
-    for (unsigned short k = range.start[2]; k < range.end[2]; k++)
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
     {
-        for (unsigned short j = range.start[1]; j < range.end[1]; j++)
+        for (unsigned short k = range.start[2]; k < range.end[2]; k++)
         {
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+            for (unsigned short j = range.start[1]; j < range.end[1]; j++)
             {
-                kernel_kernel_populate_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)]
-                );
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    kernel_kernel_populate_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)]
+                    );
+                }
             }
         }
+
+        range.start[2] += arg0.originalProperty.grid_size[2];
+        range.end[2] += arg0.originalProperty.grid_size[2];
     }
 
     arg0.isHostBufDirty = true;

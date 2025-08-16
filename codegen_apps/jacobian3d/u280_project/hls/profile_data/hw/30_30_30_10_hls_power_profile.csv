@@ -1,0 +1,9 @@
+Timestamp,Power (W)
+1755385839237,53.729782
+1755385839499,53.729782
+1755385839753,53.729782
+1755385840014,53.729782
+1755385840459,43.102758
+1755385840708,43.102758
+1755385841101,43.102758
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/u280_project/hls/build/hw/jac3D7pt_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/u280_project/hls/build/hw/jac3D7pt.xclbin -sizex=30 -sizey=30 -sizez=30 -iters=60048 -piter=20

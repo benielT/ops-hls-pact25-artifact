@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'kernel_outerloop_0'
 ================================================================
-* Date:           Fri May 16 17:40:19 2025
+* Date:           Sat Aug 16 01:06:49 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        kernel_outerloop_0
@@ -38,7 +38,7 @@
         |                                               |                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
         |                    Instance                   |               Module               |   min   |   max   |    min   |    max   | min | max |   Type   |
         +-----------------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+----------+
-        |grp_kernel_outerloop_0_dataflow_region_fu_196  |kernel_outerloop_0_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        |grp_kernel_outerloop_0_dataflow_region_fu_208  |kernel_outerloop_0_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
         +-----------------------------------------------+------------------------------------+---------+---------+----------+----------+-----+-----+----------+
 
         * Loop: 
@@ -46,7 +46,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_120_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        |- VITIS_LOOP_126_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -58,19 +58,19 @@
 +---------------------+---------+------+---------+---------+-----+
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
-|DSP                  |        -|     -|        -|        -|    -|
+|DSP                  |        -|     1|        -|        -|    -|
 |Expression           |        -|     -|        0|       67|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |      144|  2430|   332388|   168164|   72|
+|Instance             |      144|  2430|   313011|   164799|   72|
 |Memory               |        -|     -|        -|        -|    -|
-|Multiplexer          |        -|     -|        -|       53|    -|
-|Register             |        -|     -|       70|        -|    -|
+|Multiplexer          |        -|     -|        -|       70|    -|
+|Register             |        -|     -|       73|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |      144|  2430|   332458|   168284|   72|
+|Total                |      144|  2431|   313084|   164936|   72|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
-|Utilization SLR (%)  |       10|    80|       38|       38|   22|
+|Utilization SLR (%)  |       10|    80|       36|       37|   22|
 +---------------------+---------+------+---------+---------+-----+
 |Available            |     4032|  9024|  2607360|  1303680|  960|
 +---------------------+---------+------+---------+---------+-----+
@@ -82,14 +82,18 @@
     +-----------------------------------------------+------------------------------------+---------+------+--------+--------+-----+
     |                    Instance                   |               Module               | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
     +-----------------------------------------------+------------------------------------+---------+------+--------+--------+-----+
-    |control_s_axi_U                                |control_s_axi                       |        0|     0|     376|     552|    0|
-    |grp_kernel_outerloop_0_dataflow_region_fu_196  |kernel_outerloop_0_dataflow_region  |      144|  2430|  332012|  167612|   72|
+    |control_s_axi_U                                |control_s_axi                       |        0|     0|     398|     584|    0|
+    |grp_kernel_outerloop_0_dataflow_region_fu_208  |kernel_outerloop_0_dataflow_region  |      144|  2430|  312613|  164215|   72|
     +-----------------------------------------------+------------------------------------+---------+------+--------+--------+-----+
-    |Total                                          |                                    |      144|  2430|  332388|  168164|   72|
+    |Total                                          |                                    |      144|  2430|  313011|  164799|   72|
     +-----------------------------------------------+------------------------------------+---------+------+--------+--------+-----+
 
     * DSP: 
-    N/A
+    +------------------------------+-------------------------+-----------+
+    |           Instance           |          Module         | Expression|
+    +------------------------------+-------------------------+-----------+
+    |mul_mul_27s_16ns_27_4_1_U544  |mul_mul_27s_16ns_27_4_1  |    i0 * i1|
+    +------------------------------+-------------------------+-----------+
 
     * Memory: 
     N/A
@@ -101,12 +105,12 @@
     +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |                            Variable Name                           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |i_4_fu_246_p2                                                       |         +|   0|  0|  39|          32|           1|
-    |grp_kernel_outerloop_0_dataflow_region_fu_196_arg1_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln120_fu_241_p2                                                |      icmp|   0|  0|  20|          32|          32|
+    |i_4_fu_268_p2                                                       |         +|   0|  0|  39|          32|           1|
+    |grp_kernel_outerloop_0_dataflow_region_fu_208_arg1_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln126_fu_263_p2                                                |      icmp|   0|  0|  20|          32|          32|
     |ap_block_state1                                                     |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_196_ap_done       |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_196_ap_ready      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_208_ap_done       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_kernel_outerloop_0_dataflow_region_fu_208_ap_ready      |        or|   0|  0|   2|           1|           1|
     +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |Total                                                               |          |   0|  0|  67|          68|          37|
     +--------------------------------------------------------------------+----------+----+---+----+------------+------------+
@@ -115,30 +119,30 @@
     +----------------------------------+----+-----------+-----+-----------+
     |               Name               | LUT| Input Size| Bits| Total Bits|
     +----------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                         |  26|          5|    1|          5|
+    |ap_NS_fsm                         |  43|          8|    1|          8|
     |ap_done                           |   9|          2|    1|          2|
     |arg0_axis_in_TREADY_int_regslice  |   9|          2|    1|          2|
-    |i_fu_120                          |   9|          2|   32|         64|
+    |i_fu_126                          |   9|          2|   32|         64|
     +----------------------------------+----+-----------+-----+-----------+
-    |Total                             |  53|         11|   35|         73|
+    |Total                             |  70|         14|   35|         76|
     +----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +--------------------------------------------------------------------+----+----+-----+-----------+
     |                                Name                                | FF | LUT| Bits| Const Bits|
     +--------------------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                                           |   4|   0|    4|          0|
+    |ap_CS_fsm                                                           |   7|   0|    7|          0|
     |ap_done_reg                                                         |   1|   0|    1|          0|
     |ap_rst_n_inv                                                        |   1|   0|    1|          0|
     |ap_rst_reg_1                                                        |   1|   0|    1|          0|
     |ap_rst_reg_2                                                        |   1|   0|    1|          0|
-    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_196_ap_done   |   1|   0|    1|          0|
-    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_196_ap_ready  |   1|   0|    1|          0|
-    |grp_kernel_outerloop_0_dataflow_region_fu_196_ap_start_reg          |   1|   0|    1|          0|
-    |i_fu_120                                                            |  32|   0|   32|          0|
-    |total_bytes_reg_319                                                 |  27|   0|   32|          5|
+    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_208_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_kernel_outerloop_0_dataflow_region_fu_208_ap_ready  |   1|   0|    1|          0|
+    |grp_kernel_outerloop_0_dataflow_region_fu_208_ap_start_reg          |   1|   0|    1|          0|
+    |i_fu_126                                                            |  32|   0|   32|          0|
+    |total_bytes_reg_363                                                 |  27|   0|   32|          5|
     +--------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                               |  70|   0|   75|          5|
+    |Total                                                               |  73|   0|   78|          5|
     +--------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -152,14 +156,14 @@
 +-----------------------+-----+-----+---------------+------------------------+--------------+
 |s_axi_control_AWVALID  |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_AWREADY  |  out|    1|          s_axi|                 control|        scalar|
-|s_axi_control_AWADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_AWADDR   |   in|    8|          s_axi|                 control|        scalar|
 |s_axi_control_WVALID   |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_WREADY   |  out|    1|          s_axi|                 control|        scalar|
 |s_axi_control_WDATA    |   in|   32|          s_axi|                 control|        scalar|
 |s_axi_control_WSTRB    |   in|    4|          s_axi|                 control|        scalar|
 |s_axi_control_ARVALID  |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_ARREADY  |  out|    1|          s_axi|                 control|        scalar|
-|s_axi_control_ARADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_ARADDR   |   in|    8|          s_axi|                 control|        scalar|
 |s_axi_control_RVALID   |  out|    1|          s_axi|                 control|        scalar|
 |s_axi_control_RREADY   |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_RDATA    |  out|   32|          s_axi|                 control|        scalar|

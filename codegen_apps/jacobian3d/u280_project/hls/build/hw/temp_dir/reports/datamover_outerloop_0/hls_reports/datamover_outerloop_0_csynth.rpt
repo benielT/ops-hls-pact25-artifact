@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'datamover_outerloop_0'
 ================================================================
-* Date:           Fri May 16 17:38:40 2025
+* Date:           Sat Aug 16 01:04:57 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        datamover_outerloop_0
@@ -38,7 +38,7 @@
         |                                                                      |                                                           |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
         |                               Instance                               |                           Module                          |   min   |   max   |    min   |    max   | min | max |   Type   |
         +----------------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
-        |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224  |datamover_outerloop_0_dataflow_read_write_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234  |datamover_outerloop_0_dataflow_read_write_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
         +----------------------------------------------------------------------+-----------------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
 
         * Loop: 
@@ -58,15 +58,15 @@
 +---------------------+---------+------+---------+---------+-----+
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
-|DSP                  |        -|     1|        -|        -|    -|
+|DSP                  |        -|     2|        -|        -|    -|
 |Expression           |        -|     -|        0|      156|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |        0|     2|    18107|    30483|    0|
+|Instance             |        0|     3|    18129|    30515|    0|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|      415|    -|
-|Register             |        -|     -|      334|        -|    -|
+|Register             |        -|     -|      350|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     3|    18441|    31054|    0|
+|Total                |        0|     5|    18479|    31086|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -82,13 +82,13 @@
     +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+-------+-----+
     |                               Instance                               |                           Module                          | BRAM_18K| DSP|  FF  |  LUT  | URAM|
     +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+-------+-----+
-    |control_s_axi_U                                                       |control_s_axi                                              |        0|   0|   419|    650|    0|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224  |datamover_outerloop_0_dataflow_read_write_dataflow_region  |        0|   0|  8389|  13782|    0|
+    |control_s_axi_U                                                       |control_s_axi                                              |        0|   0|   441|    682|    0|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234  |datamover_outerloop_0_dataflow_read_write_dataflow_region  |        0|   0|  8389|  13782|    0|
     |gmem0_m_axi_U                                                         |gmem0_m_axi                                                |        0|   0|  4567|   8001|    0|
     |gmem1_m_axi_U                                                         |gmem1_m_axi                                                |        0|   0|  4567|   8001|    0|
-    |mul_32s_16ns_32_2_1_U92                                               |mul_32s_16ns_32_2_1                                        |        0|   2|   165|     49|    0|
+    |mul_32s_32s_32_2_1_U92                                                |mul_32s_32s_32_2_1                                         |        0|   3|   165|     49|    0|
     +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+-------+-----+
-    |Total                                                                 |                                                           |        0|   2| 18107|  30483|    0|
+    |Total                                                                 |                                                           |        0|   3| 18129|  30515|    0|
     +----------------------------------------------------------------------+-----------------------------------------------------------+---------+----+------+-------+-----+
 
     * DSP: 
@@ -96,6 +96,7 @@
     |           Instance           |          Module          | Expression|
     +------------------------------+--------------------------+-----------+
     |mul_mul_16ns_16ns_32_4_1_U93  |mul_mul_16ns_16ns_32_4_1  |    i0 * i1|
+    |mul_mul_16ns_16ns_32_4_1_U94  |mul_mul_16ns_16ns_32_4_1  |    i0 * i1|
     +------------------------------+--------------------------+-----------+
 
     * Memory: 
@@ -108,16 +109,16 @@
     +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |                                       Variable Name                                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |add_ln2576_fu_266_p2                                                                       |         +|   0|  0|  24|          17|           4|
-    |i_2_fu_366_p2                                                                              |         +|   0|  0|  38|          31|           1|
+    |add_ln2577_fu_276_p2                                                                       |         +|   0|  0|  24|          17|           4|
+    |i_2_fu_380_p2                                                                              |         +|   0|  0|  38|          31|           1|
     |diff_y_fu_328_p2                                                                           |         -|   0|  0|  23|          16|          16|
-    |diff_z_fu_318_p2                                                                           |         -|   0|  0|  23|          16|          16|
-    |num_xblocks_fu_304_p2                                                                      |         -|   0|  0|  21|          14|          14|
-    |icmp_ln76_fu_361_p2                                                                        |      icmp|   0|  0|  19|          31|          31|
+    |diff_z_fu_334_p2                                                                           |         -|   0|  0|  23|          16|          16|
+    |num_xblocks_fu_314_p2                                                                      |         -|   0|  0|  21|          14|          14|
+    |icmp_ln76_fu_375_p2                                                                        |      icmp|   0|  0|  19|          31|          31|
     |ap_block_state1                                                                            |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_ap_done       |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_ap_ready      |        or|   0|  0|   2|           1|           1|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_arg0_axis_out_TREADY  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_ap_done       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_ap_ready      |        or|   0|  0|   2|           1|           1|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_arg0_axis_out_TREADY  |        or|   0|  0|   2|           1|           1|
     +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |Total                                                                                      |          |   0|  0| 156|         129|          86|
     +-------------------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
@@ -140,23 +141,23 @@
     |gmem1_BREADY                                                                               |   9|          2|    1|          2|
     |gmem1_RREADY                                                                               |   9|          2|    1|          2|
     |gmem1_WVALID                                                                               |   9|          2|    1|          2|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_arg0                  |  14|          3|   64|        192|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_arg1                  |  14|          3|   64|        192|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_ARREADY   |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RDATA     |  14|          3|  512|       1536|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RFIFONUM  |  14|          3|    9|         27|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RID       |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RLAST     |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RRESP     |  14|          3|    2|          6|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RUSER     |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem0_RVALID    |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_AWREADY   |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_BID       |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_BRESP     |  14|          3|    2|          6|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_BUSER     |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_BVALID    |  14|          3|    1|          3|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_m_axi_gmem1_WREADY    |  14|          3|    1|          3|
-    |i_fu_166                                                                                   |   9|          2|   31|         62|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_arg0                  |  14|          3|   64|        192|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_arg1                  |  14|          3|   64|        192|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_ARREADY   |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RDATA     |  14|          3|  512|       1536|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RFIFONUM  |  14|          3|    9|         27|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RID       |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RLAST     |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RRESP     |  14|          3|    2|          6|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RUSER     |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem0_RVALID    |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_AWREADY   |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_BID       |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_BRESP     |  14|          3|    2|          6|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_BUSER     |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_BVALID    |  14|          3|    1|          3|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_m_axi_gmem1_WREADY    |  14|          3|    1|          3|
+    |i_fu_170                                                                                   |   9|          2|   31|         62|
     +-------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
     |Total                                                                                      | 415|         90|  708|       2091|
     +-------------------------------------------------------------------------------------------+----+-----------+-----+-----------+
@@ -170,20 +171,20 @@
     |ap_rst_n_inv                                                                               |   1|   0|    1|          0|
     |ap_rst_reg_1                                                                               |   1|   0|    1|          0|
     |ap_rst_reg_2                                                                               |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_ap_done   |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_ap_ready  |   1|   0|    1|          0|
-    |arg0_read_reg_426                                                                          |  64|   0|   64|          0|
-    |arg1_read_reg_420                                                                          |  64|   0|   64|          0|
-    |config_total_xblocks_reg_432                                                               |  32|   0|   32|          0|
-    |diff_y_reg_405                                                                             |  16|   0|   16|          0|
-    |end_x_reg_390                                                                              |  13|   0|   13|          0|
-    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_224_ap_start_reg          |   1|   0|    1|          0|
-    |i_fu_166                                                                                   |  31|   0|   31|          0|
-    |mul_ln2620_reg_410                                                                         |  32|   0|   32|          0|
-    |num_pkts_reg_437                                                                           |  31|   0|   32|          1|
-    |trunc_ln_reg_442                                                                           |  31|   0|   31|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_ap_ready  |   1|   0|    1|          0|
+    |arg0_read_reg_451                                                                          |  64|   0|   64|          0|
+    |arg1_read_reg_445                                                                          |  64|   0|   64|          0|
+    |end_x_reg_410                                                                              |  13|   0|   13|          0|
+    |grp_datamover_outerloop_0_dataflow_read_write_dataflow_region_fu_234_ap_start_reg          |   1|   0|    1|          0|
+    |i_fu_170                                                                                   |  31|   0|   31|          0|
+    |mul_ln2622_1_reg_440                                                                       |  32|   0|   32|          0|
+    |mul_ln2622_reg_435                                                                         |  32|   0|   32|          0|
+    |num_beats_reg_457                                                                          |  32|   0|   32|          0|
+    |num_pkts_reg_462                                                                           |  31|   0|   32|          1|
+    |trunc_ln_reg_467                                                                           |  31|   0|   31|          0|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                                      | 334|   0|  335|          1|
+    |Total                                                                                      | 350|   0|  351|          1|
     +-------------------------------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -197,14 +198,14 @@
 +-----------------------+-----+-----+---------------+------------------------+--------------+
 |s_axi_control_AWVALID  |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_AWREADY  |  out|    1|          s_axi|                 control|        scalar|
-|s_axi_control_AWADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_AWADDR   |   in|    8|          s_axi|                 control|        scalar|
 |s_axi_control_WVALID   |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_WREADY   |  out|    1|          s_axi|                 control|        scalar|
 |s_axi_control_WDATA    |   in|   32|          s_axi|                 control|        scalar|
 |s_axi_control_WSTRB    |   in|    4|          s_axi|                 control|        scalar|
 |s_axi_control_ARVALID  |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_ARREADY  |  out|    1|          s_axi|                 control|        scalar|
-|s_axi_control_ARADDR   |   in|    7|          s_axi|                 control|        scalar|
+|s_axi_control_ARADDR   |   in|    8|          s_axi|                 control|        scalar|
 |s_axi_control_RVALID   |  out|    1|          s_axi|                 control|        scalar|
 |s_axi_control_RREADY   |   in|    1|          s_axi|                 control|        scalar|
 |s_axi_control_RDATA    |  out|   32|          s_axi|                 control|        scalar|
