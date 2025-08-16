@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2022.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Thu May 15 19:46:49 2025</td></tr>
+<tr><td><b>Date</b></td><td>Fri Aug 15 20:36:01 2025</td></tr>
 <tr><td><b>Host</b></td><td>acclnode01 running 64-bit Ubuntu 20.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/jac2D9pt.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo </td></tr>
+<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/jac2D9pt.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3445,7 +3445,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">Accelerator fit - DSP resources</td>
 <td align="left">Accelerator.Kernel.Resource.DSP</td>
-<td align="left">The design requires more DSP resources elements than are available. The total number of DSP blocks required by all kernels is 7267, out of 8304 available (utilization threshold 0.800000).</td>
+<td align="left">The design requires more DSP resources elements than are available. The total number of DSP blocks required by all kernels is 7272, out of 8304 available (utilization threshold 0.800000).</td>
 <td align="left">Xilinx FPGAs and programmable SoCs are ideal for high-performance or multi-channel digital signal processing (DSP) applications that can take advantage of hardware parellelism. <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?t=vitis+guidance;v=2022.2;d=ACCELERATOR-FIT-01.html">This page</a> describes how to potentially reduce the number of DSP blocks required for all kernels by utilizing sharing of operations.</td>
 </tr>
 <tr>
@@ -3455,7 +3455,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">Auto frequency scaling - Higher frequency possible</td>
 <td align="left">Accelerator.jac2D9pt.Performance</td>
-<td align="left">For clock <a href="file:///home/x_thileeb/repos/OPS_mine/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt">clk_kernel_00_unbuffered_net</a>, the auto scaled frequency 300.7 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 300.0 MHz.</td>
+<td align="left">For clock <a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_loopback_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt">clk_kernel_00_unbuffered_net</a>, the auto scaled frequency 300.3 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 300.0 MHz.</td>
 <td align="left">The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?t=vitis+guidance;v=2022.2;d=AUTO-FREQ-SCALING-08.html">setting</a> the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.</td>
 </tr>
 <tr>
@@ -3465,7 +3465,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">Auto frequency scaling - Higher frequency possible</td>
 <td align="left">Accelerator.jac2D9pt.Performance</td>
-<td align="left">For clock <a href="file:///home/x_thileeb/repos/OPS_mine/apps/c/jac2D9pt_fpga_experimental/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt">hbm_aclk</a>, the auto scaled frequency 457.8 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.</td>
+<td align="left">For clock <a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_loopback_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt">hbm_aclk</a>, the auto scaled frequency 469.9 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.</td>
 <td align="left">The automatic frequency scaling feature allows user kernels to operate in hardware, even if at a lower frequency than intended. In this case the clock may in fact be able to run at a higher frequency than specified. You may want to consider <a href="https://www.xilinx.com/cgi-bin/docs/rdoc?t=vitis+guidance;v=2022.2;d=AUTO-FREQ-SCALING-08.html">setting</a> the clock frequency higher for better performance. The '--kernel_frequency' option is one way to control the frequency specification.</td>
 </tr>
 </table>

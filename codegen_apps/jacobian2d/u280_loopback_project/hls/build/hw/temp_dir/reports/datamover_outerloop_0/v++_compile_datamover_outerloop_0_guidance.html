@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2022.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Thu May 15 13:39:29 2025</td></tr>
+<tr><td><b>Date</b></td><td>Fri Aug 15 14:50:54 2025</td></tr>
 <tr><td><b>Host</b></td><td>acclnode01 running 64-bit Ubuntu 20.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine/ops//hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
+<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3440,7 +3440,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
+<td align="left">Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_432_1'(<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=432">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=432">ops_hls_datamover.hpp</a>)
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3451,7 +3451,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
+<td align="left">Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_454_2'(<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=454">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=454">ops_hls_datamover.hpp</a>)
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3462,7 +3462,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
+<td align="left">Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_568_1'(<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=568">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=568">ops_hls_datamover.hpp</a>)
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3473,7 +3473,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
+<td align="left">Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_581_2'(<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=581">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=581">ops_hls_datamover.hpp</a>)
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3484,7 +3484,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_431_1'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_432_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3495,7 +3495,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_453_2'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_454_2'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3506,7 +3506,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_893_1_VITIS_LOOP_895_2'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3517,7 +3517,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3528,7 +3528,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_996_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3539,7 +3539,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3550,7 +3550,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_996_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3561,7 +3561,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_809_1_VITIS_LOOP_811_2'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3572,7 +3572,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_567_1'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3583,7 +3583,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_580_2'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

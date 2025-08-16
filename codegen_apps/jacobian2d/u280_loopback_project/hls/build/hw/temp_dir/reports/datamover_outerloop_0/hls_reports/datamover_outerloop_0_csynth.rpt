@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'datamover_outerloop_0'
 ================================================================
-* Date:           Thu May 15 13:39:07 2025
+* Date:           Fri Aug 15 14:50:26 2025
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        datamover_outerloop_0
@@ -38,9 +38,9 @@
         |                                                           |                                                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
         |                          Instance                         |                     Module                     |   min   |   max   |    min   |    max   | min | max |   Type   |
         +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
-        |grp_datamover_outerloop_0_dataflow_region_read_fu_198      |datamover_outerloop_0_dataflow_region_read      |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
-        |grp_datamover_outerloop_0_loopback_dataflow_region_fu_219  |datamover_outerloop_0_loopback_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
-        |grp_datamover_outerloop_0_dataflow_region_write_fu_242     |datamover_outerloop_0_dataflow_region_write     |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        |grp_datamover_outerloop_0_dataflow_region_read_fu_208      |datamover_outerloop_0_dataflow_region_read      |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        |grp_datamover_outerloop_0_loopback_dataflow_region_fu_229  |datamover_outerloop_0_loopback_dataflow_region  |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+        |grp_datamover_outerloop_0_dataflow_region_write_fu_252     |datamover_outerloop_0_dataflow_region_write     |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
         +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+----------+
 
         * Loop: 
@@ -63,12 +63,12 @@
 |DSP                  |        -|     1|        -|        -|    -|
 |Expression           |        -|     -|        0|      184|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |        0|     -|    18833|    31033|    0|
+|Instance             |        0|     2|    19020|    31114|    0|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|      212|    -|
-|Register             |        -|     -|      292|        -|    -|
+|Register             |        -|     -|      342|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     1|    19125|    31429|    0|
+|Total                |        0|     3|    19362|    31510|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -84,21 +84,22 @@
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+------+-----+
     |                          Instance                         |                     Module                     | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+------+-----+
-    |control_s_axi_U                                            |control_s_axi                                   |        0|   0|   353|   554|    0|
-    |grp_datamover_outerloop_0_dataflow_region_read_fu_198      |datamover_outerloop_0_dataflow_region_read      |        0|   0|  4056|  5011|    0|
-    |grp_datamover_outerloop_0_dataflow_region_write_fu_242     |datamover_outerloop_0_dataflow_region_write     |        0|   0|  4337|  8804|    0|
-    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_219  |datamover_outerloop_0_loopback_dataflow_region  |        0|   0|   953|   662|    0|
+    |control_s_axi_U                                            |control_s_axi                                   |        0|   0|   375|   586|    0|
+    |grp_datamover_outerloop_0_dataflow_region_read_fu_208      |datamover_outerloop_0_dataflow_region_read      |        0|   0|  4056|  5011|    0|
+    |grp_datamover_outerloop_0_dataflow_region_write_fu_252     |datamover_outerloop_0_dataflow_region_write     |        0|   0|  4337|  8804|    0|
+    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_229  |datamover_outerloop_0_loopback_dataflow_region  |        0|   0|   953|   662|    0|
     |gmem0_m_axi_U                                              |gmem0_m_axi                                     |        0|   0|  4567|  8001|    0|
     |gmem1_m_axi_U                                              |gmem1_m_axi                                     |        0|   0|  4567|  8001|    0|
+    |mul_32s_16ns_32_2_1_U131                                   |mul_32s_16ns_32_2_1                             |        0|   2|   165|    49|    0|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+------+-----+
-    |Total                                                      |                                                |        0|   0| 18833| 31033|    0|
+    |Total                                                      |                                                |        0|   2| 19020| 31114|    0|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     +-------------------------------+--------------------------+-----------+
     |            Instance           |          Module          | Expression|
     +-------------------------------+--------------------------+-----------+
-    |mul_mul_16ns_16ns_32_4_1_U131  |mul_mul_16ns_16ns_32_4_1  |    i0 * i1|
+    |mul_mul_16ns_16ns_32_4_1_U132  |mul_mul_16ns_16ns_32_4_1  |    i0 * i1|
     +-------------------------------+--------------------------+-----------+
 
     * Memory: 
@@ -111,21 +112,21 @@
     +--------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |                                  Variable Name                                 | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
-    |add_ln2576_fu_267_p2                                                            |         +|   0|  0|  24|          17|           4|
-    |i_2_fu_349_p2                                                                   |         +|   0|  0|  39|          32|           1|
-    |loopback_itr_fu_335_p2                                                          |         +|   0|  0|  39|          32|           2|
-    |diff_y_fu_319_p2                                                                |         -|   0|  0|  23|          16|          16|
-    |num_xblocks_fu_305_p2                                                           |         -|   0|  0|  21|          14|          14|
-    |grp_datamover_outerloop_0_dataflow_region_read_fu_198_arg0_axis_out_TREADY      |       and|   0|  0|   2|           1|           1|
-    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_arg0_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln121_fu_344_p2                                                            |      icmp|   0|  0|  20|          32|          32|
+    |add_ln2577_fu_277_p2                                                            |         +|   0|  0|  24|          17|           4|
+    |i_2_fu_367_p2                                                                   |         +|   0|  0|  39|          32|           1|
+    |loopback_itr_fu_353_p2                                                          |         +|   0|  0|  39|          32|           2|
+    |diff_y_fu_333_p2                                                                |         -|   0|  0|  23|          16|          16|
+    |num_xblocks_fu_315_p2                                                           |         -|   0|  0|  21|          14|          14|
+    |grp_datamover_outerloop_0_dataflow_region_read_fu_208_arg0_axis_out_TREADY      |       and|   0|  0|   2|           1|           1|
+    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_arg0_axis_out_TREADY  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln121_fu_362_p2                                                            |      icmp|   0|  0|  20|          32|          32|
     |ap_block_state1                                                                 |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_region_read_fu_198_ap_done           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_region_read_fu_198_ap_ready          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_region_write_fu_242_ap_done          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_dataflow_region_write_fu_242_ap_ready         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_ap_done       |        or|   0|  0|   2|           1|           1|
-    |ap_sync_grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_ap_ready      |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_region_read_fu_208_ap_done           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_region_read_fu_208_ap_ready          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_region_write_fu_252_ap_done          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_dataflow_region_write_fu_252_ap_ready         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_ap_done       |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_ap_ready      |        or|   0|  0|   2|           1|           1|
     +--------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
     |Total                                                                           |          |   0|  0| 184|         152|          78|
     +--------------------------------------------------------------------------------+----------+----+---+----+------------+------------+
@@ -134,7 +135,7 @@
     +-----------------------------------+----+-----------+-----+-----------+
     |                Name               | LUT| Input Size| Bits| Total Bits|
     +-----------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                          |  65|         12|    1|         12|
+    |ap_NS_fsm                          |  65|         14|    1|         14|
     |ap_done                            |   9|          2|    1|          2|
     |arg0_axis_out_TDATA_int_regslice   |  14|          3|  256|        768|
     |arg0_axis_out_TKEEP_int_regslice   |  14|          3|   32|         96|
@@ -147,38 +148,40 @@
     |gmem1_AWVALID                      |   9|          2|    1|          2|
     |gmem1_BREADY                       |   9|          2|    1|          2|
     |gmem1_WVALID                       |   9|          2|    1|          2|
-    |i_fu_152                           |   9|          2|   32|         64|
+    |i_fu_156                           |   9|          2|   32|         64|
     +-----------------------------------+----+-----------+-----+-----------+
-    |Total                              | 212|         44|  362|       1057|
+    |Total                              | 212|         46|  362|       1059|
     +-----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +--------------------------------------------------------------------------------+----+----+-----+-----------+
     |                                      Name                                      | FF | LUT| Bits| Const Bits|
     +--------------------------------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                                                       |  11|   0|   11|          0|
+    |ap_CS_fsm                                                                       |  13|   0|   13|          0|
     |ap_done_reg                                                                     |   1|   0|    1|          0|
     |ap_rst_n_inv                                                                    |   1|   0|    1|          0|
     |ap_rst_reg_1                                                                    |   1|   0|    1|          0|
     |ap_rst_reg_2                                                                    |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_read_fu_198_ap_done       |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_read_fu_198_ap_ready      |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_write_fu_242_ap_done      |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_write_fu_242_ap_ready     |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_ap_done   |   1|   0|    1|          0|
-    |ap_sync_reg_grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_ap_ready  |   1|   0|    1|          0|
-    |arg0_read_reg_393                                                               |  64|   0|   64|          0|
-    |arg1_read_reg_388                                                               |  64|   0|   64|          0|
-    |config_total_xblocks_reg_398                                                    |  32|   0|   32|          0|
-    |end_x_reg_373                                                                   |  13|   0|   13|          0|
-    |grp_datamover_outerloop_0_dataflow_region_read_fu_198_ap_start_reg              |   1|   0|    1|          0|
-    |grp_datamover_outerloop_0_dataflow_region_write_fu_242_ap_start_reg             |   1|   0|    1|          0|
-    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_219_ap_start_reg          |   1|   0|    1|          0|
-    |i_fu_152                                                                        |  32|   0|   32|          0|
-    |loopback_itr_reg_412                                                            |  32|   0|   32|          0|
-    |num_pkts_reg_405                                                                |  31|   0|   32|          1|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_read_fu_208_ap_done       |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_read_fu_208_ap_ready      |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_write_fu_252_ap_done      |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_dataflow_region_write_fu_252_ap_ready     |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_ap_ready  |   1|   0|    1|          0|
+    |arg0_read_reg_426                                                               |  64|   0|   64|          0|
+    |arg1_read_reg_421                                                               |  64|   0|   64|          0|
+    |diff_y_reg_406                                                                  |  16|   0|   16|          0|
+    |end_x_reg_391                                                                   |  13|   0|   13|          0|
+    |grp_datamover_outerloop_0_dataflow_region_read_fu_208_ap_start_reg              |   1|   0|    1|          0|
+    |grp_datamover_outerloop_0_dataflow_region_write_fu_252_ap_start_reg             |   1|   0|    1|          0|
+    |grp_datamover_outerloop_0_loopback_dataflow_region_fu_229_ap_start_reg          |   1|   0|    1|          0|
+    |i_fu_156                                                                        |  32|   0|   32|          0|
+    |loopback_itr_reg_445                                                            |  32|   0|   32|          0|
+    |mul_ln2622_reg_411                                                              |  32|   0|   32|          0|
+    |num_beats_reg_431                                                               |  32|   0|   32|          0|
+    |num_pkts_reg_438                                                                |  31|   0|   32|          1|
     +--------------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                           | 292|   0|  293|          1|
+    |Total                                                                           | 342|   0|  343|          1|
     +--------------------------------------------------------------------------------+----+----+-----+-----------+
 
 

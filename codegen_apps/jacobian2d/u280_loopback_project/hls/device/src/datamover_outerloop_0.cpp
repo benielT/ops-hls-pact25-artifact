@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 23:00:55.671120 by ops-translator
+// Auto-generated at 2025-08-17 00:47:08.087888 by ops-translator
 #include <datamover_outerloop_0.hpp>
 static void datamover_outerloop_0_dataflow_region_read(
         const unsigned int num_pkts,
@@ -139,15 +139,14 @@ extern "C" void datamover_outerloop_0(
         const unsigned short gridSize_0,
         const unsigned short gridSize_1,
         const unsigned int outer_itr,
+        const unsigned short batch_size,
     //u
         ap_uint<mem_data_width>* arg0,
     //u2
         ap_uint<mem_data_width>* arg1,
     //u
-
         hls::stream <ap_axiu<axis_data_width,0,0,0>>& arg0_axis_out,
     //u2
-
         hls::stream <ap_axiu<axis_data_width,0,0,0>>& arg1_axis_in
     )
 
@@ -161,6 +160,8 @@ extern "C" void datamover_outerloop_0(
     #pragma HLS INTERFACE s_axilite port = gridSize_0 bundle = control
     #pragma HLS INTERFACE s_axilite port = gridSize_1 bundle = control
     #pragma HLS INTERFACE s_axilite port = outer_itr bundle = control
+    #pragma HLS INTERFACE s_axilite port = batch_size bundle = control
+
  
     #pragma HLS INTERFACE mode=m_axi bundle=gmem0 depth=4096 max_read_burst_length=64 max_write_burst_length=64 \
             num_read_outstanding=4 num_write_outstanding=4 \
@@ -196,9 +197,14 @@ extern "C" void datamover_outerloop_0(
 
     constexpr unsigned int num_of_pkts_per_bytes = mem_data_width / axis_data_width;
     ops::hls::MemConfig config;
-    ops::hls::genMemConfig<mem_data_width, axis_data_width, data_width>(read_gridSize, range, config);
+    ops::hls::genMemConfig<mem_data_width, axis_data_width, data_width>(read_gridSize, range, config, batch_size);
     const unsigned int num_beats = config.total_xblocks;
-    const unsigned int num_pkts = num_of_pkts_per_bytes * config.total_xblocks;
+    const unsigned int num_pkts = num_of_pkts_per_bytes * num_beats;
+
+#ifdef DEBUG_LOG
+    printf("[KERNEL_DEBUG]|%s| REALIZED numbers: batch_size: %d, num_beats: %d, num_pkts: %d,\n", __func__,
+            batch_size, num_beats, num_pkts);
+#endif 
         datamover_outerloop_0_dataflow_region_read(
                 num_pkts,
                 config,

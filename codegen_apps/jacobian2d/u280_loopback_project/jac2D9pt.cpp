@@ -200,6 +200,7 @@ int main(int argc, const char **argv)
     float* u2_cpu[batches];
     float* f_cpu[batches];
     float* ref_cpu[batches];
+#endif
 
     int grid_size_y = size[1] - d_m[1] + d_p[1];
     #ifdef OPS_FPGA
@@ -207,7 +208,6 @@ int main(int argc, const char **argv)
     #else
     int grid_size_x = size[0] - d_m[0] + d_p[0];
     #endif
-#endif
 
     // Allocation
     for (unsigned int bat = 0; bat < batches; bat++)

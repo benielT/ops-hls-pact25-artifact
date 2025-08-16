@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu May 15 14:25:21 2025
+| Date         : Fri Aug 15 15:41:50 2025
 | Host         : acclnode01 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file full_util_synthed.rpt -pb full_util_synthed.pb
 | Design       : level0_wrapper
@@ -36,18 +36,18 @@ Table of Contents
 +----------------------------+--------+--------+------------+-----------+-------+
 |          Site Type         |  Used  |  Fixed | Prohibited | Available | Util% |
 +----------------------------+--------+--------+------------+-----------+-------+
-| CLB LUTs*                  | 603388 | 121446 |          0 |   1303680 | 46.28 |
-|   LUT as Logic             | 578097 | 114225 |          0 |   1303680 | 44.34 |
-|   LUT as Memory            |  25291 |   7221 |          0 |    600960 |  4.21 |
+| CLB LUTs*                  | 573335 | 121446 |          0 |   1303680 | 43.98 |
+|   LUT as Logic             | 531091 | 114225 |          0 |   1303680 | 40.74 |
+|   LUT as Memory            |  42244 |   7221 |          0 |    600960 |  7.03 |
 |     LUT as Distributed RAM |   6534 |   5006 |            |           |       |
-|     LUT as Shift Register  |  18757 |   2215 |            |           |       |
-| CLB Registers              | 957452 | 136086 |          0 |   2607360 | 36.72 |
-|   Register as Flip Flop    | 957448 | 136082 |          0 |   2607360 | 36.72 |
+|     LUT as Shift Register  |  35710 |   2215 |            |           |       |
+| CLB Registers              | 842083 | 136086 |          0 |   2607360 | 32.30 |
+|   Register as Flip Flop    | 842079 | 136082 |          0 |   2607360 | 32.30 |
 |   Register as Latch        |      0 |      0 |          0 |   2607360 |  0.00 |
 |   Register as AND/OR       |      4 |      4 |          0 |   2607360 | <0.01 |
-| CARRY8                     |  19316 |    946 |          0 |    162960 | 11.85 |
-| F7 Muxes                   |   3581 |   1683 |          0 |    651840 |  0.55 |
-| F8 Muxes                   |    455 |    446 |          0 |    325920 |  0.14 |
+| CARRY8                     |  19295 |    946 |          0 |    162960 | 11.84 |
+| F7 Muxes                   |   9080 |   1683 |          0 |    651840 |  1.39 |
+| F8 Muxes                   |    497 |    446 |          0 |    325920 |  0.15 |
 | F9 Muxes                   |      0 |      0 |          0 |    162960 |  0.00 |
 +----------------------------+--------+--------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -68,8 +68,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0      |          Yes |           - |            - |
 | 398    |          Yes |           - |          Set |
 | 3542   |          Yes |           - |        Reset |
-| 5840   |          Yes |         Set |            - |
-| 947668 |          Yes |       Reset |            - |
+| 5612   |          Yes |         Set |            - |
+| 832527 |          Yes |       Reset |            - |
 +--------+--------------+-------------+--------------+
 
 
@@ -95,8 +95,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| DSPs           | 7271 |     4 |          0 |      9024 | 80.57 |
-|   DSP48E2 only | 7271 |       |            |           |       |
+| DSPs           | 7276 |     4 |          0 |      9024 | 80.63 |
+|   DSP48E2 only | 7276 |       |            |           |       |
 +----------------+------+-------+------------+-----------+-------+
 
 
@@ -184,24 +184,24 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------------+--------+---------------------+
 |       Ref Name       |  Used  | Functional Category |
 +----------------------+--------+---------------------+
-| FDRE                 | 947668 |            Register |
-| LUT3                 | 233586 |                 CLB |
-| LUT6                 | 167497 |                 CLB |
-| LUT5                 | 134265 |                 CLB |
-| LUT4                 | 104312 |                 CLB |
-| LUT2                 |  65823 |                 CLB |
-| CARRY8               |  19316 |                 CLB |
-| LUT1                 |  14788 |                 CLB |
-| SRLC32E              |  13909 |                 CLB |
+| FDRE                 | 832527 |            Register |
+| LUT6                 | 169959 |                 CLB |
+| LUT3                 | 138284 |                 CLB |
+| LUT5                 | 134619 |                 CLB |
+| LUT4                 |  98566 |                 CLB |
+| LUT2                 |  67571 |                 CLB |
+| SRLC32E              |  24766 |                 CLB |
+| CARRY8               |  19295 |                 CLB |
+| LUT1                 |  15793 |                 CLB |
+| SRL16E               |  10930 |                 CLB |
 | RAMD32               |   9636 |                 CLB |
-| DSP48E2              |   7271 |          Arithmetic |
-| FDSE                 |   5840 |            Register |
-| SRL16E               |   4834 |                 CLB |
-| MUXF7                |   3581 |                 CLB |
+| MUXF7                |   9080 |                 CLB |
+| DSP48E2              |   7276 |          Arithmetic |
+| FDSE                 |   5612 |            Register |
 | FDCE                 |   3542 |            Register |
 | RAMS32               |   1346 |                 CLB |
 | RAMD64E              |    528 |                 CLB |
-| MUXF8                |    455 |                 CLB |
+| MUXF8                |    497 |                 CLB |
 | FDPE                 |    398 |            Register |
 | RAMB36E2             |    390 |            BLOCKRAM |
 | URAM288              |    104 |            BLOCKRAM |
