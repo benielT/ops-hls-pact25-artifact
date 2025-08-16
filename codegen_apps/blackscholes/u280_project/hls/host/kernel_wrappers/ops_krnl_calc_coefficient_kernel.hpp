@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 20:16:01.551155 by ops-translator
+// Auto-generated at 2025-08-15 13:02:33.358923 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -36,18 +36,24 @@ void ops_par_loop_ops_krnl_calc_coefficient(ops::hls::Block dummyBlock, int dim,
     getGrid(arg1);
     getGrid(arg2);
 
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
-            {
-                ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0], 0, 0});
-                kernel_ops_krnl_calc_coefficient_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i )],
-                    arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i )],
-                    arg2.hostBuffer[getOffset(arg2_0_stencil_offset, arg2.originalProperty, i )],
-                    alpha,
-                    beta,
-                    idx
-                );
-            }
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
+    {
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0] - (bat * arg0.originalProperty.grid_size[0]), 0, 0});
+                    kernel_ops_krnl_calc_coefficient_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i )],
+                        arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i )],
+                        arg2.hostBuffer[getOffset(arg2_0_stencil_offset, arg2.originalProperty, i )],
+                        alpha,
+                        beta,
+                        idx
+                    );
+                }
+
+        range.start[0] += arg0.originalProperty.grid_size[0];
+        range.end[0] += arg0.originalProperty.grid_size[0];
+    }
 
     arg0.isHostBufDirty = true;
     arg1.isHostBufDirty = true;

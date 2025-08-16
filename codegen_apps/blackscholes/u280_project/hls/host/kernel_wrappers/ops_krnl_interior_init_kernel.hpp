@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 20:16:01.543866 by ops-translator
+// Auto-generated at 2025-08-15 13:02:33.351324 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -27,16 +27,22 @@ void ops_par_loop_ops_krnl_interior_init(ops::hls::Block dummyBlock, int dim, in
     constexpr int arg0_0_stencil_offset[] = { 0, 0, 0 };
     getGrid(arg0);
 
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
-            {
-                ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0], 0, 0});
-                kernel_ops_krnl_interior_init_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i )],
-                    idx,
-                    delta_s,
-                    strike_price
-                );
-            }
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
+    {
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0] - (bat * arg0.originalProperty.grid_size[0]), 0, 0});
+                    kernel_ops_krnl_interior_init_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i )],
+                        idx,
+                        delta_s,
+                        strike_price
+                    );
+                }
+
+        range.start[0] += arg0.originalProperty.grid_size[0];
+        range.end[0] += arg0.originalProperty.grid_size[0];
+    }
 
     arg0.isHostBufDirty = true;
 

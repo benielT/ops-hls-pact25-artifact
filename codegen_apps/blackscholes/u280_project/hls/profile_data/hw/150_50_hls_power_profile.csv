@@ -1,0 +1,9 @@
+Timestamp,Power (W)
+1755368143757,53.400501
+1755368144023,53.400501
+1755368144269,53.400501
+1755368144532,41.267985
+1755368144793,41.267985
+1755368145064,41.267985
+1755368145489,41.267985
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_project/hls/build/hw/blackscholes_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_project/hls/build/hw/blackscholes.xclbin -sizex=150 -iters=60060 -piter=10000 -bsize=50
