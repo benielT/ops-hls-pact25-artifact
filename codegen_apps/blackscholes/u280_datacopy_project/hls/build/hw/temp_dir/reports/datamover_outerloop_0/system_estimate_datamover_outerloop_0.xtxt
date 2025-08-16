@@ -1,0 +1,201 @@
+===============================================================================
+Version:    v++ v2022.2 (64-bit)
+Build:      SW Build 3671529 on 2022-10-13-17:52:11
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug 15 14:54:22 2025
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             datamover_outerloop_0
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name            Type  Target              OpenCL Library         Compute Units
+---------------------  ----  ------------------  ---------------------  -------------
+datamover_outerloop_0  c     fpga0:OCL_REGION_0  datamover_outerloop_0  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     datamover_outerloop_0
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit             Kernel Name            Module Name                                                                   Target Frequency  Estimated Frequency
+-----------------------  ---------------------  ----------------------------------------------------------------------------  ----------------  -------------------
+datamover_outerloop_0_1  datamover_outerloop_0  entry_proc                                                                    300.300293        821.692688
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_432_1                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_454_2                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_s                                                      300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_432_1                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_454_2                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1                                                      300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_432_1                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_454_2                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2                                                      300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_432_1                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_454_2                            300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3                                                      300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2    300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_s                                             300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4                                             300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5                                             300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6                                             300.300293        692.520752
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_Pipeline_VITIS_LOOP_957_1                                    300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_s                                                            300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7_Pipeline_VITIS_LOOP_957_1                                  300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7                                                            300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8_Pipeline_VITIS_LOOP_957_1                                  300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8                                                            300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9_Pipeline_VITIS_LOOP_957_1                                  300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9                                                            300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_s                                                            300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_10                                                           300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_11                                                           300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_12                                                           300.300293        789.265991
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2      300.300293        413.736023
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_s                                               300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   300.300293        413.736023
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13                                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   300.300293        413.736023
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14                                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   300.300293        413.736023
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15                                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_568_1                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_581_2                              300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_s                                                      300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_568_1                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_581_2                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16                                                     300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_568_1                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_581_2                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17                                                     300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_568_1                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_581_2                           300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18                                                     300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0_dataflow_read_write_dataflow_region                     300.300293        411.015198
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0                                                         300.300293        411.015198
+
+Latency Information
+Compute Unit             Kernel Name            Module Name                                                                   Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+-----------------------  ---------------------  ----------------------------------------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+datamover_outerloop_0_1  datamover_outerloop_0  entry_proc                                                                    0               0              0             0               0 ns             0 ns            0 ns
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_432_1                              undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_454_2                              3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_s                                                      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_432_1                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_454_2                            3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1                                                      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_432_1                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_454_2                            3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2                                                      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_432_1                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_454_2                            3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3                                                      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2    undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_s                                             undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4                                             undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5                                             undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6                                             undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_Pipeline_VITIS_LOOP_957_1                                    undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_s                                                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7_Pipeline_VITIS_LOOP_957_1                                  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7                                                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8_Pipeline_VITIS_LOOP_957_1                                  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8                                                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9_Pipeline_VITIS_LOOP_957_1                                  undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9                                                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_s                                                            undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_10                                                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_11                                                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_12                                                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_s                                               undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13                                              undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14                                              undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15                                              undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_568_1                              undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_581_2                              3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_s                                                      undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_568_1                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_581_2                           3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16                                                     undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_568_1                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_581_2                           3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17                                                     undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_568_1                           undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_581_2                           3 ~ 65          3              undef         65              9.999 ns         undef           0.217 us
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18                                                     undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0_dataflow_read_write_dataflow_region                     undef           undef          undef         undef           undef            undef           undef
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0                                                         undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit             Kernel Name            Module Name                                                                   FF     LUT    DSP  BRAM  URAM
+-----------------------  ---------------------  ----------------------------------------------------------------------------  -----  -----  ---  ----  ----
+datamover_outerloop_0_1  datamover_outerloop_0  entry_proc                                                                    3      128    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_432_1                              550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_454_2                              550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_s                                                      1479   1548   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_432_1                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1_Pipeline_VITIS_LOOP_454_2                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_1                                                      1479   1548   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_432_1                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2_Pipeline_VITIS_LOOP_454_2                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_2                                                      1479   1548   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_432_1                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3_Pipeline_VITIS_LOOP_454_2                            550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  mem2stream_512u_32u_2u_3                                                      1479   1548   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2    814    2327   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_s                                             883    2385   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  814    2327   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_4                                             883    2385   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  814    2327   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_5                                             883    2385   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6_Pipeline_VITIS_LOOP_894_1_VITIS_LOOP_896_2  814    2327   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepdown_512u_256u_6                                             883    2385   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_Pipeline_VITIS_LOOP_957_1                                    35     119    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_s                                                            72     170    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7_Pipeline_VITIS_LOOP_957_1                                  35     119    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_7                                                            72     170    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8_Pipeline_VITIS_LOOP_957_1                                  35     119    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_8                                                            72     170    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9_Pipeline_VITIS_LOOP_957_1                                  35     119    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2axis_256u_9                                                            72     170    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_s                                                            291    121    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_10                                                           291    121    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_11                                                           291    121    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  axis2stream_256u_12                                                           291    121    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2      811    6031   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_s                                               880    6098   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   811    6031   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_13                                              880    6098   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   811    6031   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_14                                              880    6098   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15_Pipeline_VITIS_LOOP_810_1_VITIS_LOOP_812_2   811    6031   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2streamStepup_256u_512u_15                                              880    6098   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_568_1                              550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_581_2                              550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_s                                                      1539   1624   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_568_1                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16_Pipeline_VITIS_LOOP_581_2                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_16                                                     1539   1624   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_568_1                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17_Pipeline_VITIS_LOOP_581_2                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_17                                                     1539   1624   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_568_1                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18_Pipeline_VITIS_LOOP_581_2                           550    144    0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  stream2mem_512u_32u_2u_18                                                     1539   1624   0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0_dataflow_read_write_dataflow_region                     33544  54999  0    0     0
+datamover_outerloop_0_1  datamover_outerloop_0  datamover_outerloop_0                                                         57374  96600  0    0     0
+-------------------------------------------------------------------------------

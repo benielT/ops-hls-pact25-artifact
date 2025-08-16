@@ -1,0 +1,225 @@
+====================================================================
+Version:    xcd v2022.2 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Fri Aug 15 14:59:18 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: kernel_outerloop_0_1
+Kernel: kernel_outerloop_0
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_outerloop_0_2
+Kernel: kernel_outerloop_0
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: kernel_outerloop_0_3
+Kernel: kernel_outerloop_0
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+Compute Unit: datamover_outerloop_0_1
+Kernel: datamover_outerloop_0
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: buffer_kernel_outerloop_0_3_arg1_axis_out/M_AXIS
+Destination Pin: datamover_outerloop_0_1/arg1_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_3_arg2_axis_out/M_AXIS
+Destination Pin: datamover_outerloop_0_1/arg2_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_3_arg3_axis_out/M_AXIS
+Destination Pin: datamover_outerloop_0_1/arg3_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_3_arg4_axis_out/M_AXIS
+Destination Pin: datamover_outerloop_0_1/arg4_axis_in
+
+Source Pin: SLR0/M02_AXI
+Destination Pin: datamover_outerloop_0_1/s_axi_control
+
+Source Pin: buffer_datamover_outerloop_0_1_arg0_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_1/arg0_axis_in
+
+Source Pin: buffer_datamover_outerloop_0_1_arg1_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_1/arg1_axis_in
+
+Source Pin: buffer_datamover_outerloop_0_1_arg2_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_1/arg2_axis_in
+
+Source Pin: buffer_datamover_outerloop_0_1_arg3_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_1/arg3_axis_in
+
+Source Pin: SLR0/M01_AXI
+Destination Pin: kernel_outerloop_0_1/s_axi_control
+
+Source Pin: buffer_kernel_outerloop_0_1_arg4_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_2/arg0_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_1_arg1_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_2/arg1_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_1_arg2_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_2/arg2_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_1_arg3_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_2/arg3_axis_in
+
+Source Pin: SLR1/M01_AXI
+Destination Pin: kernel_outerloop_0_2/s_axi_control
+
+Source Pin: buffer_kernel_outerloop_0_2_arg4_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_3/arg0_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_2_arg1_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_3/arg1_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_2_arg2_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_3/arg2_axis_in
+
+Source Pin: buffer_kernel_outerloop_0_2_arg3_axis_out/M_AXIS
+Destination Pin: kernel_outerloop_0_3/arg3_axis_in
+
+Source Pin: SLR2/M01_AXI
+Destination Pin: kernel_outerloop_0_3/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: datamover_outerloop_0_1/arg0_axis_out
+Destination Pin: buffer_datamover_outerloop_0_1_arg0_axis_out/S_AXIS
+
+Source Pin: datamover_outerloop_0_1/arg1_axis_out
+Destination Pin: buffer_datamover_outerloop_0_1_arg1_axis_out/S_AXIS
+
+Source Pin: datamover_outerloop_0_1/arg2_axis_out
+Destination Pin: buffer_datamover_outerloop_0_1_arg2_axis_out/S_AXIS
+
+Source Pin: datamover_outerloop_0_1/arg3_axis_out
+Destination Pin: buffer_datamover_outerloop_0_1_arg3_axis_out/S_AXIS
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem0
+Destination Pin: hmss_0/S01_AXI
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem1
+Destination Pin: hmss_0/S02_AXI
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem2
+Destination Pin: hmss_0/S03_AXI
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem3
+Destination Pin: hmss_0/S04_AXI
+
+Source Pin: datamover_outerloop_0_1/m_axi_gmem4
+Destination Pin: hmss_0/S05_AXI
+
+Source Pin: kernel_outerloop_0_1/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_1_arg1_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_1/arg2_axis_out
+Destination Pin: buffer_kernel_outerloop_0_1_arg2_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_1/arg3_axis_out
+Destination Pin: buffer_kernel_outerloop_0_1_arg3_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_1/arg4_axis_out
+Destination Pin: buffer_kernel_outerloop_0_1_arg4_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_2/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_2_arg1_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_2/arg2_axis_out
+Destination Pin: buffer_kernel_outerloop_0_2_arg2_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_2/arg3_axis_out
+Destination Pin: buffer_kernel_outerloop_0_2_arg3_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_2/arg4_axis_out
+Destination Pin: buffer_kernel_outerloop_0_2_arg4_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_3/arg1_axis_out
+Destination Pin: buffer_kernel_outerloop_0_3_arg1_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_3/arg2_axis_out
+Destination Pin: buffer_kernel_outerloop_0_3_arg2_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_3/arg3_axis_out
+Destination Pin: buffer_kernel_outerloop_0_3_arg3_axis_out/S_AXIS
+
+Source Pin: kernel_outerloop_0_3/arg4_axis_out
+Destination Pin: buffer_kernel_outerloop_0_3_arg4_axis_out/S_AXIS
+
+3. Clock Connections
+====================
+
+Compute Unit: datamover_outerloop_0_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: datamover_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_1
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_2
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_2/ap_clk
+
+Compute Unit: kernel_outerloop_0_3
+Clock ID: 0
+Platform Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: kernel_outerloop_0_3/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: datamover_outerloop_0_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: datamover_outerloop_0_1/ap_rst_n
+Associated Clock Pin: datamover_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_1/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_1/ap_clk
+
+Compute Unit: kernel_outerloop_0_2
+Source Pin: proc_sys_reset_kernel_slr1/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_2/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_2/ap_clk
+
+Compute Unit: kernel_outerloop_0_3
+Source Pin: proc_sys_reset_kernel_slr2/peripheral_aresetn
+Destination Pin: kernel_outerloop_0_3/ap_rst_n
+Associated Clock Pin: kernel_outerloop_0_3/ap_clk
+
