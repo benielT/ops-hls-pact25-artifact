@@ -1,0 +1,1430 @@
+<ENTRY>
+{
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug 15 14:54:21 2025",
+ "timestampMillis": "1755258861218",
+ "buildStep": {
+  "cmdId": "065a74af-61f5-48b0-906b-3e23300bb1d6",
+  "name": "v++",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/jac2D9pt.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+  "args": [
+   "-s",
+   "-O3",
+   "--target",
+   "hw",
+   "--platform",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--hls.jobs",
+   "64",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/",
+   "--temp_dir",
+   "hls/build/hw/temp_dir/link/",
+   "--log_dir",
+   "hls/build/hw/temp_dir/link/logs/",
+   "--link",
+   "--config",
+   "hls/host/xrt.cfg",
+   "-o",
+   "hls/build/hw/jac2D9pt.xclbin",
+   "./hls/build/hw/datamover_outerloop_0.xo",
+   "./hls/build/hw/kernel_outerloop_0.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/host/xrt.cfg",
+    "content": "[connectivity]\nnk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\n\nstream_connect=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:128\nstream_connect=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg0_axis_in:128\nstream_connect=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg0_axis_in:128\nstream_connect=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:128\n\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:54:21 2025",
+ "timestampMillis": "1755258861219",
+ "status": {
+  "cmdId": "065a74af-61f5-48b0-906b-3e23300bb1d6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Aug 15 14:54:25 2025",
+ "timestampMillis": "1755258865569",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "jac2D9pt",
+    "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "datamover_outerloop_0",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/datamover_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/datamover_outerloop_0/datamover_outerloop_0/cpu_sources/datamover_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "datamover_outerloop_0_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "kernel_outerloop_0",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/kernel_outerloop_0.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/kernel_outerloop_0/kernel_outerloop_0/cpu_sources/kernel_outerloop_0.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "kernel_outerloop_0_1",
+     "kernel_outerloop_0_2",
+     "kernel_outerloop_0_3"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 14:54:25 2025",
+ "timestampMillis": "1755258865829",
+ "buildStep": {
+  "cmdId": "e792d6a9-2c7e-4706-86eb-20291c73e0da",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/datamover_outerloop_0.xo",
+   "--xo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/kernel_outerloop_0.xo",
+   "-keep",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini",
+    "content": "nk=kernel_outerloop_0:1:kernel_outerloop_0_1\nnk=kernel_outerloop_0:1:kernel_outerloop_0_2\nnk=kernel_outerloop_0:1:kernel_outerloop_0_3\nsc=datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:128\nsc=kernel_outerloop_0_1.arg1_axis_out:kernel_outerloop_0_2.arg0_axis_in:128\nsc=kernel_outerloop_0_2.arg1_axis_out:kernel_outerloop_0_3.arg0_axis_in:128\nsc=kernel_outerloop_0_3.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:128\nsp=datamover_outerloop_0_1.arg0:HBM[0]\nsp=datamover_outerloop_0_1.arg1:HBM[1]\nslr=kernel_outerloop_0_1:SLR0\nslr=kernel_outerloop_0_2:SLR1\nslr=kernel_outerloop_0_3:SLR2\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:54:25 2025",
+ "timestampMillis": "1755258865830",
+ "status": {
+  "cmdId": "e792d6a9-2c7e-4706-86eb-20291c73e0da",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:54:50 2025",
+ "timestampMillis": "1755258890897",
+ "status": {
+  "cmdId": "e792d6a9-2c7e-4706-86eb-20291c73e0da",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 14:54:50 2025",
+ "timestampMillis": "1755258890905",
+ "buildStep": {
+  "cmdId": "c9138373-6a6d-4501-9796-1b4d98b6b52a",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:54:50 2025",
+ "timestampMillis": "1755258890906",
+ "status": {
+  "cmdId": "c9138373-6a6d-4501-9796-1b4d98b6b52a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:02 2025",
+ "timestampMillis": "1755258902991",
+ "status": {
+  "cmdId": "c9138373-6a6d-4501-9796-1b4d98b6b52a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 14:55:02 2025",
+ "timestampMillis": "1755258902998",
+ "buildStep": {
+  "cmdId": "b3d98cec-b469-45af-955b-f01d432cabd8",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:02 2025",
+ "timestampMillis": "1755258902998",
+ "status": {
+  "cmdId": "b3d98cec-b469-45af-955b-f01d432cabd8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 14:55:03 2025",
+ "timestampMillis": "1755258903269",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:03 2025",
+ "timestampMillis": "1755258903271",
+ "status": {
+  "cmdId": "b3d98cec-b469-45af-955b-f01d432cabd8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 14:55:03 2025",
+ "timestampMillis": "1755258903281",
+ "buildStep": {
+  "cmdId": "a54b3f6c-de1a-4543-9201-057127dacda1",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-s",
+   "--remote_ip_cache",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/",
+   "--output_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int",
+   "--log_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/logs/link",
+   "--report_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link",
+   "--config",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+   "-k",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link",
+   "--no-info",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0",
+   "--iprepo",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0",
+   "--messageDb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/run_link/vpl.pb",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project\nmisc=BinaryName=jac2D9pt\n\n[connectivity]\nnk=datamover_outerloop_0:1:datamover_outerloop_0_1\nnk=kernel_outerloop_0:3:kernel_outerloop_0_1,kernel_outerloop_0_2,kernel_outerloop_0_3\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\nprop=run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\nprop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true\nprop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true\n\n"
+   }
+  ],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:03 2025",
+ "timestampMillis": "1755258903281",
+ "status": {
+  "cmdId": "a54b3f6c-de1a-4543-9201-057127dacda1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug 15 14:55:04 2025",
+ "timestampMillis": "1755258904556",
+ "buildStep": {
+  "cmdId": "51e89c33-9241-47d5-a4a9-cdb3c6f3054d",
+  "name": "vpl",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:04 2025",
+ "timestampMillis": "1755258904556",
+ "status": {
+  "cmdId": "51e89c33-9241-47d5-a4a9-cdb3c6f3054d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Aug 15 14:55:09 2025",
+ "timestampMillis": "1755258909356",
+ "vivadoProject": {
+  "openDir": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 14:55:09 2025",
+ "timestampMillis": "1755258909358",
+ "buildStep": {
+  "cmdId": "5c350016-80f4-4ed4-92b4-92607962c294",
+  "name": "vivado",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 14:55:09 2025",
+ "timestampMillis": "1755258909359",
+ "status": {
+  "cmdId": "5c350016-80f4-4ed4-92b4-92607962c294",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 14:55:57 2025",
+ "timestampMillis": "1755258957551",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/automation_summary_update_bd.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug 15 15:17:09 2025",
+ "timestampMillis": "1755260229604",
+ "buildStep": {
+  "cmdId": "1b521a03-fde2-4b34-b532-65fd6213affe",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 15:17:09 2025",
+ "timestampMillis": "1755260229605",
+ "status": {
+  "cmdId": "1b521a03-fde2-4b34-b532-65fd6213affe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Aug 15 15:17:09 2025",
+ "timestampMillis": "1755260229606",
+ "buildStep": {
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 15:17:09 2025",
+ "timestampMillis": "1755260229606",
+ "status": {
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 19:45:02 2025",
+ "timestampMillis": "1755276302443",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 19:50:16 2025",
+ "timestampMillis": "1755276616840",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 19:50:16 2025",
+ "timestampMillis": "1755276616843",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:09:22 2025",
+ "timestampMillis": "1755277762667",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:09:22 2025",
+ "timestampMillis": "1755277762673",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255045",
+ "status": {
+  "cmdId": "5c350016-80f4-4ed4-92b4-92607962c294",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255144",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255149",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255152",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255156",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255160",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255164",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255168",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255172",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255176",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255179",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255186",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255189",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255192",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255195",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255426",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_hmss_0_0_synth_1_ulp_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255430",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/bd_85ad_interconnect1_0_0_synth_1_bd_85ad_interconnect1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255433",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_1_0_synth_1_ulp_kernel_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255436",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_2_0_synth_1_ulp_kernel_outerloop_0_2_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255439",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_kernel_outerloop_0_3_0_synth_1_ulp_kernel_outerloop_0_3_0_utilization_synth.rpt",
+  "name": "kernel_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255443",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_datamover_outerloop_0_1_0_synth_1_ulp_datamover_outerloop_0_1_0_utilization_synth.rpt",
+  "name": "datamover_outerloop_0",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255446",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/ulp_buffer_kernel_outerloop_0_1_arg1_axis_out_0_synth_1_ulp_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255449",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/syn/bd_85ad_interconnect0_2_0_synth_1_bd_85ad_interconnect0_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255453",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255501",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255544",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255549",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255598",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255643",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255647",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_hw_bb_locked_timing_summary_postroute_physopted.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "d705b4a8-28ed-4bd7-9a91-541b493b9fa4"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255702",
+ "status": {
+  "cmdId": "51e89c33-9241-47d5-a4a9-cdb3c6f3054d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255805",
+ "status": {
+  "cmdId": "a54b3f6c-de1a-4543-9201-057127dacda1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255826",
+ "buildStep": {
+  "cmdId": "26ad2ebb-2c4a-4adf-8eb0-bd7c91700701",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255826",
+ "status": {
+  "cmdId": "26ad2ebb-2c4a-4adf-8eb0-bd7c91700701",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255843",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255854",
+ "buildStep": {
+  "cmdId": "71281fbc-ec34-44ab-9442-856f677504c1",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml",
+  "args": [
+   "-a",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/address_map.xml",
+   "-sdsl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "-o",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:15 2025",
+ "timestampMillis": "1755279255855",
+ "status": {
+  "cmdId": "71281fbc-ec34-44ab-9442-856f677504c1",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266179",
+ "status": {
+  "cmdId": "71281fbc-ec34-44ab-9442-856f677504c1",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266180",
+ "buildStep": {
+  "cmdId": "ec767905-ff65-4710-be3b-788b4c3972a3",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266180",
+ "status": {
+  "cmdId": "ec767905-ff65-4710-be3b-788b4c3972a3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266188",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266190",
+ "status": {
+  "cmdId": "ec767905-ff65-4710-be3b-788b4c3972a3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266190",
+ "buildStep": {
+  "cmdId": "5a8519f1-a772-4be6-ae7c-f810586801a6",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266191",
+ "status": {
+  "cmdId": "5a8519f1-a772-4be6-ae7c-f810586801a6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266198",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266199",
+ "status": {
+  "cmdId": "5a8519f1-a772-4be6-ae7c-f810586801a6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266205",
+ "status": {
+  "cmdId": "26ad2ebb-2c4a-4adf-8eb0-bd7c91700701",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266215",
+ "buildStep": {
+  "cmdId": "cef0ee02-0c5f-4103-a292-484b0caf5d65",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd --append-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.rtd",
+   "--append-section",
+   ":JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/jac2D9pt.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266215",
+ "status": {
+  "cmdId": "cef0ee02-0c5f-4103-a292-484b0caf5d65",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266598",
+ "status": {
+  "cmdId": "cef0ee02-0c5f-4103-a292-484b0caf5d65",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266606",
+ "buildStep": {
+  "cmdId": "d542b5cf-67cb-4ff3-93ad-3dc8952c2259",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin.info --input /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin.info",
+   "--input",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:26 2025",
+ "timestampMillis": "1755279266606",
+ "status": {
+  "cmdId": "d542b5cf-67cb-4ff3-93ad-3dc8952c2259",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267444",
+ "status": {
+  "cmdId": "d542b5cf-67cb-4ff3-93ad-3dc8952c2259",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267453",
+ "buildStep": {
+  "cmdId": "8ccc91fd-03e4-4134-9f35-55f7b0ef8db2",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267453",
+ "status": {
+  "cmdId": "8ccc91fd-03e4-4134-9f35-55f7b0ef8db2",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267457",
+ "status": {
+  "cmdId": "8ccc91fd-03e4-4134-9f35-55f7b0ef8db2",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267568",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/system_estimate_jac2D9pt.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267592",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267596",
+ "status": {
+  "cmdId": "065a74af-61f5-48b0-906b-3e23300bb1d6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267679",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/reports/link/v++_link_jac2D9pt_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Aug 15 20:34:27 2025",
+ "timestampMillis": "1755279267680",
+ "report": {
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/temp_dir/link/v++_link_jac2D9pt_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

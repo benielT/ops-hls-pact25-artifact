@@ -1,0 +1,10 @@
+Timestamp,Power (W)
+1755382839641,52.486202
+1755382840079,52.486202
+1755382840504,35.336086
+1755382840936,35.336086
+1755382841376,35.336086
+1755382841772,59.270517
+1755382842160,59.270517
+1755382842594,59.270517
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian2d/u280_datacopy_project/hls/build/hw/jac2D9pt.xclbin -sizex=30 -sizey=30 -iters=60018 -piter=1000 -bsize=20
