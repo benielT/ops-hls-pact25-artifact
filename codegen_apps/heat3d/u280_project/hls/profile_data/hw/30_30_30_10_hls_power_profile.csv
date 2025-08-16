@@ -1,0 +1,9 @@
+Timestamp,Power (W)
+1755376091064,47.876808
+1755376091407,39.781080
+1755376091675,39.781080
+1755376091934,39.781080
+1755376092189,39.781080
+1755376092439,38.817928
+1755376092805,38.817928
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/heat3d_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/heat3d.xclbin -sizex=30 -sizey=30 -sizez=30 -iters=60000 -piter=20

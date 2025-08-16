@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-29 00:06:57.362391 by ops-translator
+// Auto-generated at 2025-08-16 01:02:52.067821 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -28,22 +28,28 @@ void ops_par_loop_ops_krnl_interior_init(ops::hls::Block dummyBlock, int dim, in
     constexpr int arg0_0_stencil_offset[] = { 0, 0, 0 };
     getGrid(arg0);
 
-    for (unsigned short k = range.start[2]; k < range.end[2]; k++)
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
     {
-        for (unsigned short j = range.start[1]; j < range.end[1]; j++)
+        for (unsigned short k = range.start[2]; k < range.end[2]; k++)
         {
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+            for (unsigned short j = range.start[1]; j < range.end[1]; j++)
             {
-                ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0], j - arg0.originalProperty.d_m[1], k - arg0.originalProperty.d_m[2]});
-                kernel_ops_krnl_interior_init_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)],
-                    idx,
-                    angle_res_x,
-                    angle_res_y,
-                    angle_res_z
-                );
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    ops::hls::IdxType idx({i - arg0.originalProperty.d_m[0], j - arg0.originalProperty.d_m[1], k - arg0.originalProperty.d_m[2]- (bat * arg0.originalProperty.grid_size[2])});
+                    kernel_ops_krnl_interior_init_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)],
+                        idx,
+                        angle_res_x,
+                        angle_res_y,
+                        angle_res_z
+                    );
+                }
             }
         }
+
+        range.start[2] += arg0.originalProperty.grid_size[2];
+        range.end[2] += arg0.originalProperty.grid_size[2];
     }
 
     arg0.isHostBufDirty = true;

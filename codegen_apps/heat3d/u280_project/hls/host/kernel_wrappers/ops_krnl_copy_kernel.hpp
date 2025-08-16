@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-29 00:06:57.365735 by ops-translator
+// Auto-generated at 2025-08-16 01:02:52.070983 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -25,18 +25,24 @@ void ops_par_loop_ops_krnl_copy(ops::hls::Block dummyBlock, int dim, int* ops_ra
     getGrid(arg0);
     getGrid(arg1);
 
-    for (unsigned short k = range.start[2]; k < range.end[2]; k++)
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
     {
-        for (unsigned short j = range.start[1]; j < range.end[1]; j++)
+        for (unsigned short k = range.start[2]; k < range.end[2]; k++)
         {
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+            for (unsigned short j = range.start[1]; j < range.end[1]; j++)
             {
-                kernel_ops_krnl_copy_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)],
-                    arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j, k)]
-                );
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    kernel_ops_krnl_copy_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j, k)],
+                        arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j, k)]
+                    );
+                }
             }
         }
+
+        range.start[2] += arg0.originalProperty.grid_size[2];
+        range.end[2] += arg0.originalProperty.grid_size[2];
     }
 
     arg0.isHostBufDirty = true;

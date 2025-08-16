@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-29 00:06:57.772818 by ops-translator
+// Auto-generated at 2025-08-16 01:02:52.513969 by ops-translator
 #pragma once
 #include "PE_ops_krnl_heat3D.hpp"
 
@@ -21,6 +21,7 @@ extern "C" void kernel_outerloop_0(
         const unsigned short stencilConfig_upper_limit_1,
         const unsigned short stencilConfig_upper_limit_2,
         const unsigned short stencilConfig_outer_loop_limit,
+        const unsigned short stencilConfig_batch_size,
         const float param_k,
     //u
         hls::stream <ap_axiu<axis_data_width, 0, 0, 0>>& arg0_axis_in,

@@ -557,10 +557,10 @@
     "version": "2022.2",
     "cl": "3671529",
     "time_stamp": "2022-10-13-17:52:11",
-    "options": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/heat3d.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+    "options": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/heat3d.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
     "xclbin_name": "heat3d",
-    "uuid": "49588525-aba3-4063-a54e-616475ad7b73",
-    "link_uuid": "49588525-aba3-4063-a54e-616475ad7b73",
+    "uuid": "bc1964d2-44b1-4e1f-8ea3-620ca37ca50a",
+    "link_uuid": "bc1964d2-44b1-4e1f-8ea3-620ca37ca50a",
     "package_uuid": "",
     "system_compile_flow": false
    },
@@ -606,7 +606,7 @@
       {
        "name": "kernel_outerloop_0",
        "estimated_resources": {
-        "LUT": "119",
+        "LUT": "128",
         "REG": "3",
         "BRAM": "",
         "DSP": "",
@@ -634,7 +634,7 @@
         {
          "name": "S_AXI_CONTROL",
          "mode": "slave",
-         "range": "0x88",
+         "range": "0x90",
          "data_width": "32",
          "port_type": "addressable",
          "base": "0x0",
@@ -812,18 +812,30 @@
         },
         {
          "id": "14",
-         "name": "param_k",
+         "name": "stencilConfig_batch_size",
          "address_qualifier": "0",
          "port": "S_AXI_CONTROL",
          "size": "0x4",
          "offset": "0x80",
+         "host_offset": "0x0",
+         "host_size": "0x2",
+         "type": "unsigned int",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "15",
+         "name": "param_k",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
+         "offset": "0x88",
          "host_offset": "0x0",
          "host_size": "0x4",
          "type": "float",
          "direction": "DirUnknown"
         },
         {
-         "id": "15",
+         "id": "16",
          "name": "arg0_axis_in",
          "address_qualifier": "4",
          "port": "ARG0_AXIS_IN",
@@ -835,7 +847,7 @@
          "direction": "DirUnknown"
         },
         {
-         "id": "16",
+         "id": "17",
          "name": "arg1_axis_out",
          "address_qualifier": "4",
          "port": "ARG1_AXIS_OUT",
@@ -900,7 +912,7 @@
         {
          "name": "S_AXI_CONTROL",
          "mode": "slave",
-         "range": "0x80",
+         "range": "0x88",
          "data_width": "32",
          "port_type": "addressable",
          "base": "0x0",
@@ -1042,23 +1054,23 @@
         },
         {
          "id": "11",
-         "name": "arg0",
-         "address_qualifier": "1",
-         "port": "M_AXI_GMEM0",
-         "size": "0x8",
+         "name": "batch_size",
+         "address_qualifier": "0",
+         "port": "S_AXI_CONTROL",
+         "size": "0x4",
          "offset": "0x68",
          "host_offset": "0x0",
-         "host_size": "0x8",
-         "type": "void*",
+         "host_size": "0x2",
+         "type": "unsigned int",
          "direction": "DirUnknown"
         },
         {
          "id": "12",
-         "name": "arg1",
+         "name": "arg0",
          "address_qualifier": "1",
-         "port": "M_AXI_GMEM1",
+         "port": "M_AXI_GMEM0",
          "size": "0x8",
-         "offset": "0x74",
+         "offset": "0x70",
          "host_offset": "0x0",
          "host_size": "0x8",
          "type": "void*",
@@ -1066,6 +1078,18 @@
         },
         {
          "id": "13",
+         "name": "arg1",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x7C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*",
+         "direction": "DirUnknown"
+        },
+        {
+         "id": "14",
          "name": "arg0_axis_out",
          "address_qualifier": "4",
          "port": "ARG0_AXIS_OUT",
@@ -1077,7 +1101,7 @@
          "direction": "DirUnknown"
         },
         {
-         "id": "14",
+         "id": "15",
          "name": "arg1_axis_in",
          "address_qualifier": "4",
          "port": "ARG1_AXIS_IN",
@@ -1103,26 +1127,26 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "195210",
-         "REG": "351737",
+         "LUT": "190669",
+         "REG": "316984",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "195210",
-         "REG": "351737",
+         "LUT": "190669",
+         "REG": "316984",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "234940",
-         "REG": "353415",
+         "LUT": "226513",
+         "REG": "319291",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         }
        ],
@@ -1145,27 +1169,27 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "195210",
+           "used": "190669",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "169107",
+           "used": "164230",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "26103",
+           "used": "26439",
            "available": "205440"
           },
           {
            "resource_name": "REG",
-           "used": "351737",
+           "used": "316984",
            "available": "879360"
           },
           {
            "resource_name": "CARRY8",
-           "used": "9658",
+           "used": "9498",
            "available": "54960"
           },
           {
@@ -1195,7 +1219,7 @@
           },
           {
            "resource_name": "DSPs",
-           "used": "2016",
+           "used": "2017",
            "available": "2880"
           }
          ]
@@ -1330,26 +1354,26 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "194175",
-         "REG": "351707",
+         "LUT": "185766",
+         "REG": "316625",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "194175",
-         "REG": "351707",
+         "LUT": "185766",
+         "REG": "316625",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "234940",
-         "REG": "353415",
+         "LUT": "226513",
+         "REG": "319291",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         }
        ],
@@ -1432,27 +1456,27 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "194175",
+           "used": "185766",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "168072",
+           "used": "159327",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "26103",
+           "used": "26439",
            "available": "197760"
           },
           {
            "resource_name": "REG",
-           "used": "351707",
+           "used": "316625",
            "available": "864000"
           },
           {
            "resource_name": "CARRY8",
-           "used": "9658",
+           "used": "9498",
            "available": "54000"
           },
           {
@@ -1482,7 +1506,7 @@
           },
           {
            "resource_name": "DSPs",
-           "used": "2016",
+           "used": "2017",
            "available": "3072"
           }
          ]
@@ -1557,26 +1581,26 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "193978",
-         "REG": "351447",
+         "LUT": "184481",
+         "REG": "317749",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "193978",
-         "REG": "351447",
+         "LUT": "184481",
+         "REG": "317749",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "234940",
-         "REG": "353415",
+         "LUT": "226513",
+         "REG": "319291",
          "BRAM": "256",
-         "DSP": "2016",
+         "DSP": "2017",
          "URAM": "0"
         }
        ],
@@ -1719,27 +1743,27 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "193978",
+           "used": "184481",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "167875",
+           "used": "158042",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "26103",
+           "used": "26439",
            "available": "197760"
           },
           {
            "resource_name": "REG",
-           "used": "351447",
+           "used": "317749",
            "available": "864000"
           },
           {
            "resource_name": "CARRY8",
-           "used": "9658",
+           "used": "9498",
            "available": "54000"
           },
           {
@@ -1769,7 +1793,7 @@
           },
           {
            "resource_name": "DSPs",
-           "used": "2016",
+           "used": "2017",
            "available": "3072"
           }
          ]
@@ -1784,26 +1808,26 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "9972",
-         "REG": "16384",
+         "LUT": "10038",
+         "REG": "16427",
          "BRAM": "31",
-         "DSP": "3",
+         "DSP": "5",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "9972",
-         "REG": "16384",
+         "LUT": "10038",
+         "REG": "16427",
          "BRAM": "31",
-         "DSP": "3",
+         "DSP": "5",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "10222",
-         "REG": "16557",
+         "LUT": "10257",
+         "REG": "16574",
          "BRAM": "31",
-         "DSP": "3",
+         "DSP": "5",
          "URAM": "0"
         }
        ],
@@ -1826,12 +1850,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "9972",
+           "used": "10038",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "7600",
+           "used": "7666",
            "available": "439680"
           },
           {
@@ -1841,22 +1865,22 @@
           },
           {
            "resource_name": "REG",
-           "used": "16343",
+           "used": "16385",
            "available": "879360"
           },
           {
            "resource_name": "CARRY8",
-           "used": "205",
+           "used": "207",
            "available": "54960"
           },
           {
            "resource_name": "F7MUX",
-           "used": "383",
+           "used": "379",
            "available": "219840"
           },
           {
            "resource_name": "F8MUX",
-           "used": "0",
+           "used": "9",
            "available": "109920"
           },
           {
@@ -1876,7 +1900,7 @@
           },
           {
            "resource_name": "DSPs",
-           "used": "3",
+           "used": "5",
            "available": "2880"
           }
          ]
@@ -1901,7 +1925,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "41",
+           "used": "42",
            "available": "864000"
           },
           {
@@ -2010,7 +2034,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "3",
-        "kernel_argument_id": "11",
+        "kernel_argument_id": "12",
         "arg_name": "arg0",
         "mode": "Master",
         "name": "",
@@ -2031,7 +2055,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "3",
-        "kernel_argument_id": "12",
+        "kernel_argument_id": "13",
         "arg_name": "arg1",
         "mode": "Master",
         "name": "",
@@ -2052,7 +2076,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "3",
-        "kernel_argument_id": "13",
+        "kernel_argument_id": "14",
         "arg_name": "arg0_axis_out",
         "mode": "Master",
         "name": "",
@@ -2061,7 +2085,7 @@
        "node2": {
         "type": "compute_unit",
         "id": "0",
-        "kernel_argument_id": "15",
+        "kernel_argument_id": "16",
         "arg_name": "arg0_axis_in",
         "mode": "Slave",
         "name": "",
@@ -2073,7 +2097,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "2",
-        "kernel_argument_id": "16",
+        "kernel_argument_id": "17",
         "arg_name": "arg1_axis_out",
         "mode": "Master",
         "name": "",
@@ -2082,7 +2106,7 @@
        "node2": {
         "type": "compute_unit",
         "id": "3",
-        "kernel_argument_id": "14",
+        "kernel_argument_id": "15",
         "arg_name": "arg1_axis_in",
         "mode": "Slave",
         "name": "",
@@ -2094,7 +2118,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "1",
-        "kernel_argument_id": "16",
+        "kernel_argument_id": "17",
         "arg_name": "arg1_axis_out",
         "mode": "Master",
         "name": "",
@@ -2103,7 +2127,7 @@
        "node2": {
         "type": "compute_unit",
         "id": "2",
-        "kernel_argument_id": "15",
+        "kernel_argument_id": "16",
         "arg_name": "arg0_axis_in",
         "mode": "Slave",
         "name": "",
@@ -2115,7 +2139,7 @@
        "node1": {
         "type": "compute_unit",
         "id": "0",
-        "kernel_argument_id": "16",
+        "kernel_argument_id": "17",
         "arg_name": "arg1_axis_out",
         "mode": "Master",
         "name": "",
@@ -2124,7 +2148,7 @@
        "node2": {
         "type": "compute_unit",
         "id": "1",
-        "kernel_argument_id": "15",
+        "kernel_argument_id": "16",
         "arg_name": "arg0_axis_in",
         "mode": "Slave",
         "name": "",

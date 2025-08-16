@@ -1,0 +1,4 @@
+grid_x,grid_y,grid_z,iters,batch_size,batch_id,init_time,main_time,total_time
+300,300,300,60000,1,0,680705,1.67464e+07,1.74271e+07
+300,300,300,60000,1,1,748692,1.67465e+07,1.74952e+07
+args: -sizex=300 -sizey=300 -sizez=300 -iters=60000 -batch=2 -bsize=1

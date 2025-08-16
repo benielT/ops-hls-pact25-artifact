@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/datamover_outerloop_0.xo.compile_summary",
+ "thisFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/datamover_outerloop_0.xo.compile_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,13 +9,13 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Sat May 17 11:52:37 2025",
- "timestampMillis": "1747471957342",
+ "dateTimestamp": "Sat Aug 16 01:03:09 2025",
+ "timestampMillis": "1755295389098",
  "buildStep": {
-  "cmdId": "0971dda5-03ce-4fee-87f6-2c62e17e417a",
+  "cmdId": "cbafe515-aa15-42fe-abd2-711ca8f1850f",
   "name": "v++",
-  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0.steps.log",
-  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine/ops//hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp ",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp ",
   "args": [
    "-s",
    "-O3",
@@ -26,14 +26,14 @@
    "--hls.jobs",
    "64",
    "--remote_ip_cache",
-   "/home/x_thileeb/repos/OPS_mine/ops//hls/IP_CACHE/",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/",
    "--temp_dir",
    "hls/build/hw/temp_dir/",
    "--log_dir",
    "hls/build/hw/temp_dir/",
    "--compile",
-   "-I/home/x_thileeb/repos/OPS_mine/ops//hls/include/device/",
-   "-I/home/x_thileeb/repos/OPS_mine/ops//hls/L1/include/",
+   "-I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/",
+   "-I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/",
    "-I./hls/device/include/",
    "-k",
    "datamover_outerloop_0",
@@ -42,17 +42,17 @@
    "hls/device/src/datamover_outerloop_0.cpp"
   ],
   "iniFiles": [],
-  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel"
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat May 17 11:52:37 2025",
- "timestampMillis": "1747471957344",
+ "dateTimestamp": "Sat Aug 16 01:03:09 2025",
+ "timestampMillis": "1755295389099",
  "status": {
-  "cmdId": "0971dda5-03ce-4fee-87f6-2c62e17e417a",
+  "cmdId": "cbafe515-aa15-42fe-abd2-711ca8f1850f",
   "state": "CS_RUNNING"
  }
 }
@@ -60,8 +60,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Sat May 17 11:52:39 2025",
- "timestampMillis": "1747471959990",
+ "dateTimestamp": "Sat Aug 16 01:03:12 2025",
+ "timestampMillis": "1755295392050",
  "buildSummary": {
   "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
   "hardwareDsa": "",
@@ -75,12 +75,12 @@
     "base": {
      "type": "KERNEL",
      "name": "datamover_outerloop_0",
-     "file": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/datamover_outerloop_0.xo",
+     "file": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/datamover_outerloop_0.xo",
      "reports": [],
      "uuid": ""
     },
     "sources": [
-     "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/device/src/datamover_outerloop_0.cpp"
+     "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/device/src/datamover_outerloop_0.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -96,32 +96,32 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Sat May 17 11:52:39 2025",
- "timestampMillis": "1747471959995",
+ "dateTimestamp": "Sat Aug 16 01:03:12 2025",
+ "timestampMillis": "1755295392056",
  "buildStep": {
-  "cmdId": "7076ee19-5af1-4aba-86d2-2c64830d5ec5",
+  "cmdId": "3e4c2076-c1e9-4e33-a32b-85b20f20deb9",
   "name": "vitis_hls",
-  "logFile": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/vitis_hls.log",
-  "commandLine": "vitis_hls -f /home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl -messageDb vitis_hls.pb",
+  "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl -messageDb vitis_hls.pb",
   "args": [
    "vitis_hls",
    "-f",
-   "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl",
+   "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0.tcl",
    "-messageDb",
    "vitis_hls.pb"
   ],
   "iniFiles": [],
-  "cwd": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel"
+  "cwd": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat May 17 11:52:39 2025",
- "timestampMillis": "1747471959996",
+ "dateTimestamp": "Sat Aug 16 01:03:12 2025",
+ "timestampMillis": "1755295392056",
  "status": {
-  "cmdId": "7076ee19-5af1-4aba-86d2-2c64830d5ec5",
+  "cmdId": "3e4c2076-c1e9-4e33-a32b-85b20f20deb9",
   "state": "CS_RUNNING"
  }
 }
@@ -129,10 +129,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005277",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444440",
  "status": {
-  "cmdId": "7076ee19-5af1-4aba-86d2-2c64830d5ec5",
+  "cmdId": "3e4c2076-c1e9-4e33-a32b-85b20f20deb9",
   "state": "CS_PASSED"
  }
 }
@@ -140,10 +140,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005675",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444887",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/datamover_outerloop_0.design.xml",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/datamover_outerloop_0.design.xml",
   "name": "datamover_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_REPORT",
@@ -154,10 +154,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005676",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444888",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/.message_syn.xml",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/.message_syn.xml",
   "name": "datamover_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
@@ -168,10 +168,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005682",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444896",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/reports/datamover_outerloop_0/hls_reports/datamover_outerloop_0_csynth.rpt",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/reports/datamover_outerloop_0/hls_reports/datamover_outerloop_0_csynth.rpt",
   "name": "datamover_outerloop_0",
   "fileType": "TEXT",
   "reportType": "KERNEL_HLS_CSYNTH",
@@ -182,10 +182,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005683",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444896",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/syn/report/datamover_outerloop_0_csynth.xml",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/syn/report/datamover_outerloop_0_csynth.xml",
   "name": "datamover_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_CSYNTH",
@@ -196,10 +196,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005698",
+ "dateTimestamp": "Sat Aug 16 01:04:04 2025",
+ "timestampMillis": "1755295444908",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/reports/datamover_outerloop_0/system_estimate_datamover_outerloop_0.xtxt",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/reports/datamover_outerloop_0/system_estimate_datamover_outerloop_0.xtxt",
   "name": "",
   "fileType": "TEXT",
   "reportType": "GLOBAL_SYSTEM_ESTIMATE",
@@ -210,10 +210,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat May 17 11:53:25 2025",
- "timestampMillis": "1747472005972",
+ "dateTimestamp": "Sat Aug 16 01:04:05 2025",
+ "timestampMillis": "1755295445149",
  "status": {
-  "cmdId": "0971dda5-03ce-4fee-87f6-2c62e17e417a",
+  "cmdId": "cbafe515-aa15-42fe-abd2-711ca8f1850f",
   "state": "CS_PASSED"
  }
 }
@@ -221,10 +221,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:26 2025",
- "timestampMillis": "1747472006057",
+ "dateTimestamp": "Sat Aug 16 01:04:05 2025",
+ "timestampMillis": "1755295445231",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/reports/datamover_outerloop_0/v++_compile_datamover_outerloop_0_guidance.html",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/reports/datamover_outerloop_0/v++_compile_datamover_outerloop_0_guidance.html",
   "name": "",
   "fileType": "HTML",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -235,10 +235,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat May 17 11:53:26 2025",
- "timestampMillis": "1747472006059",
+ "dateTimestamp": "Sat Aug 16 01:04:05 2025",
+ "timestampMillis": "1755295445232",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine/apps/c/heat3d_fpga_experimental/opt_kernel/hls/build/hw/temp_dir/v++_compile_datamover_outerloop_0_guidance.pb3",
+  "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/heat3d/u280_project/hls/build/hw/temp_dir/v++_compile_datamover_outerloop_0_guidance.pb3",
   "name": "",
   "fileType": "BINARY_PROTOBUF",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
