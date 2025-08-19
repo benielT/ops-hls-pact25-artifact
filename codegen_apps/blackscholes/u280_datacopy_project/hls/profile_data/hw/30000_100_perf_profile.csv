@@ -1,3 +1,3 @@
 grid_x,grid_y,grid_z,iters,batch_size,batch_id,init_time,main_time,total_time
-30000,1,1,60060,1,0,417.811,19609,20026.9
+30000,1,1,60060,1,0,459.532,16803,17262.5
 args: -sizex=30000 -iters=60060 -batch=1 -bsize=100

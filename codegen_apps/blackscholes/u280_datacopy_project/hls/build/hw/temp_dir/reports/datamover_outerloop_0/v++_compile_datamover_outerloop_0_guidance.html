@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2022.2 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Aug 15 14:54:23 2025</td></tr>
+<tr><td><b>Date</b></td><td>Tue Aug 19 02:35:26 2025</td></tr>
 <tr><td><b>Host</b></td><td>acclnode01 running 64-bit Ubuntu 20.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
+<tr><td><b>Command</b></td><td>/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop "run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}" --vivado.prop "run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}" --advanced.misc "report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3432,281 +3432,6 @@ window.onload = function () { addSorting(); }
 <th align="left">Categories</th>
 <th align="left" width="350">Details</th>
 <th align="left" width="380">Resolution</th>
-</tr>
-<tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">28</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">30</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">32</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">33</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">34</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">35</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">36</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">40</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">41</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">42</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">43</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">44</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">45</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">46</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">47</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">48</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">49</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">50</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">51</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Kernel</td>
-<td align="left">**** Estimated Fmax: 411.00 MHz
-</td>
-<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">1</td>
@@ -3991,6 +3716,281 @@ window.onload = function () { addSorting(); }
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
 <td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_894_1_VITIS_LOOP_896_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">29</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_957_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_997_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">39</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">40</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_810_1_VITIS_LOOP_812_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">41</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">44</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">45</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">46</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">47</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_568_1'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">48</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_581_2'
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">49</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">50</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
+</td>
+<td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">51</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Kernel</td>
+<td align="left">**** Estimated Fmax: 411.00 MHz
 </td>
 <td align="left"><a href="http:///www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;d=ug1399-vitis-hls.pdf;">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

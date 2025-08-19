@@ -1,5 +1,5 @@
 
-// Auto-generated at 2025-08-15 14:52:29.410273 by ops-translator
+// Auto-generated at 2025-08-19 21:26:11.505318 by ops-translator
 
 /*
 * Open source copyright declaration based on BSD open source template:
@@ -402,7 +402,8 @@ gridProp.grid_size_x = gridProp.act_size_x;
 #ifdef POWER_PROFILE
     for (unsigned int p = 0; p < power_iter; p++)
     {
-        std::cout << "Power profiling iter: " << p << " of " << power_iter << std::endl;
+        if ((p % (power_iter/10)) == 0)
+            std::cout << "Power profiling iter: " << p << " of " << power_iter << std::endl;
 #endif
 #ifdef OPS_FPGA
 #endif 

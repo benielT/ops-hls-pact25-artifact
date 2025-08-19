@@ -1,7 +1,7 @@
 ====================================================================
 Version:    xcd v2022.2 (64-bit)
 Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Created:    Sat Aug 16 07:32:38 2025
+Created:    Tue Aug 19 13:51:18 2025
 ====================================================================
 
 1. Kernel and compute unit information
@@ -168,7 +168,7 @@ Compute Unit: datamover_outerloop_0_1
 Clock ID: 0
 Platform Clock Frequency: 300.000000 MHz
 Requested Kernel Clock Frequency: 300.000000 MHz
-Achieved Kernel Clock Frequency: 176.100000 MHz
+Achieved Kernel Clock Frequency: 285.600000 MHz
 Source Pin: ulp_ucs/aclk_kernel_00
 Destination Pin: datamover_outerloop_0_1/ap_clk
 
@@ -176,7 +176,7 @@ Compute Unit: kernel_outerloop_0_1
 Clock ID: 0
 Platform Clock Frequency: 300.000000 MHz
 Requested Kernel Clock Frequency: 300.000000 MHz
-Achieved Kernel Clock Frequency: 176.100000 MHz
+Achieved Kernel Clock Frequency: 285.600000 MHz
 Source Pin: ulp_ucs/aclk_kernel_00
 Destination Pin: kernel_outerloop_0_1/ap_clk
 
@@ -184,7 +184,7 @@ Compute Unit: kernel_outerloop_0_2
 Clock ID: 0
 Platform Clock Frequency: 300.000000 MHz
 Requested Kernel Clock Frequency: 300.000000 MHz
-Achieved Kernel Clock Frequency: 176.100000 MHz
+Achieved Kernel Clock Frequency: 285.600000 MHz
 Source Pin: ulp_ucs/aclk_kernel_00
 Destination Pin: kernel_outerloop_0_2/ap_clk
 
@@ -192,7 +192,7 @@ Compute Unit: kernel_outerloop_0_3
 Clock ID: 0
 Platform Clock Frequency: 300.000000 MHz
 Requested Kernel Clock Frequency: 300.000000 MHz
-Achieved Kernel Clock Frequency: 176.100000 MHz
+Achieved Kernel Clock Frequency: 285.600000 MHz
 Source Pin: ulp_ucs/aclk_kernel_00
 Destination Pin: kernel_outerloop_0_3/ap_clk
 
@@ -242,10 +242,10 @@ Compute Unit: kernel_outerloop_0_1
 +------------+--------+------+------+--------+--------+--------+
 | Site Type  |   SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
 +------------+--------+------+------+--------+--------+--------+
-| LUT        | 175459 |    0 |    0 |  39.91 |   0.00 |   0.00 |
-| LUTAsLogic | 147571 |    0 |    0 |  33.56 |   0.00 |   0.00 |
+| LUT        | 175095 |    0 |    0 |  39.82 |   0.00 |   0.00 |
+| LUTAsLogic | 147207 |    0 |    0 |  33.48 |   0.00 |   0.00 |
 | LUTAsMem   |  27888 |    0 |    0 |  13.57 |   0.00 |   0.00 |
-| REG        | 294146 |    0 |    0 |  33.45 |   0.00 |   0.00 |
+| REG        | 294479 |    0 |    0 |  33.49 |   0.00 |   0.00 |
 | CARRY8     |   6048 |    0 |    0 |  11.00 |   0.00 |   0.00 |
 | F7MUX      |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
 | F8MUX      |      0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
@@ -259,10 +259,10 @@ Compute Unit: kernel_outerloop_0_2
 +------------+------+--------+------+--------+--------+--------+
 | Site Type  | SLR0 |   SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
 +------------+------+--------+------+--------+--------+--------+
-| LUT        |    0 | 172777 |    0 |   0.00 |  39.99 |   0.00 |
-| LUTAsLogic |    0 | 144889 |    0 |   0.00 |  33.54 |   0.00 |
+| LUT        |    0 | 173080 |    0 |   0.00 |  40.06 |   0.00 |
+| LUTAsLogic |    0 | 145192 |    0 |   0.00 |  33.61 |   0.00 |
 | LUTAsMem   |    0 |  27888 |    0 |   0.00 |  14.10 |   0.00 |
-| REG        |    0 | 293790 |    0 |   0.00 |  34.00 |   0.00 |
+| REG        |    0 | 294433 |    0 |   0.00 |  34.08 |   0.00 |
 | CARRY8     |    0 |   6048 |    0 |   0.00 |  11.20 |   0.00 |
 | F7MUX      |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
 | F8MUX      |    0 |      0 |    0 |   0.00 |   0.00 |   0.00 |
@@ -276,10 +276,10 @@ Compute Unit: kernel_outerloop_0_3
 +------------+------+------+--------+--------+--------+--------+
 | Site Type  | SLR0 | SLR1 |   SLR2 | SLR0 % | SLR1 % | SLR2 % |
 +------------+------+------+--------+--------+--------+--------+
-| LUT        |    0 |    0 | 173906 |   0.00 |   0.00 |  40.26 |
-| LUTAsLogic |    0 |    0 | 146018 |   0.00 |   0.00 |  33.80 |
+| LUT        |    0 |    0 | 174359 |   0.00 |   0.00 |  40.36 |
+| LUTAsLogic |    0 |    0 | 146471 |   0.00 |   0.00 |  33.91 |
 | LUTAsMem   |    0 |    0 |  27888 |   0.00 |   0.00 |  14.10 |
-| REG        |    0 |    0 | 293447 |   0.00 |   0.00 |  33.96 |
+| REG        |    0 |    0 | 294629 |   0.00 |   0.00 |  34.10 |
 | CARRY8     |    0 |    0 |   6048 |   0.00 |   0.00 |  11.20 |
 | F7MUX      |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
 | F8MUX      |    0 |    0 |      0 |   0.00 |   0.00 |   0.00 |
@@ -293,10 +293,10 @@ Compute Unit: datamover_outerloop_0_1
 +------------+-------+------+------+--------+--------+--------+
 | Site Type  |  SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
 +------------+-------+------+------+--------+--------+--------+
-| LUT        | 32403 |    0 |    0 |   7.37 |   0.00 |   0.00 |
-| LUTAsLogic | 23482 |    0 |    0 |   5.34 |   0.00 |   0.00 |
+| LUT        | 32310 |    0 |    0 |   7.35 |   0.00 |   0.00 |
+| LUTAsLogic | 23389 |    0 |    0 |   5.32 |   0.00 |   0.00 |
 | LUTAsMem   |  8921 |    0 |    0 |   4.34 |   0.00 |   0.00 |
-| REG        | 53635 |  192 |    0 |   6.10 |   0.02 |   0.00 |
+| REG        | 53643 |   40 |    0 |   6.10 |   0.00 |   0.00 |
 | CARRY8     |   533 |    0 |    0 |   0.97 |   0.00 |   0.00 |
 | F7MUX      |  3833 |    0 |    0 |   1.74 |   0.00 |   0.00 |
 | F8MUX      |     0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
@@ -313,10 +313,10 @@ SLR0
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
 | Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
-| LUT        |               175459 |                    0 |                    0 |                   32403 |    439680 |
-| LUTAsLogic |               147571 |                    0 |                    0 |                   23482 |    439680 |
+| LUT        |               175095 |                    0 |                    0 |                   32310 |    439680 |
+| LUTAsLogic |               147207 |                    0 |                    0 |                   23389 |    439680 |
 | LUTAsMem   |                27888 |                    0 |                    0 |                    8921 |    205440 |
-| REG        |               294146 |                    0 |                    0 |                   53635 |    879360 |
+| REG        |               294479 |                    0 |                    0 |                   53643 |    879360 |
 | CARRY8     |                 6048 |                    0 |                    0 |                     533 |     54960 |
 | F7MUX      |                    0 |                    0 |                    0 |                    3833 |    219840 |
 | F8MUX      |                    0 |                    0 |                    0 |                       0 |    109920 |
@@ -330,10 +330,10 @@ SLR1
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
 | Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
-| LUT        |                    0 |               172777 |                    0 |                       0 |    439680 |
-| LUTAsLogic |                    0 |               144889 |                    0 |                       0 |    439680 |
+| LUT        |                    0 |               173080 |                    0 |                       0 |    439680 |
+| LUTAsLogic |                    0 |               145192 |                    0 |                       0 |    439680 |
 | LUTAsMem   |                    0 |                27888 |                    0 |                       0 |    205440 |
-| REG        |                    0 |               293790 |                    0 |                     192 |    879360 |
+| REG        |                    0 |               294433 |                    0 |                      40 |    879360 |
 | CARRY8     |                    0 |                 6048 |                    0 |                       0 |     54960 |
 | F7MUX      |                    0 |                    0 |                    0 |                       0 |    219840 |
 | F8MUX      |                    0 |                    0 |                    0 |                       0 |    109920 |
@@ -347,10 +347,10 @@ SLR2
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
 | Site Type  | kernel_outerloop_0_1 | kernel_outerloop_0_2 | kernel_outerloop_0_3 | datamover_outerloop_0_1 | Available |
 +------------+----------------------+----------------------+----------------------+-------------------------+-----------+
-| LUT        |                    0 |                    0 |               173906 |                       0 |    439680 |
-| LUTAsLogic |                    0 |                    0 |               146018 |                       0 |    439680 |
+| LUT        |                    0 |                    0 |               174359 |                       0 |    439680 |
+| LUTAsLogic |                    0 |                    0 |               146471 |                       0 |    439680 |
 | LUTAsMem   |                    0 |                    0 |                27888 |                       0 |    205440 |
-| REG        |                    0 |                    0 |               293447 |                       0 |    879360 |
+| REG        |                    0 |                    0 |               294629 |                       0 |    879360 |
 | CARRY8     |                    0 |                    0 |                 6048 |                       0 |     54960 |
 | F7MUX      |                    0 |                    0 |                    0 |                       0 |    219840 |
 | F8MUX      |                    0 |                    0 |                    0 |                       0 |    109920 |

@@ -677,10 +677,10 @@
     "version": "2022.2",
     "cl": "3671529",
     "time_stamp": "2022-10-13-17:52:11",
-    "options": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/blackscholes.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+    "options": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o hls/build/hw/blackscholes.xclbin ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
     "xclbin_name": "blackscholes",
-    "uuid": "8283ad48-da98-4538-9b7a-07676d1cb4fc",
-    "link_uuid": "8283ad48-da98-4538-9b7a-07676d1cb4fc",
+    "uuid": "b94a2188-bdbc-4f42-901c-52f293c3db59",
+    "link_uuid": "b94a2188-bdbc-4f42-901c-52f293c3db59",
     "package_uuid": "",
     "system_compile_flow": false
    },
@@ -1406,24 +1406,24 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "175459",
-         "REG": "294146",
+         "LUT": "175095",
+         "REG": "294479",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "175459",
-         "REG": "294146",
+         "LUT": "175095",
+         "REG": "294479",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "201092",
-         "REG": "295033",
+         "LUT": "201511",
+         "REG": "295401",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
@@ -1448,12 +1448,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "175459",
+           "used": "175095",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "147571",
+           "used": "147207",
            "available": "439680"
           },
           {
@@ -1463,7 +1463,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "294146",
+           "used": "294479",
            "available": "879360"
           },
           {
@@ -1633,24 +1633,24 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "172777",
-         "REG": "293790",
+         "LUT": "173090",
+         "REG": "294441",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "172777",
-         "REG": "293790",
+         "LUT": "173080",
+         "REG": "294433",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "201092",
-         "REG": "295033",
+         "LUT": "201511",
+         "REG": "295401",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
@@ -1735,12 +1735,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "172777",
+           "used": "173080",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "144889",
+           "used": "145192",
            "available": "432000"
           },
           {
@@ -1750,7 +1750,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "293790",
+           "used": "294433",
            "available": "864000"
           },
           {
@@ -1860,24 +1860,24 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "173906",
-         "REG": "293447",
+         "LUT": "174359",
+         "REG": "294629",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "173906",
-         "REG": "293447",
+         "LUT": "174359",
+         "REG": "294629",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "201092",
-         "REG": "295033",
+         "LUT": "201511",
+         "REG": "295401",
          "BRAM": "0",
          "DSP": "2311",
          "URAM": "0"
@@ -2022,12 +2022,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "173906",
+           "used": "174359",
            "available": "432000"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "146018",
+           "used": "146471",
            "available": "432000"
           },
           {
@@ -2037,7 +2037,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "293447",
+           "used": "294629",
            "available": "864000"
           },
           {
@@ -2087,16 +2087,16 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "32403",
-         "REG": "53827",
+         "LUT": "32313",
+         "REG": "53693",
          "BRAM": "77",
          "DSP": "1",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "32403",
-         "REG": "53827",
+         "LUT": "32310",
+         "REG": "53683",
          "BRAM": "77",
          "DSP": "1",
          "URAM": "0"
@@ -2129,12 +2129,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "32403",
+           "used": "32310",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "23482",
+           "used": "23389",
            "available": "439680"
           },
           {
@@ -2144,7 +2144,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "53635",
+           "used": "53643",
            "available": "879360"
           },
           {
@@ -2204,7 +2204,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "192",
+           "used": "40",
            "available": "864000"
           },
           {

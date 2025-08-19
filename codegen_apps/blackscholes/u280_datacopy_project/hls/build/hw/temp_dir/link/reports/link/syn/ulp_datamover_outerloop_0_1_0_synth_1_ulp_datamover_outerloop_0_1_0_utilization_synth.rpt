@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Aug 15 15:07:06 2025
+| Date         : Tue Aug 19 02:46:36 2025
 | Host         : acclnode01 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file ulp_datamover_outerloop_0_1_0_utilization_synth.rpt -pb ulp_datamover_outerloop_0_1_0_utilization_synth.pb
 | Design       : ulp_datamover_outerloop_0_1_0

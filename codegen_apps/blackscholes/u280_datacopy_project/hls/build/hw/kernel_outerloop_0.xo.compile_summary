@@ -9,13 +9,13 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Fri Aug 15 14:54:35 2025",
- "timestampMillis": "1755258875064",
+ "dateTimestamp": "Tue Aug 19 02:35:37 2025",
+ "timestampMillis": "1755560137601",
  "buildStep": {
-  "cmdId": "aea48321-c88c-4ea3-97ea-9fbdd75f711f",
+  "cmdId": "b097c7ab-7355-4987-80a9-a88595b625cf",
   "name": "v++",
   "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0.steps.log",
-  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp ",
+  "commandLine": "/tools/Xilinx/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp ",
   "args": [
    "-s",
    "-O3",
@@ -24,7 +24,7 @@
    "--platform",
    "xilinx_u280_gen3x16_xdma_1_202211_1",
    "--hls.jobs",
-   "64",
+   "128",
    "--remote_ip_cache",
    "/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/",
    "--temp_dir",
@@ -49,10 +49,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Aug 15 14:54:35 2025",
- "timestampMillis": "1755258875065",
+ "dateTimestamp": "Tue Aug 19 02:35:37 2025",
+ "timestampMillis": "1755560137603",
  "status": {
-  "cmdId": "aea48321-c88c-4ea3-97ea-9fbdd75f711f",
+  "cmdId": "b097c7ab-7355-4987-80a9-a88595b625cf",
   "state": "CS_RUNNING"
  }
 }
@@ -60,8 +60,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Fri Aug 15 14:54:38 2025",
- "timestampMillis": "1755258878057",
+ "dateTimestamp": "Tue Aug 19 02:35:40 2025",
+ "timestampMillis": "1755560140233",
  "buildSummary": {
   "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
   "hardwareDsa": "",
@@ -96,10 +96,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Fri Aug 15 14:54:38 2025",
- "timestampMillis": "1755258878064",
+ "dateTimestamp": "Tue Aug 19 02:35:40 2025",
+ "timestampMillis": "1755560140239",
  "buildStep": {
-  "cmdId": "b6895f2c-8042-484e-a8da-ae1a8fcd0cca",
+  "cmdId": "94a43473-b94c-4808-9928-4055d74bfb38",
   "name": "vitis_hls",
   "logFile": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/vitis_hls.log",
   "commandLine": "vitis_hls -f /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl -messageDb vitis_hls.pb",
@@ -118,10 +118,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Aug 15 14:54:38 2025",
- "timestampMillis": "1755258878064",
+ "dateTimestamp": "Tue Aug 19 02:35:40 2025",
+ "timestampMillis": "1755560140239",
  "status": {
-  "cmdId": "b6895f2c-8042-484e-a8da-ae1a8fcd0cca",
+  "cmdId": "94a43473-b94c-4808-9928-4055d74bfb38",
   "state": "CS_RUNNING"
  }
 }
@@ -129,10 +129,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Aug 15 14:57:02 2025",
- "timestampMillis": "1755259022395",
+ "dateTimestamp": "Tue Aug 19 02:37:49 2025",
+ "timestampMillis": "1755560269745",
  "status": {
-  "cmdId": "b6895f2c-8042-484e-a8da-ae1a8fcd0cca",
+  "cmdId": "94a43473-b94c-4808-9928-4055d74bfb38",
   "state": "CS_PASSED"
  }
 }
@@ -140,8 +140,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:03 2025",
- "timestampMillis": "1755259023538",
+ "dateTimestamp": "Tue Aug 19 02:37:50 2025",
+ "timestampMillis": "1755560270686",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/kernel_outerloop_0.design.xml",
   "name": "kernel_outerloop_0",
@@ -154,8 +154,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:03 2025",
- "timestampMillis": "1755259023539",
+ "dateTimestamp": "Tue Aug 19 02:37:50 2025",
+ "timestampMillis": "1755560270688",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/.message_syn.xml",
   "name": "kernel_outerloop_0",
@@ -168,8 +168,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:03 2025",
- "timestampMillis": "1755259023546",
+ "dateTimestamp": "Tue Aug 19 02:37:50 2025",
+ "timestampMillis": "1755560270694",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/hls_reports/kernel_outerloop_0_csynth.rpt",
   "name": "kernel_outerloop_0",
@@ -182,8 +182,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:03 2025",
- "timestampMillis": "1755259023546",
+ "dateTimestamp": "Tue Aug 19 02:37:50 2025",
+ "timestampMillis": "1755560270695",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/syn/report/kernel_outerloop_0_csynth.xml",
   "name": "kernel_outerloop_0",
@@ -196,8 +196,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:03 2025",
- "timestampMillis": "1755259023581",
+ "dateTimestamp": "Tue Aug 19 02:37:50 2025",
+ "timestampMillis": "1755560270727",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/system_estimate_kernel_outerloop_0.xtxt",
   "name": "",
@@ -210,10 +210,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Fri Aug 15 14:57:04 2025",
- "timestampMillis": "1755259024278",
+ "dateTimestamp": "Tue Aug 19 02:37:51 2025",
+ "timestampMillis": "1755560271224",
  "status": {
-  "cmdId": "aea48321-c88c-4ea3-97ea-9fbdd75f711f",
+  "cmdId": "b097c7ab-7355-4987-80a9-a88595b625cf",
   "state": "CS_PASSED"
  }
 }
@@ -221,8 +221,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:04 2025",
- "timestampMillis": "1755259024355",
+ "dateTimestamp": "Tue Aug 19 02:37:51 2025",
+ "timestampMillis": "1755560271312",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/v++_compile_kernel_outerloop_0_guidance.html",
   "name": "",
@@ -235,8 +235,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Fri Aug 15 14:57:04 2025",
- "timestampMillis": "1755259024356",
+ "dateTimestamp": "Tue Aug 19 02:37:51 2025",
+ "timestampMillis": "1755560271313",
  "report": {
   "path": "/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/temp_dir/v++_compile_kernel_outerloop_0_guidance.pb3",
   "name": "",

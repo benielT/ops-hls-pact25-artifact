@@ -1,4 +1,4 @@
-// Auto-generated at 2025-08-15 14:52:29.400181 by ops-translator
+// Auto-generated at 2025-08-19 21:26:11.495879 by ops-translator
 #pragma once
 #include "PE_ops_krnl_blackscholes.hpp"
 

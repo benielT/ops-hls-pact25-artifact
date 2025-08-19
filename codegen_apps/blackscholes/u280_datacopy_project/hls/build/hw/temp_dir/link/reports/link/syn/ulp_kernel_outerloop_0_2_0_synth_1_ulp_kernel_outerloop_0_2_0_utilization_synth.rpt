@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Aug 15 15:20:05 2025
+| Date         : Tue Aug 19 02:58:45 2025
 | Host         : acclnode01 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file ulp_kernel_outerloop_0_2_0_utilization_synth.rpt -pb ulp_kernel_outerloop_0_2_0_utilization_synth.pb
 | Design       : ulp_kernel_outerloop_0_2_0
@@ -36,13 +36,13 @@ Table of Contents
 +----------------------------+--------+-------+------------+-----------+-------+
 |          Site Type         |  Used  | Fixed | Prohibited | Available | Util% |
 +----------------------------+--------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 201092 |     0 |          0 |   1303680 | 15.42 |
-|   LUT as Logic             | 159064 |     0 |          0 |   1303680 | 12.20 |
+| CLB LUTs*                  | 201511 |     0 |          0 |   1303680 | 15.46 |
+|   LUT as Logic             | 159483 |     0 |          0 |   1303680 | 12.23 |
 |   LUT as Memory            |  42028 |     0 |          0 |    600960 |  6.99 |
 |     LUT as Distributed RAM |  13616 |     0 |            |           |       |
 |     LUT as Shift Register  |  28412 |     0 |            |           |       |
-| CLB Registers              | 295033 |     0 |          0 |   2607360 | 11.32 |
-|   Register as Flip Flop    | 295033 |     0 |          0 |   2607360 | 11.32 |
+| CLB Registers              | 295401 |     0 |          0 |   2607360 | 11.33 |
+|   Register as Flip Flop    | 295401 |     0 |          0 |   2607360 | 11.33 |
 |   Register as Latch        |      0 |     0 |          0 |   2607360 |  0.00 |
 | CARRY8                     |   6048 |     0 |          0 |    162960 |  3.71 |
 | F7 Muxes                   |      0 |     0 |          0 |    651840 |  0.00 |
@@ -68,7 +68,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0      |          Yes |           - |          Set |
 | 0      |          Yes |           - |        Reset |
 | 840    |          Yes |         Set |            - |
-| 294193 |          Yes |       Reset |            - |
+| 294561 |          Yes |       Reset |            - |
 +--------+--------------+-------------+--------------+
 
 
@@ -167,18 +167,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+--------+---------------------+
 | Ref Name |  Used  | Functional Category |
 +----------+--------+---------------------+
-| FDRE     | 294193 |            Register |
-| LUT3     |  71641 |                 CLB |
-| LUT6     |  40542 |                 CLB |
-| LUT5     |  39340 |                 CLB |
-| LUT4     |  32915 |                 CLB |
+| FDRE     | 294561 |            Register |
+| LUT3     |  71534 |                 CLB |
+| LUT6     |  41084 |                 CLB |
+| LUT5     |  39350 |                 CLB |
+| LUT4     |  32890 |                 CLB |
 | SRL16E   |  28240 |                 CLB |
 | RAMD32   |  23736 |                 CLB |
-| LUT2     |  20483 |                 CLB |
+| LUT2     |  20284 |                 CLB |
 | CARRY8   |   6048 |                 CLB |
 | RAMS32   |   3496 |                 CLB |
 | DSP48E2  |   2311 |          Arithmetic |
-| LUT1     |   1000 |                 CLB |
+| LUT1     |   1020 |                 CLB |
 | FDSE     |    840 |            Register |
 | SRLC32E  |    172 |                 CLB |
 +----------+--------+---------------------+

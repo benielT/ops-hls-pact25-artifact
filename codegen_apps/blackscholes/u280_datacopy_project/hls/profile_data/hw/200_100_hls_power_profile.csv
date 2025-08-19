@@ -1,14 +1,8 @@
 Timestamp,Power (W)
-1755371365149,49.925617
-1755371365482,35.467968
-1755371365739,35.467968
-1755371365986,35.467968
-1755371366243,35.467968
-1755371366485,41.355717
-1755371366733,41.355717
-1755371366989,41.355717
-1755371367246,41.355717
-1755371367497,46.862996
-1755371367750,46.862996
-1755371368117,46.862996
-Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes.xclbin -sizex=200 -iters=60060 -piter=10000 -bsize=100
+1755628457725,50.283461
+1755628458086,50.283461
+1755628458345,50.283461
+1755628458606,50.283461
+1755628458870,47.442102
+1755628459249,47.442102
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes.xclbin -sizex=200 -iters=60060 -piter=5000 -bsize=100

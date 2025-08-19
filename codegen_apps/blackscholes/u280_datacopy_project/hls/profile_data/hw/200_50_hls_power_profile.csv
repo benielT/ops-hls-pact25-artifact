@@ -1,18 +1,7 @@
 Timestamp,Power (W)
-1755370784229,42.403162
-1755370784493,32.172344
-1755370784739,32.172344
-1755370784983,32.172344
-1755370785235,32.172344
-1755370785498,38.838280
-1755370785744,38.838280
-1755370785984,38.838280
-1755370786235,38.838280
-1755370786505,44.992660
-1755370786760,44.992660
-1755370787008,44.992660
-1755370787252,44.992660
-1755370787515,44.748490
-1755370787762,44.748490
-1755370788133,44.748490
-Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes.xclbin -sizex=200 -iters=60060 -piter=10000 -bsize=50
+1755628403544,40.790814
+1755628403806,40.790814
+1755628404064,40.790814
+1755628404326,40.790814
+1755628404701,41.939926
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/blackscholes/u280_datacopy_project/hls/build/hw/blackscholes.xclbin -sizex=200 -iters=60060 -piter=2000 -bsize=50

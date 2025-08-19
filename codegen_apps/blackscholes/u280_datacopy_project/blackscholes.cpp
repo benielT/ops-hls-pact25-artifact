@@ -403,7 +403,8 @@ gridProp.grid_size_x = gridProp.act_size_x;
 #ifdef POWER_PROFILE
     for (unsigned int p = 0; p < power_iter; p++)
     {
-        std::cout << "Power profiling iter: " << p << " of " << power_iter << std::endl;
+        if ((p % (power_iter/10)) == 0)
+            std::cout << "Power profiling iter: " << p << " of " << power_iter << std::endl;
 #endif
 #ifdef OPS_FPGA
         #pragma ISL "isl0" calcParam[bat].N

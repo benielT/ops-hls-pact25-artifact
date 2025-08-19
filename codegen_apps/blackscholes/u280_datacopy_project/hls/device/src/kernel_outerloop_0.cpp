@@ -1,4 +1,4 @@
-// Auto-generated at 2025-08-15 14:52:29.401735 by ops-translator
+// Auto-generated at 2025-08-19 21:26:11.497377 by ops-translator
 #include <ops_hls_kernel_support.h>
 #include <kernel_outerloop_0.hpp>
 
@@ -58,13 +58,13 @@ hls::stream <ap_axiu<axis_data_width, 0, 0, 0>>& arg0_axis_in,  hls::stream <ap_
 {
 #pragma HLS DATAFLOW
 ::hls::stream<ap_uint<axis_data_width>> arg0_arg1_streams[iter_par_factor + 1];
-    #pragma HLS STREAM variable = arg0_arg1_streams depth = 10
+    #pragma HLS STREAM variable = arg0_arg1_streams depth = 32
 ::hls::stream<ap_uint<axis_data_width>> arg2_arg2_streams[iter_par_factor + 1];
-    #pragma HLS STREAM variable = arg2_arg2_streams depth = 10
+    #pragma HLS STREAM variable = arg2_arg2_streams depth = 32
 ::hls::stream<ap_uint<axis_data_width>> arg3_arg3_streams[iter_par_factor + 1];
-    #pragma HLS STREAM variable = arg3_arg3_streams depth = 10
+    #pragma HLS STREAM variable = arg3_arg3_streams depth = 32
 ::hls::stream<ap_uint<axis_data_width>> arg4_arg4_streams[iter_par_factor + 1];
-    #pragma HLS STREAM variable = arg4_arg4_streams depth = 10
+    #pragma HLS STREAM variable = arg4_arg4_streams depth = 32
     
         ops::hls::axis2stream<axis_data_width, axis_data_width>(arg0_axis_in, arg0_arg1_streams[0], total_bytes);
         ops::hls::axis2stream<axis_data_width, axis_data_width>(arg1_axis_in, arg2_arg2_streams[0], total_bytes);
