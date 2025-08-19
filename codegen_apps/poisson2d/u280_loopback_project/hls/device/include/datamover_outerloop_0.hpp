@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 20:44:39.332936 by ops-translator
+// Auto-generated at 2025-08-16 01:05:42.518720 by ops-translator
 
 #pragma once
 #include <ops_hls_kernel_support.h>
@@ -14,15 +14,14 @@ extern "C" void datamover_outerloop_0(
         const unsigned short gridSize_0,
         const unsigned short gridSize_1,
         const unsigned int outer_itr,
+        const unsigned short batch_size,
     //u
         ap_uint<mem_data_width>* arg0,
     //u2
         ap_uint<mem_data_width>* arg1,
     //u
-
         hls::stream <ap_axiu<axis_data_width,0,0,0>>& arg0_axis_out,
     //u2
-
         hls::stream <ap_axiu<axis_data_width,0,0,0>>& arg1_axis_in
     )
 ;

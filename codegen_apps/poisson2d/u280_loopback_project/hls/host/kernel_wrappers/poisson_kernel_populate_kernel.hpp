@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 20:44:38.941010 by ops-translator
+// Auto-generated at 2025-08-16 01:05:42.030853 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -35,19 +35,25 @@ void ops_par_loop_poisson_kernel_populate(ops::hls::Block dummyBlock, int dim, i
     getGrid(arg2);
     getGrid(arg3);
 
-        for (unsigned short j = range.start[1]; j < range.end[1]; j++)
-        {
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
+    {
+            for (unsigned short j = range.start[1]; j < range.end[1]; j++)
             {
-                ops::hls::IdxType idx({i - arg1.originalProperty.d_m[0], j - arg1.originalProperty.d_m[1], 0});
-                kernel_poisson_kernel_populate_core(
-                    idx,
-                    arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j)],
-                    arg2.hostBuffer[getOffset(arg2_0_stencil_offset, arg2.originalProperty, i , j)],
-                    arg3.hostBuffer[getOffset(arg3_0_stencil_offset, arg3.originalProperty, i , j)]
-                );
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    ops::hls::IdxType idx({i - arg1.originalProperty.d_m[0], j - arg1.originalProperty.d_m[1] - (bat * arg1.originalProperty.grid_size[1]), 0});
+                    kernel_poisson_kernel_populate_core(
+                        idx,
+                        arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j)],
+                        arg2.hostBuffer[getOffset(arg2_0_stencil_offset, arg2.originalProperty, i , j)],
+                        arg3.hostBuffer[getOffset(arg3_0_stencil_offset, arg3.originalProperty, i , j)]
+                    );
+                }
             }
-        }
+
+        range.start[1] += arg1.originalProperty.grid_size[1];
+        range.end[1] += arg1.originalProperty.grid_size[1];
+    }
 
     arg1.isHostBufDirty = true;
     arg2.isHostBufDirty = true;

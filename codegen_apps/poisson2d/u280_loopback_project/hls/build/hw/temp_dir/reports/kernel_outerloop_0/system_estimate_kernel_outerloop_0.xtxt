@@ -2,7 +2,7 @@
 Version:    v++ v2022.2 (64-bit)
 Build:      SW Build 3671529 on 2022-10-13-17:52:11
 Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Created:    Mon Apr 21 18:22:25 2025
+Created:    Sat Aug 16 01:12:02 2025
 ===============================================================================
 
 -------------------------------------------------------------------------------
@@ -26,10 +26,10 @@ Timing Information (MHz)
 Compute Unit          Kernel Name         Module Name                                       Target Frequency  Estimated Frequency
 --------------------  ------------------  ------------------------------------------------  ----------------  -------------------
 kernel_outerloop_0_1  kernel_outerloop_0  entry_proc                                        300.300293        821.692688
-kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1  300.300293        808.407471
+kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1522_1  300.300293        808.407471
 kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_s                           300.300293        808.407471
 kernel_outerloop_0_1  kernel_outerloop_0  generic_ldexp_float_s                             300.300293        562.746216
-kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_142_1              300.300293        426.985474
+kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_145_2              300.300293        426.985474
 kernel_outerloop_0_1  kernel_outerloop_0  stencilRun                                        300.300293        426.985474
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0                              300.300293        411.015198
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_1                            300.300293        411.015198
@@ -58,7 +58,7 @@ kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_23               
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_24                           300.300293        411.015198
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_25                           300.300293        411.015198
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_26                           300.300293        426.985474
-kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1  300.300293        808.407471
+kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1898_1  300.300293        808.407471
 kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_s                           300.300293        476.871735
 kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0_dataflow_region                300.300293        411.015198
 kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0                                300.300293        411.015198
@@ -67,10 +67,10 @@ Latency Information
 Compute Unit          Kernel Name         Module Name                                       Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
 --------------------  ------------------  ------------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
 kernel_outerloop_0_1  kernel_outerloop_0  entry_proc                                        0               0              0             0               0 ns             0 ns            0 ns
-kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1  undef           undef          undef         undef           undef            undef           undef
+kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1522_1  undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_s                           undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  generic_ldexp_float_s                             1               0              0             0               0 ns             0 ns            0 ns
-kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_142_1              undef           undef          undef         undef           undef            undef           undef
+kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_145_2              undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  stencilRun                                        undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0                              undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_1                            undef           undef          undef         undef           undef            undef           undef
@@ -99,7 +99,7 @@ kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_23               
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_24                           undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_25                           undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_26                           undef           undef          undef         undef           undef            undef           undef
-kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1  undef           undef          undef         undef           undef            undef           undef
+kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1898_1  undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_s                           undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0_dataflow_region                undef           undef          undef         undef           undef            undef           undef
 kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0                                undef           undef          undef         undef           undef            undef           undef
@@ -107,41 +107,41 @@ kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0                    
 Area Information
 Compute Unit          Kernel Name         Module Name                                       FF      LUT     DSP  BRAM  URAM
 --------------------  ------------------  ------------------------------------------------  ------  ------  ---  ----  ----
-kernel_outerloop_0_1  kernel_outerloop_0  entry_proc                                        3       83      0    0     0
-kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1  286     111     0    0     0
+kernel_outerloop_0_1  kernel_outerloop_0  entry_proc                                        3       92      0    0     0
+kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_Pipeline_VITIS_LOOP_1522_1  286     111     0    0     0
 kernel_outerloop_0_1  kernel_outerloop_0  axis2stream_256u_256u_s                           319     217     0    0     0
 kernel_outerloop_0_1  kernel_outerloop_0  generic_ldexp_float_s                             0       183     0    0     0
-kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_142_1              17197   11800   0    0     0
-kernel_outerloop_0_1  kernel_outerloop_0  stencilRun                                        17316   11919   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0                              17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_1                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_2                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_3                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_4                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_5                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_6                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_7                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_8                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_9                            17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_10                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_11                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_12                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_13                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_14                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_15                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_16                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_17                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_18                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_19                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_20                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_21                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_22                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_23                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_24                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_25                           17433   12097   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_26                           17432   12025   0    16    0
-kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1  30      111     0    0     0
+kernel_outerloop_0_1  kernel_outerloop_0  stencilRun_Pipeline_VITIS_LOOP_145_2              15887   11360   0    0     0
+kernel_outerloop_0_1  kernel_outerloop_0  stencilRun                                        16023   11530   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0                              16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_1                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_2                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_3                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_4                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_5                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_6                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_7                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_8                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_9                            16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_10                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_11                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_12                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_13                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_14                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_15                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_16                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_17                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_18                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_19                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_20                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_21                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_22                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_23                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_24                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_25                           16156   11726   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  joint_PE_outerloop_0_26                           16155   11645   0    16    0
+kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_Pipeline_VITIS_LOOP_1898_1  30      111     0    0     0
 kernel_outerloop_0_1  kernel_outerloop_0  stream2axis_256u_256u_s                           62      201     0    0     0
-kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0_dataflow_region                499623  343459  0    432   0
-kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0                                500003  344035  0    432   0
+kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0_dataflow_region                466085  334059  0    432   0
+kernel_outerloop_0_1  kernel_outerloop_0  kernel_outerloop_0                                466490  334684  0    432   0
 -------------------------------------------------------------------------------

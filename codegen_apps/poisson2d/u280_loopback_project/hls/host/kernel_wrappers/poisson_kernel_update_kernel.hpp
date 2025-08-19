@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 20:44:38.944401 by ops-translator
+// Auto-generated at 2025-08-16 01:05:42.034310 by ops-translator
 #pragma once 
 #include <ops_hls_rt_support.h>
 
@@ -25,16 +25,22 @@ void ops_par_loop_poisson_kernel_update(ops::hls::Block dummyBlock, int dim, int
     getGrid(arg0);
     getGrid(arg1);
 
-        for (unsigned short j = range.start[1]; j < range.end[1]; j++)
-        {
-            for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+    for (unsigned short bat = 0; bat < dummyBlock.batch_size; bat++)
+    {
+            for (unsigned short j = range.start[1]; j < range.end[1]; j++)
             {
-                kernel_poisson_kernel_update_core(
-                    arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j)],
-                    arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j)]
-                );
+                for (unsigned short i = range.start[0]; i < range.end[0]; i++)
+                {
+                    kernel_poisson_kernel_update_core(
+                        arg0.hostBuffer[getOffset(arg0_0_stencil_offset, arg0.originalProperty, i , j)],
+                        arg1.hostBuffer[getOffset(arg1_0_stencil_offset, arg1.originalProperty, i , j)]
+                    );
+                }
             }
-        }
+
+        range.start[1] += arg0.originalProperty.grid_size[1];
+        range.end[1] += arg0.originalProperty.grid_size[1];
+    }
 
     arg1.isHostBufDirty = true;
 

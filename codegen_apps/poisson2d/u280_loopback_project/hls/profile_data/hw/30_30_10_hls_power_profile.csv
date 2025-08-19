@@ -1,0 +1,9 @@
+Timestamp,Power (W)
+1755629842604,69.753556
+1755629842946,69.753556
+1755629843200,69.753556
+1755629843451,39.404555
+1755629843710,39.404555
+1755629843971,39.404555
+1755629844337,39.404555
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/poisson2d/u280_loopback_project/hls/build/hw/poisson2d_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/poisson2d/u280_loopback_project/hls/build/hw/poisson2d.xclbin -sizex=30 -sizey=30 -iters=60102 -piter=1000 -bsize=10

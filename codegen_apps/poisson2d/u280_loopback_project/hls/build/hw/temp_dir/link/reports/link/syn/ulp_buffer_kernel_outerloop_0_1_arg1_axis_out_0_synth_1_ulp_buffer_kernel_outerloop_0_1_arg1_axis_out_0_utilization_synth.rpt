@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Apr 21 18:26:01 2025
+| Date         : Sat Aug 16 01:16:18 2025
 | Host         : acclnode01 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file ulp_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt -pb ulp_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.pb
 | Design       : ulp_buffer_kernel_outerloop_0_1_arg1_axis_out_0
