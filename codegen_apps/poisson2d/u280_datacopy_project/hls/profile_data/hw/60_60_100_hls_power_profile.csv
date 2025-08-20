@@ -1,0 +1,11 @@
+Timestamp,Power (W)
+1755687540356,49.187337
+1755687540705,49.187337
+1755687540960,49.187337
+1755687541302,55.185438
+1755687541560,55.185438
+1755687541820,55.185438
+1755687542087,55.185438
+1755687542359,85.512435
+1755687542765,85.512435
+Command: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/poisson2d/u280_datacopy_project/hls/build/hw/poisson2d_host /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/poisson2d/u280_datacopy_project/hls/build/hw/poisson2d.xclbin -sizex=60 -sizey=60 -iters=60102 -piter=1000 -bsize=100
