@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2022.1 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Thu Apr 24 18:26:21 2025</td></tr>
+<tr><td><b>Date</b></td><td>Thu Aug 21 21:08:00 2025</td></tr>
 <tr><td><b>Host</b></td><td>acclnode02 running 64-bit Ubuntu 20.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>v++  -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
+<tr><td><b>Command</b></td><td>v++  -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k datamover_outerloop_0 -o hls/build/hw/datamover_outerloop_0.xo hls/device/src/datamover_outerloop_0.cpp </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3433,6 +3433,292 @@ window.onload = function () { addSorting(); }
 <th align="left">Categories</th>
 <th align="left" width="350">Details</th>
 <th align="left" width="380">Resolution</th>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">Interface</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
+<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/temp/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">Throughput</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">27</td>
@@ -3574,292 +3860,6 @@ window.onload = function () { addSorting(); }
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.datamover_outerloop_0.Kernel</td>
 <td align="left">**** Estimated Fmax: 411.00 MHz
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">3</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_431_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=431">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst reads of variable length and bit width 64 in loop 'VITIS_LOOP_453_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=453">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_567_1'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=567">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Interface</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Interface</td>
-<td align="left">Multiple burst writes of variable length and bit width 64 in loop 'VITIS_LOOP_580_2'(<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///home/x_thileeb/repos/OPS_mine_vck5000/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp#line=580">ops_hls_datamover.hpp</a>)
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">15</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">16</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">20</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_431_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_453_2'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.datamover_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
 </td>
 <td align="left"></td>
 </tr>

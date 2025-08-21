@@ -16,7 +16,7 @@ CXXFLAGS="$@"
 PROFILE_DIR=./hls/profile_data/${TARGET_MODE}/
 PROFILE_FILE=perf_profile.csv
 POWER_PROFILE_FILE=hls_power_profile.csv
-DEVICE_BDF=0000:c1:00.1
+DEVICE_BDF=0000:81:00.1
 
 # Hardcoded parameter sets (sizex, sizey, iters, batch)
 if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then

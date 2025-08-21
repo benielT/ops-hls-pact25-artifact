@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Thu Apr 24 19:13:18 2025
+| Date         : Thu Aug 21 21:59:47 2025
 | Host         : acclnode02 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file full_util_synthed.rpt -pb full_util_synthed.pb
 | Design       : top_wrapper
@@ -32,14 +32,14 @@ Table of Contents
 +----------------------------+--------+-------+------------+-----------+-------+
 |          Site Type         |  Used  | Fixed | Prohibited | Available | Util% |
 +----------------------------+--------+-------+------------+-----------+-------+
-| Registers                  | 272917 | 19799 |          0 |   1799680 | 15.16 |
-|   Register as Flip Flop    | 272917 | 19799 |          0 |   1799680 | 15.16 |
+| Registers                  | 319814 | 19799 |          0 |   1799680 | 17.77 |
+|   Register as Flip Flop    | 319814 | 19799 |          0 |   1799680 | 17.77 |
 |   Register as Latch        |      0 |     0 |          0 |   1799680 |  0.00 |
-| CLB LUTs*                  | 195840 | 15457 |          0 |    899840 | 21.76 |
-|   LUT as Logic             | 127234 | 15258 |          0 |    899840 | 14.14 |
-|   LUT as Memory            |  68606 |   199 |          0 |    449920 | 15.25 |
-|     LUT as Distributed RAM |   1184 |    32 |            |           |       |
-|     LUT as Shift Register  |  67422 |   167 |            |           |       |
+| CLB LUTs*                  | 211784 | 15457 |          0 |    899840 | 23.54 |
+|   LUT as Logic             | 138252 | 15258 |          0 |    899840 | 15.36 |
+|   LUT as Memory            |  73532 |   199 |          0 |    449920 | 16.34 |
+|     LUT as Distributed RAM |   1568 |    32 |            |           |       |
+|     LUT as Shift Register  |  71964 |   167 |            |           |       |
 |       Variable Length      |      0 |     0 |            |           |       |
 |       Fixed Length         |      0 |     0 |            |           |       |
 | LOOKAHEAD8                 |   6058 |    62 |          0 |    112480 |  5.39 |
@@ -53,8 +53,8 @@ Table of Contents
 +--------------------------+------+-------+------------+-----------+-------+
 |         Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +--------------------------+------+-------+------------+-----------+-------+
-| Block RAM Tile           |  397 |     0 |          0 |       967 | 41.05 |
-|   RAMB36E5               |  365 |     0 |          0 |       967 | 37.75 |
+| Block RAM Tile           |  749 |     0 |          0 |       967 | 77.46 |
+|   RAMB36E5               |  717 |     0 |          0 |       967 | 74.15 |
 |   RAMB18E5*              |   64 |     0 |          0 |      1934 |  3.31 |
 | Block RAM Imux registers |    0 |     0 |            |           |       |
 |   Pipelining             |    0 |       |            |           |       |
@@ -189,25 +189,26 @@ Table of Contents
 +---------------+--------+---------------------+
 |    Ref Name   |  Used  | Functional Category |
 +---------------+--------+---------------------+
-| FDRE          | 266196 |            Register |
-| LUT3          |  59917 |                 CLB |
-| SRL16E        |  55482 |                 CLB |
+| FDRE          | 313085 |            Register |
+| LUT3          |  81612 |                 CLB |
+| SRL16E        |  58610 |                 CLB |
 | LUTCY2        |  40712 |                 CLB |
 | LUTCY1        |  40712 |                 CLB |
-| LUT4          |  17444 |                 CLB |
-| LUT6          |  14031 |                 CLB |
-| SRLC32E       |  11940 |                 CLB |
-| LUT2          |  10966 |                 CLB |
-| LUT5          |  10509 |                 CLB |
+| LUT4          |  16249 |                 CLB |
+| LUT6          |  14079 |                 CLB |
+| SRLC32E       |  13354 |                 CLB |
+| LUT2          |  11108 |                 CLB |
+| LUT5          |  10721 |                 CLB |
 | LOOKAHEAD8    |   6058 |                 CLB |
-| FDSE          |   4725 |            Register |
-| LUT1          |   2454 |                 CLB |
-| RAMD32        |   2008 |                 CLB |
+| FDSE          |   4733 |            Register |
+| LUT1          |   2456 |                 CLB |
 | FDCE          |   1970 |            Register |
+| RAMD32        |   1336 |                 CLB |
 | DSPFP32       |   1328 |          Arithmetic |
-| RAMB36E5_INT  |    365 |            BLOCKRAM |
+| RAMD64E5      |    768 |                 CLB |
+| RAMB36E5_INT  |    717 |            BLOCKRAM |
 | IOBUF         |    324 |                 I/O |
-| RAMS32        |    320 |                 CLB |
+| RAMS32        |    224 |                 CLB |
 | OBUF          |    100 |                 I/O |
 | XPHY          |     92 |                 I/O |
 | XPIO_VREF     |     72 |                 I/O |

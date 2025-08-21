@@ -1,17 +1,16 @@
 Timestamp,Power (W)
-1745521987341,35
-1745521992297,38
-1745521997297,38
-1745522002296,39
-1745522006796,38
-1745522011796,39
-1745522016795,39
-1745522021796,39
-1745522026797,39
-1745522031795,39
-1745522036296,39
-1745522041296,39
-1745522046296,39
-1745522051297,39
-1745522056342,39
-Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d.xclbin -sizex=50 -sizey=50 -sizez=16 -iters=1800 -piter=100
+1755815904773,40
+1755815909289,40
+1755815914281,40
+1755815919281,41
+1755815924281,39
+1755815929281,38
+1755815934289,39
+1755815938781,39
+1755815943794,39
+1755815948773,40
+1755815953781,38
+1755815958773,41
+1755815963789,39
+1755815968273,39
+Command: /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/rtm3d_host /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/rtm3d.xclbin -sizex=50 -sizey=50 -sizez=16 -iters=1800 -piter=100

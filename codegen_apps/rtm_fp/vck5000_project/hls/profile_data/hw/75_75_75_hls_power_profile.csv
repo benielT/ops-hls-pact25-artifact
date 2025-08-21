@@ -1,10 +1,9 @@
 Timestamp,Power (W)
-1745522144846,35
-1745522149795,39
-1745522154298,37
-1745522159298,37
-1745522164296,38
-1745522169296,37
-1745522174296,38
-1745522179361,35
-Command: /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d_host /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/rtm3d.xclbin -sizex=75 -sizey=75 -sizez=75 -iters=1800 -piter=10
+1755816042273,40
+1755816047273,38
+1755816051781,37
+1755816056773,40
+1755816061782,40
+1755816066785,41
+1755816071803,33
+Command: /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/rtm3d_host /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/rtm3d.xclbin -sizex=75 -sizey=75 -sizez=75 -iters=1800 -piter=10

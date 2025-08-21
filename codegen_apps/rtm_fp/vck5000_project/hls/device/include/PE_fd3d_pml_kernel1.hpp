@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-29 03:19:40.158212 by ops-translator
+// Auto-generated at 2025-08-21 21:06:11.346907 by ops-translator
 
 #pragma once
 #include <ops_hls_kernel_support.h>
@@ -55,23 +55,23 @@ typedef ::hls::stream<widen_fd3d_pml_kernel1_8_dt> widen_stream_fd3d_pml_kernel1
 typedef ::hls::stream<widen_fd3d_pml_kernel1_9_dt> widen_stream_fd3d_pml_kernel1_9_dt;
 
 /*
-    ArgGbl(id=0, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/383:17, access_type=AccessType.OPS_READ,ptr=&disps[0], dim=1, type=int)
-    ArgGbl(id=1, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/384:17, access_type=AccessType.OPS_READ,ptr=&disps[1], dim=1, type=int)
-    ArgGbl(id=2, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/385:17, access_type=AccessType.OPS_READ,ptr=&disps[2], dim=1, type=int)
-    ArgIdx(id=3, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/386:17)
-    ArgGbl(id=4, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/387:17, access_type=AccessType.OPS_READ,ptr=&dt, dim=1, type=float)
-    ArgGbl(id=5, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/388:17, access_type=AccessType.OPS_READ,ptr=&scale1_der1, dim=1, type=float)
-    ArgGbl(id=6, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/389:17, access_type=AccessType.OPS_READ,ptr=&scale2_der1, dim=1, type=float)
-    ArgDat(id=0, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/392:17, access_type=AccessType.OPS_RW, opt=True, dat_id=0, global_dat_id=0, stencil_id=S3D_000)
-    ArgDat(id=1, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/393:17, access_type=AccessType.OPS_RW, opt=True, dat_id=1, global_dat_id=1, stencil_id=S3D_big_sten)
-    ArgDat(id=2, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/394:17, access_type=AccessType.OPS_RW, opt=True, dat_id=2, global_dat_id=2, stencil_id=S3D_big_sten)
-    ArgDat(id=3, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/395:17, access_type=AccessType.OPS_RW, opt=True, dat_id=3, global_dat_id=3, stencil_id=S3D_big_sten)
-    ArgDat(id=4, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/396:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=4, global_dat_id=4, stencil_id=S3D_000)
-    ArgDat(id=5, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/397:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=5, global_dat_id=5, stencil_id=S3D_000)
-    ArgDat(id=6, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/398:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=6, global_dat_id=6, stencil_id=S3D_000)
-    ArgDat(id=7, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/399:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=7, global_dat_id=7, stencil_id=S3D_000)
-    ArgDat(id=8, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/400:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=8, global_dat_id=8, stencil_id=S3D_000)
-    ArgDat(id=9, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/rtm_fp/vck5000_project/rtm.cpp/401:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=9, global_dat_id=9, stencil_id=S3D_000)
+    ArgGbl(id=0, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/383:17, access_type=AccessType.OPS_READ,ptr=&disps[0], dim=1, type=int)
+    ArgGbl(id=1, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/384:17, access_type=AccessType.OPS_READ,ptr=&disps[1], dim=1, type=int)
+    ArgGbl(id=2, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/385:17, access_type=AccessType.OPS_READ,ptr=&disps[2], dim=1, type=int)
+    ArgIdx(id=3, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/386:17)
+    ArgGbl(id=4, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/387:17, access_type=AccessType.OPS_READ,ptr=&dt, dim=1, type=float)
+    ArgGbl(id=5, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/388:17, access_type=AccessType.OPS_READ,ptr=&scale1_der1, dim=1, type=float)
+    ArgGbl(id=6, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/389:17, access_type=AccessType.OPS_READ,ptr=&scale2_der1, dim=1, type=float)
+    ArgDat(id=0, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/392:17, access_type=AccessType.OPS_RW, opt=True, dat_id=0, global_dat_id=0, stencil_id=S3D_big_sten)
+    ArgDat(id=1, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/393:17, access_type=AccessType.OPS_RW, opt=True, dat_id=1, global_dat_id=1, stencil_id=S3D_big_sten)
+    ArgDat(id=2, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/394:17, access_type=AccessType.OPS_RW, opt=True, dat_id=2, global_dat_id=2, stencil_id=S3D_big_sten)
+    ArgDat(id=3, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/395:17, access_type=AccessType.OPS_RW, opt=True, dat_id=3, global_dat_id=3, stencil_id=S3D_big_sten)
+    ArgDat(id=4, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/396:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=4, global_dat_id=4, stencil_id=S3D_000)
+    ArgDat(id=5, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/397:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=5, global_dat_id=5, stencil_id=S3D_000)
+    ArgDat(id=6, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/398:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=6, global_dat_id=6, stencil_id=S3D_000)
+    ArgDat(id=7, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/399:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=7, global_dat_id=7, stencil_id=S3D_000)
+    ArgDat(id=8, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/400:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=8, global_dat_id=8, stencil_id=S3D_000)
+    ArgDat(id=9, loc=/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/rtm.cpp/401:17, access_type=AccessType.OPS_WRITE, opt=True, dat_id=9, global_dat_id=9, stencil_id=S3D_000)
 */
 inline void kernel_fd3d_pml_kernel1_core(
         const int* dispx,
@@ -83,6 +83,54 @@ inline void kernel_fd3d_pml_kernel1_core(
         const float* scale2,
         stencil_type& reg_0_0_0,
         stencil_type& reg_0_0_1,
+        stencil_type& reg_0_1_0,
+        stencil_type& reg_0_1_1,
+        stencil_type& reg_0_2_0,
+        stencil_type& reg_0_2_1,
+        stencil_type& reg_0_3_0,
+        stencil_type& reg_0_3_1,
+        stencil_type& reg_0_4_0,
+        stencil_type& reg_0_4_1,
+        stencil_type& reg_0_5_0,
+        stencil_type& reg_0_5_1,
+        stencil_type& reg_0_6_0,
+        stencil_type& reg_0_6_1,
+        stencil_type& reg_0_7_0,
+        stencil_type& reg_0_7_1,
+        stencil_type& reg_0_8_0,
+        stencil_type& reg_0_8_1,
+        stencil_type& reg_0_9_0,
+        stencil_type& reg_0_9_1,
+        stencil_type& reg_0_10_0,
+        stencil_type& reg_0_10_1,
+        stencil_type& reg_0_11_0,
+        stencil_type& reg_0_11_1,
+        stencil_type& reg_0_12_0,
+        stencil_type& reg_0_12_1,
+        stencil_type& reg_0_13_0,
+        stencil_type& reg_0_13_1,
+        stencil_type& reg_0_14_0,
+        stencil_type& reg_0_14_1,
+        stencil_type& reg_0_15_0,
+        stencil_type& reg_0_15_1,
+        stencil_type& reg_0_16_0,
+        stencil_type& reg_0_16_1,
+        stencil_type& reg_0_17_0,
+        stencil_type& reg_0_17_1,
+        stencil_type& reg_0_18_0,
+        stencil_type& reg_0_18_1,
+        stencil_type& reg_0_19_0,
+        stencil_type& reg_0_19_1,
+        stencil_type& reg_0_20_0,
+        stencil_type& reg_0_20_1,
+        stencil_type& reg_0_21_0,
+        stencil_type& reg_0_21_1,
+        stencil_type& reg_0_22_0,
+        stencil_type& reg_0_22_1,
+        stencil_type& reg_0_23_0,
+        stencil_type& reg_0_23_1,
+        stencil_type& reg_0_24_0,
+        stencil_type& reg_0_24_1,
         stencil_type& reg_1_0_0,
         stencil_type& reg_1_0_1,
         stencil_type& reg_1_1_0,
@@ -278,7 +326,7 @@ inline void kernel_fd3d_pml_kernel1_core(
     int ypmlend=yend-pml_width;
     int zpmlend=zend-pml_width;
 
-    float sigma = reg_0_0_1/reg_0_0_0;
+    float sigma = reg_0_12_1/reg_0_12_0;
     float sigma_10_percent = sigma * 0.1f;
     float sigmax=0.0;
     float sigmay=0.0;
@@ -744,19 +792,19 @@ inline void kernel_fd3d_pml_kernel1_core(
     vyz *= invdz;
     vzz *= invdz;
 
-    float vxx_div_rho = vxx/reg_0_0_0;
-    float vyy_div_rho = vyy/reg_0_0_0;
-    float vzz_div_rho = vzz/reg_0_0_0;
+    float vxx_div_rho = vxx/reg_0_12_0;
+    float vyy_div_rho = vyy/reg_0_12_0;
+    float vzz_div_rho = vzz/reg_0_12_0;
 
     float add_pxx_pyx_pxz0 = pxx+pyx;
     float add_pxx_pyx_pxz = add_pxx_pyx_pxz0 + pxz;
-    float add_pxx_pyx_pxz_mul_mu = add_pxx_pyx_pxz*reg_0_0_1;
+    float add_pxx_pyx_pxz_mul_mu = add_pxx_pyx_pxz*reg_0_12_1;
     float add_pxy_pyy_pyz0 = pxy+pyy;
     float add_pxy_pyy_pyz = add_pxy_pyy_pyz0 + pyz;
-    float add_pxy_pyy_pyz_mul_mu = add_pxy_pyy_pyz*reg_0_0_1;
+    float add_pxy_pyy_pyz_mul_mu = add_pxy_pyy_pyz*reg_0_12_1;
     float add_pxz_pyz_pzz0 = pxz+pyz;
     float add_pxz_pyz_pzz = add_pxz_pyz_pzz0 + pzz;
-    float add_pxz_pyz_pzz_mul_mu = add_pxz_pyz_pzz*reg_0_0_1;
+    float add_pxz_pyz_pzz_mul_mu = add_pxz_pyz_pzz*reg_0_12_1;
 
     float ytemp0 =(vxx_div_rho - sigmax_mul_px) * *dt;
     float ytemp3 =(add_pxx_pyx_pxz_mul_mu - sigmax_mul_vx)* *dt;
@@ -792,6 +840,54 @@ inline void kernel_fd3d_pml_kernel1_core(
     printf("[KERNEL_INTERNAL_CORE]|%s| index_val: (%d, %d, %d) \n", __func__, idx[0], idx[1], idx[2]);
     printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_0_0: %f \n", __func__, reg_0_0_0);
     printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_0_1: %f \n", __func__, reg_0_0_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_1_0: %f \n", __func__, reg_0_1_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_1_1: %f \n", __func__, reg_0_1_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_2_0: %f \n", __func__, reg_0_2_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_2_1: %f \n", __func__, reg_0_2_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_3_0: %f \n", __func__, reg_0_3_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_3_1: %f \n", __func__, reg_0_3_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_4_0: %f \n", __func__, reg_0_4_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_4_1: %f \n", __func__, reg_0_4_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_5_0: %f \n", __func__, reg_0_5_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_5_1: %f \n", __func__, reg_0_5_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_6_0: %f \n", __func__, reg_0_6_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_6_1: %f \n", __func__, reg_0_6_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_7_0: %f \n", __func__, reg_0_7_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_7_1: %f \n", __func__, reg_0_7_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_8_0: %f \n", __func__, reg_0_8_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_8_1: %f \n", __func__, reg_0_8_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_9_0: %f \n", __func__, reg_0_9_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_9_1: %f \n", __func__, reg_0_9_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_10_0: %f \n", __func__, reg_0_10_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_10_1: %f \n", __func__, reg_0_10_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_11_0: %f \n", __func__, reg_0_11_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_11_1: %f \n", __func__, reg_0_11_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_12_0: %f \n", __func__, reg_0_12_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_12_1: %f \n", __func__, reg_0_12_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_13_0: %f \n", __func__, reg_0_13_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_13_1: %f \n", __func__, reg_0_13_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_14_0: %f \n", __func__, reg_0_14_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_14_1: %f \n", __func__, reg_0_14_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_15_0: %f \n", __func__, reg_0_15_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_15_1: %f \n", __func__, reg_0_15_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_16_0: %f \n", __func__, reg_0_16_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_16_1: %f \n", __func__, reg_0_16_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_17_0: %f \n", __func__, reg_0_17_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_17_1: %f \n", __func__, reg_0_17_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_18_0: %f \n", __func__, reg_0_18_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_18_1: %f \n", __func__, reg_0_18_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_19_0: %f \n", __func__, reg_0_19_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_19_1: %f \n", __func__, reg_0_19_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_20_0: %f \n", __func__, reg_0_20_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_20_1: %f \n", __func__, reg_0_20_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_21_0: %f \n", __func__, reg_0_21_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_21_1: %f \n", __func__, reg_0_21_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_22_0: %f \n", __func__, reg_0_22_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_22_1: %f \n", __func__, reg_0_22_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_23_0: %f \n", __func__, reg_0_23_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_23_1: %f \n", __func__, reg_0_23_1);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_24_0: %f \n", __func__, reg_0_24_0);
+    printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_0_24_1: %f \n", __func__, reg_0_24_1);
     printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_1_0_0: %f \n", __func__, reg_1_0_0);
     printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_1_0_1: %f \n", __func__, reg_1_0_1);
     printf("[KERNEL_INTERNAL_CORE]|%s| write_val - reg_1_1_0: %f \n", __func__, reg_1_1_0);
@@ -1017,10 +1113,8 @@ public:
 
     //  *** stencil description and read & write point definitions  ****
         /*
-        WindowBufferDiscriptor(widen_stencil=Stencil(id=-1, dim=3, stencil_ptr='read_stencil_widen', num_points=25, points=[Point(x=4, y=4, z=4), Point(x=0, y=4, z=4), Point(x=1, y=4, z=4), Point(x=2, y=4, z=4), Point(x=3, y=4, z=4), Point(x=5, y=4, z=4), Point(x=6, y=4, z=4), Point(x=7, y=4, z=4), Point(x=8, y=4, z=4), Point(x=4, y=4, z=0), Point(x=4, y=4, z=1), Point(x=4, y=4, z=2), Point(x=4, y=4, z=3), Point(x=4, y=0, z=4), Point(x=4, y=1, z=4), Point(x=4, y=2, z=4), Point(x=4, y=3, z=4), Point(x=4, y=5, z=4), Point(x=4, y=6, z=4), Point(x=4, y=7, z=4), Point(x=4, y=8, z=4), Point(x=4, y=4, z=5), Point(x=4, y=4, z=6), Point(x=4, y=4, z=7), Point(x=4, y=4, z=8)], base_point=Point(x=4, y=4, z=4), stencil_size=Point(x=9, y=9, z=9), d_m=Point(x=4.0, y=4, z=4), d_p=Point(x=4.0, y=4, z=4), row_discriptors=[StencilRowDiscriptor(row_id=(4, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=4), Point(x=0, y=4, z=4), Point(x=1, y=4, z=4), Point(x=2, y=4, z=4), Point(x=3, y=4, z=4), Point(x=5, y=4, z=4), Point(x=6, y=4, z=4), Point(x=7, y=4, z=4), Point(x=8, y=4, z=4)]), StencilRowDiscriptor(row_id=(4, 0), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=0)]), StencilRowDiscriptor(row_id=(4, 1), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=1)]), StencilRowDiscriptor(row_id=(4, 2), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=2)]), StencilRowDiscriptor(row_id=(4, 3), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=3)]), StencilRowDiscriptor(row_id=(0, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=0, z=4)]), StencilRowDiscriptor(row_id=(1, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=1, z=4)]), StencilRowDiscriptor(row_id=(2, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=2, z=4)]), StencilRowDiscriptor(row_id=(3, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=3, z=4)]), StencilRowDiscriptor(row_id=(5, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=5, z=4)]), StencilRowDiscriptor(row_id=(6, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=6, z=4)]), StencilRowDiscriptor(row_id=(7, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=7, z=4)]), StencilRowDiscriptor(row_id=(8, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=8, z=4)]), StencilRowDiscriptor(row_id=(4, 5), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=5)]), StencilRowDiscriptor(row_id=(4, 6), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=6)]), StencilRowDiscriptor(row_id=(4, 7), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=7)]), StencilRowDiscriptor(row_id=(4, 8), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=8)])], stride=[], read_origin_diff=Point(x=0, y=0, z=4)), window_buffers=[WindowBuffer(name='buf_p4_0', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=0), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False), WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True), WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True), WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True), WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False), WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r3_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False), WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True), WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True), WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True)], chains=[(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8), (8, WindowBuffer(name='buf_p4_0', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=0), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False)), (9, WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True)), (WindowBuffer(name='buf_p4_0', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=0), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False), 9), (10, WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True)), (WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True), 10), (11, WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True)), (WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True), 11), (12, WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False)), (WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True), 12), (13, WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False), 13), (14, WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True), 14), (15, WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True), 15), (16, WindowBuffer(name='buf_r3_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True), 16), (17, WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r3_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=True), 17), (18, WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True), 18), (19, WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True), 19), (20, WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False)), (WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True), 20), (21, WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True)), (WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False), 21), (22, WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True)), (WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True), 22), (23, WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True)), (WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True), 23), (24, 'read_val'), (WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True), 24)], point_to_widen_map={Point(x=4, y=4, z=4): Point(x=4, y=4, z=4), Point(x=0, y=4, z=4): Point(x=0, y=4, z=4), Point(x=1, y=4, z=4): Point(x=1, y=4, z=4), Point(x=2, y=4, z=4): Point(x=2, y=4, z=4), Point(x=3, y=4, z=4): Point(x=3, y=4, z=4), Point(x=5, y=4, z=4): Point(x=5, y=4, z=4), Point(x=6, y=4, z=4): Point(x=6, y=4, z=4), Point(x=7, y=4, z=4): Point(x=7, y=4, z=4), Point(x=8, y=4, z=4): Point(x=8, y=4, z=4), Point(x=4, y=4, z=0): Point(x=4, y=4, z=0), Point(x=4, y=4, z=1): Point(x=4, y=4, z=1), Point(x=4, y=4, z=2): Point(x=4, y=4, z=2), Point(x=4, y=4, z=3): Point(x=4, y=4, z=3), Point(x=4, y=0, z=4): Point(x=4, y=0, z=4), Point(x=4, y=1, z=4): Point(x=4, y=1, z=4), Point(x=4, y=2, z=4): Point(x=4, y=2, z=4), Point(x=4, y=3, z=4): Point(x=4, y=3, z=4), Point(x=4, y=5, z=4): Point(x=4, y=5, z=4), Point(x=4, y=6, z=4): Point(x=4, y=6, z=4), Point(x=4, y=7, z=4): Point(x=4, y=7, z=4), Point(x=4, y=8, z=4): Point(x=4, y=8, z=4), Point(x=4, y=4, z=5): Point(x=4, y=4, z=5), Point(x=4, y=4, z=6): Point(x=4, y=4, z=6), Point(x=4, y=4, z=7): Point(x=4, y=4, z=7), Point(x=4, y=4, z=8): Point(x=4, y=4, z=8)})
+        WindowBufferDiscriptor(widen_stencil=Stencil(id=-1, dim=3, stencil_ptr='read_stencil_widen', num_points=25, points=[Point(x=4, y=4, z=0), Point(x=4, y=4, z=1), Point(x=4, y=4, z=2), Point(x=4, y=4, z=3), Point(x=4, y=0, z=4), Point(x=4, y=1, z=4), Point(x=4, y=2, z=4), Point(x=4, y=3, z=4), Point(x=0, y=4, z=4), Point(x=1, y=4, z=4), Point(x=2, y=4, z=4), Point(x=3, y=4, z=4), Point(x=4, y=4, z=4), Point(x=5, y=4, z=4), Point(x=6, y=4, z=4), Point(x=7, y=4, z=4), Point(x=8, y=4, z=4), Point(x=4, y=5, z=4), Point(x=4, y=6, z=4), Point(x=4, y=7, z=4), Point(x=4, y=8, z=4), Point(x=4, y=4, z=5), Point(x=4, y=4, z=6), Point(x=4, y=4, z=7), Point(x=4, y=4, z=8)], base_point=Point(x=4, y=4, z=4), stencil_size=Point(x=9, y=9, z=9), d_m=Point(x=4.0, y=4, z=4), d_p=Point(x=4.0, y=4, z=4), row_discriptors=[StencilRowDiscriptor(row_id=(4, 0), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=0)]), StencilRowDiscriptor(row_id=(4, 1), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=1)]), StencilRowDiscriptor(row_id=(4, 2), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=2)]), StencilRowDiscriptor(row_id=(4, 3), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=3)]), StencilRowDiscriptor(row_id=(0, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=0, z=4)]), StencilRowDiscriptor(row_id=(1, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=1, z=4)]), StencilRowDiscriptor(row_id=(2, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=2, z=4)]), StencilRowDiscriptor(row_id=(3, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=3, z=4)]), StencilRowDiscriptor(row_id=(4, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=0, y=4, z=4), Point(x=1, y=4, z=4), Point(x=2, y=4, z=4), Point(x=3, y=4, z=4), Point(x=4, y=4, z=4), Point(x=5, y=4, z=4), Point(x=6, y=4, z=4), Point(x=7, y=4, z=4), Point(x=8, y=4, z=4)]), StencilRowDiscriptor(row_id=(5, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=5, z=4)]), StencilRowDiscriptor(row_id=(6, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=6, z=4)]), StencilRowDiscriptor(row_id=(7, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=7, z=4)]), StencilRowDiscriptor(row_id=(8, 4), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=8, z=4)]), StencilRowDiscriptor(row_id=(4, 5), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=5)]), StencilRowDiscriptor(row_id=(4, 6), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=6)]), StencilRowDiscriptor(row_id=(4, 7), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=7)]), StencilRowDiscriptor(row_id=(4, 8), base_point=Point(x=4, y=4, z=4), row_points=[Point(x=4, y=4, z=8)])], stride=[], read_origin_diff=Point(x=0, y=0, z=4)), window_buffers=[WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True), WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True), WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True), WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False), WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r3_4_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=0, y=4, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=False), WindowBuffer(name='buf_r4_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False), WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True), WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False), WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True), WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True), WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True)], chains=[(0, WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True)), (1, WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True)), (WindowBuffer(name='buf_p0_1', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=1), write_point=Point(x=4, y=4, z=0), is_read_write_aligned=True), 1), (2, WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True)), (WindowBuffer(name='buf_p1_2', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=2), write_point=Point(x=4, y=4, z=1), is_read_write_aligned=True), 2), (3, WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False)), (WindowBuffer(name='buf_p2_3', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=3), write_point=Point(x=4, y=4, z=2), is_read_write_aligned=True), 3), (4, WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_p3_4', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=0, z=4), write_point=Point(x=4, y=4, z=3), is_read_write_aligned=False), 4), (5, WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r0_1_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=1, z=4), write_point=Point(x=4, y=0, z=4), is_read_write_aligned=True), 5), (6, WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r1_2_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=2, z=4), write_point=Point(x=4, y=1, z=4), is_read_write_aligned=True), 6), (7, WindowBuffer(name='buf_r3_4_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=0, y=4, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=False)), (WindowBuffer(name='buf_r2_3_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=3, z=4), write_point=Point(x=4, y=2, z=4), is_read_write_aligned=True), 7), (8, 9), (9, 10), (10, 11), (11, 12), (12, 13), (13, 14), (14, 15), (15, 16), (16, WindowBuffer(name='buf_r4_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False)), (WindowBuffer(name='buf_r3_4_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=0, y=4, z=4), write_point=Point(x=4, y=3, z=4), is_read_write_aligned=False), 8), (17, WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r4_5_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=5, z=4), write_point=Point(x=8, y=4, z=4), is_read_write_aligned=False), 17), (18, WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r5_6_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=6, z=4), write_point=Point(x=4, y=5, z=4), is_read_write_aligned=True), 18), (19, WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True)), (WindowBuffer(name='buf_r6_7_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=7, z=4), write_point=Point(x=4, y=6, z=4), is_read_write_aligned=True), 19), (20, WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False)), (WindowBuffer(name='buf_r7_8_p4', buffer_type=<BufferType.LINE_BUFF: 0>, read_point=Point(x=4, y=8, z=4), write_point=Point(x=4, y=7, z=4), is_read_write_aligned=True), 20), (21, WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True)), (WindowBuffer(name='buf_p4_5', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=5), write_point=Point(x=4, y=8, z=4), is_read_write_aligned=False), 21), (22, WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True)), (WindowBuffer(name='buf_p5_6', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=6), write_point=Point(x=4, y=4, z=5), is_read_write_aligned=True), 22), (23, WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True)), (WindowBuffer(name='buf_p6_7', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=7), write_point=Point(x=4, y=4, z=6), is_read_write_aligned=True), 23), (24, 'read_val'), (WindowBuffer(name='buf_p7_8', buffer_type=<BufferType.PLANE_BUFF: 1>, read_point=Point(x=4, y=4, z=8), write_point=Point(x=4, y=4, z=7), is_read_write_aligned=True), 24)], point_to_widen_map={Point(x=4, y=4, z=0): Point(x=4, y=4, z=0), Point(x=4, y=4, z=1): Point(x=4, y=4, z=1), Point(x=4, y=4, z=2): Point(x=4, y=4, z=2), Point(x=4, y=4, z=3): Point(x=4, y=4, z=3), Point(x=4, y=0, z=4): Point(x=4, y=0, z=4), Point(x=4, y=1, z=4): Point(x=4, y=1, z=4), Point(x=4, y=2, z=4): Point(x=4, y=2, z=4), Point(x=4, y=3, z=4): Point(x=4, y=3, z=4), Point(x=0, y=4, z=4): Point(x=0, y=4, z=4), Point(x=1, y=4, z=4): Point(x=1, y=4, z=4), Point(x=2, y=4, z=4): Point(x=2, y=4, z=4), Point(x=3, y=4, z=4): Point(x=3, y=4, z=4), Point(x=4, y=4, z=4): Point(x=4, y=4, z=4), Point(x=5, y=4, z=4): Point(x=5, y=4, z=4), Point(x=6, y=4, z=4): Point(x=6, y=4, z=4), Point(x=7, y=4, z=4): Point(x=7, y=4, z=4), Point(x=8, y=4, z=4): Point(x=8, y=4, z=4), Point(x=4, y=5, z=4): Point(x=4, y=5, z=4), Point(x=4, y=6, z=4): Point(x=4, y=6, z=4), Point(x=4, y=7, z=4): Point(x=4, y=7, z=4), Point(x=4, y=8, z=4): Point(x=4, y=8, z=4), Point(x=4, y=4, z=5): Point(x=4, y=4, z=5), Point(x=4, y=4, z=6): Point(x=4, y=4, z=6), Point(x=4, y=4, z=7): Point(x=4, y=4, z=7), Point(x=4, y=4, z=8): Point(x=4, y=4, z=8)})
         */
-        // Stencil: S3D_000
-        //      `- point: (0,0,0)
         // Stencil: S3D_big_sten
         //      |- point: (4,4,0)
         //      |- point: (4,4,1)
@@ -1106,8 +1200,6 @@ public:
                 stencilConfig.grid_size[1] * stencilConfig.grid_size[0] ;
 
     //  *** data read write boundary definitions ****
-            unsigned int S3D_000_read_lb_itr = 4 * stencilConfig.grid_size[0] * stencilConfig.grid_size[1];
-            unsigned int S3D_000_read_ub_itr = (4 + stencilConfig.grid_size[2]) * stencilConfig.grid_size[1] * stencilConfig.grid_size[0];
             unsigned int S3D_big_sten_read_lb_itr = 0 * stencilConfig.grid_size[0] * stencilConfig.grid_size[1];
             unsigned int S3D_big_sten_read_ub_itr = (0 + stencilConfig.grid_size[2]) * stencilConfig.grid_size[1] * stencilConfig.grid_size[0];
 
@@ -1147,10 +1239,107 @@ public:
         widen_fd3d_pml_kernel1_0_dt arg0_widenStencilValues[read_num_points_fd3d_pml_kernel1];
         #pragma HLS ARRAY_PARTITION variable = arg0_widenStencilValues dim = 1 complete
 
-        stencil_type arg0_0_rowArr_0_0[vector_factor + span_x];
-        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_0_0 dim=1 complete
-        stencil_type arg0_1_rowArr_0_0[vector_factor + span_x];
-        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_0_0 dim=1 complete
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p0_1[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p0_1 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p1_2[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p1_2 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p2_3[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p2_3 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p3_4[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p3_4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r0_1_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r0_1_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r1_2_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r1_2_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r2_3_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r2_3_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r3_4_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r3_4_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r4_5_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r4_5_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r5_6_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r5_6_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r6_7_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r6_7_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_r7_8_p4[line_buff_3d_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_r7_8_p4 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p4_5[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p4_5 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p5_6[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p5_6 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p6_7[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p6_7 type = ram_s2p latency=2
+        widen_fd3d_pml_kernel1_0_dt arg0_buf_p7_8[max_depth];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p7_8 type = ram_s2p latency=2
+
+        stencil_type arg0_0_rowArr_4_0[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_0 dim=1 complete
+        stencil_type arg0_1_rowArr_4_0[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_0 dim=1 complete
+        stencil_type arg0_0_rowArr_4_1[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_1 dim=1 complete
+        stencil_type arg0_1_rowArr_4_1[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_1 dim=1 complete
+        stencil_type arg0_0_rowArr_4_2[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_2 dim=1 complete
+        stencil_type arg0_1_rowArr_4_2[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_2 dim=1 complete
+        stencil_type arg0_0_rowArr_4_3[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_3 dim=1 complete
+        stencil_type arg0_1_rowArr_4_3[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_3 dim=1 complete
+        stencil_type arg0_0_rowArr_0_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_0_4 dim=1 complete
+        stencil_type arg0_1_rowArr_0_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_0_4 dim=1 complete
+        stencil_type arg0_0_rowArr_1_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_1_4 dim=1 complete
+        stencil_type arg0_1_rowArr_1_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_1_4 dim=1 complete
+        stencil_type arg0_0_rowArr_2_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_2_4 dim=1 complete
+        stencil_type arg0_1_rowArr_2_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_2_4 dim=1 complete
+        stencil_type arg0_0_rowArr_3_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_3_4 dim=1 complete
+        stencil_type arg0_1_rowArr_3_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_3_4 dim=1 complete
+        stencil_type arg0_0_rowArr_4_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_4 dim=1 complete
+        stencil_type arg0_1_rowArr_4_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_4 dim=1 complete
+        stencil_type arg0_0_rowArr_5_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_5_4 dim=1 complete
+        stencil_type arg0_1_rowArr_5_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_5_4 dim=1 complete
+        stencil_type arg0_0_rowArr_6_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_6_4 dim=1 complete
+        stencil_type arg0_1_rowArr_6_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_6_4 dim=1 complete
+        stencil_type arg0_0_rowArr_7_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_7_4 dim=1 complete
+        stencil_type arg0_1_rowArr_7_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_7_4 dim=1 complete
+        stencil_type arg0_0_rowArr_8_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_8_4 dim=1 complete
+        stencil_type arg0_1_rowArr_8_4[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_8_4 dim=1 complete
+        stencil_type arg0_0_rowArr_4_5[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_5 dim=1 complete
+        stencil_type arg0_1_rowArr_4_5[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_5 dim=1 complete
+        stencil_type arg0_0_rowArr_4_6[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_6 dim=1 complete
+        stencil_type arg0_1_rowArr_4_6[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_6 dim=1 complete
+        stencil_type arg0_0_rowArr_4_7[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_7 dim=1 complete
+        stencil_type arg0_1_rowArr_4_7[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_7 dim=1 complete
+        stencil_type arg0_0_rowArr_4_8[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_0_rowArr_4_8 dim=1 complete
+        stencil_type arg0_1_rowArr_4_8[vector_factor + span_x];
+        #pragma HLS ARRAY_PARTITION variable = arg0_1_rowArr_4_8 dim=1 complete
 
         // arg1(yy_0_1)
         widen_fd3d_pml_kernel1_1_dt arg1_widenStencilValues[read_num_points_fd3d_pml_kernel1];
@@ -1570,17 +1759,12 @@ public:
                     k = 0;
                 else if (cond_x_terminate && cond_y_terminate)
                     k++;
-                    bool S3D_000_read_cond = (reg_itr < S3D_000_read_ub_itr) and (reg_itr >= S3D_000_read_lb_itr);
                     bool S3D_big_sten_read_cond = (reg_itr < S3D_big_sten_read_ub_itr) and (reg_itr >= S3D_big_sten_read_lb_itr);
                 /*    bool read_cond  =  (reg_itr < read_ub_itr) and (reg_itr >= read_lb_itr); */
 
-                    if (S3D_000_read_cond)
-                    {
-                        arg0_read_val = arg0_rd_buffer.read();
-                    }
-
                     if (S3D_big_sten_read_cond)
                     {
+                        arg0_read_val = arg0_rd_buffer.read();
                         arg1_read_val = arg1_rd_buffer.read();
                         arg2_read_val = arg2_rd_buffer.read();
                         arg3_read_val = arg3_rd_buffer.read();
@@ -1594,7 +1778,47 @@ public:
                         arg3_read_val = arg3_rd_buffer.read();
                     }*/
 
-                arg0_widenStencilValues[0] = arg0_read_val;                
+                arg0_widenStencilValues[0] = arg0_buf_p0_1[S3D_big_sten_buf_p0_1_rd_wr];                
+                arg0_widenStencilValues[1] = arg0_buf_p1_2[S3D_big_sten_buf_p1_2_rd_wr];                
+                arg0_buf_p0_1[S3D_big_sten_buf_p0_1_rd_wr] = arg0_widenStencilValues[1];                
+                arg0_widenStencilValues[2] = arg0_buf_p2_3[S3D_big_sten_buf_p2_3_rd_wr];                
+                arg0_buf_p1_2[S3D_big_sten_buf_p1_2_rd_wr] = arg0_widenStencilValues[2];                
+                arg0_widenStencilValues[3] = arg0_buf_p3_4[S3D_big_sten_buf_p3_4_wr];                
+                arg0_buf_p2_3[S3D_big_sten_buf_p2_3_rd_wr] = arg0_widenStencilValues[3];                
+                arg0_widenStencilValues[4] = arg0_buf_r0_1_p4[S3D_big_sten_buf_r0_1_p4_rd_wr];                
+                arg0_buf_p3_4[S3D_big_sten_buf_p3_4_rd] = arg0_widenStencilValues[4];                
+                arg0_widenStencilValues[5] = arg0_buf_r1_2_p4[S3D_big_sten_buf_r1_2_p4_rd_wr];                
+                arg0_buf_r0_1_p4[S3D_big_sten_buf_r0_1_p4_rd_wr] = arg0_widenStencilValues[5];                
+                arg0_widenStencilValues[6] = arg0_buf_r2_3_p4[S3D_big_sten_buf_r2_3_p4_rd_wr];                
+                arg0_buf_r1_2_p4[S3D_big_sten_buf_r1_2_p4_rd_wr] = arg0_widenStencilValues[6];                
+                arg0_widenStencilValues[7] = arg0_buf_r3_4_p4[S3D_big_sten_buf_r3_4_p4_wr];                
+                arg0_buf_r2_3_p4[S3D_big_sten_buf_r2_3_p4_rd_wr] = arg0_widenStencilValues[7];                
+                arg0_widenStencilValues[8] = arg0_widenStencilValues[9];                
+                arg0_widenStencilValues[9] = arg0_widenStencilValues[10];                
+                arg0_widenStencilValues[10] = arg0_widenStencilValues[11];                
+                arg0_widenStencilValues[11] = arg0_widenStencilValues[12];                
+                arg0_widenStencilValues[12] = arg0_widenStencilValues[13];                
+                arg0_widenStencilValues[13] = arg0_widenStencilValues[14];                
+                arg0_widenStencilValues[14] = arg0_widenStencilValues[15];                
+                arg0_widenStencilValues[15] = arg0_widenStencilValues[16];                
+                arg0_widenStencilValues[16] = arg0_buf_r4_5_p4[S3D_big_sten_buf_r4_5_p4_wr];                
+                arg0_buf_r3_4_p4[S3D_big_sten_buf_r3_4_p4_rd] = arg0_widenStencilValues[8];                
+                arg0_widenStencilValues[17] = arg0_buf_r5_6_p4[S3D_big_sten_buf_r5_6_p4_rd_wr];                
+                arg0_buf_r4_5_p4[S3D_big_sten_buf_r4_5_p4_rd] = arg0_widenStencilValues[17];                
+                arg0_widenStencilValues[18] = arg0_buf_r6_7_p4[S3D_big_sten_buf_r6_7_p4_rd_wr];                
+                arg0_buf_r5_6_p4[S3D_big_sten_buf_r5_6_p4_rd_wr] = arg0_widenStencilValues[18];                
+                arg0_widenStencilValues[19] = arg0_buf_r7_8_p4[S3D_big_sten_buf_r7_8_p4_rd_wr];                
+                arg0_buf_r6_7_p4[S3D_big_sten_buf_r6_7_p4_rd_wr] = arg0_widenStencilValues[19];                
+                arg0_widenStencilValues[20] = arg0_buf_p4_5[S3D_big_sten_buf_p4_5_wr];                
+                arg0_buf_r7_8_p4[S3D_big_sten_buf_r7_8_p4_rd_wr] = arg0_widenStencilValues[20];                
+                arg0_widenStencilValues[21] = arg0_buf_p5_6[S3D_big_sten_buf_p5_6_rd_wr];                
+                arg0_buf_p4_5[S3D_big_sten_buf_p4_5_rd] = arg0_widenStencilValues[21];                
+                arg0_widenStencilValues[22] = arg0_buf_p6_7[S3D_big_sten_buf_p6_7_rd_wr];                
+                arg0_buf_p5_6[S3D_big_sten_buf_p5_6_rd_wr] = arg0_widenStencilValues[22];                
+                arg0_widenStencilValues[23] = arg0_buf_p7_8[S3D_big_sten_buf_p7_8_rd_wr];                
+                arg0_buf_p6_7[S3D_big_sten_buf_p6_7_rd_wr] = arg0_widenStencilValues[23];                
+                arg0_widenStencilValues[24] = arg0_read_val;                
+                arg0_buf_p7_8[S3D_big_sten_buf_p7_8_rd_wr] = arg0_widenStencilValues[24];                
                 arg1_widenStencilValues[0] = arg1_buf_p0_1[S3D_big_sten_buf_p0_1_rd_wr];                
                 arg1_widenStencilValues[1] = arg1_buf_p1_2[S3D_big_sten_buf_p1_2_rd_wr];                
                 arg1_buf_p0_1[S3D_big_sten_buf_p0_1_rd_wr] = arg1_widenStencilValues[1];                
@@ -1958,12 +2182,108 @@ public:
             {
 #pragma HLS UNROLL factor=vector_factor
                 unsigned short x_d2 = x * 2;
-                ops::hls::DataConv arg0_0_tmpConverter_0_0;
-                arg0_0_tmpConverter_0_0.i = arg0_widenStencilValues[0].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
-                arg0_0_rowArr_0_0[x + half_span_x] = arg0_0_tmpConverter_0_0.f; 
-                ops::hls::DataConv arg0_1_tmpConverter_0_0;
-                arg0_1_tmpConverter_0_0.i = arg0_widenStencilValues[0].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
-                arg0_1_rowArr_0_0[x + half_span_x] = arg0_1_tmpConverter_0_0.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_0;
+                arg0_0_tmpConverter_4_0.i = arg0_widenStencilValues[0].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_0[x + half_span_x] = arg0_0_tmpConverter_4_0.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_0;
+                arg0_1_tmpConverter_4_0.i = arg0_widenStencilValues[0].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_0[x + half_span_x] = arg0_1_tmpConverter_4_0.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_1;
+                arg0_0_tmpConverter_4_1.i = arg0_widenStencilValues[1].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_1[x + half_span_x] = arg0_0_tmpConverter_4_1.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_1;
+                arg0_1_tmpConverter_4_1.i = arg0_widenStencilValues[1].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_1[x + half_span_x] = arg0_1_tmpConverter_4_1.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_2;
+                arg0_0_tmpConverter_4_2.i = arg0_widenStencilValues[2].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_2[x + half_span_x] = arg0_0_tmpConverter_4_2.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_2;
+                arg0_1_tmpConverter_4_2.i = arg0_widenStencilValues[2].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_2[x + half_span_x] = arg0_1_tmpConverter_4_2.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_3;
+                arg0_0_tmpConverter_4_3.i = arg0_widenStencilValues[3].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_3[x + half_span_x] = arg0_0_tmpConverter_4_3.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_3;
+                arg0_1_tmpConverter_4_3.i = arg0_widenStencilValues[3].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_3[x + half_span_x] = arg0_1_tmpConverter_4_3.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_0_4;
+                arg0_0_tmpConverter_0_4.i = arg0_widenStencilValues[4].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_0_4[x + half_span_x] = arg0_0_tmpConverter_0_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_0_4;
+                arg0_1_tmpConverter_0_4.i = arg0_widenStencilValues[4].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_0_4[x + half_span_x] = arg0_1_tmpConverter_0_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_1_4;
+                arg0_0_tmpConverter_1_4.i = arg0_widenStencilValues[5].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_1_4[x + half_span_x] = arg0_0_tmpConverter_1_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_1_4;
+                arg0_1_tmpConverter_1_4.i = arg0_widenStencilValues[5].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_1_4[x + half_span_x] = arg0_1_tmpConverter_1_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_2_4;
+                arg0_0_tmpConverter_2_4.i = arg0_widenStencilValues[6].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_2_4[x + half_span_x] = arg0_0_tmpConverter_2_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_2_4;
+                arg0_1_tmpConverter_2_4.i = arg0_widenStencilValues[6].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_2_4[x + half_span_x] = arg0_1_tmpConverter_2_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_3_4;
+                arg0_0_tmpConverter_3_4.i = arg0_widenStencilValues[7].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_3_4[x + half_span_x] = arg0_0_tmpConverter_3_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_3_4;
+                arg0_1_tmpConverter_3_4.i = arg0_widenStencilValues[7].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_3_4[x + half_span_x] = arg0_1_tmpConverter_3_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_4;
+                arg0_0_tmpConverter_4_4.i = arg0_widenStencilValues[12].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_4[x + half_span_x] = arg0_0_tmpConverter_4_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_4;
+                arg0_1_tmpConverter_4_4.i = arg0_widenStencilValues[12].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_4[x + half_span_x] = arg0_1_tmpConverter_4_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_5_4;
+                arg0_0_tmpConverter_5_4.i = arg0_widenStencilValues[17].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_5_4[x + half_span_x] = arg0_0_tmpConverter_5_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_5_4;
+                arg0_1_tmpConverter_5_4.i = arg0_widenStencilValues[17].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_5_4[x + half_span_x] = arg0_1_tmpConverter_5_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_6_4;
+                arg0_0_tmpConverter_6_4.i = arg0_widenStencilValues[18].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_6_4[x + half_span_x] = arg0_0_tmpConverter_6_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_6_4;
+                arg0_1_tmpConverter_6_4.i = arg0_widenStencilValues[18].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_6_4[x + half_span_x] = arg0_1_tmpConverter_6_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_7_4;
+                arg0_0_tmpConverter_7_4.i = arg0_widenStencilValues[19].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_7_4[x + half_span_x] = arg0_0_tmpConverter_7_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_7_4;
+                arg0_1_tmpConverter_7_4.i = arg0_widenStencilValues[19].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_7_4[x + half_span_x] = arg0_1_tmpConverter_7_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_8_4;
+                arg0_0_tmpConverter_8_4.i = arg0_widenStencilValues[20].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_8_4[x + half_span_x] = arg0_0_tmpConverter_8_4.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_8_4;
+                arg0_1_tmpConverter_8_4.i = arg0_widenStencilValues[20].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_8_4[x + half_span_x] = arg0_1_tmpConverter_8_4.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_5;
+                arg0_0_tmpConverter_4_5.i = arg0_widenStencilValues[21].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_5[x + half_span_x] = arg0_0_tmpConverter_4_5.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_5;
+                arg0_1_tmpConverter_4_5.i = arg0_widenStencilValues[21].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_5[x + half_span_x] = arg0_1_tmpConverter_4_5.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_6;
+                arg0_0_tmpConverter_4_6.i = arg0_widenStencilValues[22].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_6[x + half_span_x] = arg0_0_tmpConverter_4_6.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_6;
+                arg0_1_tmpConverter_4_6.i = arg0_widenStencilValues[22].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_6[x + half_span_x] = arg0_1_tmpConverter_4_6.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_7;
+                arg0_0_tmpConverter_4_7.i = arg0_widenStencilValues[23].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_7[x + half_span_x] = arg0_0_tmpConverter_4_7.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_7;
+                arg0_1_tmpConverter_4_7.i = arg0_widenStencilValues[23].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_7[x + half_span_x] = arg0_1_tmpConverter_4_7.f; 
+                ops::hls::DataConv arg0_0_tmpConverter_4_8;
+                arg0_0_tmpConverter_4_8.i = arg0_widenStencilValues[24].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
+                arg0_0_rowArr_4_8[x + half_span_x] = arg0_0_tmpConverter_4_8.f; 
+                ops::hls::DataConv arg0_1_tmpConverter_4_8;
+                arg0_1_tmpConverter_4_8.i = arg0_widenStencilValues[24].range(s_datatype_size * (x_d2 + 2) - 1, (x_d2 + 1) * s_datatype_size);
+                arg0_1_rowArr_4_8[x + half_span_x] = arg0_1_tmpConverter_4_8.f; 
                 ops::hls::DataConv arg1_0_tmpConverter_4_0;
                 arg1_0_tmpConverter_4_0.i = arg1_widenStencilValues[0].range(s_datatype_size * (x_d2 + 1) - 1, (x_d2 + 0) * s_datatype_size);
                 arg1_0_rowArr_4_0[x + half_span_x] = arg1_0_tmpConverter_4_0.f; 
@@ -2276,6 +2596,70 @@ public:
             {
                 //diff = -4
                 // access_idx = 0
+                ops::hls::DataConv arg0_0_tmpConverter_0_4_4_0;
+                arg0_0_tmpConverter_0_4_4_0.i = arg0_widenStencilValues[8].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[0] = arg0_0_tmpConverter_0_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_0_4_4_0;
+                arg0_1_tmpConverter_0_4_4_0.i = arg0_widenStencilValues[8].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[0] = arg0_1_tmpConverter_0_4_4_0.f;
+                //diff = -3
+                // access_idx = 1
+                ops::hls::DataConv arg0_0_tmpConverter_1_4_4_0;
+                arg0_0_tmpConverter_1_4_4_0.i = arg0_widenStencilValues[9].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[1] = arg0_0_tmpConverter_1_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_1_4_4_0;
+                arg0_1_tmpConverter_1_4_4_0.i = arg0_widenStencilValues[9].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[1] = arg0_1_tmpConverter_1_4_4_0.f;
+                //diff = -2
+                // access_idx = 2
+                ops::hls::DataConv arg0_0_tmpConverter_2_4_4_0;
+                arg0_0_tmpConverter_2_4_4_0.i = arg0_widenStencilValues[10].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[2] = arg0_0_tmpConverter_2_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_2_4_4_0;
+                arg0_1_tmpConverter_2_4_4_0.i = arg0_widenStencilValues[10].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[2] = arg0_1_tmpConverter_2_4_4_0.f;
+                //diff = -1
+                // access_idx = 3
+                ops::hls::DataConv arg0_0_tmpConverter_3_4_4_0;
+                arg0_0_tmpConverter_3_4_4_0.i = arg0_widenStencilValues[11].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[3] = arg0_0_tmpConverter_3_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_3_4_4_0;
+                arg0_1_tmpConverter_3_4_4_0.i = arg0_widenStencilValues[11].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[3] = arg0_1_tmpConverter_3_4_4_0.f;
+                //diff = 1
+                // access_idx = 5
+                ops::hls::DataConv arg0_0_tmpConverter_5_4_4_0;
+                arg0_0_tmpConverter_5_4_4_0.i = arg0_widenStencilValues[13].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[5] = arg0_0_tmpConverter_5_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_5_4_4_0;
+                arg0_1_tmpConverter_5_4_4_0.i = arg0_widenStencilValues[13].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[5] = arg0_1_tmpConverter_5_4_4_0.f;
+                //diff = 2
+                // access_idx = 6
+                ops::hls::DataConv arg0_0_tmpConverter_6_4_4_0;
+                arg0_0_tmpConverter_6_4_4_0.i = arg0_widenStencilValues[14].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[6] = arg0_0_tmpConverter_6_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_6_4_4_0;
+                arg0_1_tmpConverter_6_4_4_0.i = arg0_widenStencilValues[14].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[6] = arg0_1_tmpConverter_6_4_4_0.f;
+                //diff = 3
+                // access_idx = 7
+                ops::hls::DataConv arg0_0_tmpConverter_7_4_4_0;
+                arg0_0_tmpConverter_7_4_4_0.i = arg0_widenStencilValues[15].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[7] = arg0_0_tmpConverter_7_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_7_4_4_0;
+                arg0_1_tmpConverter_7_4_4_0.i = arg0_widenStencilValues[15].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[7] = arg0_1_tmpConverter_7_4_4_0.f;
+                //diff = 4
+                // access_idx = 8
+                ops::hls::DataConv arg0_0_tmpConverter_8_4_4_0;
+                arg0_0_tmpConverter_8_4_4_0.i = arg0_widenStencilValues[16].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
+                arg0_0_rowArr_4_4[8] = arg0_0_tmpConverter_8_4_4_0.f;
+                ops::hls::DataConv arg0_1_tmpConverter_8_4_4_0;
+                arg0_1_tmpConverter_8_4_4_0.i = arg0_widenStencilValues[16].range(s_datatype_size * (1 + 1) - 1, s_datatype_size * 1);
+                arg0_1_rowArr_4_4[8] = arg0_1_tmpConverter_8_4_4_0.f;
+                //diff = -4
+                // access_idx = 0
                 ops::hls::DataConv arg1_0_tmpConverter_0_4_4_0;
                 arg1_0_tmpConverter_0_4_4_0.i = arg1_widenStencilValues[8].range(s_datatype_size * (0 + 1) - 1, s_datatype_size * 0);
                 arg1_0_rowArr_4_4[0] = arg1_0_tmpConverter_0_4_4_0.f;
@@ -2516,8 +2900,56 @@ public:
                         &dt,
                         &scale1_der1,
                         &scale2_der1,
-                        arg0_0_rowArr_0_0[x + 4],
-                        arg0_1_rowArr_0_0[x + 4],
+                        arg0_0_rowArr_4_0[x + 4],
+                        arg0_1_rowArr_4_0[x + 4],
+                        arg0_0_rowArr_4_1[x + 4],
+                        arg0_1_rowArr_4_1[x + 4],
+                        arg0_0_rowArr_4_2[x + 4],
+                        arg0_1_rowArr_4_2[x + 4],
+                        arg0_0_rowArr_4_3[x + 4],
+                        arg0_1_rowArr_4_3[x + 4],
+                        arg0_0_rowArr_0_4[x + 4],
+                        arg0_1_rowArr_0_4[x + 4],
+                        arg0_0_rowArr_1_4[x + 4],
+                        arg0_1_rowArr_1_4[x + 4],
+                        arg0_0_rowArr_2_4[x + 4],
+                        arg0_1_rowArr_2_4[x + 4],
+                        arg0_0_rowArr_3_4[x + 4],
+                        arg0_1_rowArr_3_4[x + 4],
+                        arg0_0_rowArr_4_4[x + 0],
+                        arg0_1_rowArr_4_4[x + 0],
+                        arg0_0_rowArr_4_4[x + 1],
+                        arg0_1_rowArr_4_4[x + 1],
+                        arg0_0_rowArr_4_4[x + 2],
+                        arg0_1_rowArr_4_4[x + 2],
+                        arg0_0_rowArr_4_4[x + 3],
+                        arg0_1_rowArr_4_4[x + 3],
+                        arg0_0_rowArr_4_4[x + 4],
+                        arg0_1_rowArr_4_4[x + 4],
+                        arg0_0_rowArr_4_4[x + 5],
+                        arg0_1_rowArr_4_4[x + 5],
+                        arg0_0_rowArr_4_4[x + 6],
+                        arg0_1_rowArr_4_4[x + 6],
+                        arg0_0_rowArr_4_4[x + 7],
+                        arg0_1_rowArr_4_4[x + 7],
+                        arg0_0_rowArr_4_4[x + 8],
+                        arg0_1_rowArr_4_4[x + 8],
+                        arg0_0_rowArr_5_4[x + 4],
+                        arg0_1_rowArr_5_4[x + 4],
+                        arg0_0_rowArr_6_4[x + 4],
+                        arg0_1_rowArr_6_4[x + 4],
+                        arg0_0_rowArr_7_4[x + 4],
+                        arg0_1_rowArr_7_4[x + 4],
+                        arg0_0_rowArr_8_4[x + 4],
+                        arg0_1_rowArr_8_4[x + 4],
+                        arg0_0_rowArr_4_5[x + 4],
+                        arg0_1_rowArr_4_5[x + 4],
+                        arg0_0_rowArr_4_6[x + 4],
+                        arg0_1_rowArr_4_6[x + 4],
+                        arg0_0_rowArr_4_7[x + 4],
+                        arg0_1_rowArr_4_7[x + 4],
+                        arg0_0_rowArr_4_8[x + 4],
+                        arg0_1_rowArr_4_8[x + 4],
                         arg1_0_rowArr_4_0[x + 4],
                         arg1_1_rowArr_4_0[x + 4],
                         arg1_0_rowArr_4_1[x + 4],
@@ -2754,8 +3186,8 @@ public:
                     arg9_1_tmpConvWrite.f = 0.0;
                 }
             // *** rw convertions ***
-                arg0_0_tmpConvWrite.f = arg0_0_rowArr_0_0[x + 4];
-                arg0_1_tmpConvWrite.f = arg0_1_rowArr_0_0[x + 4];
+                arg0_0_tmpConvWrite.f = arg0_0_rowArr_4_4[x + 4];
+                arg0_1_tmpConvWrite.f = arg0_1_rowArr_4_4[x + 4];
                 arg1_0_tmpConvWrite.f = arg1_0_rowArr_4_4[x + 4];
                 arg1_1_tmpConvWrite.f = arg1_1_rowArr_4_4[x + 4];
                 arg2_0_tmpConvWrite.f = arg2_0_rowArr_4_4[x + 4];

@@ -1,6 +1,6 @@
 <ENTRY>
 {
- "thisFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/kernel_outerloop_0.xo.compile_summary",
+ "thisFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/kernel_outerloop_0.xo.compile_summary",
  "connectId": "",
  "serverToken": "",
  "timestamp": "0"
@@ -9,13 +9,13 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Thu Apr 24 18:26:32 2025",
- "timestampMillis": "1745508392952",
+ "dateTimestamp": "Thu Aug 21 21:08:12 2025",
+ "timestampMillis": "1755799692207",
  "buildStep": {
-  "cmdId": "d4949fb0-41bc-4da7-ac6f-ad716d1d1c99",
+  "cmdId": "c194280c-58be-4d89-b040-ec487bb93795",
   "name": "v++",
-  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0.steps.log",
-  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp ",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop \"run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-retiming}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.prop run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp ",
   "args": [
    "-s",
    "-O3",
@@ -24,16 +24,16 @@
    "--platform",
    "xilinx_vck5000_gen4x8_xdma_2_202210_1",
    "--hls.jobs",
-   "128",
+   "64",
    "--remote_ip_cache",
-   "/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/",
    "--temp_dir",
    "hls/build/hw/temp_dir/",
    "--log_dir",
    "hls/build/hw/temp_dir/",
    "--compile",
-   "-I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/",
-   "-I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/",
+   "-I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/",
+   "-I/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/",
    "-I./hls/device/include/",
    "-k",
    "kernel_outerloop_0",
@@ -42,17 +42,17 @@
    "hls/device/src/kernel_outerloop_0.cpp"
   ],
   "iniFiles": [],
-  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2"
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Thu Apr 24 18:26:32 2025",
- "timestampMillis": "1745508392953",
+ "dateTimestamp": "Thu Aug 21 21:08:12 2025",
+ "timestampMillis": "1755799692209",
  "status": {
-  "cmdId": "d4949fb0-41bc-4da7-ac6f-ad716d1d1c99",
+  "cmdId": "c194280c-58be-4d89-b040-ec487bb93795",
   "state": "CS_RUNNING"
  }
 }
@@ -60,8 +60,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Thu Apr 24 18:26:36 2025",
- "timestampMillis": "1745508396813",
+ "dateTimestamp": "Thu Aug 21 21:08:15 2025",
+ "timestampMillis": "1755799695876",
  "buildSummary": {
   "hardwarePlatform": "xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm",
   "hardwareDsa": "",
@@ -75,12 +75,12 @@
     "base": {
      "type": "KERNEL",
      "name": "kernel_outerloop_0",
-     "file": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/kernel_outerloop_0.xo",
+     "file": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/kernel_outerloop_0.xo",
      "reports": [],
      "uuid": ""
     },
     "sources": [
-     "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/device/src/kernel_outerloop_0.cpp"
+     "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/device/src/kernel_outerloop_0.cpp"
     ],
     "psSources": [],
     "cuNames": [],
@@ -96,32 +96,32 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Thu Apr 24 18:26:36 2025",
- "timestampMillis": "1745508396822",
+ "dateTimestamp": "Thu Aug 21 21:08:15 2025",
+ "timestampMillis": "1755799695992",
  "buildStep": {
-  "cmdId": "93a6d1ad-a733-400a-9f9f-92f8dd6b6534",
+  "cmdId": "c4d7b8d2-e7a4-49b9-8035-e254540c4394",
   "name": "vitis_hls",
-  "logFile": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/vitis_hls.log",
-  "commandLine": "vitis_hls -f /home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl -messageDb vitis_hls.pb",
+  "logFile": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/vitis_hls.log",
+  "commandLine": "vitis_hls -f /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl -messageDb vitis_hls.pb",
   "args": [
    "vitis_hls",
    "-f",
-   "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl",
+   "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl",
    "-messageDb",
    "vitis_hls.pb"
   ],
   "iniFiles": [],
-  "cwd": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2"
+  "cwd": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Thu Apr 24 18:26:36 2025",
- "timestampMillis": "1745508396823",
+ "dateTimestamp": "Thu Aug 21 21:08:15 2025",
+ "timestampMillis": "1755799695993",
  "status": {
-  "cmdId": "93a6d1ad-a733-400a-9f9f-92f8dd6b6534",
+  "cmdId": "c4d7b8d2-e7a4-49b9-8035-e254540c4394",
   "state": "CS_RUNNING"
  }
 }
@@ -129,10 +129,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Thu Apr 24 18:35:09 2025",
- "timestampMillis": "1745508909946",
+ "dateTimestamp": "Thu Aug 21 21:19:07 2025",
+ "timestampMillis": "1755800347028",
  "status": {
-  "cmdId": "93a6d1ad-a733-400a-9f9f-92f8dd6b6534",
+  "cmdId": "c4d7b8d2-e7a4-49b9-8035-e254540c4394",
   "state": "CS_PASSED"
  }
 }
@@ -140,10 +140,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:10 2025",
- "timestampMillis": "1745508910993",
+ "dateTimestamp": "Thu Aug 21 21:19:08 2025",
+ "timestampMillis": "1755800348200",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/kernel_outerloop_0.design.xml",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/kernel_outerloop_0.design.xml",
   "name": "kernel_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_REPORT",
@@ -154,10 +154,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:10 2025",
- "timestampMillis": "1745508910994",
+ "dateTimestamp": "Thu Aug 21 21:19:08 2025",
+ "timestampMillis": "1755800348201",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/.message_syn.xml",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/.message_syn.xml",
   "name": "kernel_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
@@ -168,10 +168,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:11 2025",
- "timestampMillis": "1745508911001",
+ "dateTimestamp": "Thu Aug 21 21:19:08 2025",
+ "timestampMillis": "1755800348207",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/reports/kernel_outerloop_0/hls_reports/kernel_outerloop_0_csynth.rpt",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/hls_reports/kernel_outerloop_0_csynth.rpt",
   "name": "kernel_outerloop_0",
   "fileType": "TEXT",
   "reportType": "KERNEL_HLS_CSYNTH",
@@ -182,10 +182,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:11 2025",
- "timestampMillis": "1745508911001",
+ "dateTimestamp": "Thu Aug 21 21:19:08 2025",
+ "timestampMillis": "1755800348208",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/syn/report/kernel_outerloop_0_csynth.xml",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/syn/report/kernel_outerloop_0_csynth.xml",
   "name": "kernel_outerloop_0",
   "fileType": "XML",
   "reportType": "KERNEL_HLS_CSYNTH",
@@ -196,10 +196,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:11 2025",
- "timestampMillis": "1745508911056",
+ "dateTimestamp": "Thu Aug 21 21:19:08 2025",
+ "timestampMillis": "1755800348275",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/reports/kernel_outerloop_0/system_estimate_kernel_outerloop_0.xtxt",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/system_estimate_kernel_outerloop_0.xtxt",
   "name": "",
   "fileType": "TEXT",
   "reportType": "GLOBAL_SYSTEM_ESTIMATE",
@@ -210,10 +210,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:12 2025",
- "timestampMillis": "1745508912204",
+ "dateTimestamp": "Thu Aug 21 21:19:09 2025",
+ "timestampMillis": "1755800349588",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/reports/kernel_outerloop_0/v++_compile_kernel_outerloop_0_guidance.html",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/v++_compile_kernel_outerloop_0_guidance.html",
   "name": "",
   "fileType": "HTML",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -224,10 +224,10 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Thu Apr 24 18:35:12 2025",
- "timestampMillis": "1745508912205",
+ "dateTimestamp": "Thu Aug 21 21:19:09 2025",
+ "timestampMillis": "1755800349589",
  "report": {
-  "path": "/home/x_thileeb/repos/OPS_mine_vck5000/apps/c/rtm_multidim_fpga_experimental/multidim_2/hls/build/hw/temp_dir/v++_compile_kernel_outerloop_0_guidance.pb",
+  "path": "/home/x_thileeb/repos/temp/ops-hls-pact25-artifact/codegen_apps/rtm_fp/vck5000_project/hls/build/hw/temp_dir/v++_compile_kernel_outerloop_0_guidance.pb",
   "name": "",
   "fileType": "BINARY_PROTOBUF",
   "reportType": "GLOBAL_RULECHECK_GUIDANCE",
@@ -238,10 +238,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Thu Apr 24 18:35:12 2025",
- "timestampMillis": "1745508912209",
+ "dateTimestamp": "Thu Aug 21 21:19:09 2025",
+ "timestampMillis": "1755800349594",
  "status": {
-  "cmdId": "d4949fb0-41bc-4da7-ac6f-ad716d1d1c99",
+  "cmdId": "c194280c-58be-4d89-b040-ec487bb93795",
   "state": "CS_PASSED"
  }
 }

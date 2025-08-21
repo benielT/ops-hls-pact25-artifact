@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-29 03:19:41.441803 by ops-translator
+// Auto-generated at 2025-08-21 21:06:12.760950 by ops-translator
 #include <datamover_outerloop_0.hpp>
 static void datamover_outerloop_0_dataflow_region_read(
         const unsigned int num_pkts,
@@ -320,37 +320,37 @@ extern "C" void datamover_outerloop_0(
     #pragma HLS INTERFACE s_axilite port = gridSize_2 bundle = control
     #pragma HLS INTERFACE s_axilite port = outer_itr bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem0 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem0 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg0 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg0 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem1 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem1 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg1 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg1 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem2 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem2 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg2 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg2 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem3 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem3 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg3 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg3 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem4 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem4 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg4 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg4 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem5 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem5 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg5 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg5 bundle = control
  
-    #pragma HLS INTERFACE mode=m_axi bundle=gmem6 depth=16 max_read_burst_length=16 max_write_burst_length=16 \
+    #pragma HLS INTERFACE mode=m_axi bundle=gmem6 depth=4096 max_read_burst_length=16 max_write_burst_length=16 \
             num_read_outstanding=4 num_write_outstanding=4 \
             port=arg6 offset=slave
     #pragma HLS INTERFACE s_axilite port = arg6 bundle = control

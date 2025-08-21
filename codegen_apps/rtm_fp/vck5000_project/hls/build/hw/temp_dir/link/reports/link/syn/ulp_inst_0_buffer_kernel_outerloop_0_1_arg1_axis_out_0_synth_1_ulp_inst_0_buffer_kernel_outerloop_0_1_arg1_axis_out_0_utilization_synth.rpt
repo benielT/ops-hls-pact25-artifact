@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-| Date         : Thu Apr 24 18:41:04 2025
+| Date         : Thu Aug 21 21:24:01 2025
 | Host         : acclnode02 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.rpt -pb ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0_utilization_synth.pb
 | Design       : ulp_inst_0_buffer_kernel_outerloop_0_1_arg1_axis_out_0
@@ -32,13 +32,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Registers                  |  201 |     0 |          0 |   1799680 |  0.01 |
-|   Register as Flip Flop    |  201 |     0 |          0 |   1799680 |  0.01 |
+| Registers                  |  209 |     0 |          0 |   1799680 |  0.01 |
+|   Register as Flip Flop    |  209 |     0 |          0 |   1799680 |  0.01 |
 |   Register as Latch        |    0 |     0 |          0 |   1799680 |  0.00 |
-| CLB LUTs*                  |   75 |     0 |          0 |    899840 | <0.01 |
-|   LUT as Logic             |   27 |     0 |          0 |    899840 | <0.01 |
-|   LUT as Memory            |   48 |     0 |          0 |    449920 |  0.01 |
-|     LUT as Distributed RAM |   48 |     0 |            |           |       |
+| CLB LUTs*                  |  134 |     0 |          0 |    899840 |  0.01 |
+|   LUT as Logic             |   38 |     0 |          0 |    899840 | <0.01 |
+|   LUT as Memory            |   96 |     0 |          0 |    449920 |  0.02 |
+|     LUT as Distributed RAM |   96 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
 |       Variable Length      |    0 |     0 |            |           |       |
 |       Fixed Length         |    0 |     0 |            |           |       |
@@ -185,16 +185,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  193 |            Register |
-| RAMD32   |   84 |                 CLB |
-| RAMS32   |   12 |                 CLB |
+| FDRE     |  201 |            Register |
+| RAMD64E5 |   96 |                 CLB |
+| LUT6     |   13 |                 CLB |
+| LUT2     |   12 |                 CLB |
 | LUT4     |   10 |                 CLB |
-| LUT3     |    9 |                 CLB |
 | FDSE     |    8 |            Register |
-| LUT2     |    6 |                 CLB |
-| LUT6     |    5 |                 CLB |
+| LUT3     |    6 |                 CLB |
 | LUT1     |    5 |                 CLB |
-| LUT5     |    1 |                 CLB |
+| LUT5     |    4 |                 CLB |
 +----------+------+---------------------+
 
 

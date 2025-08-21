@@ -207,10 +207,10 @@
     "version": "2022.1",
     "cl": "3524075",
     "time_stamp": "2022-04-13-17:42:45",
-    "options": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 128 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/rtm3d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
+    "options": "/tools/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++ -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/temp/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/link/ --log_dir hls/build/hw/temp_dir/link/logs/ --link --config hls/host/xrt.cfg -o ./hls/build/hw/rtm3d.xsa ./hls/build/hw/datamover_outerloop_0.xo ./hls/build/hw/kernel_outerloop_0.xo ",
     "xclbin_name": "rtm3d",
-    "uuid": "b3f8af16-a4d8-411b-be5f-b36fdbf01ef7",
-    "link_uuid": "b3f8af16-a4d8-411b-be5f-b36fdbf01ef7",
+    "uuid": "e00e93ae-d28d-430b-8463-1370a2398da8",
+    "link_uuid": "e00e93ae-d28d-430b-8463-1370a2398da8",
     "package_uuid": "",
     "system_compile_flow": false
    },
@@ -1361,16 +1361,16 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "18237",
-         "REG": "20506",
+         "LUT": "18174",
+         "REG": "20475",
          "BRAM": "13",
          "DSP": "",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "18227",
-         "REG": "20501",
+         "LUT": "18174",
+         "REG": "20475",
          "BRAM": "13",
          "DSP": "",
          "URAM": "0"
@@ -1402,25 +1402,25 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "113134",
-         "REG": "218059",
-         "BRAM": "352",
+         "LUT": "127657",
+         "REG": "265523",
+         "BRAM": "704",
          "DSP": "",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "113127",
-         "REG": "218059",
-         "BRAM": "352",
+         "LUT": "127655",
+         "REG": "265523",
+         "BRAM": "704",
          "DSP": "",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "153793",
-         "REG": "220010",
-         "BRAM": "352",
+         "LUT": "169265",
+         "REG": "266843",
+         "BRAM": "704",
          "DSP": "",
          "URAM": "0"
         }
