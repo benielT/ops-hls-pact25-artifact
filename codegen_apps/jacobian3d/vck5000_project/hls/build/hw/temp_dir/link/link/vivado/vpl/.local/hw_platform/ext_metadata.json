@@ -1,0 +1,39 @@
+{
+    "xclbin": {
+        "append_sections": {
+            "partition_metadata": {
+                "interfaces": [
+                    {
+                        "interface_uuid": "ae9af7bca57dde8a3ba8a3f9262d78bb"
+                    }
+                ],
+                "schema_version": {
+                    "minor": "0x0",
+                    "major": "0x1"
+                }
+            }
+        }
+    },
+    "chipscope_debug": {
+        "debug_networks": {
+            "mgmt": {
+                "is_user_visible": "false",
+                "name": "Management Debug Network",
+                "pcie_pf": "0",
+                "bar_number": "0",
+                "axi_baseaddr": "0x0000020105000000",
+                "supports_microblaze_debug": "false",
+                "supports_jtag_fallback": "false"
+            },
+            "user": {
+                "is_user_visible": "true",
+                "name": "User Debug Network",
+                "pcie_pf": "1",
+                "bar_number": "2",
+                "axi_baseaddr": "0x0000020205800000",
+                "supports_microblaze_debug": "false",
+                "supports_jtag_fallback": "false"
+            }
+        }
+    }
+}

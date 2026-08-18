@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="cortex_a72" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_datamover_outerloop_0">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="is_loopback" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_start_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_end_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_start_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_end_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_start_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="range_end_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gridSize_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gridSize_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="gridSize_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="outer_itr" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg0_axis_out" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg1_axis_in" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_datamover_outerloop_0">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="is_loopback" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_start_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_end_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_start_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_end_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_start_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="range_end_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gridSize_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gridSize_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="gridSize_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="outer_itr" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg0_axis_out" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg1_axis_in" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_kernel_outerloop_0">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="slr_region" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="outer_itr" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_grid_size_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_grid_size_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_grid_size_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_dim" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_total_itr" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_lower_limit_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_lower_limit_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_lower_limit_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_upper_limit_0" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_upper_limit_1" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_upper_limit_2" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="stencilConfig_outer_loop_limit" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg0_axis_in" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="arg1_axis_out" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="swblk_kernel_outerloop_0">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="slr_region" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="outer_itr" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_grid_size_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_grid_size_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_grid_size_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_dim" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_total_itr" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_lower_limit_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_lower_limit_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_lower_limit_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_upper_limit_0" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_upper_limit_1" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_upper_limit_2" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="stencilConfig_outer_loop_limit" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg0_axis_in" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="arg1_axis_out" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:comp cf:name="gen4x8_xdma_2" xd:componentRef="gen4x8_xdma_2" xd:clockId="0"/>
+  <cf:comp cf:name="datamover_outerloop_0_1" xd:componentRef="datamover_outerloop_0" xd:clockId="0"/>
+  <cf:comp cf:name="kernel_outerloop_0_1" xd:componentRef="kernel_outerloop_0" xd:clockId="0"/>
+  <cf:instance cf:name="hwinst_datamover_outerloop_0_1" cf:blockName="hwblk_datamover_outerloop_0" cf:compName="datamover_outerloop_0_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="is_loopback" cf:compPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="range_start_0" cf:compPort="s_axi_control" xd:register="0x18"/>
+    <cf:portMap cf:blockPort="range_end_0" cf:compPort="s_axi_control" xd:register="0x20"/>
+    <cf:portMap cf:blockPort="range_start_1" cf:compPort="s_axi_control" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="range_end_1" cf:compPort="s_axi_control" xd:register="0x30"/>
+    <cf:portMap cf:blockPort="range_start_2" cf:compPort="s_axi_control" xd:register="0x38"/>
+    <cf:portMap cf:blockPort="range_end_2" cf:compPort="s_axi_control" xd:register="0x40"/>
+    <cf:portMap cf:blockPort="gridSize_0" cf:compPort="s_axi_control" xd:register="0x48"/>
+    <cf:portMap cf:blockPort="gridSize_1" cf:compPort="s_axi_control" xd:register="0x50"/>
+    <cf:portMap cf:blockPort="gridSize_2" cf:compPort="s_axi_control" xd:register="0x58"/>
+    <cf:portMap cf:blockPort="outer_itr" cf:compPort="s_axi_control" xd:register="0x60"/>
+    <cf:portMap cf:blockPort="arg0" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x68"/>
+    <cf:portMap cf:blockPort="arg1" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x74"/>
+    <cf:portMap cf:blockPort="arg0_axis_out" cf:compPort="arg0_axis_out" xd:bufferDepth="128"/>
+    <cf:portMap cf:blockPort="arg1_axis_in" cf:compPort="arg1_axis_in"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_datamover_outerloop_0_1" cf:blockName="swblk_datamover_outerloop_0" cf:compName="gen4x8_xdma_2">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="is_loopback" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_start_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_end_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_start_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_end_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_start_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="range_end_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gridSize_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gridSize_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="gridSize_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="outer_itr" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="arg0" cf:compPort="axi_noc_kernel0_S00_AXI" cf:ctrlPort="axi_ic_user_M01_AXI" cf:sptag="MC_NOC0"/>
+    <cf:portMap cf:blockPort="arg1" cf:compPort="axi_noc_kernel0_S01_AXI" cf:ctrlPort="axi_ic_user_M01_AXI" cf:sptag="MC_NOC0"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_kernel_outerloop_0_1" cf:blockName="hwblk_kernel_outerloop_0" cf:compName="kernel_outerloop_0_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="slr_region" cf:compPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="outer_itr" cf:compPort="s_axi_control" xd:register="0x18"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_0" cf:compPort="s_axi_control" xd:register="0x20"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_1" cf:compPort="s_axi_control" xd:register="0x28"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_2" cf:compPort="s_axi_control" xd:register="0x30"/>
+    <cf:portMap cf:blockPort="stencilConfig_dim" cf:compPort="s_axi_control" xd:register="0x38"/>
+    <cf:portMap cf:blockPort="stencilConfig_total_itr" cf:compPort="s_axi_control" xd:register="0x40"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_0" cf:compPort="s_axi_control" xd:register="0x48"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_1" cf:compPort="s_axi_control" xd:register="0x50"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_2" cf:compPort="s_axi_control" xd:register="0x58"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_0" cf:compPort="s_axi_control" xd:register="0x60"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_1" cf:compPort="s_axi_control" xd:register="0x68"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_2" cf:compPort="s_axi_control" xd:register="0x70"/>
+    <cf:portMap cf:blockPort="stencilConfig_outer_loop_limit" cf:compPort="s_axi_control" xd:register="0x78"/>
+    <cf:portMap cf:blockPort="arg0_axis_in" cf:compPort="arg0_axis_in"/>
+    <cf:portMap cf:blockPort="arg1_axis_out" cf:compPort="arg1_axis_out" xd:bufferDepth="128"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_kernel_outerloop_0_1" cf:blockName="swblk_kernel_outerloop_0" cf:compName="gen4x8_xdma_2">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="slr_region" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="outer_itr" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_grid_size_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_dim" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_total_itr" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_lower_limit_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_0" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_1" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_upper_limit_2" cf:compPort="axi_ic_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="stencilConfig_outer_loop_limit" cf:compPort="axi_ic_user_M01_AXI"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="is_loopback" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="is_loopback">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_start_0" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_start_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_end_0" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_end_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_start_1" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_start_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_end_1" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_end_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_start_2" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_start_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="range_end_2" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="range_end_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="gridSize_0" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="gridSize_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="gridSize_1" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="gridSize_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="gridSize_2" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="gridSize_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="outer_itr" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="outer_itr">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="arg0" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="arg0">
+    <cf:dataMover cf:compName="datamover_outerloop_0_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_datamover_outerloop_0_1" cf:srcPort="arg1" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="arg1">
+    <cf:dataMover cf:compName="datamover_outerloop_0_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_datamover_outerloop_0_1" cf:srcPort="arg0_axis_out" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="arg0_axis_in"/>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="slr_region" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="slr_region">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="outer_itr" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="outer_itr">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_grid_size_0" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_grid_size_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_grid_size_1" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_grid_size_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_grid_size_2" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_grid_size_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_dim" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_dim">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_total_itr" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_total_itr">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_lower_limit_0" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_lower_limit_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_lower_limit_1" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_lower_limit_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_lower_limit_2" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_lower_limit_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_upper_limit_0" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_upper_limit_0">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_upper_limit_1" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_upper_limit_1">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_upper_limit_2" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_upper_limit_2">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_kernel_outerloop_0_1" cf:srcPort="stencilConfig_outer_loop_limit" cf:dstInst="hwinst_kernel_outerloop_0_1" cf:dstPort="stencilConfig_outer_loop_limit">
+    <cf:dataMover cf:compName="gen4x8_xdma_2" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="hwinst_kernel_outerloop_0_1" cf:srcPort="arg1_axis_out" cf:dstInst="hwinst_datamover_outerloop_0_1" cf:dstPort="arg1_axis_in"/>
+</cf:model>

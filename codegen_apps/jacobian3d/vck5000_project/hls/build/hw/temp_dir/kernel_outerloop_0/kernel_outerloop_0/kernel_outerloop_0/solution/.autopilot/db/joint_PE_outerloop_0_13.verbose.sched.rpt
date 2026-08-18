@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vitis HLS Report for 'joint_PE_outerloop_0_13'
+================================================================
+* Date:           Sun Jul 26 01:24:51 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.301 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.50>
+ST_1 : Operation 3 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_outer_loop_limit = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_outer_loop_limit"   --->   Operation 3 'read' 'stencil_m_stencilConfig_outer_loop_limit' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_2"   --->   Operation 4 'read' 'stencil_m_stencilConfig_upper_limit_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_1"   --->   Operation 5 'read' 'stencil_m_stencilConfig_upper_limit_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_0"   --->   Operation 6 'read' 'stencil_m_stencilConfig_upper_limit_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_2"   --->   Operation 7 'read' 'stencil_m_stencilConfig_lower_limit_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_1"   --->   Operation 8 'read' 'stencil_m_stencilConfig_lower_limit_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_0"   --->   Operation 9 'read' 'stencil_m_stencilConfig_lower_limit_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_2"   --->   Operation 10 'read' 'stencil_m_stencilConfig_grid_size_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_1"   --->   Operation 11 'read' 'stencil_m_stencilConfig_grid_size_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_0"   --->   Operation 12 'read' 'stencil_m_stencilConfig_grid_size_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [2/2] (0.70ns)   --->   "%call_ln484 = call void @stencilRun, i16 %stencil_m_stencilConfig_grid_size_0, i16 %stencil_m_stencilConfig_grid_size_1, i16 %stencil_m_stencilConfig_grid_size_2, i16 %stencil_m_stencilConfig_lower_limit_0, i16 %stencil_m_stencilConfig_lower_limit_1, i16 %stencil_m_stencilConfig_lower_limit_2, i16 %stencil_m_stencilConfig_upper_limit_0, i16 %stencil_m_stencilConfig_upper_limit_1, i16 %stencil_m_stencilConfig_upper_limit_2, i16 %stencil_m_stencilConfig_outer_loop_limit, i256 %arg0_arg1_streams_13, i256 %arg0_arg1_streams_14" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:484]   --->   Operation 13 'call' 'call_ln484' <Predicate = true> <Delay = 0.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_outer_loop_limit, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_14, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_13, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln484 = call void @stencilRun, i16 %stencil_m_stencilConfig_grid_size_0, i16 %stencil_m_stencilConfig_grid_size_1, i16 %stencil_m_stencilConfig_grid_size_2, i16 %stencil_m_stencilConfig_lower_limit_0, i16 %stencil_m_stencilConfig_lower_limit_1, i16 %stencil_m_stencilConfig_lower_limit_2, i16 %stencil_m_stencilConfig_upper_limit_0, i16 %stencil_m_stencilConfig_upper_limit_1, i16 %stencil_m_stencilConfig_upper_limit_2, i16 %stencil_m_stencilConfig_outer_loop_limit, i256 %arg0_arg1_streams_13, i256 %arg0_arg1_streams_14" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:484]   --->   Operation 26 'call' 'call_ln484' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln17 = ret" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:17]   --->   Operation 27 'ret' 'ret_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.5ns
+The critical path consists of the following:
+	fifo read operation ('stencil.m_stencilConfig.outer_loop_limit') on port 'stencilConfig_outer_loop_limit' [14]  (0.796 ns)
+	'call' operation ('call_ln484', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:484) to 'stencilRun' [35]  (0.706 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,11 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+# Tool Version Limit: 2022.04
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+
+Family       : versal
+Device       : xcvc1902
+Package      : -vsvd1760
+Speed Grade  : -2MP-e-S
+Clock Period : 3.333 ns

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Jul 26 01:23:07 2026
+# Process ID: 1956297
+# Current directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/vivado.log
+# Journal file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/vivado.jou
+# Running On: acclnode05, OS: Linux, CPU Frequency: 2894.818 MHz, CPU Physical cores: 32, Host memory: 540639 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2926.855 ; gain = 0.027 ; free physical = 153897 ; free virtual = 487910
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Running package_xo -xo_path /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/export.xo -kernel_name datamover_outerloop_0 -kernel_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp -ip_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/ip_unzip_dir -design_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/datamover_outerloop_0.design.xml -debug_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.debug -hls_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 26 01:23:21 2026...

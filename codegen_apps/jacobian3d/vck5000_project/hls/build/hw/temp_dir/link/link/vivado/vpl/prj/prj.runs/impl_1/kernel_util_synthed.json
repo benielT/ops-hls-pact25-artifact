@@ -1,0 +1,58 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "design_state": "Synthesized",
+    "user_budget": {
+        "actual_resources": {
+            "REG": "211661",
+            "LUT": "64460",
+            "LUTAsMem": "24250",
+            "BRAM": "143",
+            "URAM": "420"
+        },
+        "supply_resources": {
+            "REG": "1768703",
+            "LUT": "877137",
+            "LUTAsMem": "447766",
+            "BRAM": "926",
+            "URAM": "463"
+        }
+    },
+    "kernels": [
+        {
+            "name": "datamover_outerloop_0",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "datamover_outerloop_0_1",
+                    "actual_resources": {
+                        "REG": "17628",
+                        "LUT": "10781",
+                        "LUTAsMem": "3657",
+                        "BRAM": "31",
+                        "URAM": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "kernel_outerloop_0",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "kernel_outerloop_0_1",
+                    "actual_resources": {
+                        "REG": "194033",
+                        "LUT": "53679",
+                        "LUTAsMem": "20593",
+                        "BRAM": "112",
+                        "URAM": "420"
+                    }
+                }
+            ]
+        }
+    ]
+}

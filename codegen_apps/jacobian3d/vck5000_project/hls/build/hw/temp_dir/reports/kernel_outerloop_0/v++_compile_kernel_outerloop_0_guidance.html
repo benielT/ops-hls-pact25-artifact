@@ -3407,9 +3407,9 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xrcserver v.2022.1 (lin64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Thu Apr 24 19:00:04 2025</td></tr>
-<tr><td><b>Host</b></td><td>acclnode02 running 64-bit Ubuntu 20.04.6 LTS</td></tr>
-<tr><td><b>Command</b></td><td>v++  -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/include/device/ -I/home/x_thileeb/repos/OPS_mine_vck5000/ops//hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp </td></tr>
+<tr><td><b>Date</b></td><td>Sun Jul 26 01:28:52 2026</td></tr>
+<tr><td><b>Host</b></td><td>acclnode05 running 64-bit Ubuntu 24.04.3 LTS</td></tr>
+<tr><td><b>Command</b></td><td>v++  -s -O3 --target hw --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --hls.jobs 64 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ --temp_dir hls/build/hw/temp_dir/ --log_dir hls/build/hw/temp_dir/ --compile -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/include/device/ -I/home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/L1/include/ -I./hls/device/include/ -k kernel_outerloop_0 -o hls/build/hw/kernel_outerloop_0.xo hls/device/src/kernel_outerloop_0.cpp </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
@@ -3433,28 +3433,6 @@ window.onload = function () { addSorting(); }
 <th align="left">Categories</th>
 <th align="left" width="350">Details</th>
 <th align="left" width="380">Resolution</th>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.kernel_outerloop_0.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
-</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Kernel</td>
-<td align="left">advisory</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.kernel_outerloop_0.Kernel</td>
-<td align="left">**** Estimated Fmax: 412.71 MHz
-</td>
-<td align="left"></td>
 </tr>
 <tr>
 <td align="left">1</td>
@@ -3485,7 +3463,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.kernel_outerloop_0.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 19, loop 'VITIS_LOOP_193_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'VITIS_LOOP_194_1'
 </td>
 <td align="left"></td>
 </tr>
@@ -3497,6 +3475,28 @@ window.onload = function () { addSorting(); }
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.kernel_outerloop_0.Throughput</td>
 <td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1897_1'
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.kernel_outerloop_0.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
+</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Kernel</td>
+<td align="left">advisory</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.kernel_outerloop_0.Kernel</td>
+<td align="left">**** Estimated Fmax: 434.59 MHz
 </td>
 <td align="left"></td>
 </tr>

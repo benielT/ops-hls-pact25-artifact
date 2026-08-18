@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ip_presets schema="1.0">
+
+   <ip_preset preset_proc_name="ddr4_preset">
+      <ip vendor="xilinx.com" library="ip" name="axi_noc" version="*">
+         <user_parameters>
+            <user_parameter name="CONFIG.CONTROLLERTYPE"              value="DDR4_SDRAM"/>
+            <user_parameter name="CONFIG.MC_NO_CHANNELS"              value="Single"/>
+            <user_parameter name="CONFIG.MC_SYSTEM_CLOCK"             value="Differential"/>
+            <user_parameter name="CONFIG.MC_STACKHEIGHT"              value="1"/>
+            <user_parameter name="CONFIG.MC_MEMORY_DEVICETYPE"        value="Components"/>
+            <user_parameter name="CONFIG.MC_ROWADDRESSWIDTH"          value="16"/>
+            <user_parameter name="CONFIG.MC_RANK"                     value="1"/>
+            <user_parameter name="CONFIG.NUM_MC"                      value="4"/>
+            <user_parameter name="CONFIG.NUM_MCP"                     value="4"/>
+            <user_parameter name="CONFIG.MC_CHAN_REGION0"             value="DDR_LOW0"/>
+            <user_parameter name="CONFIG.MC_CHAN_REGION1"             value="DDR_LOW2"/>
+            <user_parameter name="CONFIG.MC_COMPONENT_WIDTH"          value="x16"/>
+            <user_parameter name="CONFIG.MC_INTERLEAVE_SIZE"          value="4096"/>
+            <user_parameter name="CONFIG.MC_ADDR_BIT9"                value="CA5"/>
+            <user_parameter name="CONFIG.MC_DATAWIDTH"                value="72"/>
+            <user_parameter name="CONFIG.MC_DM_WIDTH"                 value="9"/>
+            <user_parameter name="CONFIG.MC_DQS_WIDTH"                value="9"/>
+            <user_parameter name="CONFIG.MC_DQ_WIDTH"                 value="72"/>
+            <user_parameter name="CONFIG.MC_ECC"                      value="true"/>
+            <user_parameter name="CONFIG.MC_EN_ECC_SCRUBBING"         value="true"/>
+            <user_parameter name="CONFIG.MC_INIT_MEM_USING_ECC_SCRUB" value="true"/>
+            <user_parameter name="CONFIG.MC_INPUTCLK0_PERIOD"         value="5000"/>
+            <user_parameter name="CONFIG.MC_INPUT_FREQUENCY0"         value="200.000"/>
+            <user_parameter name="CONFIG.MC_MEMORY_SPEEDGRADE"        value="DDR4-3200AA(22-22-22)"/>
+         </user_parameters>
+      </ip>
+   </ip_preset>
+
+</ip_presets>

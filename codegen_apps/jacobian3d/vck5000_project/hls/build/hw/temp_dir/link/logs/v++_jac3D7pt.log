@@ -1,0 +1,15 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+	Reports: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/package
+	Log files: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/logs/package
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.xclbin.package_summary, at Sun Jul 26 03:54:03 2026
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Jul 26 03:54:03 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/package/v++_package_jac3D7pt_guidance.html', at Sun Jul 26 03:54:04 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/hw/xilinx_vck5000_gen4x8_xdma_2_202210_1.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-2256] Packaging for hardware
+INFO: [v++ 60-2460] Successfully copied a temporary xclbin to the output xclbin: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.xclbin
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.xclbin.package_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 14s
+INFO: [v++ 60-1653] Closing dispatch client.

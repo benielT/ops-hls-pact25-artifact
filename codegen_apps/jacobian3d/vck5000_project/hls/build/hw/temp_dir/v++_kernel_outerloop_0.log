@@ -1,0 +1,32 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0
+	Log files: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/kernel_outerloop_0.xo.compile_summary, at Sun Jul 26 01:23:45 2026
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Jul 26 01:23:45 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/v++_compile_kernel_outerloop_0_guidance.html', at Sun Jul 26 01:23:47 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/hw/xilinx_vck5000_gen4x8_xdma_2_202210_1.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_vck5000_gen4x8_xdma_2_202210_1
+INFO: [v++ 60-242] Creating kernel: 'kernel_outerloop_0'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: kernel_outerloop_0 Log file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_1521_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1521_1'
+INFO: [v++ 204-61] Pipelining function 'kernel_jac3D_kernel_stencil_core'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 0, Final II = 1, Depth = 10, function 'kernel_jac3D_kernel_stencil_core'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_194_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'VITIS_LOOP_194_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_1897_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1897_1'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 434.59 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/reports/kernel_outerloop_0/system_estimate_kernel_outerloop_0.xtxt
+INFO: [v++ 60-586] Created hls/build/hw/kernel_outerloop_0.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/kernel_outerloop_0.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 5m 17s
+INFO: [v++ 60-1653] Closing dispatch client.

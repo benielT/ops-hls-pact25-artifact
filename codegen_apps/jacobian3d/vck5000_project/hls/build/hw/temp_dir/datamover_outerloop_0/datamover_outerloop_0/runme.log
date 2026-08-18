@@ -1,0 +1,605 @@
+
+*** Running vitis_hls
+    with args -f datamover_outerloop_0.tcl -messageDb vitis_hls.pb
+
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'x_thileeb' on host 'acclnode05' (Linux_x86_64 version 6.17.0-23-generic) on Sun Jul 26 01:22:15 +03 2026
+INFO: [HLS 200-10] On os Ubuntu 24.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/opsc/include/:/tools/Xilinx/Vitis/2022.1/include/:/tools/Xilinx/Vivado/2022.1/include/:/tools/Xilinx/Vitis_HLS/2022.1/include/.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/opsc/include/:/tools/Xilinx/Vitis/2022.1/include/:/tools/Xilinx/Vivado/2022.1/include/:/tools/Xilinx/Vitis_HLS/2022.1/include/.
+Sourcing Tcl script 'datamover_outerloop_0.tcl'
+INFO: [HLS 200-1510] Running: open_project datamover_outerloop_0 
+INFO: [HLS 200-10] Creating and opening project '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0'.
+INFO: [HLS 200-1510] Running: set_top datamover_outerloop_0 
+INFO: [HLS 200-1510] Running: add_files /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp -cflags  -I /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device -I /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/L1/include -I /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include 
+INFO: [HLS 200-10] Adding design file '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvc1902-vsvd1760-2MP-e-S 
+INFO: [HLS 200-1611] Setting target device to 'xcvc1902-vsvd1760-2MP-e-S'
+INFO: [HLS 200-1510] Running: create_clock -period 299.996999MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname datamover_outerloop_0 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.458 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp' ... 
+WARNING: [HLS 207-4785] attribute 'deprecated' is ignored, place it after "struct" to apply attribute to type declaration (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/L1/include/ops_hls_defs.hpp:105:16)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:234:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:372:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1478:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2092:9)
+WARNING: [HLS 207-4949] logical not is only applied to the left hand side of this comparison (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+INFO: [HLS 207-4281] add parentheses after the '!' to evaluate the comparison first (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+INFO: [HLS 207-4282] add parentheses around left hand side expression to silence this warning (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+WARNING: [HLS 207-4949] logical not is only applied to the left hand side of this comparison (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+INFO: [HLS 207-4281] add parentheses after the '!' to evaluate the comparison first (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+INFO: [HLS 207-4282] add parentheses around left hand side expression to silence this warning (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+WARNING: [HLS 207-5292] unused parameter 'size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:189:20)
+WARNING: [HLS 207-5292] unused parameter 'size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:326:20)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.79 seconds. CPU system time: 1.38 seconds. Elapsed time: 6.93 seconds; current allocated memory: 465.152 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:359:2)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:359:2) in function 'log_reduce::log_generic<double>' completely with a factor of 99 (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.131.141.151.161.171.181.230.240.250.260)' into 'fp_struct<double>::to_double() const (.128.138.148.158.168.178.227.237.247.257)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:523:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.128.138.148.158.168.178.227.237.247.257)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:538:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 57, 59>(ap_ufixed<57, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<59, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 59, 69>(ap_ufixed<59, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<69, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 69, 73>(ap_ufixed<69, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 73, 68>(ap_ufixed<73, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<68, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 68, 63>(ap_ufixed<68, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 63, 58>(ap_ufixed<63, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<58, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'void log_reduce::range_reduce<ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 58, 53>(ap_ufixed<58, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<53, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<53, -37, (ap_q_mode)5, (ap_o_mode)3, 0> log_reduce::log_traits<double>::range_reduction<57>(ap_ufixed<57, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<102, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:182:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double log_reduce::log_generic<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double log_reduce::log_generic<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double log_reduce::log_generic<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double log_reduce::log_generic<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double log_reduce::log_generic<double>(double)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:212:0)
+INFO: [HLS 214-178] Inlining function 'log_reduce::log2(double)' into 'log2' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c/logdouble.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'log2' into '__gnu_cxx::__enable_if<__is_integer<unsigned short>::__value, double>::__type std::log2<unsigned short>(unsigned short)' (/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:1583:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>(double, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::mantissa() const' into 'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>(double, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>(double, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:65:0)
+INFO: [HLS 214-178] Inlining function 'unsigned short generic_cast_IEEE754<unsigned short, (ap_q_mode)6, double>(double, bool, hls::enable_if<!(std::numeric_limits<unsigned short>::is_signed), bool>::type)' into 'unsigned short generic_cast_IEEE754<unsigned short, double>(double, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'unsigned short generic_cast_IEEE754<unsigned short, double>(double, bool)' into '__hls_fptoui_double_i16' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:68:0)
+INFO: [HLS 214-178] Inlining function 'log2' into '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::log2<int>(int)' (/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:1583:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<unsigned short>::__value, double>::__type std::log2<unsigned short>(unsigned short)' into 'void ops::hls::genMemConfig<(unsigned short)512, (unsigned short)256, (unsigned short)32>(unsigned short (&) [3], ops::hls::AccessRange&, ops::hls::MemConfig&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2571:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptoui_double_i16' into 'void ops::hls::genMemConfig<(unsigned short)512, (unsigned short)256, (unsigned short)32>(unsigned short (&) [3], ops::hls::AccessRange&, ops::hls::MemConfig&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2571:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::log2<int>(int)' into 'void ops::hls::genMemConfig<(unsigned short)512, (unsigned short)256, (unsigned short)32>(unsigned short (&) [3], ops::hls::AccessRange&, ops::hls::MemConfig&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2571:0)
+INFO: [HLS 214-178] Inlining function 'datamover_outerloop_0_dataflow_read_write(unsigned int, unsigned int, ops::hls::MemConfig const&, ap_uint<512>*, ap_uint<512>*, hls::stream<hls::axis<ap_uint<256>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<256>, 0ul, 0ul, 0ul>, 0>&)' into 'datamover_outerloop_0' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:157:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'arg1' with compact=none mode in 512-bits
+INFO: [HLS 214-241] Aggregating maxi variable 'arg0' with compact=none mode in 512-bits
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_431_1'(/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:431:20) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:431:20)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 512 in loop 'VITIS_LOOP_453_2'(/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:453:20) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:453:20)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_567_1'(/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:567:20) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:567:20)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 512 in loop 'VITIS_LOOP_580_2'(/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:580:20) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:580:20)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void ops::hls::mem2stream<512u, 32u, 2u>(ap_uint<512u>*, hls::stream<ap_uint<512u>, 0>&, unsigned int) (.349.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'void ops::hls::stream2streamStepdown<512u, 256u>(hls::stream<ap_uint<512u>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'void ops::hls::stream2axis<256u>(hls::stream<ap_uint<256u>, 0>&, hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, unsigned int) (.397.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void ops::hls::stream2axis<256u>(hls::stream<ap_uint<256u>, 0>&, hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, unsigned int) (.397.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_uint<32>s' into 'void ops::hls::stream2axis<256u>(hls::stream<ap_uint<256u>, 0>&, hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, unsigned int) (.397.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<256>s.i256' into 'void ops::hls::axis2stream<256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.372.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'void ops::hls::axis2stream<256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.372.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'void ops::hls::axis2stream<256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.372.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<32>s.i32' into 'void ops::hls::axis2stream<256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.372.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i512.s_struct.ap_uint<512>s' into 'void ops::hls::stream2streamStepup<256u, 512u>(hls::stream<ap_uint<256u>, 0>&, hls::stream<ap_uint<512u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.99 seconds. CPU system time: 1.88 seconds. Elapsed time: 12.11 seconds; current allocated memory: 474.227 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 474.227 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.65 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.8 seconds; current allocated memory: 620.355 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log_traits<double>::range_reduction<57>' into 'log_reduce::log_generic<double>' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:339) automatically.
+INFO: [XFORM 203-602] Inlining function 'ops::hls::genMemConfig<(unsigned short)512, (unsigned short)256, (unsigned short)32>' into 'datamover_outerloop_0' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:207) automatically.
+WARNING: [SYNCHK 200-23] /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:414: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.58 seconds. CPU system time: 0.2 seconds. Elapsed time: 1.82 seconds; current allocated memory: 753.691 MB.
+INFO: [XFORM 203-102] Partitioning array 'range.start' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:186) automatically.
+INFO: [XFORM 203-102] Partitioning array 'range.end' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:186) automatically.
+INFO: [XFORM 203-102] Partitioning array 'read_gridSize' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:195) automatically.
+INFO: [XFORM 203-602] Inlining function 'log_reduce::log_traits<double>::range_reduction<57>' into 'log_reduce::log_generic<double>' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_log_.h:339) automatically.
+INFO: [XFORM 203-602] Inlining function 'ops::hls::genMemConfig<(unsigned short)512, (unsigned short)256, (unsigned short)32>' into 'datamover_outerloop_0' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:207) automatically.
+WARNING: [HLS 200-805] An internal stream 'arg1_write_reduced_mem_strm' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'arg1_write_mem_strm' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'arg0_read_reduced_mem_strm' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'arg0_read_mem_strm' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'datamover_outerloop_0_dataflow_read_write_dataflow_region' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp:40:1), detected/extracted 7 process function(s): 
+	 'entry_proc'
+	 'ops::hls::mem2stream<512u, 32u, 2u>'
+	 'ops::hls::stream2streamStepdown<512u, 256u>'
+	 'ops::hls::stream2axis<256u>'
+	 'ops::hls::axis2stream<256u>'
+	 'ops::hls::stream2streamStepup<256u, 512u>'
+	 'ops::hls::stream2mem<512u, 32u, 2u>'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.61 seconds. CPU system time: 0.19 seconds. Elapsed time: 1.85 seconds; current allocated memory: 925.156 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_809_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:808:33) in function 'ops::hls::stream2streamStepup<256u, 512u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_893_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:891:33) in function 'ops::hls::stream2streamStepdown<512u, 256u>'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.43 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1.043 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'datamover_outerloop_0' ...
+WARNING: [SYN 201-103] Legalizing function name 'mem2stream<512u, 32u, 2u>_Pipeline_VITIS_LOOP_431_1' to 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1'.
+WARNING: [SYN 201-103] Legalizing function name 'mem2stream<512u, 32u, 2u>_Pipeline_VITIS_LOOP_453_2' to 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2'.
+WARNING: [SYN 201-103] Legalizing function name 'mem2stream<512u, 32u, 2u>' to 'mem2stream_512u_32u_2u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2streamStepdown<512u, 256u>_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2' to 'stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2streamStepdown<512u, 256u>' to 'stream2streamStepdown_512u_256u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2axis<256u>_Pipeline_VITIS_LOOP_956_1' to 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2axis<256u>' to 'stream2axis_256u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'axis2stream<256u>' to 'axis2stream_256u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2streamStepup<256u, 512u>_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2' to 'stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2streamStepup<256u, 512u>' to 'stream2streamStepup_256u_512u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2mem<512u, 32u, 2u>_Pipeline_VITIS_LOOP_567_1' to 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2mem<512u, 32u, 2u>_Pipeline_VITIS_LOOP_580_2' to 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2mem<512u, 32u, 2u>' to 'stream2mem_512u_32u_2u_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.11 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.043 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_431_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_431_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.044 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_453_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_453_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.044 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem2stream_512u_32u_2u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.044 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.06 seconds; current allocated memory: 1.045 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_893_1_VITIS_LOOP_895_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, loop 'VITIS_LOOP_893_1_VITIS_LOOP_895_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.046 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.046 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2streamStepdown_512u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.046 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.046 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_956_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_956_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.046 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.046 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axis_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.046 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.046 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axis2stream_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_996_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_996_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.046 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.047 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_809_1_VITIS_LOOP_811_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_809_1_VITIS_LOOP_811_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.047 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.047 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2streamStepup_256u_512u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.047 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.047 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_567_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_567_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.047 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.048 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_580_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_580_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.048 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.048 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2mem_512u_32u_2u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.46 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.048 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.14 seconds. CPU system time: 0 seconds. Elapsed time: 1.16 seconds; current allocated memory: 1.049 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'datamover_outerloop_0_dataflow_read_write_dataflow_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.049 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.049 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'datamover_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln2620) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.049 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.050 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.050 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1' pipeline 'VITIS_LOOP_431_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.051 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2' pipeline 'VITIS_LOOP_453_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.051 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem2stream_512u_32u_2u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem2stream_512u_32u_2u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.054 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2' pipeline 'VITIS_LOOP_893_1_VITIS_LOOP_895_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'lshr_512ns_10ns_512_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.61 seconds; current allocated memory: 1.055 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2streamStepdown_512u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2streamStepdown_512u_256u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.057 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1' pipeline 'VITIS_LOOP_956_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.058 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axis_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axis_256u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.058 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axis2stream_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'axis2stream_256u_s' pipeline 'VITIS_LOOP_996_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axis2stream_256u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.059 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2' pipeline 'VITIS_LOOP_809_1_VITIS_LOOP_811_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.059 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2streamStepup_256u_512u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2streamStepup_256u_512u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.060 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1' pipeline 'VITIS_LOOP_567_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1/m_axi_gmem1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.061 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2' pipeline 'VITIS_LOOP_580_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2/m_axi_gmem1_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.062 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2mem_512u_32u_2u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2mem_512u_32u_2u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.065 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'datamover_outerloop_0_dataflow_read_write_dataflow_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'datamover_outerloop_0_dataflow_read_write_dataflow_region/m_axi_gmem1_RREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'datamover_outerloop_0_dataflow_read_write_dataflow_region'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.64 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.74 seconds; current allocated memory: 1.068 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'datamover_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/is_loopback' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_start_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_end_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_start_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_end_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_start_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/range_end_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/gridSize_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/gridSize_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/gridSize_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/outer_itr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg0_axis_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg0_axis_out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg0_axis_out_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg0_axis_out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg1_axis_in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg1_axis_in_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg1_axis_in_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'datamover_outerloop_0/arg1_axis_in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'datamover_outerloop_0' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'is_loopback', 'range_start_0', 'range_end_0', 'range_start_1', 'range_end_1', 'range_start_2', 'range_end_2', 'gridSize_0', 'gridSize_1', 'gridSize_2', 'outer_itr', 'arg0', 'arg1' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16ns_32_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'datamover_outerloop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.77 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.89 seconds; current allocated memory: 1.070 GB.
+INFO: [RTMG 210-286] Generating pipelined shifter : 'datamover_outerloop_0_lshr_512ns_10ns_512_2_1'
+INFO: [RTMG 210-285] Implementing FIFO 'num_pkts_c_U(datamover_outerloop_0_fifo_w32_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_read_c15_U(datamover_outerloop_0_fifo_w32_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg1_c_U(datamover_outerloop_0_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_read_c16_U(datamover_outerloop_0_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_read_mem_strm_U(datamover_outerloop_0_fifo_w512_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_read_reduced_mem_strm_U(datamover_outerloop_0_fifo_w256_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg1_write_reduced_mem_strm_U(datamover_outerloop_0_fifo_w256_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_read_c_U(datamover_outerloop_0_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg1_write_mem_strm_U(datamover_outerloop_0_fifo_w512_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_stream2axis_256u_U0_U(datamover_outerloop_0_start_for_stream2axis_256u_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_stream2streamStepup_256u_512u_U0_U(datamover_outerloop_0_start_for_stream2streamStepup_256u_512u_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_stream2mem_512u_32u_2u_U0_U(datamover_outerloop_0_start_for_stream2mem_512u_32u_2u_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_stream2streamStepdown_512u_256u_U0_U(datamover_outerloop_0_start_for_stream2streamStepdown_512u_256u_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.56 seconds. CPU system time: 0.23 seconds. Elapsed time: 3.33 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.73 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.88 seconds; current allocated memory: 1.083 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for datamover_outerloop_0.
+INFO: [VLOG 209-307] Generating Verilog RTL for datamover_outerloop_0.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 35.88 seconds. CPU system time: 4.61 seconds. Elapsed time: 42.52 seconds; current allocated memory: -383.699 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2926.855 ; gain = 0.027 ; free physical = 153897 ; free virtual = 487910
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Running package_xo -xo_path /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/export.xo -kernel_name datamover_outerloop_0 -kernel_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/datamover_outerloop_0.cpp -ip_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/ip_unzip_dir -design_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.autopilot/db/datamover_outerloop_0.design.xml -debug_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/.debug -hls_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/datamover_outerloop_0/datamover_outerloop_0/datamover_outerloop_0/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 26 01:23:21 2026...
+INFO: [HLS 200-802] Generated output file datamover_outerloop_0/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 18.72 seconds. CPU system time: 3.63 seconds. Elapsed time: 30.62 seconds; current allocated memory: 8.852 MB.
+INFO: [HLS 200-1510] Running: close_project 
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 58.85 seconds. Total CPU system time: 10.29 seconds. Total elapsed time: 77.05 seconds; peak allocated memory: 1.458 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Jul 26 01:23:31 2026...

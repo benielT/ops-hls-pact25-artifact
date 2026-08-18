@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:addressMap xmlns:xd="http://www.xilinx.com/xd">
+  <xd:addressRange xd:componentRef="BLP_S_AXI_CTRL_USER_00" xd:addressSpace="BLP_S_AXI_CTRL_USER_00" xd:segment="SEG_axi_gpio_null_user_Reg" xd:slaveRef="axi_gpio_null_user" xd:slaveInterface="S_AXI" xd:slaveSegment="Reg" xd:baseAddr="0x0000020200000000" xd:range="0x1000"/>
+  <xd:addressRange xd:componentRef="BLP_S_AXI_CTRL_USER_00" xd:addressSpace="BLP_S_AXI_CTRL_USER_00" xd:segment="SEG_datamover_outerloop_0_1_Reg" xd:slaveRef="datamover_outerloop_0_1" xd:slaveInterface="s_axi_control" xd:slaveSegment="Reg" xd:baseAddr="0x0000020200010000" xd:range="0x10000"/>
+  <xd:addressRange xd:componentRef="BLP_S_AXI_CTRL_USER_00" xd:addressSpace="BLP_S_AXI_CTRL_USER_00" xd:segment="SEG_kernel_outerloop_0_1_Reg" xd:slaveRef="kernel_outerloop_0_1" xd:slaveInterface="s_axi_control" xd:slaveSegment="Reg" xd:baseAddr="0x0000020200020000" xd:range="0x10000"/>
+  <xd:addressRange xd:componentRef="BLP_S_INI_AIE_00" xd:addressSpace="BLP_S_INI_AIE_00" xd:segment="SEG_ai_engine_0_AIE_ARRAY_0" xd:slaveRef="ai_engine_0" xd:slaveInterface="S00_AXI" xd:slaveSegment="AIE_ARRAY_0" xd:baseAddr="0x0000020000000000" xd:range="0x100000000"/>
+  <xd:addressRange xd:componentRef="BLP_S_INI_DBG_00" xd:addressSpace="BLP_S_INI_DBG_00" xd:segment="SEG_axi_dbg_hub_Mem0" xd:slaveRef="axi_dbg_hub" xd:slaveInterface="S_AXI" xd:slaveSegment="Mem0" xd:baseAddr="0x0000020205800000" xd:range="0x200000"/>
+  <xd:addressRange xd:componentRef="BLP_S_INI_PLRAM_00" xd:addressSpace="BLP_S_INI_PLRAM_00" xd:segment="SEG_plram_ctrl_Mem0" xd:slaveRef="plram_ctrl" xd:slaveInterface="S_AXI" xd:slaveSegment="Mem0" xd:baseAddr="0x0000020204000000" xd:range="0x20000"/>
+  <xd:addressRange xd:componentRef="datamover_outerloop_0_1" xd:addressSpace="Data_m_axi_gmem0" xd:segment="SEG_BLP_M_M00_INI_0_Reg" xd:slaveRef="BLP_M_M00_INI_0" xd:slaveInterface="BLP_M_M00_INI_0" xd:slaveSegment="Reg" xd:baseAddr="0x000000C100000000" xd:range="0x300000000"/>
+  <xd:addressRange xd:componentRef="datamover_outerloop_0_1" xd:addressSpace="Data_m_axi_gmem1" xd:segment="SEG_BLP_M_M01_INI_0_Reg" xd:slaveRef="BLP_M_M01_INI_0" xd:slaveInterface="BLP_M_M01_INI_0" xd:slaveSegment="Reg" xd:baseAddr="0x000000C100000000" xd:range="0x300000000"/>
+</xd:addressMap>

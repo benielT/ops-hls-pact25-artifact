@@ -1,0 +1,131 @@
+
+
+================================================================
+== Vitis HLS Report for 'stream2axis_256u_256u_s'
+================================================================
+* Date:           Sun Jul 26 01:24:53 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.788 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.78>
+ST_1 : Operation 4 [1/1] (0.89ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %size"   --->   Operation 4 'read' 'size_read' <Predicate = true> <Delay = 0.89> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.89> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_1 : Operation 5 [1/1] (0.89ns)   --->   "%add_ln1889 = add i32 %size_read, i32 31" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889]   --->   Operation 5 'add' 'add_ln1889' <Predicate = true> <Delay = 0.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i27 @_ssdm_op_PartSelect.i27.i32.i32.i32, i32 %add_ln1889, i32 5, i32 31" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889]   --->   Operation 6 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.20>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 7 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [2/2] (1.20ns)   --->   "%call_ln1889 = call void @stream2axis<256u, 256u>_Pipeline_VITIS_LOOP_1897_1, i27 %trunc_ln, i256 %arg0_arg1_streams_14, i256 %arg1_axis_out_V_data_V, i32 %arg1_axis_out_V_keep_V, i32 %arg1_axis_out_V_strb_V, i1 %arg1_axis_out_V_last_V" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889]   --->   Operation 8 'call' 'call_ln1889' <Predicate = true> <Delay = 1.20> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.21>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_14, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg1_axis_out_V_data_V, i32 %arg1_axis_out_V_keep_V, i32 %arg1_axis_out_V_strb_V, i1 %arg1_axis_out_V_last_V, void @empty_3, i32 0, i32 0, void @empty_21, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/2] (1.21ns)   --->   "%call_ln1889 = call void @stream2axis<256u, 256u>_Pipeline_VITIS_LOOP_1897_1, i27 %trunc_ln, i256 %arg0_arg1_streams_14, i256 %arg1_axis_out_V_data_V, i32 %arg1_axis_out_V_keep_V, i32 %arg1_axis_out_V_strb_V, i1 %arg1_axis_out_V_last_V" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889]   --->   Operation 12 'call' 'call_ln1889' <Predicate = true> <Delay = 1.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%ret_ln1924 = ret" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1924]   --->   Operation 13 'ret' 'ret_ln1924' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.79ns
+The critical path consists of the following:
+	fifo read operation ('size_read') on port 'size' [8]  (0.895 ns)
+	'add' operation ('add_ln1889', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889) [11]  (0.893 ns)
+
+ <State 2>: 1.21ns
+The critical path consists of the following:
+	'call' operation ('call_ln1889', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889) to 'stream2axis<256u, 256u>_Pipeline_VITIS_LOOP_1897_1' [14]  (1.21 ns)
+
+ <State 3>: 1.22ns
+The critical path consists of the following:
+	'call' operation ('call_ln1889', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1889) to 'stream2axis<256u, 256u>_Pipeline_VITIS_LOOP_1897_1' [14]  (1.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

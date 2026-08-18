@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vitis HLS Report for 'stream2axis_256u_Pipeline_VITIS_LOOP_956_1'
+================================================================
+* Date:           Sun Jul 26 01:22:45 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        datamover_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.361 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_956_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.36>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%itr = alloca i32 1"   --->   Operation 5 'alloca' 'itr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %arg0_axis_out_V_last_V, i32 %arg0_axis_out_V_strb_V, i32 %arg0_axis_out_V_keep_V, i256 %arg0_axis_out_V_data_V, void @empty_21, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_read_reduced_mem_strm, void @empty_7, i32 0, i32 0, void @empty_27, i32 0, i32 0, void @empty_27, void @empty_27, void @empty_27, i32 0, i32 0, i32 0, i32 0, void @empty_27, void @empty_27, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%pkts_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pkts_load"   --->   Operation 8 'read' 'pkts_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.46ns)   --->   "%store_ln0 = store i32 0, i32 %itr"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.46>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%itr_1 = load i32 %itr" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 11 'load' 'itr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.89ns)   --->   "%itr_2 = add i32 %itr_1, i32 1" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 12 'add' 'itr_2' <Predicate = true> <Delay = 0.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.70ns)   --->   "%icmp_ln956 = icmp_eq  i32 %itr_1, i32 %pkts_load_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 13 'icmp' 'icmp_ln956' <Predicate = true> <Delay = 0.70> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln956 = br i1 %icmp_ln956, void %for.inc.split.i, void %stream2axis<256u>.exit.exitStub" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 14 'br' 'br_ln956' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.46ns)   --->   "%store_ln956 = store i32 %itr_2, i32 %itr" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 15 'store' 'store_ln956' <Predicate = (!icmp_ln956)> <Delay = 0.46>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 21 'ret' 'ret_ln0' <Predicate = (icmp_ln956)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.86>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specpipeline_ln957 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_27" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:957]   --->   Operation 16 'specpipeline' 'specpipeline_ln957' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specloopname_ln956 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 17 'specloopname' 'specloopname_ln956' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.86ns)   --->   "%tmp = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %arg0_read_reduced_mem_strm" [/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 18 'read' 'tmp' <Predicate = true> <Delay = 0.86> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.86> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 2> <FIFO>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%write_ln304 = write void @_ssdm_op_Write.axis.volatile.i256P0A.i32P0A.i32P0A.i1P0A, i256 %arg0_axis_out_V_data_V, i32 %arg0_axis_out_V_keep_V, i32 %arg0_axis_out_V_strb_V, i1 %arg0_axis_out_V_last_V, i256 %tmp, i32 0, i32 0, i1 0"   --->   Operation 19 'write' 'write_ln304' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 127 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln956 = br void %for.inc.i" [/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956]   --->   Operation 20 'br' 'br_ln956' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.36ns
+The critical path consists of the following:
+	'alloca' operation ('itr') [7]  (0 ns)
+	'load' operation ('itr', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956) on local variable 'itr' [14]  (0 ns)
+	'add' operation ('itr', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956) [15]  (0.893 ns)
+	'store' operation ('store_ln956', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956) of variable 'itr', /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:956 on local variable 'itr' [23]  (0.468 ns)
+
+ <State 2>: 0.864ns
+The critical path consists of the following:
+	fifo read operation ('tmp', /tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'arg0_read_reduced_mem_strm' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [21]  (0.864 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

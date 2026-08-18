@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 23:38:42.645209 by ops-translator
+// Auto-generated at 2026-07-25 12:06:24.307929 by ops-translator
 #pragma once
 
 typedef float stencil_type;
@@ -8,7 +8,7 @@ constexpr unsigned short line_buff_2d_depth = max_depth;
 constexpr unsigned short line_buff_3d_depth = max_depth / 2;
 constexpr unsigned short vector_factor = 8;
 constexpr unsigned short mem_vector_factor = 16;
-constexpr unsigned short iter_par_factor = 22;
+constexpr unsigned short iter_par_factor = 14;
 constexpr unsigned short mem_data_width = data_width * mem_vector_factor;
 constexpr unsigned short shift_bits = 3; 
 constexpr unsigned short axis_data_width = data_width * vector_factor;

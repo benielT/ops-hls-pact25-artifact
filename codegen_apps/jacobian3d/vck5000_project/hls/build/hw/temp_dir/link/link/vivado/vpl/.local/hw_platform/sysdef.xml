@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="7" DIGEST="">
+	<TOOL_VERSION Version="2022.1"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="xilinx.com:vck5000:1.0" PART="xcvc1902-vsvd1760-2MP-e-S" ARCH="versal" PACKAGE="vsvd1760" DEVICE="xcvc1902" SPEED="-2MP" LUT="899840" FF="1799680" BRAM="967" DSP="0"/>
+	<HIERARCHY Name="top_wrapper"/>
+	<File Type="HW_HANDOFF" Name="top.hwh" src_db="top.hwdef" DESIGN_HIERARCHY="top_i" BD_TYPE="DEFAULT_BD">
+	</File>
+	<File Type="BDA" Name="top.bda" src_db="temp.hdf">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0.hwh" src_db="ulp_inst_0.hwdef" DESIGN_HIERARCHY="top_i/ulp" BD_TYPE="REFERENCE_BD">
+	</File>
+	<File Type="BDA" Name="ulp_inst_0.bda" src_db="ulp_inst_0.hwdef">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_sc_plram_0.hwh" src_db="ulp_inst_0_axi_sc_plram_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_sc_plram/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_noc_kernel0_0.hwh" src_db="ulp_inst_0_axi_noc_kernel0_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_noc_kernel0/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_noc_h2c_0.hwh" src_db="ulp_inst_0_axi_noc_h2c_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_noc_h2c/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_noc_aie_prog_0.hwh" src_db="ulp_inst_0_axi_noc_aie_prog_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_noc_aie_prog/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_ic_user_extend_0.hwh" src_db="ulp_inst_0_axi_ic_user_extend_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_ic_user_extend/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_axi_ic_user_0.hwh" src_db="ulp_inst_0_axi_ic_user_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/axi_ic_user/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="ulp_inst_0_ai_engine_0_0.hwh" src_db="ulp_inst_0_ai_engine_0_0.hwdef" DESIGN_HIERARCHY="top_i/ulp/ai_engine_0/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_cips_0.hwh" src_db="top_cips_0.hwdef" DESIGN_HIERARCHY="top_i/blp/cips/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="PS_FSBL_INIT" Name="bd_4885_pspmc_0_0_pmc_cdo.bin" src_db="bd_4885_pspmc_0_0.hwdef">
+	</File>
+	<File Type="HW_HANDOFF" Name="bd_4885_pspmc_0_0.hwh" src_db="bd_4885_pspmc_0_0.hwdef" DESIGN_HIERARCHY="top_i/blp/cips/inst/pspmc_0/inst" BD_TYPE="REFERENCE_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="bd_4885_cpm_0_0.hwh" src_db="bd_4885_cpm_0_0.hwdef" DESIGN_HIERARCHY="top_i/blp/cips/inst/cpm_0/inst" BD_TYPE="REFERENCE_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_sc_ctrl_mgmt_freq_0.hwh" src_db="top_axi_sc_ctrl_mgmt_freq_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/ulp_clocking/frequency_counters/axi_sc_ctrl_mgmt_freq/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_sc_ctrl_mgmt_top_0.hwh" src_db="top_axi_sc_ctrl_mgmt_top_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/ulp_clocking/axi_sc_ctrl_mgmt_top/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_ic_rpu_0.hwh" src_db="top_axi_ic_rpu_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/axi_ic_rpu/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_ic_pluser_0.hwh" src_db="top_axi_ic_pluser_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/axi_ic_pluser/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_ic_plmgmt_0.hwh" src_db="top_axi_ic_plmgmt_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/axi_ic_plmgmt/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_ic_apu_0.hwh" src_db="top_axi_ic_apu_0.hwdef" DESIGN_HIERARCHY="top_i/blp/blp_logic/axi_ic_apu/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_noc_mc_0.hwh" src_db="top_axi_noc_mc_0.hwdef" DESIGN_HIERARCHY="top_i/blp/axi_noc_mc/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="HW_HANDOFF" Name="top_axi_noc_ic_0.hwh" src_db="top_axi_noc_ic_0.hwdef" DESIGN_HIERARCHY="top_i/blp/axi_noc_ic/inst" BD_TYPE="SCOPED_BD">
+	</File>
+	<File Type="PDI" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1.pdi" src_db="temp.hdf">
+	</File>
+	<USEDRESOURCES LUT="19475" FF="27664" BRAM="32" DSP="0"/>
+	<WDIATTRS>
+		<WDIATTR ATTRNAME="FPD_CDO_STAGE" ATTRVAL="2"/>
+		<WDIATTR ATTRNAME="FPD_PL_IF" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="LPD_CDO_STAGE" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="LPD_PL_IF" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PL_CLK0" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PL_CLK1" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PL_CLK2" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PL_CLK3" ATTRVAL="0"/>
+		<WDIATTR ATTRNAME="PL_RESET" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PMC_CDO_STAGE" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PMC_PL_IF" ATTRVAL="1"/>
+		<WDIATTR ATTRNAME="PMC_SEM_NPI_SCAN_ENABLE" ATTRVAL="0"/>
+		<WDIATTR ATTRNAME="SEM_MEM_SCAN" ATTRVAL="0"/>
+	</WDIATTRS>
+</Project>
+

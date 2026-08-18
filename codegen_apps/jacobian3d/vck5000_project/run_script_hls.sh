@@ -16,7 +16,7 @@ CXXFLAGS="$@"
 PROFILE_DIR=./hls/profile_data/${TARGET_MODE}/
 PROFILE_FILE=perf_profile.csv
 POWER_PROFILE_FILE=hls_power_profile.csv
-DEVICE_BDF=0000:c1:00.1
+DEVICE_BDF=0000:81:00.1
 
 # Hardcoded parameter sets (sizex, sizey, iters, batch)
 if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
@@ -35,13 +35,13 @@ if [[ "${CXXFLAGS}" == *"-DPOWER_PROFILE"* ]]; then
             )
         else
             parameter_sets=(
-                # "30,30,30,60016,2000"
-                # "50,50,50,60016,2000"
-                # "100,100,100,60016,200"
-                # "150,150,150,60016,100"
-                # "200,200,200,60016,100"
-                # "250,250,250,60016,50"
-                "300,300,300,60016,10"
+                "30,30,30,60004,100"
+                "50,50,50,60004,100"
+                "100,100,100,60004,200"
+                "150,150,150,60004,100"
+                "200,200,200,60004,100"
+                "250,250,250,60004,50"
+                "300,300,300,60004,10"
                 # Add more parameter sets here as needed
             )
         fi
@@ -67,13 +67,13 @@ else
             echo "U280 platform parameters used"
         else
             parameter_sets=(
-                "30,30,30,60016,50"
-                "50,50,50,60016,50"
-                "100,100,100,60016,20" 
-                "150,150,150,60016,20"
-                "200,200,200,60016,10"
-                "250,250,250,60016,5"
-                "300,300,300,60016,2"
+                "30,30,30,60004,50"
+                "50,50,50,60004,50"
+                "100,100,100,60004,20" 
+                "150,150,150,60004,20"
+                "200,200,200,60004,10"
+                "250,250,250,60004,5"
+                "300,300,300,60004,2"
                 # Add more parameter sets here as needed
                 )
             echo "VCK5000 platform parameters used"

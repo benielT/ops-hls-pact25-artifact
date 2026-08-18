@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 23:38:42.816367 by ops-translator
+// Auto-generated at 2026-07-25 12:06:24.477872 by ops-translator
 
 #pragma once
 #include <ops_hls_kernel_support.h>
@@ -23,8 +23,8 @@ typedef ::hls::stream<widen_jac3D_kernel_stencil_0_dt> widen_stream_jac3D_kernel
 typedef ::hls::stream<widen_jac3D_kernel_stencil_1_dt> widen_stream_jac3D_kernel_stencil_1_dt;
 
 /*
-    ArgDat(id=0, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/jacobian3d/vck5000_project/jac3D7pt.cpp/271:21, access_type=AccessType.OPS_READ, opt=True, dat_id=0, global_dat_id=0, stencil_id=S3D_7PT)
-    ArgDat(id=1, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/apps/jacobian3d/vck5000_project/jac3D7pt.cpp/272:21, access_type=AccessType.OPS_WRITE, opt=True, dat_id=1, global_dat_id=1, stencil_id=S3D_00)
+    ArgDat(id=0, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/jac3D7pt.cpp/271:21, access_type=AccessType.OPS_READ, opt=True, dat_id=0, global_dat_id=0, stencil_id=S3D_7PT)
+    ArgDat(id=1, loc=/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/jac3D7pt.cpp/272:21, access_type=AccessType.OPS_WRITE, opt=True, dat_id=1, global_dat_id=1, stencil_id=S3D_00)
 */
 inline void kernel_jac3D_kernel_stencil_core(
         const stencil_type& reg_0_0,
@@ -167,14 +167,14 @@ public:
         widen_jac3D_kernel_stencil_0_dt arg0_widenStencilValues[read_num_points_jac3D_kernel_stencil];
         #pragma HLS ARRAY_PARTITION variable = arg0_widenStencilValues dim = 1 complete
 
-        widen_jac3D_kernel_stencil_0_dt arg0_buf_p0_1[max_depth];
-        #pragma HLS BIND_STORAGE variable = arg0_buf_p0_1 type = ram_s2p latency=2
-        widen_jac3D_kernel_stencil_0_dt arg0_buf_r0_1_p1[line_buff_3d_depth];
+        widen_jac3D_kernel_stencil_0_dt arg0_buf_p0_1[11476];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p0_1 type = ram_s2p impl=URAM latency=2
+        widen_jac3D_kernel_stencil_0_dt arg0_buf_r0_1_p1[38];
         #pragma HLS BIND_STORAGE variable = arg0_buf_r0_1_p1 type = ram_s2p latency=2
-        widen_jac3D_kernel_stencil_0_dt arg0_buf_r1_2_p1[line_buff_3d_depth];
+        widen_jac3D_kernel_stencil_0_dt arg0_buf_r1_2_p1[38];
         #pragma HLS BIND_STORAGE variable = arg0_buf_r1_2_p1 type = ram_s2p latency=2
-        widen_jac3D_kernel_stencil_0_dt arg0_buf_p1_2[max_depth];
-        #pragma HLS BIND_STORAGE variable = arg0_buf_p1_2 type = ram_s2p latency=2
+        widen_jac3D_kernel_stencil_0_dt arg0_buf_p1_2[11476];
+        #pragma HLS BIND_STORAGE variable = arg0_buf_p1_2 type = ram_s2p impl=URAM latency=2
 
         stencil_type arg0_rowArr_1_0[vector_factor + span_x];
         #pragma HLS ARRAY_PARTITION variable = arg0_rowArr_1_0 dim=1 complete

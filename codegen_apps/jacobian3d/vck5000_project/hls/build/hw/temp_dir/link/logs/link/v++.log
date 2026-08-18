@@ -1,0 +1,298 @@
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:project.ensureVersalHasCIPS=false
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:bd.enableAutoConnectionsInNoc=1
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:constr.restoreXDEFConstraintsASTCL=1
+INFO: [v++ 60-897] Reading --xp value from platform: vivado_param:ips.enableSLRParameter=4
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link
+	Log files: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.xsa.link_summary, at Sun Jul 26 01:29:05 2026
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Jul 26 01:29:05 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link/v++_link_jac3D7pt_guidance.html', at Sun Jul 26 01:29:06 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/hw/xilinx_vck5000_gen4x8_xdma_2_202210_1.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.1
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_vck5000_gen4x8_xdma_2_202210_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [01:29:12] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/datamover_outerloop_0.xo --xo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/kernel_outerloop_0.xo -keep --config /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_vck5000_gen4x8_xdma_2_202210_1/xilinx_vck5000_gen4x8_xdma_2_202210_1.xpfm --target hw --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Sun Jul 26 01:29:14 2026
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/datamover_outerloop_0.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/kernel_outerloop_0.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [01:29:16] build_xd_ip_db started: /tools/Xilinx/Vitis/2022.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/xilinx_vck5000_gen4x8_xdma_2_202210_1.hpfm -clkid 0 -ip /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/iprepo/xilinx_com_hls_kernel_outerloop_0_1_0,kernel_outerloop_0 -ip /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/iprepo/xilinx_com_hls_datamover_outerloop_0_1_0,datamover_outerloop_0 -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [01:29:22] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2271.504 ; gain = 0.000 ; free physical = 154551 ; free virtual = 488778
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [01:29:22] cfgen started: /tools/Xilinx/Vitis/2022.1/bin/cfgen  -sc datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:128 -sc kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:128 -dmclkid 0 -r /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: datamover_outerloop_0, num: 1  {datamover_outerloop_0_1}
+INFO: [CFGEN 83-0]   kernel: kernel_outerloop_0, num: 1  {kernel_outerloop_0_1}
+INFO: [CFGEN 83-0] Stream Specs: 
+INFO: [CFGEN 83-0]   datamover_outerloop_0_1.arg0_axis_out => kernel_outerloop_0_1.arg0_axis_in
+INFO: [CFGEN 83-0]   kernel_outerloop_0_1.arg1_axis_out => datamover_outerloop_0_1.arg1_axis_in
+INFO: [CFGEN 83-2226] Inferring mapping for argument datamover_outerloop_0_1.arg0 to MC_NOC0
+INFO: [CFGEN 83-2226] Inferring mapping for argument datamover_outerloop_0_1.arg1 to MC_NOC0
+INFO: [SYSTEM_LINK 82-37] [01:29:25] cfgen finished successfully
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2271.504 ; gain = 0.000 ; free physical = 154423 ; free virtual = 488650
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [01:29:25] cf2bd started: /tools/Xilinx/Vitis/2022.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.xsd --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int --target_bd ulp_inst_0.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp_inst_0.bd -dn dr -dp /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [01:29:28] cf2bd finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2271.504 ; gain = 0.000 ; free physical = 154603 ; free virtual = 488835
+INFO: [v++ 60-1441] [01:29:28] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 154651 ; free virtual = 488882
+INFO: [v++ 60-1443] [01:29:28] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/cf2sw.rtd -nofilter /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/cf2sw_full.rtd -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [v++ 60-1441] [01:29:31] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 154926 ; free virtual = 489159
+INFO: [v++ 60-1443] [01:29:31] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [v++ 60-1441] [01:29:32] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 154818 ; free virtual = 489051
+INFO: [v++ 60-1443] [01:29:32] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache /home/x_thileeb/repos/ops-hls-pact25-artifact/scripts/../OPS/ops/hls/IP_CACHE/ -s --output_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int --log_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/logs/link --report_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link --config /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/vplConfig.ini -k /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link --no-info --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0 --iprepo /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0 --messageDb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link/vpl.pb /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+
+****** vpl v2022.1 (64-bit)
+  **** SW Build 3524075 on 2022-04-13-17:42:45
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2022.1
+INFO: [VPL 60-423]   Target device: xilinx_vck5000_gen4x8_xdma_2_202210_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform
+[01:29:53] Run vpl: Step create_project: Started
+Creating Vivado project.
+[01:29:58] Run vpl: Step create_project: Completed
+[01:29:58] Run vpl: Step create_bd: Started
+[01:30:29] Run vpl: Step create_bd: Completed
+[01:30:29] Run vpl: Step update_bd: Started
+[01:30:29] Run vpl: Step update_bd: Completed
+[01:30:29] Run vpl: Step generate_target: Started
+[01:31:09] Run vpl: Step generate_target: Completed
+[01:31:09] Run vpl: Step config_hw_runs: Started
+[01:31:13] Run vpl: Step config_hw_runs: Completed
+[01:31:13] Run vpl: Step synth: Started
+[01:31:45] Block-level synthesis in progress, 0 of 14 jobs complete, 8 jobs running.
+[01:32:16] Block-level synthesis in progress, 0 of 14 jobs complete, 8 jobs running.
+[01:32:46] Block-level synthesis in progress, 0 of 14 jobs complete, 8 jobs running.
+[01:33:17] Block-level synthesis in progress, 3 of 14 jobs complete, 5 jobs running.
+[01:33:47] Block-level synthesis in progress, 6 of 14 jobs complete, 7 jobs running.
+[01:34:18] Block-level synthesis in progress, 7 of 14 jobs complete, 6 jobs running.
+[01:34:49] Block-level synthesis in progress, 7 of 14 jobs complete, 6 jobs running.
+[01:35:19] Block-level synthesis in progress, 11 of 14 jobs complete, 2 jobs running.
+[01:35:50] Block-level synthesis in progress, 11 of 14 jobs complete, 3 jobs running.
+[01:36:20] Block-level synthesis in progress, 11 of 14 jobs complete, 3 jobs running.
+[01:36:50] Block-level synthesis in progress, 11 of 14 jobs complete, 3 jobs running.
+[01:37:21] Block-level synthesis in progress, 12 of 14 jobs complete, 2 jobs running.
+[01:37:52] Block-level synthesis in progress, 12 of 14 jobs complete, 2 jobs running.
+[01:38:22] Block-level synthesis in progress, 12 of 14 jobs complete, 2 jobs running.
+[01:38:52] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:39:23] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:39:53] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:40:24] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:40:55] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:41:25] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:41:55] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:42:26] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:42:56] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:43:27] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:43:57] Block-level synthesis in progress, 13 of 14 jobs complete, 1 job running.
+[01:44:28] Block-level synthesis in progress, 14 of 14 jobs complete, 0 jobs running.
+[01:44:58] Top-level synthesis in progress.
+[01:45:29] Top-level synthesis in progress.
+[01:45:59] Top-level synthesis in progress.
+[01:46:23] Run vpl: Step synth: Completed
+[01:46:23] Run vpl: Step impl: Started
+[01:59:06] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 29m 33s 
+
+[01:59:06] Starting logic optimization..
+[02:01:08] Phase 1 Retarget
+[02:01:39] Phase 2 Constant propagation
+[02:01:39] Phase 3 Sweep
+[02:02:09] Phase 4 BUFG optimization
+[02:02:40] Phase 5 Shift Register Optimization
+[02:02:40] Phase 6 Post Processing Netlist
+[02:06:13] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 07m 07s 
+
+[02:06:13] Starting logic placement..
+[02:07:44] Phase 1 Placer Initialization
+[02:07:44] Phase 1.1 Placer Initialization Netlist Sorting
+[02:09:46] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[02:10:47] Phase 1.3 Build Placer Netlist Model
+[02:12:19] Phase 1.4 Constrain Clocks/Macros
+[02:12:49] Phase 2 Global Placement
+[02:12:49] Phase 2.1 Floorplanning
+[02:12:49] Phase 2.1.1 Partition Driven Placement
+[02:12:49] Phase 2.1.1.1 PBP: Partition Driven Placement
+[02:15:52] Phase 2.1.1.2 PBP: Clock Region Placement
+[02:17:54] Phase 2.1.1.3 PBP: Discrete Incremental
+[02:17:54] Phase 2.1.1.4 PBP: Compute Congestion
+[02:17:54] Phase 2.1.1.5 PBP: Macro Placement
+[02:18:24] Phase 2.1.1.6 PBP: UpdateTiming
+[02:18:55] Phase 2.2 Update Timing before SLR Path Opt
+[02:18:55] Phase 2.3 Post-Processing in Floorplanning
+[02:18:55] Phase 2.4 Global Placement Core
+[02:23:29] Phase 2.4.1 Physical Synthesis In Placer
+[02:27:02] Phase 3 Detail Placement
+[02:27:02] Phase 3.1 Commit Multi Column Macros
+[02:27:02] Phase 3.2 Commit Most Macros & LUTRAMs
+[02:28:03] Phase 3.3 Small Shape DP
+[02:28:03] Phase 3.3.1 Small Shape Clustering
+[02:28:34] Phase 3.3.2 Flow Legalize Slice Clusters
+[02:28:34] Phase 3.3.3 Slice Area Swap
+[02:28:34] Phase 3.3.3.1 Slice Area Swap Initial
+[02:29:35] Phase 3.4 Place Remaining
+[02:29:35] Phase 3.5 Optimize BEL assignments
+[02:30:36] Phase 3.6 Pipeline Register Optimization
+[02:30:36] Phase 3.7 Fast Optimization
+[02:31:36] Phase 4 Post Placement Optimization and Clean-Up
+[02:31:36] Phase 4.1 Post Commit Optimization
+[02:33:38] Phase 4.1.1 Post Placement Optimization
+[02:33:38] Phase 4.1.1.1 Post Placement Timing Optimization
+[02:36:11] Phase 4.2 Post Placement Cleanup
+[02:36:41] Phase 4.3 Placer Reporting
+[02:36:41] Phase 4.3.1 Print Estimated Congestion
+[02:36:41] Phase 4.4 Final Placement Cleanup
+[02:43:47] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 37m 34s 
+
+[02:43:47] Starting logic routing..
+[02:45:19] Phase 1 Build RT Design
+[02:49:53] Phase 2 Router Initialization
+[02:49:53] Phase 2.1 Fix Topology Constraints
+[02:50:23] Phase 2.2 Pre Route Cleanup
+[02:50:23] Phase 2.3 Global Clock Net Routing
+[02:50:54] Phase 2.4 Update Timing
+[02:53:57] Phase 2.5 Update Timing for Bus Skew
+[02:53:57] Phase 2.5.1 Update Timing
+[02:54:57] Phase 3 Initial Routing
+[02:54:57] Phase 3.1 Global Routing
+[02:54:57] Phase 3.1.1 SLL Assignment
+[02:56:59] Phase 4 Rip-up And Reroute
+[02:56:59] Phase 4.1 Global Iteration 0
+[03:03:05] Phase 4.2 Global Iteration 1
+[03:04:05] Phase 4.3 Global Iteration 2
+[03:05:06] Phase 5 Delay and Skew Optimization
+[03:05:06] Phase 5.1 Delay CleanUp
+[03:05:06] Phase 5.1.1 Update Timing
+[03:06:07] Phase 5.2 Clock Skew Optimization
+[03:06:38] Phase 6 Post Hold Fix
+[03:06:38] Phase 6.1 Hold Fix Iter
+[03:06:38] Phase 6.1.1 Update Timing
+[03:08:09] Phase 7 Leaf Clock Prog Delay Opt
+[03:10:41] Phase 7.1 Hold Fix Iter
+[03:10:41] Phase 7.1.1 Update Timing
+[03:12:13] Phase 8 Route finalize
+[03:12:43] Phase 9 Verifying routed nets
+[03:12:43] Phase 10 Depositing Routes
+[03:13:13] Phase 11 Post Router Timing
+[03:15:15] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 31m 27s 
+
+[03:15:15] Starting bitstream generation..
+Starting optional post-route physical design optimization.
+Finished optional post-route physical design optimization.
+[03:23:53] Creating bitmap...
+[03:33:33] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 18m 17s 
+[03:53:38] Run vpl: Step impl: Completed
+[03:53:38] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [03:53:39] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:00:47 ; elapsed = 02:24:07 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 130558 ; free virtual = 470028
+INFO: [v++ 60-1443] [03:53:39] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [v++ 60-991] clock name 'blp_s_aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'blp_s_aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (KERNEL) clock: blp_s_aclk_kernel_01 = 500, Kernel (DATA) clock: blp_s_aclk_kernel_00 = 300
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/address_map.xml -sdsl /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/sdsl.dat -xclbin /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xclbin_orig.xml -rtd /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.rtd -o /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [03:53:41] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 130551 ; free virtual = 470022
+INFO: [v++ 60-1443] [03:53:41] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd --add-section BITSTREAM_PARTIAL_PDI:raw:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/partial.pdi --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.rtd --append-section :JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt_xml.rtd --add-section BUILD_METADATA:JSON:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xml --add-section SYSTEM_METADATA:RAW:/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_vck5000_gen4x8_xdma_2_202210_1 --output /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+XRT Build Version: 2.13.0 ()
+       Build Date: 2026-02-15 10:01:16
+          Hash ID: 
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 296 bytes
+Format : JSON
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM_PARTIAL_PDI'(19) was successfully added.
+Size   : 15065248 bytes
+Format : raw
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/partial.pdi'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 8204 bytes
+Format : JSON
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 168209 bytes
+Format : RAW
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 26832 bytes
+Format : RAW
+File   : '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+Successfully wrote (15284536 bytes) to the output file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [03:53:41] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 130527 ; free virtual = 470014
+INFO: [v++ 60-1443] [03:53:41] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xclbin.info --input /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/jac3D7pt.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [v++ 60-1441] [03:53:41] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 130505 ; free virtual = 469992
+INFO: [v++ 60-1443] [03:53:41] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/run_link
+INFO: [v++ 60-1441] [03:53:41] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2209.879 ; gain = 0.000 ; free physical = 130506 ; free virtual = 469992
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link/system_estimate_jac3D7pt.xtxt
+INFO: [v++ 82-3844] Successfully added runtime data to ./hls/build/hw/jac3D7pt.xsa
+INFO: [v++ 60-586] Created /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.ltx
+INFO: [v++ 60-586] Created ./hls/build/hw/jac3D7pt.xsa
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link/v++_link_jac3D7pt_guidance.html
+	Timing Report: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/reports/link/imp/impl_1_xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/logs/link/vivado.log
+	Steps Log File: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/jac3D7pt.xsa.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 2h 24m 47s

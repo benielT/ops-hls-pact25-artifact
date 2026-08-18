@@ -1,0 +1,378 @@
+
+
+================================================================
+== Synthesis Summary Report of 'datamover_outerloop_0'
+================================================================
++ General Information: 
+    * Date:           Sun Jul 26 01:22:57 2026
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        datamover_outerloop_0
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: versal
+    * Target device:  xcvc1902-vsvd1760-2MP-e-S
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-------------+------------+-----+
+    |                                      Modules                                     |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |             |            |     |
+    |                                      & Loops                                     |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |      FF     |     LUT    | URAM|
+    +----------------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-------------+------------+-----+
+    |+ datamover_outerloop_0                                                           |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|  3 (~0%)|   23020 (1%)|  37698 (4%)|    -|
+    | o VITIS_LOOP_76_1                                                                |       -|   2.43|        -|        -|         -|        -|     -|        no|     -|        -|            -|           -|    -|
+    |  + datamover_outerloop_0_dataflow_read_write_dataflow_region*                    |  Timing|  -0.00|        -|        -|         -|        -|     -|  dataflow|     -|        -|  13146 (~0%)|  20439 (2%)|    -|
+    |   + entry_proc                                                                   |       -|   1.58|        0|    0.000|         -|        0|     -|        no|     -|        -|      3 (~0%)|    12 (~0%)|    -|
+    |   + mem2stream_512u_32u_2u_s                                                     |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|        -|   1479 (~0%)|  1095 (~0%)|    -|
+    |    + mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1                            |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|        -|    550 (~0%)|   132 (~0%)|    -|
+    |     o VITIS_LOOP_431_1                                                           |       -|   2.43|        -|        -|         3|        2|     -|       yes|     -|        -|            -|           -|    -|
+    |    + mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2                            |  Timing|  -0.00|       65|  216.645|         -|       65|     -|        no|     -|        -|    550 (~0%)|   132 (~0%)|    -|
+    |     o VITIS_LOOP_453_2                                                           |       -|   2.43|       63|  209.979|         3|        2|    31|       yes|     -|        -|            -|           -|    -|
+    |   + axis2stream_256u_s                                                           |       -|   1.07|        -|        -|         -|        -|     -|        no|     -|        -|    291 (~0%)|   128 (~0%)|    -|
+    |    o VITIS_LOOP_996_1                                                            |       -|   2.43|        -|        -|         2|        1|     -|       yes|     -|        -|            -|           -|    -|
+    |   + stream2streamStepdown_512u_256u_s                                            |       -|   0.10|        -|        -|         -|        -|     -|        no|     -|        -|   3258 (~0%)|  6658 (~0%)|    -|
+    |    + stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2  |       -|   0.10|        -|        -|         -|        -|     -|        no|     -|        -|   3189 (~0%)|  6646 (~0%)|    -|
+    |     o VITIS_LOOP_893_1_VITIS_LOOP_895_2                                          |       -|   2.43|        -|        -|         6|        1|     -|       yes|     -|        -|            -|           -|    -|
+    |   + stream2streamStepup_256u_512u_s                                              |       -|   0.49|        -|        -|         -|        -|     -|        no|     -|        -|   4286 (~0%)|  10512 (1%)|    -|
+    |    + stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2    |       -|   0.49|        -|        -|         -|        -|     -|        no|     -|        -|   4217 (~0%)|  10498 (1%)|    -|
+    |     o VITIS_LOOP_809_1_VITIS_LOOP_811_2                                          |       -|   2.43|        -|        -|         4|        1|     -|       yes|     -|        -|            -|           -|    -|
+    |   + stream2axis_256u_s                                                           |       -|   1.07|        -|        -|         -|        -|     -|        no|     -|        -|     72 (~0%)|   138 (~0%)|    -|
+    |    + stream2axis_256u_Pipeline_VITIS_LOOP_956_1                                  |       -|   1.07|        -|        -|         -|        -|     -|        no|     -|        -|     35 (~0%)|   126 (~0%)|    -|
+    |     o VITIS_LOOP_956_1                                                           |       -|   2.43|        -|        -|         2|        1|     -|       yes|     -|        -|            -|           -|    -|
+    |   + stream2mem_512u_32u_2u_s                                                     |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|        -|   1539 (~0%)|  1176 (~0%)|    -|
+    |    + stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1                            |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|     -|        -|    550 (~0%)|   132 (~0%)|    -|
+    |     o VITIS_LOOP_567_1                                                           |       -|   2.43|        -|        -|         3|        2|     -|       yes|     -|        -|            -|           -|    -|
+    |    + stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2                            |  Timing|  -0.00|       65|  216.645|         -|       65|     -|        no|     -|        -|    550 (~0%)|   132 (~0%)|    -|
+    |     o VITIS_LOOP_580_2                                                           |       -|   2.43|       63|  209.979|         3|        2|    31|       yes|     -|        -|            -|           -|    -|
+    +----------------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 64           | 64           | 4           | 4           |
+| m_axi_gmem1 | 512 -> 512 | 64            | 64      | slave  | 0        | 512       | 64           | 64           | 4           | 4           |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register      | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL          | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER          | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER        | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR        | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | is_loopback   | 0x10   | 32    | W      | Data signal of is_loopback       |                                                                                    |
+| s_axi_control | range_start_0 | 0x18   | 32    | W      | Data signal of range_start_0     |                                                                                    |
+| s_axi_control | range_end_0   | 0x20   | 32    | W      | Data signal of range_end_0       |                                                                                    |
+| s_axi_control | range_start_1 | 0x28   | 32    | W      | Data signal of range_start_1     |                                                                                    |
+| s_axi_control | range_end_1   | 0x30   | 32    | W      | Data signal of range_end_1       |                                                                                    |
+| s_axi_control | range_start_2 | 0x38   | 32    | W      | Data signal of range_start_2     |                                                                                    |
+| s_axi_control | range_end_2   | 0x40   | 32    | W      | Data signal of range_end_2       |                                                                                    |
+| s_axi_control | gridSize_0    | 0x48   | 32    | W      | Data signal of gridSize_0        |                                                                                    |
+| s_axi_control | gridSize_1    | 0x50   | 32    | W      | Data signal of gridSize_1        |                                                                                    |
+| s_axi_control | gridSize_2    | 0x58   | 32    | W      | Data signal of gridSize_2        |                                                                                    |
+| s_axi_control | outer_itr     | 0x60   | 32    | W      | Data signal of outer_itr         |                                                                                    |
+| s_axi_control | arg0_1        | 0x68   | 32    | W      | Data signal of arg0              |                                                                                    |
+| s_axi_control | arg0_2        | 0x6c   | 32    | W      | Data signal of arg0              |                                                                                    |
+| s_axi_control | arg1_1        | 0x74   | 32    | W      | Data signal of arg1              |                                                                                    |
+| s_axi_control | arg1_2        | 0x78   | 32    | W      | Data signal of arg1              |                                                                                    |
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* AXIS
++---------------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface     | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++---------------+---------------+-------+-------+-------+--------+-------+--------+
+| arg0_axis_out | both          | 256   | 32    | 1     | 1      | 32    | 1      |
+| arg1_axis_in  | both          | 256   | 32    | 1     | 1      | 32    | 1      |
++---------------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++---------------+-----------+----------------------------------------------+
+| Argument      | Direction | Datatype                                     |
++---------------+-----------+----------------------------------------------+
+| is_loopback   | in        | bool const                                   |
+| range_start_0 | in        | unsigned short const                         |
+| range_end_0   | in        | unsigned short const                         |
+| range_start_1 | in        | unsigned short const                         |
+| range_end_1   | in        | unsigned short const                         |
+| range_start_2 | in        | unsigned short const                         |
+| range_end_2   | in        | unsigned short const                         |
+| gridSize_0    | in        | unsigned short const                         |
+| gridSize_1    | in        | unsigned short const                         |
+| gridSize_2    | in        | unsigned short const                         |
+| outer_itr     | in        | unsigned int const                           |
+| arg0          | inout     | ap_uint<512>*                                |
+| arg1          | inout     | ap_uint<512>*                                |
+| arg0_axis_out | out       | stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>& |
+| arg1_axis_in  | in        | stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>& |
++---------------+-----------+----------------------------------------------+
+
+* SW-to-HW Mapping
++---------------+---------------+-----------+----------+-----------------------------------------+
+| Argument      | HW Interface  | HW Type   | HW Usage | HW Info                                 |
++---------------+---------------+-----------+----------+-----------------------------------------+
+| is_loopback   | s_axi_control | register  |          | name=is_loopback offset=0x10 range=32   |
+| range_start_0 | s_axi_control | register  |          | name=range_start_0 offset=0x18 range=32 |
+| range_end_0   | s_axi_control | register  |          | name=range_end_0 offset=0x20 range=32   |
+| range_start_1 | s_axi_control | register  |          | name=range_start_1 offset=0x28 range=32 |
+| range_end_1   | s_axi_control | register  |          | name=range_end_1 offset=0x30 range=32   |
+| range_start_2 | s_axi_control | register  |          | name=range_start_2 offset=0x38 range=32 |
+| range_end_2   | s_axi_control | register  |          | name=range_end_2 offset=0x40 range=32   |
+| gridSize_0    | s_axi_control | register  |          | name=gridSize_0 offset=0x48 range=32    |
+| gridSize_1    | s_axi_control | register  |          | name=gridSize_1 offset=0x50 range=32    |
+| gridSize_2    | s_axi_control | register  |          | name=gridSize_2 offset=0x58 range=32    |
+| outer_itr     | s_axi_control | register  |          | name=outer_itr offset=0x60 range=32     |
+| arg0          | m_axi_gmem0   | interface |          |                                         |
+| arg0          | s_axi_control | register  | offset   | name=arg0_1 offset=0x68 range=32        |
+| arg0          | s_axi_control | register  | offset   | name=arg0_2 offset=0x6c range=32        |
+| arg1          | m_axi_gmem1   | interface |          |                                         |
+| arg1          | s_axi_control | register  | offset   | name=arg1_1 offset=0x74 range=32        |
+| arg1          | s_axi_control | register  | offset   | name=arg1_2 offset=0x78 range=32        |
+| arg0_axis_out | arg0_axis_out | interface |          |                                         |
+| arg1_axis_in  | arg1_axis_in  | interface |          |                                         |
++---------------+---------------+-----------+----------+-----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+------------------+-----------+----------+-------+------------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Loop             | Direction | Length   | Width | Location                                                                                                               |
++--------------+------------------+-----------+----------+-------+------------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | VITIS_LOOP_431_1 | read      | variable | 512   | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:431:20 |
+| m_axi_gmem0  | VITIS_LOOP_453_2 | read      | variable | 512   | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:453:20 |
+| m_axi_gmem1  | VITIS_LOOP_567_1 | write     | variable | 512   | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:567:20 |
+| m_axi_gmem1  | VITIS_LOOP_580_2 | write     | variable | 512   | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:580:20 |
++--------------+------------------+-----------+----------+-------+------------------------------------------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++-------------------+----------+------------------+----------------------------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+| HW Interface      | Variable | Loop             | Problem                                                                                                  | Resolution | Location                                                                                                               |
++-------------------+----------+------------------+----------------------------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem1,gmem0 | mem_out  | VITIS_LOOP_580_2 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:580:20 |
+| m_axi_gmem1,gmem0 | mem_out  | VITIS_LOOP_567_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:567:20 |
+| m_axi_gmem0,gmem1 | mem_in   | VITIS_LOOP_453_2 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:453:20 |
+| m_axi_gmem0,gmem1 | mem_in   | VITIS_LOOP_431_1 | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 | 214-353    | /home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:431:20 |
++-------------------+----------+------------------+----------------------------------------------------------------------------------------------------------+------------+------------------------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+| Name                                                                            | DSP | Pragma | Variable             | Op  | Impl   | Latency |
++---------------------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+| + datamover_outerloop_0                                                         | 3   |        |                      |     |        |         |
+|   add_ln2576_fu_258_p2                                                          | -   |        | add_ln2576           | add | fabric | 0       |
+|   num_xblocks_fu_296_p2                                                         | -   |        | num_xblocks          | sub | fabric | 0       |
+|   diff_y_fu_320_p2                                                              | -   |        | diff_y               | sub | fabric | 0       |
+|   diff_z_fu_310_p2                                                              | -   |        | diff_z               | sub | fabric | 0       |
+|   mul_mul_16ns_16ns_32_4_1_U95                                                  | 1   |        | mul_ln2620           | mul | dsp48  | 3       |
+|   mul_32s_16ns_32_3_1_U94                                                       | 2   |        | config_total_xblocks | mul | auto   | 2       |
+|   i_2_fu_353_p2                                                                 | -   |        | i_2                  | add | fabric | 0       |
+|  + datamover_outerloop_0_dataflow_read_write_dataflow_region                    | 0   |        |                      |     |        |         |
+|   + mem2stream_512u_32u_2u_s                                                    | 0   |        |                      |     |        |         |
+|     burst_beats_fu_142_p2                                                       | -   |        | burst_beats          | sub | fabric | 0       |
+|     add_ln453_fu_229_p2                                                         | -   |        | add_ln453            | add | fabric | 0       |
+|     add_ln453_1_fu_184_p2                                                       | -   |        | add_ln453_1          | add | fabric | 0       |
+|     add_ln453_2_fu_200_p2                                                       | -   |        | add_ln453_2          | add | fabric | 0       |
+|    + mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_431_1                           | 0   |        |                      |     |        |         |
+|      add_ln450_fu_88_p2                                                         | -   |        | add_ln450            | add | fabric | 0       |
+|    + mem2stream_512u_32u_2u_Pipeline_VITIS_LOOP_453_2                           | 0   |        |                      |     |        |         |
+|      index_6_fu_108_p2                                                          | -   |        | index_6              | add | fabric | 0       |
+|   + axis2stream_256u_s                                                          | 0   |        |                      |     |        |         |
+|     itr_4_fu_77_p2                                                              | -   |        | itr_4                | add | fabric | 0       |
+|   + stream2streamStepdown_512u_256u_s                                           | 0   |        |                      |     |        |         |
+|    + stream2streamStepdown_512u_256u_Pipeline_VITIS_LOOP_893_1_VITIS_LOOP_895_2 | 0   |        |                      |     |        |         |
+|      add_ln893_fu_100_p2                                                        | -   |        | add_ln893            | add | fabric | 0       |
+|      sub_ln674_fu_199_p2                                                        | -   |        | sub_ln674            | sub | fabric | 0       |
+|      sub_ln674_1_fu_211_p2                                                      | -   |        | sub_ln674_1          | sub | fabric | 0       |
+|      sub_ln674_2_fu_241_p2                                                      | -   |        | sub_ln674_2          | sub | fabric | 0       |
+|      add_ln895_fu_138_p2                                                        | -   |        | add_ln895            | add | fabric | 0       |
+|   + stream2streamStepup_256u_512u_s                                             | 0   |        |                      |     |        |         |
+|    + stream2streamStepup_256u_512u_Pipeline_VITIS_LOOP_809_1_VITIS_LOOP_811_2   | 0   |        |                      |     |        |         |
+|      add_ln809_fu_100_p2                                                        | -   |        | add_ln809            | add | fabric | 0       |
+|      add_ln811_fu_163_p2                                                        | -   |        | add_ln811            | add | fabric | 0       |
+|   + stream2axis_256u_s                                                          | 0   |        |                      |     |        |         |
+|    + stream2axis_256u_Pipeline_VITIS_LOOP_956_1                                 | 0   |        |                      |     |        |         |
+|      itr_2_fu_88_p2                                                             | -   |        | itr_2                | add | fabric | 0       |
+|   + stream2mem_512u_32u_2u_s                                                    | 0   |        |                      |     |        |         |
+|     burst_beats_fu_134_p2                                                       | -   |        | burst_beats          | sub | fabric | 0       |
+|     add_ln580_fu_206_p2                                                         | -   |        | add_ln580            | add | fabric | 0       |
+|     add_ln580_1_fu_175_p2                                                       | -   |        | add_ln580_1          | add | fabric | 0       |
+|     add_ln580_2_fu_191_p2                                                       | -   |        | add_ln580_2          | add | fabric | 0       |
+|    + stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_567_1                           | 0   |        |                      |     |        |         |
+|      add_ln576_fu_92_p2                                                         | -   |        | add_ln576            | add | fabric | 0       |
+|    + stream2mem_512u_32u_2u_Pipeline_VITIS_LOOP_580_2                           | 0   |        |                      |     |        |         |
+|      index_3_fu_112_p2                                                          | -   |        | index_3              | add | fabric | 0       |
++---------------------------------------------------------------------------------+-----+--------+----------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------------------------------+------+------+--------+------------+---------+------+---------+
+| Name                                                         | BRAM | URAM | Pragma | Variable   | Storage | Impl | Latency |
++--------------------------------------------------------------+------+------+--------+------------+---------+------+---------+
+| + datamover_outerloop_0                                      | 0    | 0    |        |            |         |      |         |
+|  + datamover_outerloop_0_dataflow_read_write_dataflow_region | 0    | 0    |        |            |         |      |         |
+|    arg1_c_U                                                  | -    | -    |        | arg1_c     | fifo    | srl  | 0       |
+|    p_read_c16_U                                              | -    | -    |        | p_read_c16 | fifo    | srl  | 0       |
+|    p_read_c15_U                                              | -    | -    |        | p_read_c15 | fifo    | srl  | 0       |
+|    p_read_c_U                                                | -    | -    |        | p_read_c   | fifo    | srl  | 0       |
+|    num_pkts_c_U                                              | -    | -    |        | num_pkts_c | fifo    | srl  | 0       |
++--------------------------------------------------------------+------+------+--------+------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++----------------+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------+
+| Type           | Options                       | Location                                                                                                   | Messages                   |
++----------------+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------+
+| loop_tripcount | avg=avg_num_data_per_axis_pkt | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:234 in convaxispkt2membeatmasked   | missing argument for 'max' |
+| loop_tripcount | avg=avg_num_data_per_axis_pkt | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:372 in convstreampkt2membeatmasked | missing argument for 'max' |
+| loop_tripcount | min=1 avg=8                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1478 in axis2memmasked             | missing argument for 'max' |
+| loop_tripcount | min=1 avg=8                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:2092 in stream2memmasked           | missing argument for 'max' |
++----------------+-------------------------------+------------------------------------------------------------------------------------------------------------+----------------------------+
+
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| Type            | Options                                                                                                                                                     | Location                                                                                                            |
++-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:92 in convmembeat2axispkt                   |
+| loop_tripcount  | min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat                                                                            | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:93 in convmembeat2axispkt                   |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:149 in convaxispkt2membeat                  |
+| loop_tripcount  | min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat                                                                            | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:150 in convaxispkt2membeat                  |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:233 in convaxispkt2membeatmasked            |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:284 in convstreampkt2membeat                |
+| loop_tripcount  | min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat                                                                            | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:285 in convstreampkt2membeat                |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:371 in convstreampkt2membeatmasked          |
+| pipeline        | II=ii                                                                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:433 in mem2stream                           |
+| pipeline        | II=ii                                                                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:455 in mem2stream                           |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:510 in mem2stream                           |
+| pipeline        | II=ii                                                                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:569 in stream2mem                           |
+| pipeline        | II=ii                                                                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:582 in stream2mem                           |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:632 in stream2mem                           |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:684 in stream2stream                        |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:685 in stream2stream                        |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:730 in stream2stream                        |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:731 in stream2stream                        |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:813 in stream2streamstepup                  |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:814 in stream2streamstepup                  |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:897 in stream2streamstepdown                |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:898 in stream2streamstepdown                |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:957 in stream2axis                          |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:997 in axis2stream                          |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1053 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1057 in mem2axis                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1058 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1067 in mem2axis                            |
+| stream          | variable = mem_strm depth = max_depth_v16                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1118 in mem2axisv2                          |
+| stream          | variable = red_mem_strm depth = max_depth_v8                                                                                                                | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1119 in mem2axisv2                          |
+| dataflow        |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1121 in mem2axisv2                          |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1175 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1179 in mem2axis                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1180 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1189 in mem2axis                            |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1198 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1202 in mem2axis                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1203 in mem2axis                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1212 in mem2axis                            |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1273 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1277 in axis2mem                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1278 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1287 in axis2mem                            |
+| stream          | variable = mem_strm depth = max_depth_v16                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1338 in axis2memv2                          |
+| stream          | variable = red_mem_strm depth = max_depth_v8                                                                                                                | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1339 in axis2memv2                          |
+| dataflow        |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1341 in axis2memv2                          |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1396 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1400 in axis2mem                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1401 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1410 in axis2mem                            |
+| loop_tripcount  | avg=avg_num_of_bursts max=max_num_of_bursts                                                                                                                 | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1419 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1423 in axis2mem                            |
+| loop_tripcount  | min=min_burst_len avg=avg_burst_len max=max_burst_len                                                                                                       | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1424 in axis2mem                            |
+| pipeline        | II=num_strm_pkts_per_beat                                                                                                                                   | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1433 in axis2mem                            |
+| pipeline        | II=data_per_axis_pkt                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1477 in axis2memmasked                      |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1525 in axis2stream                         |
+| loop_flatten    |                                                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1526 in axis2stream                         |
+| array_partition | variable=cycleBuf type=complete                                                                                                                             | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1581 in axis2streammasked, cycleBuf         |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1611 in axis2streammasked                   |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1672 in axis2streammasked                   |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1741 in axisloopbackv2                      |
+| pipeline        | II = 1                                                                                                                                                      | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1812 in axisloopback                        |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1847 in axisterminate                       |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1906 in stream2axis                         |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:1975 in stream2axismasked                   |
+| pipeline        | II=data_per_strm_pkt                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:2091 in stream2memmasked                    |
+| pipeline        | II=1                                                                                                                                                        | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:2316 in memwritegrid                        |
+| pipeline        | II = 1                                                                                                                                                      | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_datamover.hpp:2395 in memwritegridsimple                  |
+| inline          | off                                                                                                                                                         | ../../../../../../../../../OPS/ops/hls/L1/include/ops_hls_utils.hpp:53 in register_it                               |
+| dataflow        |                                                                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:9 in datamover_outerloop_0_dataflow_region_read                 |
+| stream          | variable = arg0_read_mem_strm                                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:11 in datamover_outerloop_0_dataflow_region_read                |
+| stream          | variable = arg0_read_reduced_mem_strm                                                                                                                       | ../../../../../device/src/datamover_outerloop_0.cpp:13 in datamover_outerloop_0_dataflow_region_read                |
+| stream          | variable = arg1_write_mem_strm                                                                                                                              | ../../../../../device/src/datamover_outerloop_0.cpp:27 in datamover_outerloop_0_dataflow_region_write               |
+| stream          | variable = arg1_write_reduced_mem_strm                                                                                                                      | ../../../../../device/src/datamover_outerloop_0.cpp:29 in datamover_outerloop_0_dataflow_region_write               |
+| dataflow        |                                                                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:31 in datamover_outerloop_0_dataflow_region_write               |
+| stream          | variable = arg0_read_mem_strm                                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:48 in datamover_outerloop_0_dataflow_read_write_dataflow_region |
+| stream          | variable = arg0_read_reduced_mem_strm                                                                                                                       | ../../../../../device/src/datamover_outerloop_0.cpp:50 in datamover_outerloop_0_dataflow_read_write_dataflow_region |
+| stream          | variable = arg1_write_mem_strm                                                                                                                              | ../../../../../device/src/datamover_outerloop_0.cpp:52 in datamover_outerloop_0_dataflow_read_write_dataflow_region |
+| stream          | variable = arg1_write_reduced_mem_strm                                                                                                                      | ../../../../../device/src/datamover_outerloop_0.cpp:54 in datamover_outerloop_0_dataflow_read_write_dataflow_region |
+| dataflow        |                                                                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:56 in datamover_outerloop_0_dataflow_read_write_dataflow_region |
+| stream          | variable = arg0_mem_strm                                                                                                                                    | ../../../../../device/src/datamover_outerloop_0.cpp:108 in datamover_outerloop_0_loopback_dataflow_region           |
+| dataflow        |                                                                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:109 in datamover_outerloop_0_loopback_dataflow_region           |
+| interface       | s_axilite port = is_loopback bundle = control                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:158 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_start_0 bundle = control                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:159 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_end_0 bundle = control                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:160 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_start_1 bundle = control                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:161 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_end_1 bundle = control                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:162 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_start_2 bundle = control                                                                                                             | ../../../../../device/src/datamover_outerloop_0.cpp:163 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = range_end_2 bundle = control                                                                                                               | ../../../../../device/src/datamover_outerloop_0.cpp:164 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = gridSize_0 bundle = control                                                                                                                | ../../../../../device/src/datamover_outerloop_0.cpp:166 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = gridSize_1 bundle = control                                                                                                                | ../../../../../device/src/datamover_outerloop_0.cpp:167 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = gridSize_2 bundle = control                                                                                                                | ../../../../../device/src/datamover_outerloop_0.cpp:168 in datamover_outerloop_0                                    |
+| interface       | s_axilite port = outer_itr bundle = control                                                                                                                 | ../../../../../device/src/datamover_outerloop_0.cpp:169 in datamover_outerloop_0                                    |
+| interface       | mode=m_axi bundle=gmem0 depth=4096 max_read_burst_length=64 max_write_burst_length=64 num_read_outstanding=4 num_write_outstanding=4 port=arg0 offset=slave | ../../../../../device/src/datamover_outerloop_0.cpp:171 in datamover_outerloop_0, arg0                              |
+| interface       | s_axilite port = arg0 bundle = control                                                                                                                      | ../../../../../device/src/datamover_outerloop_0.cpp:174 in datamover_outerloop_0                                    |
+| interface       | mode=m_axi bundle=gmem1 depth=4096 max_read_burst_length=64 max_write_burst_length=64 num_read_outstanding=4 num_write_outstanding=4 port=arg1 offset=slave | ../../../../../device/src/datamover_outerloop_0.cpp:176 in datamover_outerloop_0, arg1                              |
+| interface       | s_axilite port = arg1 bundle = control                                                                                                                      | ../../../../../device/src/datamover_outerloop_0.cpp:179 in datamover_outerloop_0                                    |
+| interface       | mode=axis port=arg0_axis_out register                                                                                                                       | ../../../../../device/src/datamover_outerloop_0.cpp:180 in datamover_outerloop_0, arg0_axis_out                     |
+| interface       | mode=axis port=arg1_axis_in register                                                                                                                        | ../../../../../device/src/datamover_outerloop_0.cpp:181 in datamover_outerloop_0, arg1_axis_in                      |
+| interface       | mode=s_axilite port=return bundle = control                                                                                                                 | ../../../../../device/src/datamover_outerloop_0.cpp:183 in datamover_outerloop_0, return                            |
+| interface       | mode=ap_ctrl_chain port=return                                                                                                                              | ../../../../../device/src/datamover_outerloop_0.cpp:184 in datamover_outerloop_0, return                            |
++-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+
+
+

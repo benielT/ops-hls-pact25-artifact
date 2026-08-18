@@ -1,0 +1,126 @@
+{
+    "schema_version": {
+        "major": "2",
+        "minor": "0",
+        "patch": "0"
+    },
+    "mem_topology": {
+        "m_count": "4",
+        "m_mem_data": {
+            "mem_data": {
+                "m_type": "MEM_DDR4",
+                "m_used": "1",
+                "m_sizeKB": "0xc00000",
+                "m_base_address": "0xc100000000",
+                "m_tag": "MC_NOC0",
+                "m_spTag": "MC_NOC0"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x80",
+                "m_base_address": "0x20204000000",
+                "m_tag": "BRAM",
+                "m_spTag": "BRAM"
+            },
+            "mem_data": {
+                "m_type": "MEM_STREAMING_CONNECTION",
+                "m_used": "1",
+                "m_tag": "dc_0",
+                "m_spTag": ""
+            },
+            "mem_data": {
+                "m_type": "MEM_STREAMING_CONNECTION",
+                "m_used": "1",
+                "m_tag": "dc_1",
+                "m_spTag": ""
+            }
+        }
+    },
+    "ip_layout": {
+        "m_count": "2",
+        "m_ip_data": {
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "1",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x20200010000",
+                "m_address_range": "0x10000",
+                "m_name": "datamover_outerloop_0:datamover_outerloop_0_1",
+                "m_clocks": [
+                    {
+                        "ap_clk": {
+                            "refClockId": "0"
+                        }
+                    }
+                ]
+            },
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x20200020000",
+                "m_address_range": "0x10000",
+                "m_name": "kernel_outerloop_0:kernel_outerloop_0_1",
+                "m_clocks": [
+                    {
+                        "ap_clk": {
+                            "refClockId": "0"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "connectivity": {
+        "m_count": "6",
+        "m_connection": {
+            "connection": {
+                "arg_index": "11",
+                "arg_name": "arg0",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "12",
+                "arg_name": "arg1",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "13",
+                "arg_name": "arg0_axis_out",
+                "mode": "Master",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "2"
+            },
+            "connection": {
+                "arg_index": "14",
+                "arg_name": "arg0_axis_in",
+                "mode": "Slave",
+                "m_ip_layout_index": "1",
+                "mem_data_index": "2"
+            },
+            "connection": {
+                "arg_index": "15",
+                "arg_name": "arg1_axis_out",
+                "mode": "Master",
+                "m_ip_layout_index": "1",
+                "mem_data_index": "3"
+            },
+            "connection": {
+                "arg_index": "14",
+                "arg_name": "arg1_axis_in",
+                "mode": "Slave",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "3"
+            }
+        }
+    }
+}

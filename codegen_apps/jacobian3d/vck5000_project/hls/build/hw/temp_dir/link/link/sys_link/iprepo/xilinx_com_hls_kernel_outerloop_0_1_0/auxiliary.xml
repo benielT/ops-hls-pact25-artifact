@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="kernel_outerloop_0" xd:componentRef="kernel_outerloop_0" xd:initiationInterval="x" xd:clockPeriod="3.333" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="slr_region" xd:originalName="slr_region" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="outer_itr" xd:originalName="outer_itr" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_grid_size_0" xd:originalName="stencilConfig_grid_size_0" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_grid_size_1" xd:originalName="stencilConfig_grid_size_1" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_grid_size_2" xd:originalName="stencilConfig_grid_size_2" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_dim" xd:originalName="stencilConfig_dim" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_total_itr" xd:originalName="stencilConfig_total_itr" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_lower_limit_0" xd:originalName="stencilConfig_lower_limit_0" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x48" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_lower_limit_1" xd:originalName="stencilConfig_lower_limit_1" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x50" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_lower_limit_2" xd:originalName="stencilConfig_lower_limit_2" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x58" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_upper_limit_0" xd:originalName="stencilConfig_upper_limit_0" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x60" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_upper_limit_1" xd:originalName="stencilConfig_upper_limit_1" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x68" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_upper_limit_2" xd:originalName="stencilConfig_upper_limit_2" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x70" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stencilConfig_outer_loop_limit" xd:originalName="stencilConfig_outer_loop_limit" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x78" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="arg0_axis_in" xd:originalName="arg0_axis_in" xd:direction="in" xd:interfaceRef="arg0_axis_in" xd:busTypeRef="axis" xd:dataWidth="256"/>
+  <xd:arg xd:name="arg1_axis_out" xd:originalName="arg1_axis_out" xd:direction="out" xd:interfaceRef="arg1_axis_out" xd:busTypeRef="axis" xd:dataWidth="256"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="68583" xd:FF="229708" xd:BRAM="0" xd:DSP="1092"/>
+</xd:acceleratorMap>

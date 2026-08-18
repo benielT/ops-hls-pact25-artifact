@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>ip</spirit:library>
+  <spirit:name>sds_lib</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>dc91146b</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>dc91146b</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f92e9879</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_register_slice_v1_1/hdl/axis_register_slice_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_infrastructure_v1_1/hdl/axis_infrastructure_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_infrastructure_v1_1/hdl/axis_infrastructure_v1_1_0.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_dwidth_converter_v1_1/sysc/axis_dwidth_converter.h</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_dwidth_converter_v1_1/hdl/axis_dwidth_converter_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_small_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_semaphore.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_s2mm.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_rising_edge.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_regs.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_queue_cdc.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_queue.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_mm2s.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_clk_div.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_cdc_sync.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_cdc_hs.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_byte_aligner.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_bram_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_beat_cnt.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_axi_ff.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_apctrl.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_align_burst_to_beat.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_align_beat_to_burst.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_cb2a86ec</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_register_slice_v1_1/hdl/axis_register_slice_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_infrastructure_v1_1/hdl/axis_infrastructure_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_infrastructure_v1_1/hdl/axis_infrastructure_v1_1_0.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_dwidth_converter_v1_1/sysc/axis_dwidth_converter.h</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/axi/axis_dwidth_converter_v1_1/hdl/axis_dwidth_converter_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_small_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_semaphore.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_s2mm.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_rising_edge.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_regs.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_queue_cdc.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_queue.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_mm2s.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_clk_div.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_cdc_sync.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_cdc_hs.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_byte_aligner.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_bram_fifo.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_beat_cnt.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_axi_ff.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_apctrl.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_align_burst_to_beat.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/sds_align_beat_to_burst.sv</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/sds_lib_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>xilinx.com:ip:sds_lib:1.0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">sds_lib_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>sds_lib_v1_0</xilinx:displayName>
+      <xilinx:hideInCatalogGUI>true</xilinx:hideInCatalogGUI>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-12-22T05:49:56Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45992c78_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209e80f3_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@566d84f8_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4be1b0d7_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3734c4f3_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33f8897b_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68fd4616_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31c0a8e_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebca979_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49be8d34_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@778a6c24_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394520f8_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5947e95d_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a76a07a_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558502e3_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@474a37cd_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c5b09c_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@565cabdc_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f670b6d_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6460a986_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b8d9ea6_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c669d13_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42711594_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68f36216_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50df8589_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a005754_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e8b456d_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bcb3fdb_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e724a04_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2267daba_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a2fafc8_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3072fe0a_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3fc8d9_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e71e39c_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63952df1_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@778ab663_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cedd7f9_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32ff5506_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f21bcb1_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@366a585c_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e557166_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28479791_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65bda221_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531c3fdf_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d69eccc_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627e78a8_ARCHIVE_LOCATION">c:/Users/igora/Designs/fast_dma_v2/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232d9df9_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@446a8603_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d839d4_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0cfb1d_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7597aa77_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aaf2cc3_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e28130c_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41903f04_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f239ba8_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68e83ea2_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39206637_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cfa12b3_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2234fc4c_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597636d4_ARCHIVE_LOCATION">/proj/xsjhdstaff5/igora/HEAD/src/products/vitis/src/sdx/host/ip_repo/sds_lib</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.3.0</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cd6f085e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="42c84e34"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

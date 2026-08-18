@@ -1,0 +1,773 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcvc1902-vsvd1760-2MP-e-S 
+INFO: [HLS 200-1611] Setting target device to 'xcvc1902-vsvd1760-2MP-e-S'
+INFO: [HLS 200-1510] Running: create_clock -period 299.996999MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname kernel_outerloop_0 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.458 GB.
+INFO: [HLS 200-10] Analyzing design file '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp' ... 
+WARNING: [HLS 207-4785] attribute 'deprecated' is ignored, place it after "struct" to apply attribute to type declaration (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/L1/include/ops_hls_defs.hpp:105:16)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:234:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:372:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1478:9)
+WARNING: [HLS 207-5546] missing argument for 'max' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2092:9)
+WARNING: [HLS 207-4949] logical not is only applied to the left hand side of this comparison (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+INFO: [HLS 207-4281] add parentheses after the '!' to evaluate the comparison first (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+INFO: [HLS 207-4282] add parentheses around left hand side expression to silence this warning (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80)
+WARNING: [HLS 207-4949] logical not is only applied to the left hand side of this comparison (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+INFO: [HLS 207-4281] add parentheses after the '!' to evaluate the comparison first (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+INFO: [HLS 207-4282] add parentheses around left hand side expression to silence this warning (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80)
+WARNING: [HLS 207-5292] unused parameter 'size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:189:20)
+WARNING: [HLS 207-5292] unused parameter 'size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:326:20)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.05 seconds. CPU system time: 1.35 seconds. Elapsed time: 6.76 seconds; current allocated memory: 465.250 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+WARNING: [HLS 214-273] In function 'kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&, ops::hls::StencilConfigCore const&, hls::stream<ap_uint<256>, 0>*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:24:0)
+INFO: [HLS 214-131] Inlining function 'kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&, ops::hls::StencilConfigCore const&, hls::stream<ap_uint<256>, 0>*)' into 'kernel_outerloop_0_dataflow_region(unsigned short const&, ops::hls::StencilConfigCore const&, unsigned int, hls::stream<hls::axis<ap_uint<256>, 0ul, 0ul, 0ul>, 0>&, hls::stream<hls::axis<ap_uint<256>, 0ul, 0ul, 0ul>, 0>&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:47:9)
+INFO: [HLS 214-210] Disaggregating variable 'stencilConfig' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:89:39)
+INFO: [HLS 214-291] Loop 'vec2arr' is marked as complete unroll implied by the pipeline pragma (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:355:22)
+INFO: [HLS 214-291] Loop 'process' is marked as complete unroll implied by the pipeline pragma (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:389:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_29_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:29:22) in function 'kernel_outerloop_0_dataflow_region' completely with a factor of 14 (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:40:0)
+INFO: [HLS 214-186] Unrolling loop 'vec2arr' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:355:22) in function 'Stencil_jac3D_kernel_stencil::stencilRun' completely with a factor of 8 (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:85:0)
+INFO: [HLS 214-186] Unrolling loop 'process' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:389:22) in function 'Stencil_jac3D_kernel_stencil::stencilRun' completely with a factor of 8 (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:85:0)
+INFO: [HLS 214-178] Inlining function 'ops::hls::StencilCoreV2<float, (unsigned short)7, (unsigned short)8, (ops::hls::CoefTypes)0, (unsigned short)3, (unsigned short)3>::setConfig(short const&, ops::hls::StencilConfigCore const&)' into 'kernel_jac3D_kernel_stencil_PE(short const&, ops::hls::StencilConfigCore const&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:472:0)
+INFO: [HLS 214-178] Inlining function 'kernel_jac3D_kernel_stencil_PE(short const&, ops::hls::StencilConfigCore const&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)' into 'joint_PE_outerloop_0(unsigned short, ops::hls::StencilConfigCore const&, hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&)' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:9:0)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_widenStencilValues': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:167:41)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_rowArr_1_0': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:179:15)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_rowArr_0_1': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:181:15)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_rowArr_1_1': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:183:15)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_rowArr_2_1': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:185:15)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_rowArr_1_2': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:187:15)
+INFO: [HLS 214-248] Applying array_partition to 'arg0_arg1_streams': Complete partitioning on dimension 1. (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_0' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_1' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_2' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_3' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_4' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_5' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_6' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_7' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_8' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_9' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_10' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_11' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_12' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_13' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_14' with compact=bit mode in 256-bits (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<256>s.i256' into 'void ops::hls::axis2stream<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'void ops::hls::axis2stream<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<1>s.i1' into 'void ops::hls::axis2stream<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint<32>s.i32' into 'void ops::hls::axis2stream<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'Stencil_jac3D_kernel_stencil::stencilRun(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<256>, 0>&) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint<256>s' into 'void ops::hls::stream2axis<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint<1>s' into 'void ops::hls::stream2axis<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_uint<32>s' into 'void ops::hls::stream2axis<256u, 256u>(hls::stream<hls::axis<ap_uint<256u>, 0ul, 0ul, 0ul>, 0>&, hls::stream<ap_uint<256u>, 0>&, unsigned int) (.1)' (/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.08 seconds. CPU system time: 1.55 seconds. Elapsed time: 6.82 seconds; current allocated memory: 465.527 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 465.527 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.18 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.23 seconds; current allocated memory: 496.156 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.55 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.6 seconds; current allocated memory: 541.629 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1897_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1897) in function 'ops::hls::stream2axis<256u, 256u>' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1521_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1521) in function 'ops::hls::axis2stream<256u, 256u>' automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencil.m_stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:473) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencilConfig.grid_size' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:99) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencilConfig.lower_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:99) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stencilConfig.upper_limit' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:99) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'kernel_outerloop_0_dataflow_region' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:32:1), detected/extracted 17 process function(s): 
+	 'entry_proc'
+	 'ops::hls::axis2stream<256u, 256u>'
+	 'joint_PE_outerloop_0'
+	 'joint_PE_outerloop_0.1'
+	 'joint_PE_outerloop_0.2'
+	 'joint_PE_outerloop_0.3'
+	 'joint_PE_outerloop_0.4'
+	 'joint_PE_outerloop_0.5'
+	 'joint_PE_outerloop_0.6'
+	 'joint_PE_outerloop_0.7'
+	 'joint_PE_outerloop_0.8'
+	 'joint_PE_outerloop_0.9'
+	 'joint_PE_outerloop_0.10'
+	 'joint_PE_outerloop_0.11'
+	 'joint_PE_outerloop_0.12'
+	 'joint_PE_outerloop_0.13'
+	 'ops::hls::stream2axis<256u, 256u>'.
+INFO: [XFORM 203-11] Balancing expressions in function 'Stencil_jac3D_kernel_stencil::stencilRun' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96:17)...32 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.04 seconds. CPU system time: 0.09 seconds. Elapsed time: 1.23 seconds; current allocated memory: 611.547 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'arg0_buf_p0_1.V' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:257:52)
+INFO: [HLS 200-472] Inferring partial write operation for 'arg0_buf_r0_1_p1.V' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:261:58)
+INFO: [HLS 200-472] Inferring partial write operation for 'arg0_buf_r1_2_p1.V' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:263:58)
+INFO: [HLS 200-472] Inferring partial write operation for 'arg0_buf_p1_2.V' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:265:52)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.65 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.76 seconds; current allocated memory: 850.023 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kernel_outerloop_0' ...
+WARNING: [SYN 201-103] Legalizing function name 'axis2stream<256u, 256u>_Pipeline_VITIS_LOOP_1521_1' to 'axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1'.
+WARNING: [SYN 201-103] Legalizing function name 'axis2stream<256u, 256u>' to 'axis2stream_256u_256u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.1' to 'joint_PE_outerloop_0_1'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.2' to 'joint_PE_outerloop_0_2'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.3' to 'joint_PE_outerloop_0_3'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.4' to 'joint_PE_outerloop_0_4'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.5' to 'joint_PE_outerloop_0_5'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.6' to 'joint_PE_outerloop_0_6'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.7' to 'joint_PE_outerloop_0_7'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.8' to 'joint_PE_outerloop_0_8'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.9' to 'joint_PE_outerloop_0_9'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.10' to 'joint_PE_outerloop_0_10'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.11' to 'joint_PE_outerloop_0_11'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.12' to 'joint_PE_outerloop_0_12'.
+WARNING: [SYN 201-103] Legalizing function name 'joint_PE_outerloop_0.13' to 'joint_PE_outerloop_0_13'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2axis<256u, 256u>_Pipeline_VITIS_LOOP_1897_1' to 'stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1'.
+WARNING: [SYN 201-103] Legalizing function name 'stream2axis<256u, 256u>' to 'stream2axis_256u_256u_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.11 seconds. Elapsed time: 0.4 seconds; current allocated memory: 851.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 852.066 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1521_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1521_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 860.266 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 860.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axis2stream_256u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 860.586 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 860.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_jac3D_kernel_stencil_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'kernel_jac3D_kernel_stencil_core'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 0, Final II = 1, Depth = 10, function 'kernel_jac3D_kernel_stencil_core'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 860.754 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 860.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stencilRun_Pipeline_VITIS_LOOP_194_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_194_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 20, loop 'VITIS_LOOP_194_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.9 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.92 seconds; current allocated memory: 866.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.09 seconds; current allocated memory: 866.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stencilRun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln147) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln96) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.05 seconds. CPU system time: 0 seconds. Elapsed time: 2.08 seconds; current allocated memory: 866.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.71 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.72 seconds; current allocated memory: 866.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.76 seconds. CPU system time: 0 seconds. Elapsed time: 1.78 seconds; current allocated memory: 866.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.47 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 866.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.67 seconds. CPU system time: 0 seconds. Elapsed time: 1.7 seconds; current allocated memory: 866.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.64 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.66 seconds; current allocated memory: 866.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.84 seconds. CPU system time: 0 seconds. Elapsed time: 1.85 seconds; current allocated memory: 866.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.62 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 866.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.79 seconds. CPU system time: 0 seconds. Elapsed time: 1.81 seconds; current allocated memory: 866.988 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 867.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.8 seconds. CPU system time: 0 seconds. Elapsed time: 1.82 seconds; current allocated memory: 867.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.53 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 867.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.79 seconds. CPU system time: 0 seconds. Elapsed time: 1.81 seconds; current allocated memory: 867.996 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.53 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 868.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.59 seconds. CPU system time: 0 seconds. Elapsed time: 1.6 seconds; current allocated memory: 868.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.66 seconds; current allocated memory: 868.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.83 seconds. CPU system time: 0 seconds. Elapsed time: 1.85 seconds; current allocated memory: 868.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.65 seconds. CPU system time: 0 seconds. Elapsed time: 0.66 seconds; current allocated memory: 869.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.77 seconds. CPU system time: 0 seconds. Elapsed time: 1.79 seconds; current allocated memory: 869.520 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 869.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.44 seconds. CPU system time: 0 seconds. Elapsed time: 1.45 seconds; current allocated memory: 869.992 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.51 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 870.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.44 seconds. CPU system time: 0 seconds. Elapsed time: 1.46 seconds; current allocated memory: 870.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.67 seconds. CPU system time: 0 seconds. Elapsed time: 0.68 seconds; current allocated memory: 870.777 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.79 seconds; current allocated memory: 870.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.66 seconds; current allocated memory: 871.250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.79 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.81 seconds; current allocated memory: 871.426 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.54 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 871.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'joint_PE_outerloop_0_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.78 seconds. CPU system time: 0 seconds. Elapsed time: 1.79 seconds; current allocated memory: 871.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.6 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 872.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1897_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1897_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.7 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.72 seconds; current allocated memory: 872.309 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 872.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream2axis_256u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 872.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 872.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_outerloop_0_dataflow_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 874.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 7.45 seconds. CPU system time: 0.02 seconds. Elapsed time: 7.49 seconds; current allocated memory: 875.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 22.8 seconds. CPU system time: 0 seconds. Elapsed time: 22.83 seconds; current allocated memory: 876.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 6.95 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.98 seconds; current allocated memory: 877.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 23.8 seconds. CPU system time: 0 seconds. Elapsed time: 23.84 seconds; current allocated memory: 877.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1' pipeline 'VITIS_LOOP_1521_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axis2stream_256u_256u_Pipeline_VITIS_LOOP_1521_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 877.832 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axis2stream_256u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axis2stream_256u_256u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 878.680 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_jac3D_kernel_stencil_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_2_primitive_dsp_0': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmadd_32ns_32ns_32ns_32ns_32_3_primitive_dsp_0': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_primitive_dsp_0': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_jac3D_kernel_stencil_core'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 879.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stencilRun_Pipeline_VITIS_LOOP_194_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stencilRun_Pipeline_VITIS_LOOP_194_1' pipeline 'VITIS_LOOP_194_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'stencilRun_Pipeline_VITIS_LOOP_194_1' is 5912 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stencilRun_Pipeline_VITIS_LOOP_194_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 885.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stencilRun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16ns_16ns_1s_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_16ns_32_3_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stencilRun'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 4.35 seconds. CPU system time: 0.08 seconds. Elapsed time: 4.48 seconds; current allocated memory: 894.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.06 seconds; current allocated memory: 895.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.97 seconds. CPU system time: 0 seconds. Elapsed time: 2.02 seconds; current allocated memory: 896.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.93 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.97 seconds; current allocated memory: 898.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.04 seconds; current allocated memory: 899.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.74 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.78 seconds; current allocated memory: 900.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.98 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.02 seconds; current allocated memory: 902.164 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.97 seconds. CPU system time: 0 seconds. Elapsed time: 2.01 seconds; current allocated memory: 903.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.97 seconds. CPU system time: 0 seconds. Elapsed time: 2 seconds; current allocated memory: 904.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.64 seconds; current allocated memory: 906.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.99 seconds; current allocated memory: 907.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.06 seconds; current allocated memory: 908.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.97 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.02 seconds; current allocated memory: 910.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.99 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.05 seconds; current allocated memory: 911.711 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'joint_PE_outerloop_0_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'joint_PE_outerloop_0_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.73 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.77 seconds; current allocated memory: 912.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1' pipeline 'VITIS_LOOP_1897_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axis_256u_256u_Pipeline_VITIS_LOOP_1897_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.62 seconds. CPU system time: 0 seconds. Elapsed time: 1.65 seconds; current allocated memory: 913.621 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream2axis_256u_256u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream2axis_256u_256u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 914.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_outerloop_0_dataflow_region' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_outerloop_0_dataflow_region'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.23 seconds; current allocated memory: 925.109 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_outerloop_0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/slr_region' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/outer_itr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_grid_size_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_grid_size_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_grid_size_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_dim' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_total_itr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_lower_limit_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_lower_limit_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_lower_limit_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_upper_limit_0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_upper_limit_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_upper_limit_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/stencilConfig_outer_loop_limit' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg0_axis_in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg0_axis_in_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg0_axis_in_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg0_axis_in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg1_axis_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg1_axis_out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg1_axis_out_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_outerloop_0/arg1_axis_out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel_outerloop_0' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'slr_region', 'outer_itr', 'stencilConfig_grid_size_0', 'stencilConfig_grid_size_1', 'stencilConfig_grid_size_2', 'stencilConfig_dim', 'stencilConfig_total_itr', 'stencilConfig_lower_limit_0', 'stencilConfig_lower_limit_1', 'stencilConfig_lower_limit_2', 'stencilConfig_upper_limit_0', 'stencilConfig_upper_limit_1', 'stencilConfig_upper_limit_2', 'stencilConfig_outer_loop_limit' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_outerloop_0'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 22.9 seconds. CPU system time: 0.03 seconds. Elapsed time: 23.02 seconds; current allocated memory: 930.797 MB.
+INFO: [RTMG 210-278] Implementing memory 'kernel_outerloop_0_stencilRun_arg0_buf_p0_1_V_RAM_S2P_URAM_2R1W_ram (RAM_S2P_URAM)' using ultra RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel_outerloop_0_stencilRun_arg0_buf_r0_1_p1_V_RAM_S2P_BRAM_2R1W_ram (RAM_S2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c47_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c60_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c73_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c86_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c99_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c112_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c125_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c138_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c151_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c164_U(kernel_outerloop_0_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_0_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'total_bytes_c_U(kernel_outerloop_0_fifo_w32_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_1_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c46_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c59_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c72_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c85_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c98_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c111_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c124_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c137_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c150_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c163_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_2_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c45_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c58_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c71_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c84_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c97_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c110_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c123_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c136_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c149_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c162_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_3_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c44_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c57_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c70_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c83_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c96_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c109_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c122_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c135_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c148_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c161_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_4_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c43_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c56_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c69_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c82_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c95_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c108_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c121_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c134_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c147_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c160_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_5_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c42_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c55_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c68_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c81_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c94_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c107_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c120_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c133_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c146_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c159_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_6_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c41_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c54_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c67_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c80_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c93_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c106_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c119_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c132_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c145_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c158_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_7_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c40_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c53_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c66_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c79_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c92_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c105_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c118_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c131_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c144_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c157_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_8_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c39_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c52_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c65_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c78_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c91_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c104_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c117_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c130_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c143_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c156_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_9_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c38_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c51_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c64_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c77_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c90_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c103_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c116_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c129_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c142_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c155_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_10_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c37_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c50_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c63_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c76_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c89_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c102_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c115_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c128_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c141_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c154_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_11_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c36_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c49_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c62_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c75_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c88_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c101_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_0_c114_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_1_c127_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_upper_limit_2_c140_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_outer_loop_limit_c153_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'arg0_arg1_streams_12_U(kernel_outerloop_0_fifo_w256_d10_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_0_c35_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_1_c48_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_grid_size_2_c61_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_0_c74_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_1_c87_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'stencilConfig_lower_limit_2_c100_U(kernel_outerloop_0_fifo_w16_d2_S)' using Shift Registers.

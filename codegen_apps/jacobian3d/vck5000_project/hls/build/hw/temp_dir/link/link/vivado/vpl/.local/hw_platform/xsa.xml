@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="1" VersionMinor="15">
+  <GenAppInfo Name="Vivado" Version="2022.1" CL="3523110" TimeStamp="Wed Apr 13 18:03:54 2022"/>
+  <DSA Vendor="xilinx" BoardId="vck5000" Name="gen4x8_xdma_2" VersionMajor="202210" VersionMinor="1" Description="" FeatureRomTimestamp="0" DcpLogicFunctionStripped="false" DcpEncrypt="false" Unified="true" Fixed="false" DefaultOutputType="xclbin">
+    <Host Architecture="x86_64" Interface="pcie"/>
+    <Build UsesPR="true" PlatformState="impl" AcceleratorBinaryContent="pdi" ValidBinaryContentValues="dcp,pdi" TopModuleName="top_wrapper">
+      <XoccLinkSwitches>
+        <XoccLinkSwitch Name="xp" Value="vivado_param:project.ensureVersalHasCIPS=false"/>
+        <XoccLinkSwitch Name="xp" Value="vivado_param:bd.enableAutoConnectionsInNoc=1"/>
+        <XoccLinkSwitch Name="xp" Value="vivado_param:constr.restoreXDEFConstraintsASTCL=1"/>
+        <XoccLinkSwitch Name="xp" Value="vivado_param:ips.enableSLRParameter=4"/>
+      </XoccLinkSwitches>
+    </Build>
+    <Board Name="xilinx.com:vck5000:1.0" Vendor="xilinx.com" Part="xcvc1902-vsvd1760-2MP-e-S" BoardPart="xilinx.com:vck5000:part0:1.0">
+      <Interfaces>
+        <Interface Id="int1" Name="PCIe" Type="gen4x8"/>
+      </Interfaces>
+      <Memories>
+        <Memory Name="mem0" Type="ddr4" Size="12GB" LowestAddress="828928688128" HighestAddress="841813590015"/>
+      </Memories>
+      <Images>
+        <Img Type="HDPI" File=""/>
+        <Img Type="MDPI" File=""/>
+        <Img Type="LDPI" File=""/>
+      </Images>
+      <PCIeId Vendor="0x10ee" Device="0x5048" Subsystem="0x000e"/>
+    </Board>
+    <Devices>
+      <Device Name="fpga0" Type="8" FpgaDevice="versal:xcvc1902:vsvd1760:-2MP:e:S">
+        <Core Name="OCL_REGION_0" Type="clc_region" ComputeUnits="64" InstancePath="top_i/ulp" DRBDName="ulp_inst_0.bd">
+          <AvailableResources LUT="886810" REG="1779881" BRAM="967" DSP="">
+            <PBlock Name="pblock_dynamic_region" ValidSLRs="SLR0">
+              <Resource Name="BRAM" Val="935"/>
+              <Resource Name="GLOBAL_CLOCK_BUFFERS" Val="336"/>
+              <Resource Name="LOOKAHEAD8" Val="109593"/>
+              <Resource Name="LUT" Val="870355"/>
+              <Resource Name="LUTAsLogic" Val="872230"/>
+              <Resource Name="LUTAsMem" Val="436525"/>
+              <Resource Name="MMCM" Val="8"/>
+              <Resource Name="REG" Val="1745735"/>
+              <Resource Name="URAM" Val="463"/>
+            </PBlock>
+          </AvailableResources>
+        </Core>
+      </Device>
+    </Devices>
+    <Files>
+      <File Type="PRE_SYS_LINK_OVERLAY_TCL" Name="tcl_hooks/sys_link_overlay.pre.tcl"/>
+      <File Type="POST_SYS_LINK_OVERLAY_TCL" Name="tcl_hooks/sys_link_overlay.post.tcl"/>
+      <File Type="PRE_OPT_TCL" Name="tcl_hooks/opt.pre.tcl"/>
+      <File Type="POST_OPT_TCL" Name="tcl_hooks/opt.post.tcl"/>
+      <File Type="IMPL_CONSTRS" Name="tcl_hooks/synth.xdc" UsedIn="synthesis" ProcessingOrder="NORMAL"/>
+      <File Type="IMPL_CONSTRS" Name="tcl_hooks/impl.xdc" UsedIn="implementation" ProcessingOrder="NORMAL"/>
+      <File Type="BB_LOCKED_IMPL_DCP" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked.dcp"/>
+      <File Type="PDI" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1.pdi"/>
+      <File Type="HPFM" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1.hpfm"/>
+      <File Type="DR_BD" Name="bd/ulp_inst_0/ulp_inst_0.bd"/>
+      <File Type="IP_REPO_PATH" Name="iprepo"/>
+      <File Type="IP_CACHE_DIR" Name="ipcache"/>
+      <File Type="BOARD_REPO_PATH" Name="board"/>
+      <File Type="EXT_META_JSON" Name="ext_metadata.json"/>
+      <File Type="NOC_TRAFFIC" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1_noc_traffic.nts"/>
+      <File Type="NOC_SOLUTION" Name="xilinx_vck5000_gen4x8_xdma_2_202210_1_noc_solution.ncr"/>
+      <File Type="SEMANTIC_LABEL" Name="semantic_labels.json"/>
+    </Files>
+  </DSA>
+</Root>

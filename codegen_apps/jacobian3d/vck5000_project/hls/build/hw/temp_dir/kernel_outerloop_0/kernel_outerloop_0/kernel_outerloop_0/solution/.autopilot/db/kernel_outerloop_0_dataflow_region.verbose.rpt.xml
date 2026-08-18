@@ -1,0 +1,341 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'kernel_outerloop_0_dataflow_region'" level="0">
+<item name = "Date">Sun Jul 26 01:26:31 2026
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">kernel_outerloop_0</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">versal</item>
+<item name = "Target device">xcvc1902-vsvd1760-2MP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.301 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="entry_proc_U0">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="axis2stream_256u_256u_U0">axis2stream_256u_256u_s, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_U0">joint_PE_outerloop_0, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_1_U0">joint_PE_outerloop_0_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_2_U0">joint_PE_outerloop_0_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_3_U0">joint_PE_outerloop_0_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_4_U0">joint_PE_outerloop_0_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_5_U0">joint_PE_outerloop_0_5, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_6_U0">joint_PE_outerloop_0_6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_7_U0">joint_PE_outerloop_0_7, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_8_U0">joint_PE_outerloop_0_8, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_9_U0">joint_PE_outerloop_0_9, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_10_U0">joint_PE_outerloop_0_10, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_11_U0">joint_PE_outerloop_0_11, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_12_U0">joint_PE_outerloop_0_12, ?, ?, ?, ?, ?, ?, no</column>
+<column name="joint_PE_outerloop_0_13_U0">joint_PE_outerloop_0_13, ?, ?, ?, ?, ?, ?, no</column>
+<column name="stream2axis_256u_256u_U0">stream2axis_256u_256u_s, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 12, -</column>
+<column name="FIFO">0, -, 16497, 8633, -</column>
+<column name="Instance">224, 1092, 212763, 59284, 224</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 4, -</column>
+<column name="Register">-, -, 2, -, -</column>
+<specialColumn name="Available">1934, 1968, 1799680, 899840, 463</specialColumn>
+<specialColumn name="Utilization (%)">11, 55, 12, 7, 48</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="axis2stream_256u_256u_U0">axis2stream_256u_256u_s, 0, 0, 319, 150, 0</column>
+<column name="entry_proc_U0">entry_proc, 0, 0, 3, 26, 0</column>
+<column name="joint_PE_outerloop_0_U0">joint_PE_outerloop_0, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_1_U0">joint_PE_outerloop_0_1, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_10_U0">joint_PE_outerloop_0_10, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_11_U0">joint_PE_outerloop_0_11, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_12_U0">joint_PE_outerloop_0_12, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_13_U0">joint_PE_outerloop_0_13, 16, 78, 15169, 4191, 16</column>
+<column name="joint_PE_outerloop_0_2_U0">joint_PE_outerloop_0_2, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_3_U0">joint_PE_outerloop_0_3, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_4_U0">joint_PE_outerloop_0_4, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_5_U0">joint_PE_outerloop_0_5, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_6_U0">joint_PE_outerloop_0_6, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_7_U0">joint_PE_outerloop_0_7, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_8_U0">joint_PE_outerloop_0_8, 16, 78, 15170, 4213, 16</column>
+<column name="joint_PE_outerloop_0_9_U0">joint_PE_outerloop_0_9, 16, 78, 15170, 4213, 16</column>
+<column name="stream2axis_256u_256u_U0">stream2axis_256u_256u_s, 0, 0, 62, 148, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="arg0_arg1_streams_0_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_10_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_11_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_12_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_13_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_14_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_1_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_2_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_3_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_4_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_5_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_6_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_7_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_8_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="arg0_arg1_streams_9_U">0, 784, 0, -, 10, 256, 2560</column>
+<column name="stencilConfig_grid_size_0_c35_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c36_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c37_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c38_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c39_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c40_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c41_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c42_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c43_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c44_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c45_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c46_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_0_c47_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_grid_size_0_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c48_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c49_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c50_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c51_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c52_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c53_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c54_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c55_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c56_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c57_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c58_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c59_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_1_c60_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_grid_size_1_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c61_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c62_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c63_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c64_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c65_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c66_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c67_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c68_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c69_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c70_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c71_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c72_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_grid_size_2_c73_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_grid_size_2_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c74_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c75_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c76_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c77_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c78_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c79_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c80_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c81_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c82_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c83_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c84_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c85_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_0_c86_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_lower_limit_0_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c87_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c88_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c89_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c90_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c91_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c92_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c93_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c94_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c95_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c96_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c97_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c98_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_1_c99_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_lower_limit_1_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c100_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c101_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c102_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c103_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c104_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c105_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c106_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c107_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c108_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c109_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c110_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c111_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_lower_limit_2_c112_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_lower_limit_2_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c152_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c153_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c154_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c155_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c156_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c157_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c158_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c159_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c160_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c161_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c162_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c163_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_outer_loop_limit_c164_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_outer_loop_limit_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c113_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c114_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c115_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c116_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c117_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c118_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c119_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c120_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c121_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c122_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c123_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c124_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_0_c125_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_upper_limit_0_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c126_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c127_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c128_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c129_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c130_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c131_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c132_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c133_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c134_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c135_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c136_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c137_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_1_c138_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_upper_limit_1_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c139_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c140_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c141_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c142_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c143_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c144_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c145_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c146_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c147_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c148_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c149_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c150_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="stencilConfig_upper_limit_2_c151_U">0, 5, 0, -, 3, 16, 48</column>
+<column name="stencilConfig_upper_limit_2_c_U">0, 36, 0, -, 2, 16, 32</column>
+<column name="total_bytes_c_U">0, 7, 0, -, 16, 32, 512</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="axis2stream_256u_256u_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="entry_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_axis2stream_256u_256u_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_entry_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_axis2stream_256u_256u_U0_ap_ready">2, 2, 1, 2</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">2, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_axis2stream_256u_256u_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_entry_proc_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="p_read">in, 16, ap_none, p_read, scalar</column>
+<column name="p_read_ap_vld">in, 1, ap_none, p_read, scalar</column>
+<column name="p_read1">in, 16, ap_none, p_read1, scalar</column>
+<column name="p_read1_ap_vld">in, 1, ap_none, p_read1, scalar</column>
+<column name="p_read2">in, 16, ap_none, p_read2, scalar</column>
+<column name="p_read2_ap_vld">in, 1, ap_none, p_read2, scalar</column>
+<column name="p_read3">in, 16, ap_none, p_read3, scalar</column>
+<column name="p_read3_ap_vld">in, 1, ap_none, p_read3, scalar</column>
+<column name="p_read4">in, 16, ap_none, p_read4, scalar</column>
+<column name="p_read4_ap_vld">in, 1, ap_none, p_read4, scalar</column>
+<column name="p_read5">in, 16, ap_none, p_read5, scalar</column>
+<column name="p_read5_ap_vld">in, 1, ap_none, p_read5, scalar</column>
+<column name="p_read6">in, 16, ap_none, p_read6, scalar</column>
+<column name="p_read6_ap_vld">in, 1, ap_none, p_read6, scalar</column>
+<column name="p_read7">in, 16, ap_none, p_read7, scalar</column>
+<column name="p_read7_ap_vld">in, 1, ap_none, p_read7, scalar</column>
+<column name="p_read8">in, 16, ap_none, p_read8, scalar</column>
+<column name="p_read8_ap_vld">in, 1, ap_none, p_read8, scalar</column>
+<column name="p_read9">in, 16, ap_none, p_read9, scalar</column>
+<column name="p_read9_ap_vld">in, 1, ap_none, p_read9, scalar</column>
+<column name="total_bytes">in, 32, ap_none, total_bytes, scalar</column>
+<column name="total_bytes_ap_vld">in, 1, ap_none, total_bytes, scalar</column>
+<column name="arg0_axis_in_TDATA">in, 256, axis, arg0_axis_in_V_data_V, pointer</column>
+<column name="arg0_axis_in_TKEEP">in, 32, axis, arg0_axis_in_V_keep_V, pointer</column>
+<column name="arg0_axis_in_TSTRB">in, 32, axis, arg0_axis_in_V_strb_V, pointer</column>
+<column name="arg0_axis_in_TLAST">in, 1, axis, arg0_axis_in_V_last_V, pointer</column>
+<column name="arg0_axis_in_TVALID">in, 1, axis, arg0_axis_in_V_last_V, pointer</column>
+<column name="arg0_axis_in_TREADY">out, 1, axis, arg0_axis_in_V_last_V, pointer</column>
+<column name="arg1_axis_out_TDATA">out, 256, axis, arg1_axis_out_V_data_V, pointer</column>
+<column name="arg1_axis_out_TKEEP">out, 32, axis, arg1_axis_out_V_keep_V, pointer</column>
+<column name="arg1_axis_out_TSTRB">out, 32, axis, arg1_axis_out_V_strb_V, pointer</column>
+<column name="arg1_axis_out_TLAST">out, 1, axis, arg1_axis_out_V_last_V, pointer</column>
+<column name="arg1_axis_out_TVALID">out, 1, axis, arg1_axis_out_V_last_V, pointer</column>
+<column name="arg1_axis_out_TREADY">in, 1, axis, arg1_axis_out_V_last_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, kernel_outerloop_0_dataflow_region, return value</column>
+</table>
+</item>
+</section>
+</profile>

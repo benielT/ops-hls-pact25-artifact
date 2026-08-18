@@ -1,0 +1,839 @@
+
+
+================================================================
+== Vitis HLS Report for 'joint_PE_outerloop_0_13'
+================================================================
+* Date:           Sun Jul 26 01:24:52 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.301 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+        |                       |            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance       |   Module   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_stencilRun_fu_108  |stencilRun  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------+------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.50>
+ST_1 : Operation 3 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_outer_loop_limit = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_outer_loop_limit"   --->   Operation 3 'read' 'stencil_m_stencilConfig_outer_loop_limit' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 4 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_2"   --->   Operation 4 'read' 'stencil_m_stencilConfig_upper_limit_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 5 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_1"   --->   Operation 5 'read' 'stencil_m_stencilConfig_upper_limit_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_upper_limit_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_upper_limit_0"   --->   Operation 6 'read' 'stencil_m_stencilConfig_upper_limit_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 7 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_2"   --->   Operation 7 'read' 'stencil_m_stencilConfig_lower_limit_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 8 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_1"   --->   Operation 8 'read' 'stencil_m_stencilConfig_lower_limit_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_lower_limit_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_lower_limit_0"   --->   Operation 9 'read' 'stencil_m_stencilConfig_lower_limit_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_2 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_2"   --->   Operation 10 'read' 'stencil_m_stencilConfig_grid_size_2' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_1 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_1"   --->   Operation 11 'read' 'stencil_m_stencilConfig_grid_size_1' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.79ns)   --->   "%stencil_m_stencilConfig_grid_size_0 = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %stencilConfig_grid_size_0"   --->   Operation 12 'read' 'stencil_m_stencilConfig_grid_size_0' <Predicate = true> <Delay = 0.79> <CoreInst = "FIFO_SRL">   --->   Core 85 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.79> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [2/2] (0.70ns)   --->   "%call_ln484 = call void @stencilRun, i16 %stencil_m_stencilConfig_grid_size_0, i16 %stencil_m_stencilConfig_grid_size_1, i16 %stencil_m_stencilConfig_grid_size_2, i16 %stencil_m_stencilConfig_lower_limit_0, i16 %stencil_m_stencilConfig_lower_limit_1, i16 %stencil_m_stencilConfig_lower_limit_2, i16 %stencil_m_stencilConfig_upper_limit_0, i16 %stencil_m_stencilConfig_upper_limit_1, i16 %stencil_m_stencilConfig_upper_limit_2, i16 %stencil_m_stencilConfig_outer_loop_limit, i256 %arg0_arg1_streams_13, i256 %arg0_arg1_streams_14" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:484]   --->   Operation 13 'call' 'call_ln484' <Predicate = true> <Delay = 0.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_outer_loop_limit, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_upper_limit_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_lower_limit_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stencilConfig_grid_size_0, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_14, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_13, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln484 = call void @stencilRun, i16 %stencil_m_stencilConfig_grid_size_0, i16 %stencil_m_stencilConfig_grid_size_1, i16 %stencil_m_stencilConfig_grid_size_2, i16 %stencil_m_stencilConfig_lower_limit_0, i16 %stencil_m_stencilConfig_lower_limit_1, i16 %stencil_m_stencilConfig_lower_limit_2, i16 %stencil_m_stencilConfig_upper_limit_0, i16 %stencil_m_stencilConfig_upper_limit_1, i16 %stencil_m_stencilConfig_upper_limit_2, i16 %stencil_m_stencilConfig_outer_loop_limit, i256 %arg0_arg1_streams_13, i256 %arg0_arg1_streams_14" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:484]   --->   Operation 26 'call' 'call_ln484' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln17 = ret" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:17]   --->   Operation 27 'ret' 'ret_ln17' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ stencilConfig_grid_size_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_grid_size_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_grid_size_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_lower_limit_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_lower_limit_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_lower_limit_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_upper_limit_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_upper_limit_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_upper_limit_2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ stencilConfig_outer_loop_limit]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ arg0_arg1_streams_13]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ arg0_arg1_streams_14]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+stencil_m_stencilConfig_outer_loop_limit (read         ) [ 001]
+stencil_m_stencilConfig_upper_limit_2    (read         ) [ 001]
+stencil_m_stencilConfig_upper_limit_1    (read         ) [ 001]
+stencil_m_stencilConfig_upper_limit_0    (read         ) [ 001]
+stencil_m_stencilConfig_lower_limit_2    (read         ) [ 001]
+stencil_m_stencilConfig_lower_limit_1    (read         ) [ 001]
+stencil_m_stencilConfig_lower_limit_0    (read         ) [ 001]
+stencil_m_stencilConfig_grid_size_2      (read         ) [ 001]
+stencil_m_stencilConfig_grid_size_1      (read         ) [ 001]
+stencil_m_stencilConfig_grid_size_0      (read         ) [ 001]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+specinterface_ln0                        (specinterface) [ 000]
+call_ln484                               (call         ) [ 000]
+ret_ln17                                 (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="stencilConfig_grid_size_0">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_grid_size_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="stencilConfig_grid_size_1">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_grid_size_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="stencilConfig_grid_size_2">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_grid_size_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="stencilConfig_lower_limit_0">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_lower_limit_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="stencilConfig_lower_limit_1">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_lower_limit_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="stencilConfig_lower_limit_2">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_lower_limit_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="stencilConfig_upper_limit_0">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_upper_limit_0"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="stencilConfig_upper_limit_1">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_upper_limit_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="stencilConfig_upper_limit_2">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_upper_limit_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="stencilConfig_outer_loop_limit">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilConfig_outer_loop_limit"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="arg0_arg1_streams_13">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arg0_arg1_streams_13"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="arg0_arg1_streams_14">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arg0_arg1_streams_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i16P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="stencilRun"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_18"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="stencil_m_stencilConfig_outer_loop_limit_read_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="16" slack="0"/>
+<pin id="50" dir="0" index="1" bw="16" slack="0"/>
+<pin id="51" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_outer_loop_limit/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="stencil_m_stencilConfig_upper_limit_2_read_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="16" slack="0"/>
+<pin id="56" dir="0" index="1" bw="16" slack="0"/>
+<pin id="57" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_upper_limit_2/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="stencil_m_stencilConfig_upper_limit_1_read_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="16" slack="0"/>
+<pin id="62" dir="0" index="1" bw="16" slack="0"/>
+<pin id="63" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_upper_limit_1/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="stencil_m_stencilConfig_upper_limit_0_read_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="16" slack="0"/>
+<pin id="68" dir="0" index="1" bw="16" slack="0"/>
+<pin id="69" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_upper_limit_0/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="stencil_m_stencilConfig_lower_limit_2_read_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="16" slack="0"/>
+<pin id="74" dir="0" index="1" bw="16" slack="0"/>
+<pin id="75" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_lower_limit_2/1 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="stencil_m_stencilConfig_lower_limit_1_read_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="16" slack="0"/>
+<pin id="80" dir="0" index="1" bw="16" slack="0"/>
+<pin id="81" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_lower_limit_1/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="stencil_m_stencilConfig_lower_limit_0_read_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="16" slack="0"/>
+<pin id="86" dir="0" index="1" bw="16" slack="0"/>
+<pin id="87" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_lower_limit_0/1 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1004" name="stencil_m_stencilConfig_grid_size_2_read_fu_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="16" slack="0"/>
+<pin id="92" dir="0" index="1" bw="16" slack="0"/>
+<pin id="93" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_grid_size_2/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="stencil_m_stencilConfig_grid_size_1_read_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="16" slack="0"/>
+<pin id="98" dir="0" index="1" bw="16" slack="0"/>
+<pin id="99" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_grid_size_1/1 "/>
+</bind>
+</comp>
+
+<comp id="102" class="1004" name="stencil_m_stencilConfig_grid_size_0_read_fu_102">
+<pin_list>
+<pin id="103" dir="0" index="0" bw="16" slack="0"/>
+<pin id="104" dir="0" index="1" bw="16" slack="0"/>
+<pin id="105" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="stencil_m_stencilConfig_grid_size_0/1 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="grp_stencilRun_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="0" slack="0"/>
+<pin id="110" dir="0" index="1" bw="16" slack="0"/>
+<pin id="111" dir="0" index="2" bw="16" slack="0"/>
+<pin id="112" dir="0" index="3" bw="16" slack="0"/>
+<pin id="113" dir="0" index="4" bw="16" slack="0"/>
+<pin id="114" dir="0" index="5" bw="16" slack="0"/>
+<pin id="115" dir="0" index="6" bw="16" slack="0"/>
+<pin id="116" dir="0" index="7" bw="16" slack="0"/>
+<pin id="117" dir="0" index="8" bw="16" slack="0"/>
+<pin id="118" dir="0" index="9" bw="16" slack="0"/>
+<pin id="119" dir="0" index="10" bw="16" slack="0"/>
+<pin id="120" dir="0" index="11" bw="256" slack="0"/>
+<pin id="121" dir="0" index="12" bw="256" slack="0"/>
+<pin id="122" dir="1" index="13" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln484/1 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1005" name="stencil_m_stencilConfig_outer_loop_limit_reg_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="16" slack="1"/>
+<pin id="138" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_outer_loop_limit "/>
+</bind>
+</comp>
+
+<comp id="141" class="1005" name="stencil_m_stencilConfig_upper_limit_2_reg_141">
+<pin_list>
+<pin id="142" dir="0" index="0" bw="16" slack="1"/>
+<pin id="143" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_upper_limit_2 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1005" name="stencil_m_stencilConfig_upper_limit_1_reg_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="16" slack="1"/>
+<pin id="148" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_upper_limit_1 "/>
+</bind>
+</comp>
+
+<comp id="151" class="1005" name="stencil_m_stencilConfig_upper_limit_0_reg_151">
+<pin_list>
+<pin id="152" dir="0" index="0" bw="16" slack="1"/>
+<pin id="153" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_upper_limit_0 "/>
+</bind>
+</comp>
+
+<comp id="156" class="1005" name="stencil_m_stencilConfig_lower_limit_2_reg_156">
+<pin_list>
+<pin id="157" dir="0" index="0" bw="16" slack="1"/>
+<pin id="158" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_lower_limit_2 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1005" name="stencil_m_stencilConfig_lower_limit_1_reg_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="16" slack="1"/>
+<pin id="163" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_lower_limit_1 "/>
+</bind>
+</comp>
+
+<comp id="166" class="1005" name="stencil_m_stencilConfig_lower_limit_0_reg_166">
+<pin_list>
+<pin id="167" dir="0" index="0" bw="16" slack="1"/>
+<pin id="168" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_lower_limit_0 "/>
+</bind>
+</comp>
+
+<comp id="171" class="1005" name="stencil_m_stencilConfig_grid_size_2_reg_171">
+<pin_list>
+<pin id="172" dir="0" index="0" bw="16" slack="1"/>
+<pin id="173" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_grid_size_2 "/>
+</bind>
+</comp>
+
+<comp id="176" class="1005" name="stencil_m_stencilConfig_grid_size_1_reg_176">
+<pin_list>
+<pin id="177" dir="0" index="0" bw="16" slack="1"/>
+<pin id="178" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_grid_size_1 "/>
+</bind>
+</comp>
+
+<comp id="181" class="1005" name="stencil_m_stencilConfig_grid_size_0_reg_181">
+<pin_list>
+<pin id="182" dir="0" index="0" bw="16" slack="1"/>
+<pin id="183" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="stencil_m_stencilConfig_grid_size_0 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="52"><net_src comp="24" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="18" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="58"><net_src comp="24" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="59"><net_src comp="16" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="64"><net_src comp="24" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="65"><net_src comp="14" pin="0"/><net_sink comp="60" pin=1"/></net>
+
+<net id="70"><net_src comp="24" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="71"><net_src comp="12" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="76"><net_src comp="24" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="77"><net_src comp="10" pin="0"/><net_sink comp="72" pin=1"/></net>
+
+<net id="82"><net_src comp="24" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="83"><net_src comp="8" pin="0"/><net_sink comp="78" pin=1"/></net>
+
+<net id="88"><net_src comp="24" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="89"><net_src comp="6" pin="0"/><net_sink comp="84" pin=1"/></net>
+
+<net id="94"><net_src comp="24" pin="0"/><net_sink comp="90" pin=0"/></net>
+
+<net id="95"><net_src comp="4" pin="0"/><net_sink comp="90" pin=1"/></net>
+
+<net id="100"><net_src comp="24" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="101"><net_src comp="2" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="106"><net_src comp="24" pin="0"/><net_sink comp="102" pin=0"/></net>
+
+<net id="107"><net_src comp="0" pin="0"/><net_sink comp="102" pin=1"/></net>
+
+<net id="123"><net_src comp="26" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="124"><net_src comp="102" pin="2"/><net_sink comp="108" pin=1"/></net>
+
+<net id="125"><net_src comp="96" pin="2"/><net_sink comp="108" pin=2"/></net>
+
+<net id="126"><net_src comp="90" pin="2"/><net_sink comp="108" pin=3"/></net>
+
+<net id="127"><net_src comp="84" pin="2"/><net_sink comp="108" pin=4"/></net>
+
+<net id="128"><net_src comp="78" pin="2"/><net_sink comp="108" pin=5"/></net>
+
+<net id="129"><net_src comp="72" pin="2"/><net_sink comp="108" pin=6"/></net>
+
+<net id="130"><net_src comp="66" pin="2"/><net_sink comp="108" pin=7"/></net>
+
+<net id="131"><net_src comp="60" pin="2"/><net_sink comp="108" pin=8"/></net>
+
+<net id="132"><net_src comp="54" pin="2"/><net_sink comp="108" pin=9"/></net>
+
+<net id="133"><net_src comp="48" pin="2"/><net_sink comp="108" pin=10"/></net>
+
+<net id="134"><net_src comp="20" pin="0"/><net_sink comp="108" pin=11"/></net>
+
+<net id="135"><net_src comp="22" pin="0"/><net_sink comp="108" pin=12"/></net>
+
+<net id="139"><net_src comp="48" pin="2"/><net_sink comp="136" pin=0"/></net>
+
+<net id="140"><net_src comp="136" pin="1"/><net_sink comp="108" pin=10"/></net>
+
+<net id="144"><net_src comp="54" pin="2"/><net_sink comp="141" pin=0"/></net>
+
+<net id="145"><net_src comp="141" pin="1"/><net_sink comp="108" pin=9"/></net>
+
+<net id="149"><net_src comp="60" pin="2"/><net_sink comp="146" pin=0"/></net>
+
+<net id="150"><net_src comp="146" pin="1"/><net_sink comp="108" pin=8"/></net>
+
+<net id="154"><net_src comp="66" pin="2"/><net_sink comp="151" pin=0"/></net>
+
+<net id="155"><net_src comp="151" pin="1"/><net_sink comp="108" pin=7"/></net>
+
+<net id="159"><net_src comp="72" pin="2"/><net_sink comp="156" pin=0"/></net>
+
+<net id="160"><net_src comp="156" pin="1"/><net_sink comp="108" pin=6"/></net>
+
+<net id="164"><net_src comp="78" pin="2"/><net_sink comp="161" pin=0"/></net>
+
+<net id="165"><net_src comp="161" pin="1"/><net_sink comp="108" pin=5"/></net>
+
+<net id="169"><net_src comp="84" pin="2"/><net_sink comp="166" pin=0"/></net>
+
+<net id="170"><net_src comp="166" pin="1"/><net_sink comp="108" pin=4"/></net>
+
+<net id="174"><net_src comp="90" pin="2"/><net_sink comp="171" pin=0"/></net>
+
+<net id="175"><net_src comp="171" pin="1"/><net_sink comp="108" pin=3"/></net>
+
+<net id="179"><net_src comp="96" pin="2"/><net_sink comp="176" pin=0"/></net>
+
+<net id="180"><net_src comp="176" pin="1"/><net_sink comp="108" pin=2"/></net>
+
+<net id="184"><net_src comp="102" pin="2"/><net_sink comp="181" pin=0"/></net>
+
+<net id="185"><net_src comp="181" pin="1"/><net_sink comp="108" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: arg0_arg1_streams_14 | {1 2 }
+ - Input state : 
+	Port: joint_PE_outerloop_0.13 : stencilConfig_grid_size_0 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_grid_size_1 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_grid_size_2 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_lower_limit_0 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_lower_limit_1 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_lower_limit_2 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_upper_limit_0 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_upper_limit_1 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_upper_limit_2 | {1 }
+	Port: joint_PE_outerloop_0.13 : stencilConfig_outer_loop_limit | {1 }
+	Port: joint_PE_outerloop_0.13 : arg0_arg1_streams_13 | {1 2 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-----------------------------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|                   Functional Unit                   |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|-----------------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   call   |                grp_stencilRun_fu_108                |    16   |    78   |  48.45  |  11531  |   5216  |    16   |
+|----------|-----------------------------------------------------|---------|---------|---------|---------|---------|---------|
+|          | stencil_m_stencilConfig_outer_loop_limit_read_fu_48 |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_upper_limit_2_read_fu_54  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_upper_limit_1_read_fu_60  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_upper_limit_0_read_fu_66  |    0    |    0    |    0    |    0    |    0    |    0    |
+|   read   |   stencil_m_stencilConfig_lower_limit_2_read_fu_72  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_lower_limit_1_read_fu_78  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_lower_limit_0_read_fu_84  |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |    stencil_m_stencilConfig_grid_size_2_read_fu_90   |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |    stencil_m_stencilConfig_grid_size_1_read_fu_96   |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   stencil_m_stencilConfig_grid_size_0_read_fu_102   |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|-----------------------------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                                                     |    16   |    78   |  48.45  |  11531  |   5216  |    16   |
+|----------|-----------------------------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------------------------------+--------+
+|                                                |   FF   |
++------------------------------------------------+--------+
+|   stencil_m_stencilConfig_grid_size_0_reg_181  |   16   |
+|   stencil_m_stencilConfig_grid_size_1_reg_176  |   16   |
+|   stencil_m_stencilConfig_grid_size_2_reg_171  |   16   |
+|  stencil_m_stencilConfig_lower_limit_0_reg_166 |   16   |
+|  stencil_m_stencilConfig_lower_limit_1_reg_161 |   16   |
+|  stencil_m_stencilConfig_lower_limit_2_reg_156 |   16   |
+|stencil_m_stencilConfig_outer_loop_limit_reg_136|   16   |
+|  stencil_m_stencilConfig_upper_limit_0_reg_151 |   16   |
+|  stencil_m_stencilConfig_upper_limit_1_reg_146 |   16   |
+|  stencil_m_stencilConfig_upper_limit_2_reg_141 |   16   |
++------------------------------------------------+--------+
+|                      Total                     |   160  |
++------------------------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------------|------|------|------|--------||---------||---------|
+|          Comp         |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------------------|------|------|------|--------||---------||---------|
+| grp_stencilRun_fu_108 |  p1  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p2  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p3  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p4  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p5  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p6  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p7  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p8  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p9  |   2  |  16  |   32   ||    15   |
+| grp_stencilRun_fu_108 |  p10 |   2  |  16  |   32   ||    15   |
+|-----------------------|------|------|------|--------||---------||---------|
+|         Total         |      |      |      |   320  ||   3.94  ||   150   |
+|-----------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |   16   |   78   |   48   |  11531 |  5216  |   16   |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    3   |    -   |   150  |    -   |
+|  Register |    -   |    -   |    -   |   160  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   16   |   78   |   52   |  11691 |  5366  |   16   |
++-----------+--------+--------+--------+--------+--------+--------+

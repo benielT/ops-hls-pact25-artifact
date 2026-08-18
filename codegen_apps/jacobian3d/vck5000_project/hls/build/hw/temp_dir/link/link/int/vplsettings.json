@@ -1,0 +1,19 @@
+{
+    "kernelContainerValues": [
+        "datamover_outerloop_0:xo",
+        "kernel_outerloop_0:xo"
+    ],
+    "compile": "false",
+    "debug": "false",
+    "exportScript": "false",
+    "gccHostCompile": "false",
+    "generateEstimateRpt": "false",
+    "keepSolution": "false",
+    "link": "false",
+    "logDir": "\/home\/x_thileeb\/repos\/ops-hls-pact25-artifact\/codegen_apps\/jacobian3d\/vck5000_project\/hls\/build\/hw\/temp_dir\/link\/logs\/link",
+    "package": "false",
+    "reportDir": "\/home\/x_thileeb\/repos\/ops-hls-pact25-artifact\/codegen_apps\/jacobian3d\/vck5000_project\/hls\/build\/hw\/temp_dir\/link\/reports\/link",
+    "saveTemps": "false",
+    "verbose": "false",
+    "vplNoIpCache": "false"
+}

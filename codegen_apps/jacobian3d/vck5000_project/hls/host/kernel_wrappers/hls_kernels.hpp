@@ -1,4 +1,4 @@
-// Auto-generated at 2025-07-28 23:38:42.641930 by ops-translator
+// Auto-generated at 2026-07-25 12:06:24.302876 by ops-translator
 
 #pragma once
 
@@ -12,7 +12,7 @@
 typedef float stencil_type;
 constexpr unsigned short vector_factor = 8;
 constexpr unsigned short mem_vector_factor = 16;
-constexpr unsigned int iter_par_factor = 22;
+constexpr unsigned int iter_par_factor = 14;
 
 // user kernel files
 #include "kernel_populate_kernel.hpp"

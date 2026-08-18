@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'kernel_jac3D_kernel_stencil_core'
+================================================================
+* Date:           Sun Jul 26 01:24:14 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.045 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        9|        9|  29.997 ns|  29.997 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.22>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%reg_0_6_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_6_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 11 'read' 'reg_0_6_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%reg_0_5_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_5_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 12 'read' 'reg_0_5_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%reg_0_4_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_4_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 13 'read' 'reg_0_4_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%reg_0_3_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_3_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 14 'read' 'reg_0_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%reg_0_2_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_2_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 15 'read' 'reg_0_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%reg_0_1_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_1_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 16 'read' 'reg_0_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%reg_0_0_read_1 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %reg_0_0_read" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30]   --->   Operation 17 'read' 'reg_0_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [3/3] (1.22ns)   --->   "%tmp2 = fmul i32 %reg_0_5_read_1, i32 0.04" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45]   --->   Operation 18 'fmul' 'tmp2' <Predicate = true> <Delay = 1.22> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [3/3] (1.22ns)   --->   "%tmp4 = fmul i32 %reg_0_3_read_1, i32 0.79" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:47]   --->   Operation 19 'fmul' 'tmp4' <Predicate = true> <Delay = 1.22> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [3/3] (1.22ns)   --->   "%tmp6 = fmul i32 %reg_0_1_read_1, i32 0.03" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:49]   --->   Operation 20 'fmul' 'tmp6' <Predicate = true> <Delay = 1.22> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.31>
+ST_2 : Operation 21 [2/3] (1.31ns)   --->   "%tmp2 = fmul i32 %reg_0_5_read_1, i32 0.04" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45]   --->   Operation 21 'fmul' 'tmp2' <Predicate = true> <Delay = 1.31> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [2/3] (1.31ns)   --->   "%tmp4 = fmul i32 %reg_0_3_read_1, i32 0.79" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:47]   --->   Operation 22 'fmul' 'tmp4' <Predicate = true> <Delay = 1.31> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [2/3] (1.31ns)   --->   "%tmp6 = fmul i32 %reg_0_1_read_1, i32 0.03" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:49]   --->   Operation 23 'fmul' 'tmp6' <Predicate = true> <Delay = 1.31> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.04>
+ST_3 : Operation 24 [1/3] (0.28ns)   --->   "%tmp2 = fmul i32 %reg_0_5_read_1, i32 0.04" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45]   --->   Operation 24 'fmul' 'tmp2' <Predicate = true> <Delay = 0.28> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/3] (0.28ns)   --->   "%tmp4 = fmul i32 %reg_0_3_read_1, i32 0.79" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:47]   --->   Operation 25 'fmul' 'tmp4' <Predicate = true> <Delay = 0.28> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/3] (0.28ns)   --->   "%tmp6 = fmul i32 %reg_0_1_read_1, i32 0.03" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:49]   --->   Operation 26 'fmul' 'tmp6' <Predicate = true> <Delay = 0.28> <CoreInst = "FMul_primitivedsp">   --->   Core 14 'FMul_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [3/3] (1.75ns)   --->   "%tmp8 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_6_read_1, i32 0.02, i32 %tmp2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51]   --->   Operation 27 'fmadd' 'tmp8' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 28 [3/3] (1.75ns)   --->   "%tmp9 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_2_read_1, i32 0.05, i32 %tmp4" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:52]   --->   Operation 28 'fmadd' 'tmp9' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 29 [3/3] (1.75ns)   --->   "%tmp10 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_4_read_1, i32 0.06, i32 %tmp6" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:53]   --->   Operation 29 'fmadd' 'tmp10' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 30 [2/3] (1.75ns)   --->   "%tmp8 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_6_read_1, i32 0.02, i32 %tmp2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51]   --->   Operation 30 'fmadd' 'tmp8' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 31 [2/3] (1.75ns)   --->   "%tmp9 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_2_read_1, i32 0.05, i32 %tmp4" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:52]   --->   Operation 31 'fmadd' 'tmp9' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 32 [2/3] (1.75ns)   --->   "%tmp10 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_4_read_1, i32 0.06, i32 %tmp6" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:53]   --->   Operation 32 'fmadd' 'tmp10' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.75>
+ST_5 : Operation 33 [1/3] (1.75ns)   --->   "%tmp8 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_6_read_1, i32 0.02, i32 %tmp2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51]   --->   Operation 33 'fmadd' 'tmp8' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 34 [1/3] (1.75ns)   --->   "%tmp9 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_2_read_1, i32 0.05, i32 %tmp4" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:52]   --->   Operation 34 'fmadd' 'tmp9' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 35 [1/3] (1.75ns)   --->   "%tmp10 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_4_read_1, i32 0.06, i32 %tmp6" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:53]   --->   Operation 35 'fmadd' 'tmp10' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.75>
+ST_6 : Operation 36 [3/3] (1.75ns)   --->   "%tmp11 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_0_read_1, i32 0.01, i32 %tmp8" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54]   --->   Operation 36 'fmadd' 'tmp11' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 37 [2/2] (1.43ns)   --->   "%tmp12 = fadd i32 %tmp9, i32 %tmp10" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:55]   --->   Operation 37 'fadd' 'tmp12' <Predicate = true> <Delay = 1.43> <CoreInst = "FAddSub_primitivedsp">   --->   Core 13 'FAddSub_primitivedsp' <Latency = 1> <II = 1> <Delay = 1.62> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.75>
+ST_7 : Operation 38 [2/3] (1.75ns)   --->   "%tmp11 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_0_read_1, i32 0.01, i32 %tmp8" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54]   --->   Operation 38 'fmadd' 'tmp11' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 39 [1/2] (0.28ns)   --->   "%tmp12 = fadd i32 %tmp9, i32 %tmp10" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:55]   --->   Operation 39 'fadd' 'tmp12' <Predicate = true> <Delay = 0.28> <CoreInst = "FAddSub_primitivedsp">   --->   Core 13 'FAddSub_primitivedsp' <Latency = 1> <II = 1> <Delay = 1.62> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.75>
+ST_8 : Operation 40 [1/3] (1.75ns)   --->   "%tmp11 = fmadd i32 @_ssdm_op_FMADD, i32 %reg_0_0_read_1, i32 0.01, i32 %tmp8" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54]   --->   Operation 40 'fmadd' 'tmp11' <Predicate = true> <Delay = 1.75> <CoreInst = "fma_primitivedsp">   --->   Core 138 'fma_primitivedsp' <Latency = 2> <II = 1> <Delay = 1.75> <FuncUnit> <Opcode : 'fmadd' 'fmsub'> <InPorts = 3> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.43>
+ST_9 : Operation 41 [2/2] (1.43ns)   --->   "%reg_1_0_write_assign = fadd i32 %tmp11, i32 %tmp12" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:56]   --->   Operation 41 'fadd' 'reg_1_0_write_assign' <Predicate = true> <Delay = 1.43> <CoreInst = "FAddSub_primitivedsp">   --->   Core 13 'FAddSub_primitivedsp' <Latency = 1> <II = 1> <Delay = 1.62> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 0.28>
+ST_10 : Operation 42 [1/2] (0.28ns)   --->   "%reg_1_0_write_assign = fadd i32 %tmp11, i32 %tmp12" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:56]   --->   Operation 42 'fadd' 'reg_1_0_write_assign' <Predicate = true> <Delay = 0.28> <CoreInst = "FAddSub_primitivedsp">   --->   Core 13 'FAddSub_primitivedsp' <Latency = 1> <II = 1> <Delay = 1.62> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%ret_ln72 = ret i32 %reg_1_0_write_assign" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:72]   --->   Operation 43 'ret' 'ret_ln72' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.22ns
+The critical path consists of the following:
+	wire read operation ('reg_0_5', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30) on port 'reg_0_5_read' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:30) [9]  (0 ns)
+	'fmul' operation ('tmp2', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45) [15]  (1.22 ns)
+
+ <State 2>: 1.31ns
+The critical path consists of the following:
+	'fmul' operation ('tmp2', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45) [15]  (1.31 ns)
+
+ <State 3>: 2.04ns
+The critical path consists of the following:
+	'fmul' operation ('tmp2', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:45) [15]  (0.286 ns)
+	'fmadd' operation ('tmp8', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51) [18]  (1.76 ns)
+
+ <State 4>: 1.76ns
+The critical path consists of the following:
+	'fmadd' operation ('tmp8', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51) [18]  (1.76 ns)
+
+ <State 5>: 1.76ns
+The critical path consists of the following:
+	'fmadd' operation ('tmp8', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:51) [18]  (1.76 ns)
+
+ <State 6>: 1.76ns
+The critical path consists of the following:
+	'fmadd' operation ('tmp11', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54) [21]  (1.76 ns)
+
+ <State 7>: 1.76ns
+The critical path consists of the following:
+	'fmadd' operation ('tmp11', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54) [21]  (1.76 ns)
+
+ <State 8>: 1.76ns
+The critical path consists of the following:
+	'fmadd' operation ('tmp11', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:54) [21]  (1.76 ns)
+
+ <State 9>: 1.43ns
+The critical path consists of the following:
+	'fadd' operation ('reg_1_0', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:56) [23]  (1.43 ns)
+
+ <State 10>: 0.288ns
+The critical path consists of the following:
+	'fadd' operation ('reg_1_0', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:56) [23]  (0.288 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

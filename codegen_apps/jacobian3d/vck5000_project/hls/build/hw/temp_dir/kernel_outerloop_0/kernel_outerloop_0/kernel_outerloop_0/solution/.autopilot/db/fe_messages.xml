@@ -1,0 +1,609 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-4785" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/L1/include/ops_hls_defs.hpp:105:16" msg_body="attribute 'deprecated' is ignored, place it after &quot;struct&quot; to apply attribute to type declaration">
+        <args ClangWarningOption="ignored-attributes"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4949" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80" msg_body="logical not is only applied to the left hand side of this comparison">
+        <args ClangWarningOption="logical-not-parentheses"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4281" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80" msg_body="add parentheses after the '!' to evaluate the comparison first">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4282" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2197:80" msg_body="add parentheses around left hand side expression to silence this warning">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4949" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80" msg_body="logical not is only applied to the left hand side of this comparison">
+        <args ClangWarningOption="logical-not-parentheses"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4281" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80" msg_body="add parentheses after the '!' to evaluate the comparison first">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4282" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2468:80" msg_body="add parentheses around left hand side expression to silence this warning">
+        <args/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5546" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:234:9" msg_body="missing argument for 'max'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5546" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:372:9" msg_body="missing argument for 'max'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5546" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1478:9" msg_body="missing argument for 'max'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5546" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2092:9" msg_body="missing argument for 'max'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:189:20" msg_body="unused parameter 'size'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:326:20" msg_body="unused parameter 'size'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:122:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:126:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:130:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:160:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_strb_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_user_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_id_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:172:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_dest_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:178:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="get_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_keep" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="set_last" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:213:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:217:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:227:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="qdma_axis&lt;WData, 0, 0, 0&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="operator=" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:281:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:291:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:302:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:312:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:327:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:363:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:370:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:378:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:388:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:399:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:409:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:425:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/L1/include/ops_hls_utils.hpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="register_it" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convMemBeat2axisPkt" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convMemBeat2axisPkt" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:149:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convAxisPkt2memBeat" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:150:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convAxisPkt2memBeat" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:233:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convAxisPkt2memBeatMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:234:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convAxisPkt2memBeatMasked" ARG_PragmaIsValid="0" ARG_PragmaOptions="avg=avg_num_data_per_axis_pkt" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:284:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convStreamPkt2memBeat" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:285:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convStreamPkt2memBeat" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_strm_pkts_per_beat avg=avg_strm_pkts_per_beat max=max_strm_pkts_per_beat" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:371:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convStreamPkt2memBeatMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:372:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convStreamPkt2memBeatMasked" ARG_PragmaIsValid="0" ARG_PragmaOptions="avg=avg_num_data_per_axis_pkt" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:433:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=ii" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:455:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=ii" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:510:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2stream" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:569:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=ii" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:582:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=ii" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:632:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2mem" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:684:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:685:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2stream" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:730:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:731:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2stream" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:813:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2streamStepup" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:814:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2streamStepup" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:897:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2streamStepdown" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:898:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2streamStepdown" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:957:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:997:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1053:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1057:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1058:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1067:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1118:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axisV2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mem_strm depth = max_depth_v16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1119:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axisV2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = red_mem_strm depth = max_depth_v8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1121:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axisV2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1175:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1179:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1198:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1202:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1212:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mem2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1277:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1278:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1287:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1338:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2memV2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = mem_strm depth = max_depth_v16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1339:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2memV2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = red_mem_strm depth = max_depth_v8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1341:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2memV2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1396:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1400:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1401:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1410:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1419:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="avg=avg_num_of_bursts max=max_num_of_bursts" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1423:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1424:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=min_burst_len avg=avg_burst_len max=max_burst_len" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1433:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2mem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=num_strm_pkts_per_beat" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1477:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2memMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=data_per_axis_pkt" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1478:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2memMasked" ARG_PragmaIsValid="0" ARG_PragmaOptions="min=1 avg=8" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1525:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2stream" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1526:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2stream" ARG_PragmaIsValid="1" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1581:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2streamMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=cycleBuf type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1611:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2streamMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1672:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axis2streamMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1741:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axisLoopbackV2" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1812:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axisLoopback" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1847:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axisTerminate" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1906:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:1975:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2axisMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2091:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2memMasked" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=data_per_strm_pkt" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2092:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stream2memMasked" ARG_PragmaIsValid="0" ARG_PragmaOptions="min=1 avg=8" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2316:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="memWriteGrid" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/OPS/ops/hls/include/device/../../L1/include/ops_hls_datamover.hpp:2395:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="memWriteGridSimple" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:143:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stencilConfig.lower_limit dim = 1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = stencilConfig.upper_limit dim = 1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_widenStencilValues dim = 1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:171:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_buf_p0_1 type = ram_s2p impl=URAM latency=2" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:173:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_buf_r0_1_p1 type = ram_s2p latency=2" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:175:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_buf_r1_2_p1 type = ram_s2p latency=2" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:177:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_buf_p1_2 type = ram_s2p impl=URAM latency=2" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_rowArr_1_0 dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:182:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_rowArr_0_1 dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:184:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_rowArr_1_1 dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:186:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_rowArr_2_1 dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:188:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_rowArr_1_2 dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:357:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=vector_factor" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:391:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="stencilRun" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=vector_factor" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="joint_PE_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = node2_1_to_node3_0 depth = 10" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0_dataflow_region_cascaded" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0_dataflow_region_cascaded" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=iter_par_factor" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0_dataflow_region" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0_dataflow_region" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = arg0_arg1_streams depth = 10" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=kernel_outerloop_0" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = slr_region bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:76:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = outer_itr bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:77:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_grid_size_0 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_grid_size_1 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:79:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_grid_size_2 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_dim bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_total_itr bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_lower_limit_0 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_lower_limit_1 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_lower_limit_2 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:85:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_upper_limit_0 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_upper_limit_1 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:87:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_upper_limit_2 bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = stencilConfig_outer_loop_limit bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:92:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = arg0_axis_in register" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = arg1_axis_out register" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:95:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_chain port = return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="kernel_outerloop_0" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port = return bundle = control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-273" msg_severity="WARNING" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:24:0" msg_body="In function 'kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;*)', Pragma conflict happens on 'INLINE' and DATAFLOW pragmas: Inline into dataflow region may break the canonical form">
+        <args Function="kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:47:9" msg_body="Inlining function 'kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;*)' into 'kernel_outerloop_0_dataflow_region(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, unsigned int, hls::stream&lt;hls::axis&lt;ap_uint&lt;256&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;256&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)'">
+        <args Callee="kernel_outerloop_0_dataflow_region_cascaded(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;*)" Caller="kernel_outerloop_0_dataflow_region(unsigned short const&amp;, ops::hls::StencilConfigCore const&amp;, unsigned int, hls::stream&lt;hls::axis&lt;ap_uint&lt;256&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;256&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:89:39" msg_body="Disaggregating variable 'stencilConfig'">
+        <args Name="stencilConfig"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:355:22" msg_body="Loop 'vec2arr' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="vec2arr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:389:22" msg_body="Loop 'process' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="process"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:40:0" msg_body="Unrolling loop 'VITIS_LOOP_29_1' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:29:22) in function 'kernel_outerloop_0_dataflow_region' completely with a factor of 14">
+        <args Factor="14" LoopLoc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:29:22" LoopName="VITIS_LOOP_29_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:85:0" msg_body="Unrolling loop 'vec2arr' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:355:22) in function 'Stencil_jac3D_kernel_stencil::stencilRun' completely with a factor of 8">
+        <args Factor="8" LoopLoc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:355:22" LoopName="vec2arr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:85:0" msg_body="Unrolling loop 'process' (/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:389:22) in function 'Stencil_jac3D_kernel_stencil::stencilRun' completely with a factor of 8">
+        <args Factor="8" LoopLoc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:389:22" LoopName="process"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:472:0" msg_body="Inlining function 'ops::hls::StencilCoreV2&lt;float, (unsigned short)7, (unsigned short)8, (ops::hls::CoefTypes)0, (unsigned short)3, (unsigned short)3&gt;::setConfig(short const&amp;, ops::hls::StencilConfigCore const&amp;)' into 'kernel_jac3D_kernel_stencil_PE(short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)'">
+        <args Callee="ops::hls::StencilCoreV2&lt;float, (unsigned short)7, (unsigned short)8, (ops::hls::CoefTypes)0, (unsigned short)3, (unsigned short)3&gt;::setConfig(short const&amp;, ops::hls::StencilConfigCore const&amp;)" Caller="kernel_jac3D_kernel_stencil_PE(short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:9:0" msg_body="Inlining function 'kernel_jac3D_kernel_stencil_PE(short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)' into 'joint_PE_outerloop_0(unsigned short, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)'">
+        <args Callee="kernel_jac3D_kernel_stencil_PE(short const&amp;, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)" Caller="joint_PE_outerloop_0(unsigned short, ops::hls::StencilConfigCore const&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:167:41" msg_body="Applying array_partition to 'arg0_widenStencilValues': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_widenStencilValues"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:179:15" msg_body="Applying array_partition to 'arg0_rowArr_1_0': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_rowArr_1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:181:15" msg_body="Applying array_partition to 'arg0_rowArr_0_1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_rowArr_0_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:183:15" msg_body="Applying array_partition to 'arg0_rowArr_1_1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_rowArr_1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:185:15" msg_body="Applying array_partition to 'arg0_rowArr_2_1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_rowArr_2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:187:15" msg_body="Applying array_partition to 'arg0_rowArr_1_2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_rowArr_1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Applying array_partition to 'arg0_arg1_streams': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="arg0_arg1_streams"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_0' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_1' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_2' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_3' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_4' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_5' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_6' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_7' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_8' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_9' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_10' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_11' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_12' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_13' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp:42:41" msg_body="Aggregating fifo (hls::stream) variable 'arg0_arg1_streams_14' with compact=bit mode in 256-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="256" HwTyName="fifo (hls::stream)" Name="arg0_arg1_streams_14"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;256&gt;s.i256' into 'void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;256&gt;s.i256" Caller="void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s' into 'void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s" Caller="void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1' into 'void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;1&gt;s.i1" Caller="void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:293:5" msg_body="Inlining function '_llvm.fpga.unpack.none.s_struct.ap_uint&lt;32&gt;s.i32' into 'void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.s_struct.ap_uint&lt;32&gt;s.i32" Caller="void ops::hls::axis2stream&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9" msg_body="Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s' into 'Stencil_jac3D_kernel_stencil::stencilRun(hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s" Caller="Stencil_jac3D_kernel_stencil::stencilRun(hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256&gt;, 0&gt;&amp;) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s' into 'void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i256.s_struct.ap_uint&lt;256&gt;s" Caller="void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s' into 'void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i1.s_struct.ap_uint&lt;1&gt;s" Caller="void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="/tools/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_axi_sdata.h:304:5" msg_body="Inlining function '_llvm.fpga.pack.none.i32.s_struct.ap_uint&lt;32&gt;s' into 'void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i32.s_struct.ap_uint&lt;32&gt;s" Caller="void ops::hls::stream2axis&lt;256u, 256u&gt;(hls::stream&lt;hls::axis&lt;ap_uint&lt;256u&gt;, 0ul, 0ul, 0ul&gt;, 0&gt;&amp;, hls::stream&lt;ap_uint&lt;256u&gt;, 0&gt;&amp;, unsigned int) (.1)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<xd:component xd:vendor="xilinx.com" xd:library="xd" xd:name="dr" xd:version="1.00" xd:type="design" xmlns:xd="http://www.xilinx.com/xd">
+  <xd:repository>
+    <xd:file xd:name="xd_ip_db.xml"/>
+  </xd:repository>
+  <xd:instance xd:name="gen4x8_xdma_2" xd:componentRef="gen4x8_xdma_2">
+    <xd:portConfig xd:intfName="axi_noc_kernel0_S00_AXI" xd:intfType="intf_pins">
+      <xd:parameter xd:name="CONNECTIONS" xd:value="[dict create M00_INI [concat read_bw \{918\} write_bw \{861\} read_avg_burst \{4\} write_avg_burst \{4\}]]"/>
+    </xd:portConfig>
+    <xd:portConfig xd:intfName="axi_noc_kernel0_S01_AXI" xd:intfType="intf_pins">
+      <xd:parameter xd:name="CONNECTIONS" xd:value="[dict create M01_INI [concat read_bw \{918\} write_bw \{861\} read_avg_burst \{4\} write_avg_burst \{4\}]]"/>
+    </xd:portConfig>
+  </xd:instance>
+  <xd:instance xd:name="datamover_outerloop_0_1" xd:componentRef="datamover_outerloop_0">
+    <xd:portConfig xd:intfName="m_axi_gmem0" xd:intfType="intf_pins"/>
+    <xd:portConfig xd:intfName="m_axi_gmem1" xd:intfType="intf_pins"/>
+  </xd:instance>
+  <xd:instance xd:name="kernel_outerloop_0_1" xd:componentRef="kernel_outerloop_0"/>
+  <xd:instance xd:name="buffer_datamover_outerloop_0_1_arg0_axis_out" xd:componentRef="axis_data_fifo">
+    <xd:parameter xd:name="FIFO_DEPTH" xd:value="128"/>
+  </xd:instance>
+  <xd:instance xd:name="buffer_kernel_outerloop_0_1_arg1_axis_out" xd:componentRef="axis_data_fifo">
+    <xd:parameter xd:name="FIFO_DEPTH" xd:value="128"/>
+  </xd:instance>
+  <xd:instance xd:name="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat" xd:componentRef="xlconcat">
+    <xd:parameter xd:name="NUM_PORTS" xd:value="32"/>
+  </xd:instance>
+  <xd:instance xd:name="irq_const_tieoff" xd:componentRef="xlconstant">
+    <xd:parameter xd:name="CONST_WIDTH" xd:value="1"/>
+    <xd:parameter xd:name="CONST_VAL" xd:value="0"/>
+  </xd:instance>
+  <xd:connection>
+    <xd:port xd:name="_bd_top_blp_s_aclk_kernel_00" xd:instanceRef="gen4x8_xdma_2"/>
+    <xd:port xd:name="s_axis_aclk" xd:instanceRef="buffer_datamover_outerloop_0_1_arg0_axis_out"/>
+    <xd:port xd:name="s_axis_aclk" xd:instanceRef="buffer_kernel_outerloop_0_1_arg1_axis_out"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="kernel_outerloop_0_1"/>
+    <xd:port xd:name="axi_ic_user_aclk1" xd:instanceRef="gen4x8_xdma_2"/>
+    <xd:port xd:name="axi_noc_kernel0_aclk0" xd:instanceRef="gen4x8_xdma_2"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="reset_controllers/reset_sync_kernel0_peripheral_aresetn" xd:instanceRef="gen4x8_xdma_2"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="kernel_outerloop_0_1"/>
+    <xd:port xd:name="s_axis_aresetn" xd:instanceRef="buffer_datamover_outerloop_0_1_arg0_axis_out"/>
+    <xd:port xd:name="s_axis_aresetn" xd:instanceRef="buffer_kernel_outerloop_0_1_arg1_axis_out"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="axi_ic_user_M01_AXI" xd:instanceRef="gen4x8_xdma_2"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="datamover_outerloop_0_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem0" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:busInterface xd:name="axi_noc_kernel0_S00_AXI" xd:instanceRef="gen4x8_xdma_2"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem1" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:busInterface xd:name="axi_noc_kernel0_S01_AXI" xd:instanceRef="gen4x8_xdma_2"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="axi_ic_user_M02_AXI" xd:instanceRef="gen4x8_xdma_2"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="kernel_outerloop_0_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="arg0_axis_out" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:busInterface xd:name="S_AXIS" xd:instanceRef="buffer_datamover_outerloop_0_1_arg0_axis_out"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="M_AXIS" xd:instanceRef="buffer_datamover_outerloop_0_1_arg0_axis_out"/>
+    <xd:busInterface xd:name="arg0_axis_in" xd:instanceRef="kernel_outerloop_0_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="arg1_axis_out" xd:instanceRef="kernel_outerloop_0_1"/>
+    <xd:busInterface xd:name="S_AXIS" xd:instanceRef="buffer_kernel_outerloop_0_1_arg1_axis_out"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:busInterface xd:name="M_AXIS" xd:instanceRef="buffer_kernel_outerloop_0_1_arg1_axis_out"/>
+    <xd:busInterface xd:name="arg1_axis_in" xd:instanceRef="datamover_outerloop_0_1"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="dout" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="kernel_interrupt/xlconcat_0_In0_1" xd:instanceRef="gen4x8_xdma_2"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="interrupt" xd:instanceRef="datamover_outerloop_0_1"/>
+    <xd:port xd:name="In1" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="interrupt" xd:instanceRef="kernel_outerloop_0_1"/>
+    <xd:port xd:name="In0" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+  </xd:connection>
+  <xd:connection>
+    <xd:port xd:name="dout" xd:instanceRef="irq_const_tieoff"/>
+    <xd:port xd:name="In2" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In3" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In4" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In5" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In6" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In7" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In8" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In9" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In10" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In11" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In12" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In13" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In14" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In15" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In16" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In17" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In18" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In19" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In20" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In21" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In22" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In23" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In24" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In25" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In26" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In27" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In28" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In29" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In30" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+    <xd:port xd:name="In31" xd:instanceRef="kernel_interrupt_xlconcat_0_In0_1_interrupt_concat"/>
+  </xd:connection>
+</xd:component>

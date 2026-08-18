@@ -1,0 +1,458 @@
+
+*** Running vivado
+    with args -log ulp_inst_0_axi_gpio_null_user_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ulp_inst_0_axi_gpio_null_user_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source ulp_inst_0_axi_gpio_null_user_0.tcl -notrace
+INFO: Dispatch client connection id - 42837
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2901.199 ; gain = 0.027 ; free physical = 146553 ; free virtual = 481024
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_kernel_outerloop_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/int/xo/ip_repo/xilinx_com_hls_datamover_outerloop_0_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tools/Xilinx/Vitis/2022.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_fifo_register:3.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/axi_fifo_register_v3_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/axi_fifo_register_v3_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:Event_Pulse:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/event_pulse_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/event_pulse_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_ic2sgdma:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/axis_ic2sgdma_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/axis_ic2sgdma_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:maxis_tieoff_v1_0:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/maxis_tieoff_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/maxis_tieoff_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:xrt_queue:1.1'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/xrt_queue_v1_1' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/xrt_queue_v1_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:sds_lib:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/sds_lib' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/sds_lib
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:stream_gate:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/stream_gate_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/stream_gate_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:aximm_tieoff_v1_0:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/aximm_tieoff_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/aximm_tieoff_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:sds:sds_mem_sink:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/sds_mem_sink' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/sds_mem_sink
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:ovld_reg:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/ovld_reg_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/ovld_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:saxis_tieoff_v1_0:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/saxis_tieoff_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/saxis_tieoff_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:sgdma2axis_ic:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/sgdma2axis_ic_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/sgdma2axis_ic_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:sds:sds_mem_source:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/sds_mem_source' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/sds_mem_source
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:xrt_queue:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/xrt_queue_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/xrt_queue_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:adapter_v3_0:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/adapter_v3_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/adapter_v3_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:Data_Mover_XIP:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/data_mover' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/data_mover
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:aie_trace_s2mm:1.0'. The one found in IP location '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/.local/hw_platform/iprepo/xilinx/aie_trace_s2mm_v1_0' will take precedence over the same IP in location /tools/Xilinx/Vitis/2022.1/data/ip/xilinx/aie_trace_s2mm_v1_0
+Command: synth_design -top ulp_inst_0_axi_gpio_null_user_0 -part xcvc1902-vsvd1760-2MP-e-S -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvc1902'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvc1902'
+INFO: [Device 21-403] Loading part xcvc1902-vsvd1760-2MP-e-S
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1959306
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/tools/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3209.051 ; gain = 307.754 ; free physical = 129766 ; free virtual = 464247
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ulp_inst_0_axi_gpio_null_user_0' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/synth/ulp_inst_0_axi_gpio_null_user_0.vhd:86]
+	Parameter C_FAMILY bound to: versal - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 1 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/synth/ulp_inst_0_axi_gpio_null_user_0.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-226] default block is never used [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-256] done synthesizing module 'ulp_inst_0_axi_gpio_null_user_0' (0#1) [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/synth/ulp_inst_0_axi_gpio_null_user_0.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT0_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:384]
+WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_in in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[1] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[2] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[3] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[4] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[7] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ABus_Reg[8] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BE_Reg[0] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BE_Reg[1] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BE_Reg[2] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BE_Reg[3] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[0] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[1] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[2] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[3] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[4] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[5] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[6] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[7] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[8] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[9] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[10] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[11] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[12] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[13] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[14] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[15] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[16] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[17] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[18] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[19] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[20] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[21] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[22] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[23] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[24] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[25] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[26] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[27] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[28] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[29] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[30] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO2_IO_I[31] in module GPIO_Core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[0] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[1] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[2] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[3] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[4] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[7] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Address_In_Erly[8] in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module slave_attachment is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3279.004 ; gain = 377.707 ; free physical = 133734 ; free virtual = 468217
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3296.816 ; gain = 395.520 ; free physical = 133580 ; free virtual = 468065
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 3296.816 ; gain = 395.520 ; free physical = 133580 ; free virtual = 468065
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3302.754 ; gain = 0.000 ; free physical = 134278 ; free virtual = 468777
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Constraints 18-6359] No Clock Expansion Window constraints config file entry for device xcvc1902.  GCLK Deskew mode will be Off and cannot be enabled via GCLK_DESKEW override.
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc] for cell 'U0'
+CRITICAL WARNING: [Power 33-705] The voltage setting 3.300 on supply VCCO_503 is different from the voltage setting of 1.800 of the parent 1V8_VCC. [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc:59]
+CRITICAL WARNING: [Power 33-704] The voltage setting 1.800 of the 1V8_VCC falls outside the allowed range <3.135-3.465> of VCCO_503 conatined by the rail. [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc:59]
+CRITICAL WARNING: [Power 33-705] The voltage setting 3.300 on supply VCCO_500 is different from the voltage setting of 1.800 of the parent 1V8_VCC. [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc:59]
+CRITICAL WARNING: [Power 33-704] The voltage setting 1.800 of the 1V8_VCC falls outside the allowed range <3.135-3.465> of VCCO_500 conatined by the rail. [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc:59]
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3443.496 ; gain = 12.906 ; free physical = 135158 ; free virtual = 469731
+Finished Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0_board.xdc] for cell 'U0'
+Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp_inst_0/ip/ulp_inst_0_axi_gpio_null_user_0/ulp_inst_0_axi_gpio_null_user_0.xdc] for cell 'U0'
+Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/ulp_inst_0_axi_gpio_null_user_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/ulp_inst_0_axi_gpio_null_user_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3443.496 ; gain = 0.000 ; free physical = 135158 ; free virtual = 469731
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  FDR => FDRE: 6 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3443.496 ; gain = 0.000 ; free physical = 135157 ; free virtual = 469731
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3443.496 ; gain = 542.199 ; free physical = 135868 ; free virtual = 470443
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcvc1902-vsvd1760-2MP-e-S
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3443.496 ; gain = 542.199 ; free physical = 135857 ; free virtual = 470433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/ulp_inst_0_axi_gpio_null_user_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3443.496 ; gain = 542.199 ; free physical = 135834 ; free virtual = 470410
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 3443.496 ; gain = 542.199 ; free physical = 136105 ; free virtual = 470694
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 12    
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3936 (col length:164)
+BRAMs: 1934 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[31] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[30] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[29] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[28] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[27] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[26] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[25] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[24] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[23] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[22] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[21] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[20] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[19] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[18] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[17] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[16] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[15] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[14] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[13] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[12] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[11] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[10] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[9] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[8] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[7] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[6] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[5] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[4] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[3] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[2] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[1] in module axi_gpio is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gpio2_io_i[0] in module axi_gpio is either unconnected or has no load
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
+INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3465.527 ; gain = 564.230 ; free physical = 135572 ; free virtual = 470195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:04 . Memory (MB): peak = 4137.707 ; gain = 1236.410 ; free physical = 131481 ; free virtual = 466359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:04 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131763 ; free virtual = 466641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `axi_gpio`
+   Worst Slack before retiming is 9300 and worst slack after retiming is 9300
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `axi_gpio' done
+
+
+INFO: [Synth 8-5816] Retiming module `ulp_inst_0_axi_gpio_null_user_0`
+   Worst Slack before retiming is 9300 and worst slack after retiming is 9300
+   Numbers of local forward move = 0, and local backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `ulp_inst_0_axi_gpio_null_user_0' done
+
+
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131764 ; free virtual = 466643
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131244 ; free virtual = 466122
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131242 ; free virtual = 466120
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131232 ; free virtual = 466110
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131234 ; free virtual = 466112
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131236 ; free virtual = 466114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131232 ; free virtual = 466110
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    11|
+|3     |LUT3 |     8|
+|4     |LUT4 |    10|
+|5     |LUT5 |     7|
+|6     |LUT6 |    10|
+|7     |FDR  |     4|
+|8     |FDRE |    37|
+|9     |FDSE |     2|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.754 ; gain = 1265.457 ; free physical = 131223 ; free virtual = 466101
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 4166.754 ; gain = 1118.777 ; free physical = 131118 ; free virtual = 465996
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:09 . Memory (MB): peak = 4166.762 ; gain = 1265.457 ; free physical = 131116 ; free virtual = 465995
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4166.762 ; gain = 0.000 ; free physical = 131113 ; free virtual = 465991
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Constraints 18-6359] No Clock Expansion Window constraints config file entry for device xcvc1902.  GCLK Deskew mode will be Off and cannot be enabled via GCLK_DESKEW override.
+INFO: [Constraints 18-5720] The default GCLK Deskew mode is Off.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4200.441 ; gain = 0.000 ; free physical = 131134 ; free virtual = 466012
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  FDR => FDRE: 4 instances
+
+Synth Design complete, checksum: d827d669
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 114 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:23 . Memory (MB): peak = 4200.441 ; gain = 1299.242 ; free physical = 130964 ; free virtual = 465842
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Common 17-1381] The checkpoint '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/ulp_inst_0_axi_gpio_null_user_0_synth_1/ulp_inst_0_axi_gpio_null_user_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/link/link/vivado/vpl/prj/prj.runs/ulp_inst_0_axi_gpio_null_user_0_synth_1/ulp_inst_0_axi_gpio_null_user_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ulp_inst_0_axi_gpio_null_user_0_utilization_synth.rpt -pb ulp_inst_0_axi_gpio_null_user_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 26 01:33:03 2026...

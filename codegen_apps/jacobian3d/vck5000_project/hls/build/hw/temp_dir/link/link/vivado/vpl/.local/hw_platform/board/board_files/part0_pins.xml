@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<part_info part_name="xcvc1902-vsvd1760-2MP-e-S">
+
+   <pins>
+      <pin index="0"   name="c0_ddr4_act_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AJ27"/>
+      <pin index="1"   name="c0_ddr4_adr0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AH26"/>
+      <pin index="2"   name="c0_ddr4_adr1"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AN29"/>
+      <pin index="3"   name="c0_ddr4_adr2"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AM28"/>
+      <pin index="4"   name="c0_ddr4_adr3"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK26"/>
+      <pin index="5"   name="c0_ddr4_adr4"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AN28"/>
+      <pin index="6"   name="c0_ddr4_adr5"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AR27"/>
+      <pin index="7"   name="c0_ddr4_adr6"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AR28"/>
+      <pin index="8"   name="c0_ddr4_adr7"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW28"/>
+      <pin index="9"   name="c0_ddr4_adr8"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AT30"/>
+      <pin index="10"  name="c0_ddr4_adr9"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AJ28"/>
+      <pin index="11"  name="c0_ddr4_adr10"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK27"/>
+      <pin index="12"  name="c0_ddr4_adr11"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AR29"/>
+      <pin index="13"  name="c0_ddr4_adr12"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BB28"/>
+      <pin index="14"  name="c0_ddr4_adr13"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AT29"/>
+      <pin index="15"  name="c0_ddr4_adr14"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AN25"/>
+      <pin index="16"  name="c0_ddr4_adr15"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AP25"/>
+      <pin index="17"  name="c0_ddr4_adr16"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK29"/>
+      <pin index="18"  name="c0_ddr4_ba0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AL25"/>
+      <pin index="19"  name="c0_ddr4_ba1"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AP27"/>
+      <pin index="20"  name="c0_ddr4_bg0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AL26"/>
+      <pin index="21"  name="c0_ddr4_ck_t0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AM27"/>
+      <pin index="22"  name="c0_ddr4_ck_c0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AN27"/>
+      <pin index="23"  name="c0_ddr4_cke0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AL29"/>
+      <pin index="24"  name="c0_ddr4_cs0_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AP26"/>
+      <pin index="25"  name="c0_ddr4_dm_dbi_n0"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV28"/>
+      <pin index="26"  name="c0_ddr4_dm_dbi_n1"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA29"/>
+      <pin index="27"  name="c0_ddr4_dm_dbi_n2"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK24"/>
+      <pin index="28"  name="c0_ddr4_dm_dbi_n3"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA23"/>
+      <pin index="29"  name="c0_ddr4_dm_dbi_n4"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY21"/>
+      <pin index="30"  name="c0_ddr4_dm_dbi_n5"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM22"/>
+      <pin index="31"  name="c0_ddr4_dm_dbi_n6"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY16"/>
+      <pin index="32"  name="c0_ddr4_dm_dbi_n7"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW17"/>
+      <pin index="33"  name="c0_ddr4_dm_dbi_n8"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP18"/>
+      <pin index="34"  name="c0_ddr4_dq0"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW27"/>
+      <pin index="35"  name="c0_ddr4_dq1"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV30"/>
+      <pin index="36"  name="c0_ddr4_dq2"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV27"/>
+      <pin index="37"  name="c0_ddr4_dq3"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU29"/>
+      <pin index="38"  name="c0_ddr4_dq4"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU25"/>
+      <pin index="39"  name="c0_ddr4_dq5"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW29"/>
+      <pin index="40"  name="c0_ddr4_dq6"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV26"/>
+      <pin index="41"  name="c0_ddr4_dq7"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW30"/>
+      <pin index="42"  name="c0_ddr4_dq8"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB26"/>
+      <pin index="43"  name="c0_ddr4_dq9"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY29"/>
+      <pin index="44"  name="c0_ddr4_dq10"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA27"/>
+      <pin index="45"  name="c0_ddr4_dq11"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY30"/>
+      <pin index="46"  name="c0_ddr4_dq12"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY26"/>
+      <pin index="47"  name="c0_ddr4_dq13"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB30"/>
+      <pin index="48"  name="c0_ddr4_dq14"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA26"/>
+      <pin index="49"  name="c0_ddr4_dq15"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB29"/>
+      <pin index="50"  name="c0_ddr4_dq16"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ22"/>
+      <pin index="51"  name="c0_ddr4_dq17"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP23"/>
+      <pin index="52"  name="c0_ddr4_dq18"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ24"/>
+      <pin index="53"  name="c0_ddr4_dq19"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR23"/>
+      <pin index="54"  name="c0_ddr4_dq20"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH22"/>
+      <pin index="55"  name="c0_ddr4_dq21"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN23"/>
+      <pin index="56"  name="c0_ddr4_dq22"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR24"/>
+      <pin index="57"  name="c0_ddr4_dq23"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK23"/>
+      <pin index="58"  name="c0_ddr4_dq24"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB25"/>
+      <pin index="59"  name="c0_ddr4_dq25"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA24"/>
+      <pin index="60"  name="c0_ddr4_dq26"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB24"/>
+      <pin index="61"  name="c0_ddr4_dq27"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY24"/>
+      <pin index="62"  name="c0_ddr4_dq28"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV25"/>
+      <pin index="63"  name="c0_ddr4_dq29"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW23"/>
+      <pin index="64"  name="c0_ddr4_dq30"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU24"/>
+      <pin index="65"  name="c0_ddr4_dq31"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW24"/>
+      <pin index="66"  name="c0_ddr4_dq32"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV22"/>
+      <pin index="67"  name="c0_ddr4_dq33"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA22"/>
+      <pin index="68"  name="c0_ddr4_dq34"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB21"/>
+      <pin index="69"  name="c0_ddr4_dq35"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV20"/>
+      <pin index="70"  name="c0_ddr4_dq36"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW22"/>
+      <pin index="71"  name="c0_ddr4_dq37"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV21"/>
+      <pin index="72"  name="c0_ddr4_dq38"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB20"/>
+      <pin index="73"  name="c0_ddr4_dq39"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA21"/>
+      <pin index="74"  name="c0_ddr4_dq40"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK20"/>
+      <pin index="75"  name="c0_ddr4_dq41"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN20"/>
+      <pin index="76"  name="c0_ddr4_dq42"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL20"/>
+      <pin index="77"  name="c0_ddr4_dq43"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP21"/>
+      <pin index="78"  name="c0_ddr4_dq44"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ21"/>
+      <pin index="79"  name="c0_ddr4_dq45"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL22"/>
+      <pin index="80"  name="c0_ddr4_dq46"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH20"/>
+      <pin index="81"  name="c0_ddr4_dq47"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK21"/>
+      <pin index="82"  name="c0_ddr4_dq48"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB16"/>
+      <pin index="83"  name="c0_ddr4_dq49"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY19"/>
+      <pin index="84"  name="c0_ddr4_dq50"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB15"/>
+      <pin index="85"  name="c0_ddr4_dq51"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB19"/>
+      <pin index="86"  name="c0_ddr4_dq52"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA16"/>
+      <pin index="87"  name="c0_ddr4_dq53"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA19"/>
+      <pin index="88"  name="c0_ddr4_dq54"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY15"/>
+      <pin index="89"  name="c0_ddr4_dq55"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA18"/>
+      <pin index="90"  name="c0_ddr4_dq56"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW15"/>
+      <pin index="91"  name="c0_ddr4_dq57"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW19"/>
+      <pin index="92"  name="c0_ddr4_dq58"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV15"/>
+      <pin index="93"  name="c0_ddr4_dq59"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU19"/>
+      <pin index="94"  name="c0_ddr4_dq60"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU15"/>
+      <pin index="95"  name="c0_ddr4_dq61"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV18"/>
+      <pin index="96"  name="c0_ddr4_dq62"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU16"/>
+      <pin index="97"  name="c0_ddr4_dq63"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW18"/>
+      <pin index="98"  name="c0_ddr4_dq64"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN16"/>
+      <pin index="99"  name="c0_ddr4_dq65"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM18"/>
+      <pin index="100" name="c0_ddr4_dq66"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP15"/>
+      <pin index="101" name="c0_ddr4_dq67"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM19"/>
+      <pin index="102" name="c0_ddr4_dq68"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN15"/>
+      <pin index="103" name="c0_ddr4_dq69"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN19"/>
+      <pin index="104" name="c0_ddr4_dq70"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM15"/>
+      <pin index="105" name="c0_ddr4_dq71"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL19"/>
+      <pin index="106" name="c0_ddr4_dqs_t0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU27"/>
+      <pin index="107" name="c0_ddr4_dqs_t1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY27"/>
+      <pin index="108" name="c0_ddr4_dqs_t2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN24"/>
+      <pin index="109" name="c0_ddr4_dqs_t3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW25"/>
+      <pin index="110" name="c0_ddr4_dqs_t4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY20"/>
+      <pin index="111" name="c0_ddr4_dqs_t5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN21"/>
+      <pin index="112" name="c0_ddr4_dqs_t6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB18"/>
+      <pin index="113" name="c0_ddr4_dqs_t7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV16"/>
+      <pin index="114" name="c0_ddr4_dqs_t8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM16"/>
+      <pin index="115" name="c0_ddr4_dqs_c0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU28"/>
+      <pin index="116" name="c0_ddr4_dqs_c1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA28"/>
+      <pin index="117" name="c0_ddr4_dqs_c2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM24"/>
+      <pin index="118" name="c0_ddr4_dqs_c3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY25"/>
+      <pin index="119" name="c0_ddr4_dqs_c4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW20"/>
+      <pin index="120" name="c0_ddr4_dqs_c5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP22"/>
+      <pin index="121" name="c0_ddr4_dqs_c6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA17"/>
+      <pin index="122" name="c0_ddr4_dqs_c7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU17"/>
+      <pin index="123" name="c0_ddr4_dqs_c8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN17"/>
+      <pin index="124" name="c0_ddr4_odt0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AL28"/>
+      <pin index="125" name="c0_ddr4_reset_n"     iostandard="LVCMOS12"                                                                        drive="8"             loc="AT22"/>
+      <pin index="126" name="ddr4_c0_sysclk_p"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AT21"/>
+      <pin index="127" name="ddr4_c0_sysclk_n"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AU20"/>
+
+      <pin index="128" name="c1_ddr4_act_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY12"/>
+      <pin index="129" name="c1_ddr4_adr0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA12"/>
+      <pin index="130" name="c1_ddr4_adr1"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA9"/>
+      <pin index="131" name="c1_ddr4_adr2"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BB9"/>
+      <pin index="132" name="c1_ddr4_adr3"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW13"/>
+      <pin index="133" name="c1_ddr4_adr4"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA11"/>
+      <pin index="134" name="c1_ddr4_adr5"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AV8"/>
+      <pin index="135" name="c1_ddr4_adr6"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW8"/>
+      <pin index="136" name="c1_ddr4_adr7"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA4"/>
+      <pin index="137" name="c1_ddr4_adr8"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY7"/>
+      <pin index="138" name="c1_ddr4_adr9"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BB14"/>
+      <pin index="139" name="c1_ddr4_adr10"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY14"/>
+      <pin index="140" name="c1_ddr4_adr11"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA7"/>
+      <pin index="141" name="c1_ddr4_adr12"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW3"/>
+      <pin index="142" name="c1_ddr4_adr13"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW7"/>
+      <pin index="143" name="c1_ddr4_adr14"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AV10"/>
+      <pin index="144" name="c1_ddr4_adr15"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW9"/>
+      <pin index="145" name="c1_ddr4_adr16"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BB13"/>
+      <pin index="146" name="c1_ddr4_ba0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW12"/>
+      <pin index="147" name="c1_ddr4_ba1"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY11"/>
+      <pin index="148" name="c1_ddr4_bg0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW14"/>
+      <pin index="149" name="c1_ddr4_ck_t0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY10"/>
+      <pin index="150" name="c1_ddr4_ck_c0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AY9"/>
+      <pin index="151" name="c1_ddr4_cke0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA14"/>
+      <pin index="152" name="c1_ddr4_cs0_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AW10"/>
+      <pin index="153" name="c1_ddr4_dm_dbi_n0"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY5"/>
+      <pin index="154" name="c1_ddr4_dm_dbi_n1"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY2"/>
+      <pin index="155" name="c1_ddr4_dm_dbi_n2"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU11"/>
+      <pin index="156" name="c1_ddr4_dm_dbi_n3"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT3"/>
+      <pin index="157" name="c1_ddr4_dm_dbi_n4"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN3"/>
+      <pin index="158" name="c1_ddr4_dm_dbi_n5"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR12"/>
+      <pin index="159" name="c1_ddr4_dm_dbi_n6"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG1"/>
+      <pin index="160" name="c1_ddr4_dm_dbi_n7"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ5"/>
+      <pin index="161" name="c1_ddr4_dm_dbi_n8"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ9"/>
+      <pin index="162" name="c1_ddr4_dq0"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW5"/>
+      <pin index="163" name="c1_ddr4_dq1"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY6"/>
+      <pin index="164" name="c1_ddr4_dq2"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV6"/>
+      <pin index="165" name="c1_ddr4_dq3"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA6"/>
+      <pin index="166" name="c1_ddr4_dq4"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV5"/>
+      <pin index="167" name="c1_ddr4_dq5"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB4"/>
+      <pin index="168" name="c1_ddr4_dq6"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU4"/>
+      <pin index="169" name="c1_ddr4_dq7"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB5"/>
+      <pin index="170" name="c1_ddr4_dq8"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU1"/>
+      <pin index="171" name="c1_ddr4_dq9"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA3"/>
+      <pin index="172" name="c1_ddr4_dq10"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV2"/>
+      <pin index="173" name="c1_ddr4_dq11"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB3"/>
+      <pin index="174" name="c1_ddr4_dq12"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV3"/>
+      <pin index="175" name="c1_ddr4_dq13"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA2"/>
+      <pin index="176" name="c1_ddr4_dq14"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU3"/>
+      <pin index="177" name="c1_ddr4_dq15"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY1"/>
+      <pin index="178" name="c1_ddr4_dq16"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT13"/>
+      <pin index="179" name="c1_ddr4_dq17"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU8"/>
+      <pin index="180" name="c1_ddr4_dq18"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU13"/>
+      <pin index="181" name="c1_ddr4_dq19"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR9"/>
+      <pin index="182" name="c1_ddr4_dq20"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT14"/>
+      <pin index="183" name="c1_ddr4_dq21"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU9"/>
+      <pin index="184" name="c1_ddr4_dq22"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT9"/>
+      <pin index="185" name="c1_ddr4_dq23"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU12"/>
+      <pin index="186" name="c1_ddr4_dq24"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT2"/>
+      <pin index="187" name="c1_ddr4_dq25"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR1"/>
+      <pin index="188" name="c1_ddr4_dq26"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT1"/>
+      <pin index="189" name="c1_ddr4_dq27"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR2"/>
+      <pin index="190" name="c1_ddr4_dq28"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR6"/>
+      <pin index="191" name="c1_ddr4_dq29"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU5"/>
+      <pin index="192" name="c1_ddr4_dq30"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT6"/>
+      <pin index="193" name="c1_ddr4_dq31"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU6"/>
+      <pin index="194" name="c1_ddr4_dq32"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP5"/>
+      <pin index="195" name="c1_ddr4_dq33"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP2"/>
+      <pin index="196" name="c1_ddr4_dq34"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN1"/>
+      <pin index="197" name="c1_ddr4_dq35"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM5"/>
+      <pin index="198" name="c1_ddr4_dq36"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP4"/>
+      <pin index="199" name="c1_ddr4_dq37"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN5"/>
+      <pin index="200" name="c1_ddr4_dq38"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM1"/>
+      <pin index="201" name="c1_ddr4_dq39"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN2"/>
+      <pin index="202" name="c1_ddr4_dq40"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM10"/>
+      <pin index="203" name="c1_ddr4_dq41"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN12"/>
+      <pin index="204" name="c1_ddr4_dq42"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN9"/>
+      <pin index="205" name="c1_ddr4_dq43"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN11"/>
+      <pin index="206" name="c1_ddr4_dq44"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN13"/>
+      <pin index="207" name="c1_ddr4_dq45"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP13"/>
+      <pin index="208" name="c1_ddr4_dq46"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP14"/>
+      <pin index="209" name="c1_ddr4_dq47"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR13"/>
+      <pin index="210" name="c1_ddr4_dq48"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG3"/>
+      <pin index="211" name="c1_ddr4_dq49"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL2"/>
+      <pin index="212" name="c1_ddr4_dq50"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF3"/>
+      <pin index="213" name="c1_ddr4_dq51"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK1"/>
+      <pin index="214" name="c1_ddr4_dq52"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF1"/>
+      <pin index="215" name="c1_ddr4_dq53"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL1"/>
+      <pin index="216" name="c1_ddr4_dq54"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF2"/>
+      <pin index="217" name="c1_ddr4_dq55"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK2"/>
+      <pin index="218" name="c1_ddr4_dq56"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH5"/>
+      <pin index="219" name="c1_ddr4_dq57"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL4"/>
+      <pin index="220" name="c1_ddr4_dq58"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG6"/>
+      <pin index="221" name="c1_ddr4_dq59"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK5"/>
+      <pin index="222" name="c1_ddr4_dq60"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG4"/>
+      <pin index="223" name="c1_ddr4_dq61"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK4"/>
+      <pin index="224" name="c1_ddr4_dq62"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG5"/>
+      <pin index="225" name="c1_ddr4_dq63"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL3"/>
+      <pin index="226" name="c1_ddr4_dq64"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL10"/>
+      <pin index="227" name="c1_ddr4_dq65"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG11"/>
+      <pin index="228" name="c1_ddr4_dq66"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK11"/>
+      <pin index="229" name="c1_ddr4_dq67"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK9"/>
+      <pin index="230" name="c1_ddr4_dq68"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH10"/>
+      <pin index="231" name="c1_ddr4_dq69"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH8"/>
+      <pin index="232" name="c1_ddr4_dq70"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL9"/>
+      <pin index="233" name="c1_ddr4_dq71"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG9"/>
+      <pin index="234" name="c1_ddr4_dqs_t0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW4"/>
+      <pin index="235" name="c1_ddr4_dqs_t1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV1"/>
+      <pin index="236" name="c1_ddr4_dqs_t2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR11"/>
+      <pin index="237" name="c1_ddr4_dqs_t3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR5"/>
+      <pin index="238" name="c1_ddr4_dqs_t4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM4"/>
+      <pin index="239" name="c1_ddr4_dqs_t5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP9"/>
+      <pin index="240" name="c1_ddr4_dqs_t6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ2"/>
+      <pin index="241" name="c1_ddr4_dqs_t7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH3"/>
+      <pin index="242" name="c1_ddr4_dqs_t8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH11"/>
+      <pin index="243" name="c1_ddr4_dqs_c0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY4"/>
+      <pin index="244" name="c1_ddr4_dqs_c1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW2"/>
+      <pin index="245" name="c1_ddr4_dqs_c2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT10"/>
+      <pin index="246" name="c1_ddr4_dqs_c3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT4"/>
+      <pin index="247" name="c1_ddr4_dqs_c4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM3"/>
+      <pin index="248" name="c1_ddr4_dqs_c5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP10"/>
+      <pin index="249" name="c1_ddr4_dqs_c6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH1"/>
+      <pin index="250" name="c1_ddr4_dqs_c7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ3"/>
+      <pin index="251" name="c1_ddr4_dqs_c8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ10"/>
+      <pin index="252" name="c1_ddr4_odt0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="BA13"/>
+      <pin index="253" name="c1_ddr4_reset_n"     iostandard="LVCMOS12"                                                                        drive="8"             loc="AT7"/>
+      <pin index="254" name="ddr4_c1_sysclk_p"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AP7"/>
+      <pin index="255" name="ddr4_c1_sysclk_n"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AN6"/>
+
+      <pin index="256" name="c2_ddr4_act_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AD12"/>
+      <pin index="257" name="c2_ddr4_adr0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AD11"/>
+      <pin index="258" name="c2_ddr4_adr1"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE9"/>
+      <pin index="259" name="c2_ddr4_adr2"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE10"/>
+      <pin index="260" name="c2_ddr4_adr3"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AB11"/>
+      <pin index="261" name="c2_ddr4_adr4"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AD8"/>
+      <pin index="262" name="c2_ddr4_adr5"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AB7"/>
+      <pin index="263" name="c2_ddr4_adr6"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC7"/>
+      <pin index="264" name="c2_ddr4_adr7"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC5"/>
+      <pin index="265" name="c2_ddr4_adr8"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE6"/>
+      <pin index="266" name="c2_ddr4_adr9"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF12"/>
+      <pin index="267" name="c2_ddr4_adr10"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC12"/>
+      <pin index="268" name="c2_ddr4_adr11"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE7"/>
+      <pin index="269" name="c2_ddr4_adr12"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC1"/>
+      <pin index="270" name="c2_ddr4_adr13"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC6"/>
+      <pin index="271" name="c2_ddr4_adr14"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AA8"/>
+      <pin index="272" name="c2_ddr4_adr15"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AB9"/>
+      <pin index="273" name="c2_ddr4_adr16"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE11"/>
+      <pin index="274" name="c2_ddr4_ba0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AA11"/>
+      <pin index="275" name="c2_ddr4_ba1"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC8"/>
+      <pin index="276" name="c2_ddr4_bg0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC13"/>
+      <pin index="277" name="c2_ddr4_ck_t0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC10"/>
+      <pin index="278" name="c2_ddr4_ck_c0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AC9"/>
+      <pin index="279" name="c2_ddr4_cke0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF13"/>
+      <pin index="280" name="c2_ddr4_cs0_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AB10"/>
+      <pin index="281" name="c2_ddr4_dm_dbi_n0"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD5"/>
+      <pin index="282" name="c2_ddr4_dm_dbi_n1"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AC2"/>
+      <pin index="283" name="c2_ddr4_dm_dbi_n2"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W8"/>
+      <pin index="284" name="c2_ddr4_dm_dbi_n3"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V2"/>
+      <pin index="285" name="c2_ddr4_dm_dbi_n4"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="R1"/>
+      <pin index="286" name="c2_ddr4_dm_dbi_n5"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W11"/>
+      <pin index="287" name="c2_ddr4_dm_dbi_n6"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K4"/>
+      <pin index="288" name="c2_ddr4_dm_dbi_n7"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K7"/>
+      <pin index="289" name="c2_ddr4_dm_dbi_n8"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J12"/>
+      <pin index="290" name="c2_ddr4_dq0"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AA6"/>
+      <pin index="291" name="c2_ddr4_dq1"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE4"/>
+      <pin index="292" name="c2_ddr4_dq2"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AB6"/>
+      <pin index="293" name="c2_ddr4_dq3"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF4"/>
+      <pin index="294" name="c2_ddr4_dq4"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AA4"/>
+      <pin index="295" name="c2_ddr4_dq5"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD4"/>
+      <pin index="296" name="c2_ddr4_dq6"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AA3"/>
+      <pin index="297" name="c2_ddr4_dq7"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE5"/>
+      <pin index="298" name="c2_ddr4_dq8"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AA1"/>
+      <pin index="299" name="c2_ddr4_dq9"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE1"/>
+      <pin index="300" name="c2_ddr4_dq10"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AB1"/>
+      <pin index="301" name="c2_ddr4_dq11"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE2"/>
+      <pin index="302" name="c2_ddr4_dq12"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AA2"/>
+      <pin index="303" name="c2_ddr4_dq13"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD3"/>
+      <pin index="304" name="c2_ddr4_dq14"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y1"/>
+      <pin index="305" name="c2_ddr4_dq15"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD2"/>
+      <pin index="306" name="c2_ddr4_dq16"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U9"/>
+      <pin index="307" name="c2_ddr4_dq17"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U5"/>
+      <pin index="308" name="c2_ddr4_dq18"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U8"/>
+      <pin index="309" name="c2_ddr4_dq19"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V5"/>
+      <pin index="310" name="c2_ddr4_dq20"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V9"/>
+      <pin index="311" name="c2_ddr4_dq21"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V6"/>
+      <pin index="312" name="c2_ddr4_dq22"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W5"/>
+      <pin index="313" name="c2_ddr4_dq23"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V7"/>
+      <pin index="314" name="c2_ddr4_dq24"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W3"/>
+      <pin index="315" name="c2_ddr4_dq25"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V1"/>
+      <pin index="316" name="c2_ddr4_dq26"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y2"/>
+      <pin index="317" name="c2_ddr4_dq27"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W2"/>
+      <pin index="318" name="c2_ddr4_dq28"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W4"/>
+      <pin index="319" name="c2_ddr4_dq29"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U3"/>
+      <pin index="320" name="c2_ddr4_dq30"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y4"/>
+      <pin index="321" name="c2_ddr4_dq31"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U4"/>
+      <pin index="322" name="c2_ddr4_dq32"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="P4"/>
+      <pin index="323" name="c2_ddr4_dq33"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="P3"/>
+      <pin index="324" name="c2_ddr4_dq34"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="P2"/>
+      <pin index="325" name="c2_ddr4_dq35"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="R4"/>
+      <pin index="326" name="c2_ddr4_dq36"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="N3"/>
+      <pin index="327" name="c2_ddr4_dq37"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="T4"/>
+      <pin index="328" name="c2_ddr4_dq38"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="N1"/>
+      <pin index="329" name="c2_ddr4_dq39"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="N2"/>
+      <pin index="330" name="c2_ddr4_dq40"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U13"/>
+      <pin index="331" name="c2_ddr4_dq41"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V11"/>
+      <pin index="332" name="c2_ddr4_dq42"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U12"/>
+      <pin index="333" name="c2_ddr4_dq43"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U10"/>
+      <pin index="334" name="c2_ddr4_dq44"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y12"/>
+      <pin index="335" name="c2_ddr4_dq45"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W9"/>
+      <pin index="336" name="c2_ddr4_dq46"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y13"/>
+      <pin index="337" name="c2_ddr4_dq47"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="Y10"/>
+      <pin index="338" name="c2_ddr4_dq48"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K2"/>
+      <pin index="339" name="c2_ddr4_dq49"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="M4"/>
+      <pin index="340" name="c2_ddr4_dq50"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K1"/>
+      <pin index="341" name="c2_ddr4_dq51"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L2"/>
+      <pin index="342" name="c2_ddr4_dq52"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J2"/>
+      <pin index="343" name="c2_ddr4_dq53"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="M3"/>
+      <pin index="344" name="c2_ddr4_dq54"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J3"/>
+      <pin index="345" name="c2_ddr4_dq55"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L3"/>
+      <pin index="346" name="c2_ddr4_dq56"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J4"/>
+      <pin index="347" name="c2_ddr4_dq57"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L7"/>
+      <pin index="348" name="c2_ddr4_dq58"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J5"/>
+      <pin index="349" name="c2_ddr4_dq59"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="M6"/>
+      <pin index="350" name="c2_ddr4_dq60"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="H7"/>
+      <pin index="351" name="c2_ddr4_dq61"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="M5"/>
+      <pin index="352" name="c2_ddr4_dq62"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="G8"/>
+      <pin index="353" name="c2_ddr4_dq63"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L6"/>
+      <pin index="354" name="c2_ddr4_dq64"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="G10"/>
+      <pin index="355" name="c2_ddr4_dq65"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L12"/>
+      <pin index="356" name="c2_ddr4_dq66"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="G9"/>
+      <pin index="357" name="c2_ddr4_dq67"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K11"/>
+      <pin index="358" name="c2_ddr4_dq68"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="G11"/>
+      <pin index="359" name="c2_ddr4_dq69"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L11"/>
+      <pin index="360" name="c2_ddr4_dq70"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="H12"/>
+      <pin index="361" name="c2_ddr4_dq71"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L10"/>
+      <pin index="362" name="c2_ddr4_dqs_t0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AB4"/>
+      <pin index="363" name="c2_ddr4_dqs_t1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AB3"/>
+      <pin index="364" name="c2_ddr4_dqs_t2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U6"/>
+      <pin index="365" name="c2_ddr4_dqs_t3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="T1"/>
+      <pin index="366" name="c2_ddr4_dqs_t4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="T2"/>
+      <pin index="367" name="c2_ddr4_dqs_t5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="V12"/>
+      <pin index="368" name="c2_ddr4_dqs_t6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="M1"/>
+      <pin index="369" name="c2_ddr4_dqs_t7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K6"/>
+      <pin index="370" name="c2_ddr4_dqs_t8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="H10"/>
+      <pin index="371" name="c2_ddr4_dqs_c0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AB5"/>
+      <pin index="372" name="c2_ddr4_dqs_c1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AC3"/>
+      <pin index="373" name="c2_ddr4_dqs_c2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U7"/>
+      <pin index="374" name="c2_ddr4_dqs_c3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="U1"/>
+      <pin index="375" name="c2_ddr4_dqs_c4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="T3"/>
+      <pin index="376" name="c2_ddr4_dqs_c5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="W13"/>
+      <pin index="377" name="c2_ddr4_dqs_c6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="L1"/>
+      <pin index="378" name="c2_ddr4_dqs_c7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="K5"/>
+      <pin index="379" name="c2_ddr4_dqs_c8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="J10"/>
+      <pin index="380" name="c2_ddr4_odt0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE13"/>
+      <pin index="381" name="c2_ddr4_reset_n"     iostandard="LVCMOS12"                                                                        drive="8"             loc="R7"/>
+      <pin index="382" name="ddr4_c2_sysclk_p"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="R5"/>
+      <pin index="383" name="ddr4_c2_sysclk_n"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="P5"/>
+
+      <pin index="384" name="c3_ddr4_act_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AH32"/>
+      <pin index="385" name="c3_ddr4_adr0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AG33"/>
+      <pin index="386" name="c3_ddr4_adr1"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE34"/>
+      <pin index="387" name="c3_ddr4_adr2"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AD34"/>
+      <pin index="388" name="c3_ddr4_adr3"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AJ33"/>
+      <pin index="389" name="c3_ddr4_adr4"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF35"/>
+      <pin index="390" name="c3_ddr4_adr5"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AH36"/>
+      <pin index="391" name="c3_ddr4_adr6"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF36"/>
+      <pin index="392" name="c3_ddr4_adr7"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AG38"/>
+      <pin index="393" name="c3_ddr4_adr8"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AD37"/>
+      <pin index="394" name="c3_ddr4_adr9"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE32"/>
+      <pin index="395" name="c3_ddr4_adr10"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AJ31"/>
+      <pin index="396" name="c3_ddr4_adr11"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE36"/>
+      <pin index="397" name="c3_ddr4_adr12"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AG40"/>
+      <pin index="398" name="c3_ddr4_adr13"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF37"/>
+      <pin index="399" name="c3_ddr4_adr14"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK35"/>
+      <pin index="400" name="c3_ddr4_adr15"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AH35"/>
+      <pin index="401" name="c3_ddr4_adr16"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AE33"/>
+      <pin index="402" name="c3_ddr4_ba0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK33"/>
+      <pin index="403" name="c3_ddr4_ba1"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF34"/>
+      <pin index="404" name="c3_ddr4_bg0"         iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AK32"/>
+      <pin index="405" name="c3_ddr4_ck_t0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AH34"/>
+      <pin index="406" name="c3_ddr4_ck_c0"       iostandard="DIFF_SSTL12"              output_impedance="RDRV_40_40"                                    slew="FAST" loc="AG35"/>
+      <pin index="407" name="c3_ddr4_cke0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF32"/>
+      <pin index="408" name="c3_ddr4_cs0_n"       iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AJ34"/>
+      <pin index="409" name="c3_ddr4_dm_dbi_n0"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF39"/>
+      <pin index="410" name="c3_ddr4_dm_dbi_n1"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF41"/>
+      <pin index="411" name="c3_ddr4_dm_dbi_n2"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL32"/>
+      <pin index="412" name="c3_ddr4_dm_dbi_n3"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM40"/>
+      <pin index="413" name="c3_ddr4_dm_dbi_n4"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP42"/>
+      <pin index="414" name="c3_ddr4_dm_dbi_n5"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT33"/>
+      <pin index="415" name="c3_ddr4_dm_dbi_n6"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY40"/>
+      <pin index="416" name="c3_ddr4_dm_dbi_n7"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV38"/>
+      <pin index="417" name="c3_ddr4_dm_dbi_n8"   iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW34"/>
+      <pin index="418" name="c3_ddr4_dq0"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ40"/>
+      <pin index="419" name="c3_ddr4_dq1"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD39"/>
+      <pin index="420" name="c3_ddr4_dq2"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ39"/>
+      <pin index="421" name="c3_ddr4_dq3"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AD38"/>
+      <pin index="422" name="c3_ddr4_dq4"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK37"/>
+      <pin index="423" name="c3_ddr4_dq5"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE39"/>
+      <pin index="424" name="c3_ddr4_dq6"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ38"/>
+      <pin index="425" name="c3_ddr4_dq7"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF38"/>
+      <pin index="426" name="c3_ddr4_dq8"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH41"/>
+      <pin index="427" name="c3_ddr4_dq9"         iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE41"/>
+      <pin index="428" name="c3_ddr4_dq10"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH40"/>
+      <pin index="429" name="c3_ddr4_dq11"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE40"/>
+      <pin index="430" name="c3_ddr4_dq12"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AJ42"/>
+      <pin index="431" name="c3_ddr4_dq13"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AE42"/>
+      <pin index="432" name="c3_ddr4_dq14"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK42"/>
+      <pin index="433" name="c3_ddr4_dq15"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AF42"/>
+      <pin index="434" name="c3_ddr4_dq16"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL31"/>
+      <pin index="435" name="c3_ddr4_dq17"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN33"/>
+      <pin index="436" name="c3_ddr4_dq18"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM31"/>
+      <pin index="437" name="c3_ddr4_dq19"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM36"/>
+      <pin index="438" name="c3_ddr4_dq20"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM30"/>
+      <pin index="439" name="c3_ddr4_dq21"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN32"/>
+      <pin index="440" name="c3_ddr4_dq22"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM35"/>
+      <pin index="441" name="c3_ddr4_dq23"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN31"/>
+      <pin index="442" name="c3_ddr4_dq24"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK41"/>
+      <pin index="443" name="c3_ddr4_dq25"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL42"/>
+      <pin index="444" name="c3_ddr4_dq26"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL41"/>
+      <pin index="445" name="c3_ddr4_dq27"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM41"/>
+      <pin index="446" name="c3_ddr4_dq28"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM38"/>
+      <pin index="447" name="c3_ddr4_dq29"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM39"/>
+      <pin index="448" name="c3_ddr4_dq30"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL38"/>
+      <pin index="449" name="c3_ddr4_dq31"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL39"/>
+      <pin index="450" name="c3_ddr4_dq32"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP39"/>
+      <pin index="451" name="c3_ddr4_dq33"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT39"/>
+      <pin index="452" name="c3_ddr4_dq34"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR40"/>
+      <pin index="453" name="c3_ddr4_dq35"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP38"/>
+      <pin index="454" name="c3_ddr4_dq36"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR39"/>
+      <pin index="455" name="c3_ddr4_dq37"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN38"/>
+      <pin index="456" name="c3_ddr4_dq38"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR42"/>
+      <pin index="457" name="c3_ddr4_dq39"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR41"/>
+      <pin index="458" name="c3_ddr4_dq40"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT34"/>
+      <pin index="459" name="c3_ddr4_dq41"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP35"/>
+      <pin index="460" name="c3_ddr4_dq42"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT35"/>
+      <pin index="461" name="c3_ddr4_dq43"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR35"/>
+      <pin index="462" name="c3_ddr4_dq44"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR31"/>
+      <pin index="463" name="c3_ddr4_dq45"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AR32"/>
+      <pin index="464" name="c3_ddr4_dq46"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP31"/>
+      <pin index="465" name="c3_ddr4_dq47"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT31"/>
+      <pin index="466" name="c3_ddr4_dq48"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY41"/>
+      <pin index="467" name="c3_ddr4_dq49"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT41"/>
+      <pin index="468" name="c3_ddr4_dq50"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY42"/>
+      <pin index="469" name="c3_ddr4_dq51"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV42"/>
+      <pin index="470" name="c3_ddr4_dq52"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA41"/>
+      <pin index="471" name="c3_ddr4_dq53"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AT42"/>
+      <pin index="472" name="c3_ddr4_dq54"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB40"/>
+      <pin index="473" name="c3_ddr4_dq55"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU41"/>
+      <pin index="474" name="c3_ddr4_dq56"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA39"/>
+      <pin index="475" name="c3_ddr4_dq57"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU38"/>
+      <pin index="476" name="c3_ddr4_dq58"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA38"/>
+      <pin index="477" name="c3_ddr4_dq59"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU40"/>
+      <pin index="478" name="c3_ddr4_dq60"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB39"/>
+      <pin index="479" name="c3_ddr4_dq61"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV40"/>
+      <pin index="480" name="c3_ddr4_dq62"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB38"/>
+      <pin index="481" name="c3_ddr4_dq63"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU39"/>
+      <pin index="482" name="c3_ddr4_dq64"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB34"/>
+      <pin index="483" name="c3_ddr4_dq65"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU33"/>
+      <pin index="484" name="c3_ddr4_dq66"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA34"/>
+      <pin index="485" name="c3_ddr4_dq67"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV35"/>
+      <pin index="486" name="c3_ddr4_dq68"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BA33"/>
+      <pin index="487" name="c3_ddr4_dq69"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AU35"/>
+      <pin index="488" name="c3_ddr4_dq70"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="BB35"/>
+      <pin index="489" name="c3_ddr4_dq71"        iostandard="POD12"       odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV33"/>
+      <pin index="490" name="c3_ddr4_dqs_t0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH38"/>
+      <pin index="491" name="c3_ddr4_dqs_t1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AH42"/>
+      <pin index="492" name="c3_ddr4_dqs_t2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AL35"/>
+      <pin index="493" name="c3_ddr4_dqs_t3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK39"/>
+      <pin index="494" name="c3_ddr4_dqs_t4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AN40"/>
+      <pin index="495" name="c3_ddr4_dqs_t5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP34"/>
+      <pin index="496" name="c3_ddr4_dqs_t6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AV41"/>
+      <pin index="497" name="c3_ddr4_dqs_t7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY39"/>
+      <pin index="498" name="c3_ddr4_dqs_t8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY35"/>
+      <pin index="499" name="c3_ddr4_dqs_c0"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG39"/>
+      <pin index="500" name="c3_ddr4_dqs_c1"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AG41"/>
+      <pin index="501" name="c3_ddr4_dqs_c2"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AM34"/>
+      <pin index="502" name="c3_ddr4_dqs_c3"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AK40"/>
+      <pin index="503" name="c3_ddr4_dqs_c4"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP40"/>
+      <pin index="504" name="c3_ddr4_dqs_c5"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AP33"/>
+      <pin index="505" name="c3_ddr4_dqs_c6"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW42"/>
+      <pin index="506" name="c3_ddr4_dqs_c7"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AW38"/>
+      <pin index="507" name="c3_ddr4_dqs_c8"      iostandard="DIFF_POD12"  odt="RTT_40" output_impedance="RDRV_40_40" equalization="EQ_LEVEL2"           slew="FAST" loc="AY34"/>
+      <pin index="508" name="c3_ddr4_odt0"        iostandard="SSTL12"                   output_impedance="RDRV_40_40"                                    slew="FAST" loc="AF33"/>
+      <pin index="509" name="c3_ddr4_reset_n"     iostandard="LVCMOS12"                                                                        drive="8"             loc="AL37"/>
+      <pin index="510" name="ddr4_c3_sysclk_p"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AN35"/>
+      <pin index="511" name="ddr4_c3_sysclk_n"    iostandard="LVDS15"                                                 equalization="EQ_LEVEL2"                       loc="AN36"/>
+
+      <pin index="512" name="qsfp0_TX_P0"    loc="G1"/>
+      <pin index="513" name="qsfp0_TX_N0"    loc="F1"/>
+      <pin index="514" name="qsfp0_RX_P0"    loc="D2"/>
+      <pin index="515" name="qsfp0_RX_N0"    loc="C2"/>
+      <pin index="516" name="qsfp0_TX_P1"    loc="G3"/>
+      <pin index="517" name="qsfp0_TX_N1"    loc="F3"/>
+      <pin index="518" name="qsfp0_RX_P1"    loc="B3"/>
+      <pin index="519" name="qsfp0_RX_N1"    loc="A3"/>
+      <pin index="520" name="qsfp0_TX_P2"    loc="G5"/>
+      <pin index="521" name="qsfp0_TX_N2"    loc="F5"/>
+      <pin index="522" name="qsfp0_RX_P2"    loc="D4"/>
+      <pin index="523" name="qsfp0_RX_N2"    loc="C4"/>
+      <pin index="524" name="qsfp0_TX_P3"    loc="E6"/>
+      <pin index="525" name="qsfp0_TX_N3"    loc="D6"/>
+      <pin index="526" name="qsfp0_RX_P3"    loc="B5"/>
+      <pin index="527" name="qsfp0_RX_N3"    loc="A5"/>
+      <pin index="528" name="qsfp0_161mhz_p" loc="B15"/>
+      <pin index="529" name="qsfp0_161mhz_n" loc="A15"/>
+
+      <pin index="530" name="qsfp1_TX_P0"    loc="E8"/>
+      <pin index="531" name="qsfp1_TX_N0"    loc="D8"/>
+      <pin index="532" name="qsfp1_RX_P0"    loc="B7"/>
+      <pin index="533" name="qsfp1_RX_N0"    loc="A7"/>
+      <pin index="534" name="qsfp1_TX_P1"    loc="E10"/>
+      <pin index="535" name="qsfp1_TX_N1"    loc="D10"/>
+      <pin index="536" name="qsfp1_RX_P1"    loc="B9"/>
+      <pin index="537" name="qsfp1_RX_N1"    loc="A9"/>
+      <pin index="538" name="qsfp1_TX_P2"    loc="E12"/>
+      <pin index="539" name="qsfp1_TX_N2"    loc="D12"/>
+      <pin index="540" name="qsfp1_RX_P2"    loc="B11"/>
+      <pin index="541" name="qsfp1_RX_N2"    loc="A11"/>
+      <pin index="542" name="qsfp1_TX_P3"    loc="E14"/>
+      <pin index="543" name="qsfp1_TX_N3"    loc="D14"/>
+      <pin index="544" name="qsfp1_RX_P3"    loc="B13"/>
+      <pin index="545" name="qsfp1_RX_N3"    loc="A13"/>
+      <pin index="546" name="qsfp1_161mhz_p" loc="D18"/>
+      <pin index="547" name="qsfp1_161mhz_n" loc="C18"/>
+  </pins>
+
+</part_info>

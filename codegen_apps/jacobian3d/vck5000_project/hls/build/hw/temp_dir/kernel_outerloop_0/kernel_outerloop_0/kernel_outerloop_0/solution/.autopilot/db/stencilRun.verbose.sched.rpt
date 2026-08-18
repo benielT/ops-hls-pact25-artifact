@@ -1,0 +1,201 @@
+
+
+================================================================
+== Vitis HLS Report for 'stencilRun'
+================================================================
+* Date:           Sun Jul 26 01:24:18 2026
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        kernel_outerloop_0
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: versal
+* Target device:  xcvc1902-vsvd1760-2MP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.301 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.17>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_14 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read1"   --->   Operation 8 'read' 'p_read_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read45 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read"   --->   Operation 9 'read' 'p_read45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.17ns)   --->   "%arg0_buf_p0_1_V = alloca i64 1" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:170]   --->   Operation 10 'alloca' 'arg0_buf_p0_1_V' <Predicate = true> <Delay = 1.17> <CoreInst = "RAM_S2P_URAM">   --->   Core 102 'RAM_S2P_URAM' <Latency = 2> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 11476> <RAM>
+ST_1 : Operation 11 [1/1] (0.77ns)   --->   "%arg0_buf_r0_1_p1_V = alloca i64 1" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:172]   --->   Operation 11 'alloca' 'arg0_buf_r0_1_p1_V' <Predicate = true> <Delay = 0.77> <CoreInst = "RAM_S2P_BRAM">   --->   Core 101 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 38> <RAM>
+ST_1 : Operation 12 [1/1] (0.77ns)   --->   "%arg0_buf_r1_2_p1_V = alloca i64 1" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:174]   --->   Operation 12 'alloca' 'arg0_buf_r1_2_p1_V' <Predicate = true> <Delay = 0.77> <CoreInst = "RAM_S2P_BRAM">   --->   Core 101 'RAM_S2P_BRAM' <Latency = 2> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 38> <RAM>
+ST_1 : Operation 13 [1/1] (1.17ns)   --->   "%arg0_buf_p1_2_V = alloca i64 1" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:176]   --->   Operation 13 'alloca' 'arg0_buf_p1_2_V' <Predicate = true> <Delay = 1.17> <CoreInst = "RAM_S2P_URAM">   --->   Core 102 'RAM_S2P_URAM' <Latency = 2> <II = 1> <Delay = 1.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 256> <Depth = 11476> <RAM>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln96 = zext i16 %p_read45" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 14 'zext' 'zext_ln96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln96_1 = zext i16 %p_read_14" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 15 'zext' 'zext_ln96_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln147 = mul i32 %zext_ln96_1, i32 %zext_ln96" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:147]   --->   Operation 16 'mul' 'mul_ln147' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 0.79>
+ST_2 : Operation 17 [3/3] (0.79ns) (grouped into DSP with root node plane_diff)   --->   "%mul_ln96 = mul i16 %p_read_14, i16 %p_read45" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 17 'mul' 'mul_ln96' <Predicate = true> <Delay = 0.79> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 18 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln147 = mul i32 %zext_ln96_1, i32 %zext_ln96" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:147]   --->   Operation 18 'mul' 'mul_ln147' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 0.79>
+ST_3 : Operation 19 [2/3] (0.79ns) (grouped into DSP with root node plane_diff)   --->   "%mul_ln96 = mul i16 %p_read_14, i16 %p_read45" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 19 'mul' 'mul_ln96' <Predicate = true> <Delay = 0.79> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 20 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln147 = mul i32 %zext_ln96_1, i32 %zext_ln96" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:147]   --->   Operation 20 'mul' 'mul_ln147' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 0.70>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_6 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read9"   --->   Operation 21 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_13 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read2"   --->   Operation 22 'read' 'p_read_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/3] (0.00ns) (grouped into DSP with root node plane_diff)   --->   "%mul_ln96 = mul i16 %p_read_14, i16 %p_read45" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 23 'mul' 'mul_ln96' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 24 [2/2] (0.64ns) (root node of the DSP)   --->   "%plane_diff = add i16 %mul_ln96, i16 65535" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 24 'add' 'plane_diff' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln147 = zext i16 %p_read_6" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:147]   --->   Operation 25 'zext' 'zext_ln147' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln147 = mul i32 %zext_ln96_1, i32 %zext_ln96" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:147]   --->   Operation 26 'mul' 'mul_ln147' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 27 [3/3] (0.70ns)   --->   "%iter_limit = mul i32 %mul_ln147, i32 %zext_ln147" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148]   --->   Operation 27 'mul' 'iter_limit' <Predicate = true> <Delay = 0.70> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln152 = zext i16 %p_read_13" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:152]   --->   Operation 28 'zext' 'zext_ln152' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [3/3] (0.70ns)   --->   "%S3D_7PT_read_ub_itr = mul i32 %mul_ln147, i32 %zext_ln152" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:152]   --->   Operation 29 'mul' 'S3D_7PT_read_ub_itr' <Predicate = true> <Delay = 0.70> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.92>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%p_read_7 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read8"   --->   Operation 30 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%p_read_8 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read7"   --->   Operation 31 'read' 'p_read_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%p_read_9 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read6"   --->   Operation 32 'read' 'p_read_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%p_read_10 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read5"   --->   Operation 33 'read' 'p_read_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%p_read_11 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read4"   --->   Operation 34 'read' 'p_read_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%p_read_12 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read3"   --->   Operation 35 'read' 'p_read_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/2] (0.64ns) (root node of the DSP)   --->   "%plane_diff = add i16 %mul_ln96, i16 65535" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 36 'add' 'plane_diff' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 132 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 37 [2/3] (1.92ns)   --->   "%iter_limit = mul i32 %mul_ln147, i32 %zext_ln147" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148]   --->   Operation 37 'mul' 'iter_limit' <Predicate = true> <Delay = 1.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 38 [2/3] (1.92ns)   --->   "%S3D_7PT_read_ub_itr = mul i32 %mul_ln147, i32 %zext_ln152" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:152]   --->   Operation 38 'mul' 'S3D_7PT_read_ub_itr' <Predicate = true> <Delay = 1.92> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.99>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln96_2 = zext i16 %p_read45" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96]   --->   Operation 39 'zext' 'zext_ln96_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/3] (0.26ns)   --->   "%iter_limit = mul i32 %mul_ln147, i32 %zext_ln147" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148]   --->   Operation 40 'mul' 'iter_limit' <Predicate = true> <Delay = 0.26> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 41 [1/3] (0.26ns)   --->   "%S3D_7PT_read_ub_itr = mul i32 %mul_ln147, i32 %zext_ln152" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:152]   --->   Operation 41 'mul' 'S3D_7PT_read_ub_itr' <Predicate = true> <Delay = 0.26> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 2> <II = 1> <Delay = 1.92> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 42 [1/1] (0.82ns)   --->   "%add_ln190 = add i17 %zext_ln96_2, i17 131071" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:190]   --->   Operation 42 'add' 'add_ln190' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 43 [1/1] (0.82ns)   --->   "%cond_x_val = add i16 %p_read45, i16 65535" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:190]   --->   Operation 43 'add' 'cond_x_val' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 44 [1/1] (0.82ns)   --->   "%cond_y_val = add i16 %p_read_14, i16 65535" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:191]   --->   Operation 44 'add' 'cond_y_val' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 45 [1/1] (0.82ns)   --->   "%cond_z_val = add i16 %p_read_6, i16 65535" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:192]   --->   Operation 45 'add' 'cond_z_val' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 46 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [2/2] (1.17ns)   --->   "%call_ln148 = call void @stencilRun_Pipeline_VITIS_LOOP_194_1, i16 %p_read45, i32 %iter_limit, i256 %arg0_arg1_streams_14, i16 %p_read_12, i16 %p_read_9, i16 %p_read_7, i256 %arg0_buf_p0_1_V, i256 %arg0_buf_r0_1_p1_V, i256 %arg0_buf_r1_2_p1_V, i256 %arg0_buf_p1_2_V, i16 %plane_diff, i17 %add_ln190, i16 %p_read_11, i16 %p_read_8, i16 %p_read_10, i16 %cond_x_val, i16 %cond_y_val, i16 %cond_z_val, i32 %S3D_7PT_read_ub_itr, i256 %arg0_arg1_streams_1313" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148]   --->   Operation 47 'call' 'call_ln148' <Predicate = true> <Delay = 1.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_1313, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %arg0_arg1_streams_14, void @empty_2, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%specmemcore_ln171 = specmemcore void @_ssdm_op_SpecMemCore, i256 %arg0_buf_p0_1_V, i64 666, i64 28, i64 2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:171]   --->   Operation 50 'specmemcore' 'specmemcore_ln171' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%specmemcore_ln173 = specmemcore void @_ssdm_op_SpecMemCore, i256 %arg0_buf_r0_1_p1_V, i64 666, i64 211, i64 2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:173]   --->   Operation 51 'specmemcore' 'specmemcore_ln173' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%specmemcore_ln175 = specmemcore void @_ssdm_op_SpecMemCore, i256 %arg0_buf_r1_2_p1_V, i64 666, i64 211, i64 2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:175]   --->   Operation 52 'specmemcore' 'specmemcore_ln175' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%specmemcore_ln177 = specmemcore void @_ssdm_op_SpecMemCore, i256 %arg0_buf_p1_2_V, i64 666, i64 28, i64 2" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:177]   --->   Operation 53 'specmemcore' 'specmemcore_ln177' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/2] (0.00ns)   --->   "%call_ln148 = call void @stencilRun_Pipeline_VITIS_LOOP_194_1, i16 %p_read45, i32 %iter_limit, i256 %arg0_arg1_streams_14, i16 %p_read_12, i16 %p_read_9, i16 %p_read_7, i256 %arg0_buf_p0_1_V, i256 %arg0_buf_r0_1_p1_V, i256 %arg0_buf_r1_2_p1_V, i256 %arg0_buf_p1_2_V, i16 %plane_diff, i17 %add_ln190, i16 %p_read_11, i16 %p_read_8, i16 %p_read_10, i16 %cond_x_val, i16 %cond_y_val, i16 %cond_z_val, i32 %S3D_7PT_read_ub_itr, i256 %arg0_arg1_streams_1313" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148]   --->   Operation 54 'call' 'call_ln148' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%ret_ln463 = ret" [/home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:463]   --->   Operation 55 'ret' 'ret_ln463' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.18ns
+The critical path consists of the following:
+	'alloca' operation ('arg0_buf_p0_1.V', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:170) [25]  (1.18 ns)
+
+ <State 2>: 0.796ns
+The critical path consists of the following:
+	'mul' operation of DSP[33] ('mul_ln96', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96) [32]  (0.796 ns)
+
+ <State 3>: 0.796ns
+The critical path consists of the following:
+	'mul' operation of DSP[33] ('mul_ln96', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:96) [32]  (0.796 ns)
+
+ <State 4>: 0.706ns
+The critical path consists of the following:
+	wire read operation ('p_read_6') on port 'p_read9' [15]  (0 ns)
+	'mul' operation ('iter_limit', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148) [36]  (0.706 ns)
+
+ <State 5>: 1.93ns
+The critical path consists of the following:
+	'mul' operation ('iter_limit', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148) [36]  (1.93 ns)
+
+ <State 6>: 1.99ns
+The critical path consists of the following:
+	'add' operation ('add_ln190', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:190) [43]  (0.82 ns)
+	'call' operation ('call_ln148', /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/include/PE_jac3D_kernel_stencil.hpp:148) to 'stencilRun_Pipeline_VITIS_LOOP_194_1' [48]  (1.17 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,4686 @@
+{
+    "versionMajor": "202210",
+    "versionMinor": "1",
+    "hostArchitecture": "x86_64",
+    "hostInterface": "pcie",
+    "usesPR": "true",
+    "platformState": "impl",
+    "topModuleName": "top_wrapper",
+    "acceleratorBinaryFormat": "xclbin2",
+    "acceleratorBinaryContent": "pdi",
+    "validAcceleratorBinaryContentValues": "dcp,pdi",
+    "xoccLinkXPSwitches": [
+        "vivado_param:project.ensureVersalHasCIPS=false",
+        "vivado_param:bd.enableAutoConnectionsInNoc=1",
+        "vivado_param:constr.restoreXDEFConstraintsASTCL=1",
+        "vivado_param:ips.enableSLRParameter=4"
+    ],
+    "dcpFunctionStripped": "false",
+    "dcpEncrypted": "false",
+    "defaultOutputType": "xclbin",
+    "designIntent": {
+        "dataCenter": {
+            "value": "true",
+            "explicit": "true"
+        },
+        "embedded": {
+            "value": "false",
+            "explicit": "true"
+        },
+        "externalHost": {
+            "value": "true",
+            "explicit": "true"
+        },
+        "serverManaged": {
+            "value": "true",
+            "explicit": "true"
+        }
+    },
+    "board": {
+        "name": "xilinx.com:vck5000:1.0",
+        "vendor": "xilinx.com",
+        "part": "xcvc1902-vsvd1760-2MP-e-S",
+        "boardPart": "xilinx.com:vck5000:part0:1.0",
+        "pcie": {
+            "vendor": "0x10ee",
+            "device": "0x5048",
+            "subsystem": "0x000e"
+        }
+    },
+    "devices": [
+        {
+            "name": "fpga0",
+            "type": "8",
+            "fpgaPart": "versal:xcvc1902:vsvd1760:-2MP:e:S",
+            "part": {
+                "name": "xcvc1902-vsvd1760-2MP-e-S",
+                "architecture": "versal",
+                "device": "xcvc1902",
+                "package": "vsvd1760",
+                "speedGrade": "-2MP",
+                "tempGrade": "e",
+                "revision": "S"
+            },
+            "core": {
+                "name": "OCL_REGION_0",
+                "type": "clc_region",
+                "instPath": "top_i\/ulp",
+                "drBDName": "ulp_inst_0.bd",
+                "numComputeUnits": "64",
+                "availableResources": {
+                    "bramCount": "967",
+                    "lutCount": "886810",
+                    "registerCount": "1779881",
+                    "pBlocks": [
+                        {
+                            "name": "pblock_dynamic_region",
+                            "validSlrs": [
+                                "SLR0"
+                            ],
+                            "resources": [
+                                {
+                                    "name": "BRAM",
+                                    "value": "935"
+                                },
+                                {
+                                    "name": "GLOBAL_CLOCK_BUFFERS",
+                                    "value": "336"
+                                },
+                                {
+                                    "name": "LOOKAHEAD8",
+                                    "value": "109593"
+                                },
+                                {
+                                    "name": "LUT",
+                                    "value": "870355"
+                                },
+                                {
+                                    "name": "LUTAsLogic",
+                                    "value": "872230"
+                                },
+                                {
+                                    "name": "LUTAsMem",
+                                    "value": "436525"
+                                },
+                                {
+                                    "name": "MMCM",
+                                    "value": "8"
+                                },
+                                {
+                                    "name": "REG",
+                                    "value": "1745735"
+                                },
+                                {
+                                    "name": "URAM",
+                                    "value": "463"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "interfaces": [
+        {
+            "id": "int1",
+            "name": "PCIe",
+            "type": "gen4x8"
+        }
+    ],
+    "memories": [
+        {
+            "name": "mem0",
+            "type": "ddr4",
+            "size": "12GB",
+            "lowAddress": "828928688128",
+            "highAddress": "841813590015"
+        }
+    ],
+    "files": [
+        {
+            "name": "tcl_hooks\/sys_link_overlay.pre.tcl",
+            "type": "PRE_SYS_LINK_OVERLAY_TCL"
+        },
+        {
+            "name": "tcl_hooks\/sys_link_overlay.post.tcl",
+            "type": "POST_SYS_LINK_OVERLAY_TCL"
+        },
+        {
+            "name": "tcl_hooks\/opt.pre.tcl",
+            "type": "PRE_OPT_TCL"
+        },
+        {
+            "name": "tcl_hooks\/opt.post.tcl",
+            "type": "POST_OPT_TCL"
+        },
+        {
+            "name": "tcl_hooks\/synth.xdc",
+            "type": "IMPL_CONSTRS",
+            "usedIn": "synthesis",
+            "processingOrder": "NORMAL"
+        },
+        {
+            "name": "tcl_hooks\/impl.xdc",
+            "type": "IMPL_CONSTRS",
+            "usedIn": "implementation",
+            "processingOrder": "NORMAL"
+        },
+        {
+            "name": "xilinx_vck5000_gen4x8_xdma_2_202210_1_bb_locked.dcp",
+            "type": "BB_LOCKED_IMPL_DCP"
+        },
+        {
+            "name": "xilinx_vck5000_gen4x8_xdma_2_202210_1.pdi",
+            "type": "PDI"
+        },
+        {
+            "name": "xilinx_vck5000_gen4x8_xdma_2_202210_1.hpfm",
+            "type": "HPFM"
+        },
+        {
+            "name": "bd\/ulp_inst_0\/ulp_inst_0.bd",
+            "type": "DR_BD"
+        },
+        {
+            "name": "iprepo",
+            "type": "IP_REPO_PATH"
+        },
+        {
+            "name": "ipcache",
+            "type": "IP_CACHE_DIR"
+        },
+        {
+            "name": "board",
+            "type": "BOARD_REPO_PATH"
+        },
+        {
+            "name": "ext_metadata.json",
+            "type": "EXT_META_JSON"
+        },
+        {
+            "name": "xilinx_vck5000_gen4x8_xdma_2_202210_1_noc_traffic.nts",
+            "type": "NOC_TRAFFIC"
+        },
+        {
+            "name": "xilinx_vck5000_gen4x8_xdma_2_202210_1_noc_solution.ncr",
+            "type": "NOC_SOLUTION"
+        },
+        {
+            "name": "semantic_labels.json",
+            "type": "SEMANTIC_LABEL"
+        }
+    ],
+    "vendor": "xilinx",
+    "boardId": "vck5000",
+    "name": "gen4x8_xdma_2",
+    "uniqueName": "xilinx:vck5000:gen4x8_xdma_2:202210.1",
+    "fpgaPart": "versal",
+    "fpgaDevice": "xcvc1902",
+    "interfaceDescription": "PCIe gen4x8",
+    "unifiedPlatform": "true",
+    "expandablePlatform": "true",
+    "hardware": "true",
+    "softwareEmulation": "true",
+    "hardwareEmulation": "false",
+    "hardwareEmuPlatform": "false",
+    "maxAXIMMManagers": "30",
+    "maxAXIMMSubordinates": "41",
+    "maxInterrupts": "32",
+    "usesNIFD": "false",
+    "rm": "true",
+    "generatedName": "Vivado",
+    "generatedVersion": "2022.1",
+    "generatedChangeList": "3523110",
+    "generatedIpChangeList": "3522946",
+    "generatedTimestamp": "Wed Apr 13 18:03:54 2022",
+    "idCode": "14ca8093",
+    "extendedIdCode": "01",
+    "designIDs": {
+        "designID": "3164540060",
+        "parentID": "3362414733",
+        "nodeID": "4097379089"
+    },
+    "resources": [
+        {
+            "type": "BRAM",
+            "count": "967"
+        },
+        {
+            "type": "DSP",
+            "count": "1968"
+        },
+        {
+            "type": "LUT",
+            "count": "899840"
+        },
+        {
+            "type": "FF",
+            "count": "1799680"
+        },
+        {
+            "type": "REG",
+            "count": "1779881"
+        }
+    ],
+    "systemClocks": [
+        {
+            "default": "false",
+            "name": "CPU",
+            "origName": "CPU",
+            "id": "-1",
+            "frequency": "1",
+            "instRef": "\/",
+            "period": "1000.000000",
+            "status": "reserved"
+        },
+        {
+            "default": "false",
+            "name": "PL 2",
+            "origName": "_bd_top_blp_s_aclk_ctrl_00",
+            "id": "2",
+            "frequency": "100.000000",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "period": "10.000000",
+            "normalizedPeriod": ".010000",
+            "status": "fixed"
+        },
+        {
+            "default": "true",
+            "name": "PL 0",
+            "origName": "_bd_top_blp_s_aclk_kernel_00",
+            "id": "0",
+            "frequency": "299.996999",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "period": "3.333367",
+            "normalizedPeriod": ".003333",
+            "status": "changeable"
+        },
+        {
+            "default": "false",
+            "name": "PL 1",
+            "origName": "_bd_top_blp_s_aclk_kernel_01",
+            "id": "1",
+            "frequency": "499.994999",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "period": "2.000020",
+            "normalizedPeriod": ".002000",
+            "status": "changeable"
+        }
+    ],
+    "ipParameters": [
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_CLKS",
+            "value": "number(count($designComponent\/xd:connection\/xd:port[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_aclk')])+1)",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_extend_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_extend_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_CLKS",
+            "value": "number(count($designComponent\/xd:connection\/xd:port[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_ic_user_extend_aclk')])+1)",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_noc_kernel0_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+0)",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_noc_kernel0_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+0)",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_SI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_sc_plram_S') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_MI",
+            "value": "number(count($designComponent\/xd:connection\/xd:busInterface[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_sc_plram_M') and starts-with(substring(@xd:name, string-length(@xd:name)-3, 4),'_AXI')])+1)",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        },
+        {
+            "name": "NUM_CLKS",
+            "value": "number(count($designComponent\/xd:connection\/xd:port[@xd:instanceRef=$instance and starts-with(@xd:name,'axi_sc_plram_aclk')])+2)",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "valid": "'true'"
+        }
+    ],
+    "busInterfaces": [
+        {
+            "name": "axi_ic_user_M01_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M01_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M02_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M02_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M03_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M03_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M04_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M04_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M05_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M05_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M06_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M06_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M07_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M07_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M08_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M08_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M09_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M09_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M10_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M10_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M11_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M11_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M12_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M12_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M13_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M13_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M14_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M14_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_M15_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M15_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M01_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M01_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M02_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M02_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M03_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M03_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M04_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M04_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M05_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M05_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M06_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M06_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M07_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M07_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M08_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M08_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M09_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M09_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M10_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M10_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M11_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M11_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M12_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M12_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M13_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M13_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M14_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M14_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_M15_AXI",
+            "mode": "master",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "M15_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "M_AXI_GP",
+            "spTag": "GP",
+            "dataWidth": "32",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S00_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S00_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S01_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S01_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S02_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S02_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S03_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S03_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S04_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S04_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S05_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S05_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S06_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S06_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S07_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S07_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S08_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S08_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S09_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S09_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S10_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S10_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S11_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S11_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S12_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S12_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S13_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S13_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S14_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S14_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S15_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S15_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S16_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S16_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S17_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S17_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S18_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S18_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S19_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S19_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S20_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S20_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S21_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S21_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S22_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S22_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S23_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S23_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S24_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S24_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_S25_AXI",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "aximm",
+            "interfaceRef": "S25_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_NOC",
+            "spTag": "MC_NOC0",
+            "dataWidth": "512",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_S01_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S01_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S02_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S02_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S03_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S03_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S04_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S04_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S05_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S05_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S06_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S06_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S07_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S07_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S08_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S08_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S09_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S09_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S10_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S10_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S11_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S11_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S12_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S12_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S13_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S13_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S14_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S14_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "axi_sc_plram_S15_AXI",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "aximm",
+            "interfaceRef": "S15_AXI",
+            "clockRef": "__UNKNOWN__",
+            "memPort": "S_AXI_HP",
+            "spTag": "BRAM",
+            "dataWidth": "64",
+            "numIdBits": "0",
+            "addressSegment": "Mem0"
+        },
+        {
+            "name": "ai_engine_0",
+            "mode": "master",
+            "instRef": "ai_engine_0",
+            "compRef": "ai_engine",
+            "typeRef": "aie_config",
+            "interfaceRef": "S00_AXI",
+            "clockRef": "__UNKNOWN__",
+            "dataWidth": "128",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_1",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_0",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_2",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_3",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_4",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_5",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_6",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_7",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_8",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_9",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_10",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_11",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_12",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_13",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_14",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_15",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_16",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_17",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_18",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_19",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_20",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_21",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_22",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_23",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_24",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_25",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_26",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_27",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_28",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_29",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_30",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "kernel_interrupt\/xlconcat_0_In0_31",
+            "instRef": "kernel_interrupt\/xlconcat_0",
+            "compRef": "xlconcat",
+            "typeRef": "interrupt",
+            "interfaceRef": "In0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "_bd_top_blp_s_aclk_ctrl_00",
+            "mode": "master",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "typeRef": "clock",
+            "interfaceRef": "blp_s_aclk_ctrl_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "_bd_top_blp_s_aclk_kernel_00",
+            "mode": "master",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "typeRef": "clock",
+            "interfaceRef": "blp_s_aclk_kernel_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "_bd_top_blp_s_aclk_kernel_01",
+            "mode": "master",
+            "instRef": "_bd_top",
+            "compRef": "_bd_top",
+            "typeRef": "clock",
+            "interfaceRef": "blp_s_aclk_kernel_01",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk1",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk2",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk2",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk3",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk3",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk4",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk4",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk5",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk5",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk6",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk6",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk7",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk7",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk8",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk8",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk9",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk9",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk10",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk10",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk11",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk11",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk12",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk12",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk13",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk13",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk14",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk14",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk15",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk15",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk16",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk16",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk17",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk17",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk18",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk18",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk19",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk19",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk20",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk20",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk21",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk21",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk22",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk22",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk23",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk23",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk24",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk24",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk25",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk25",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk26",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk26",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk27",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk27",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk28",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk28",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk29",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk29",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk30",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk30",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk31",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk31",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aclk32",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk32",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk1",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk2",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk2",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk3",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk3",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk4",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk4",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk5",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk5",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk6",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk6",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk7",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk7",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk8",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk8",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk9",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk9",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk10",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk10",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk11",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk11",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk12",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk12",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk13",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk13",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk14",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk14",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk15",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk15",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk16",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk16",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk17",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk17",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk18",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk18",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk19",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk19",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk20",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk20",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk21",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk21",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk22",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk22",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk23",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk23",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk24",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk24",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk25",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk25",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk26",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk26",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk27",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk27",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk28",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk28",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk29",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk29",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk30",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk30",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk31",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk31",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aclk32",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk32",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk0",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk0",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk1",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk1",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk2",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk2",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk3",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk3",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk4",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk4",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk5",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk5",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk6",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk6",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk7",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk7",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk8",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk8",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk9",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk9",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk10",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk10",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk11",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk11",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk12",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk12",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk13",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk13",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk14",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk14",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk15",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk15",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk16",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk16",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk17",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk17",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk18",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk18",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk19",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk19",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk20",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk20",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk21",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk21",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk22",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk22",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk23",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk23",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk24",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk24",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk25",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk25",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk26",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk26",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk27",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk27",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk28",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk28",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk29",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk29",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk30",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk30",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk31",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk31",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk32",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk32",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk33",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk33",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk34",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk34",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk35",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk35",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk36",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk36",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk37",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk37",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk38",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk38",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk39",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk39",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk40",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk40",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk41",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk41",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk42",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk42",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk43",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk43",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk44",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk44",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk45",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk45",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk46",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk46",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk47",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk47",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk48",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk48",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk49",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk49",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk50",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk50",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk51",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk51",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk52",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk52",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk53",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk53",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk54",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk54",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk55",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk55",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk56",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk56",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk57",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk57",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk58",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk58",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk59",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk59",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk60",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk60",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk61",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk61",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk62",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk62",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk63",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk63",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk64",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk64",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk65",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk65",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk66",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk66",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk67",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk67",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk68",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk68",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk69",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk69",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk70",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk70",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk71",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk71",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk72",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk72",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk73",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk73",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk74",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk74",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk75",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk75",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk76",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk76",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk77",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk77",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk78",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk78",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk79",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk79",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk80",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk80",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk81",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk81",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk82",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk82",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk83",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk83",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk84",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk84",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk85",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk85",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk86",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk86",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk87",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk87",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk88",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk88",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk89",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk89",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk90",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk90",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk91",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk91",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk92",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk92",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk93",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk93",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk94",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk94",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk95",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk95",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk96",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk96",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk97",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk97",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk98",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk98",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk99",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk99",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk100",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk100",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk101",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk101",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk102",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk102",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk103",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk103",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk104",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk104",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk105",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk105",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk106",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk106",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk107",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk107",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk108",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk108",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk109",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk109",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk110",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk110",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk111",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk111",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk112",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk112",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk113",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk113",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk114",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk114",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk115",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk115",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk116",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk116",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk117",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk117",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk118",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk118",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk119",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk119",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk120",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk120",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk121",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk121",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk122",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk122",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk123",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk123",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk124",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk124",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk125",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk125",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk126",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk126",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk127",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk127",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk128",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk128",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk129",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk129",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk130",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk130",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk131",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk131",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk132",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk132",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk133",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk133",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk134",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk134",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk135",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk135",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk136",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk136",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk137",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk137",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk138",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk138",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk139",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk139",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk140",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk140",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk141",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk141",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk142",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk142",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk143",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk143",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk144",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk144",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk145",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk145",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk146",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk146",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk147",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk147",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk148",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk148",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk149",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk149",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk150",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk150",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk151",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk151",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk152",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk152",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk153",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk153",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk154",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk154",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk155",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk155",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk156",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk156",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk157",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk157",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk158",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk158",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk159",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk159",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk160",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk160",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk161",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk161",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk162",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk162",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk163",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk163",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk164",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk164",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk165",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk165",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk166",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk166",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk167",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk167",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk168",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk168",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk169",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk169",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk170",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk170",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk171",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk171",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk172",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk172",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk173",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk173",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk174",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk174",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk175",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk175",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk176",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk176",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk177",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk177",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk178",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk178",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk179",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk179",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk180",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk180",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk181",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk181",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk182",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk182",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk183",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk183",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk184",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk184",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk185",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk185",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk186",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk186",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk187",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk187",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk188",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk188",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk189",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk189",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk190",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk190",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk191",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk191",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aclk192",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "clock",
+            "interfaceRef": "aclk192",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk2",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk2",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk3",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk3",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk4",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk4",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk5",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk5",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk6",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk6",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk7",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk7",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk8",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk8",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk9",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk9",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk10",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk10",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk11",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk11",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk12",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk12",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk13",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk13",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk14",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk14",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk15",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk15",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk16",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk16",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk17",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk17",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk18",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk18",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk19",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk19",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk20",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk20",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk21",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk21",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk22",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk22",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk23",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk23",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk24",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk24",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk25",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk25",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk26",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk26",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk27",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk27",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk28",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk28",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk29",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk29",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk30",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk30",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk31",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk31",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aclk32",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "clock",
+            "interfaceRef": "aclk32",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_fixed_peripheral_reset",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_fixed",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_reset",
+            "clockRef": "_bd_top_blp_s_aclk_ctrl_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_fixed_interconnect_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_fixed",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "interconnect_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_ctrl_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_fixed_peripheral_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_fixed",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_ctrl_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel0_peripheral_reset",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel0",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_reset",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel0_interconnect_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel0",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "interconnect_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel0_peripheral_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel0",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_00",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel1_peripheral_reset",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel1",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_reset",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_01",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel1_interconnect_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel1",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "interconnect_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_01",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "reset_controllers\/reset_sync_kernel1_peripheral_aresetn",
+            "mode": "master",
+            "instRef": "reset_controllers\/reset_sync_kernel1",
+            "compRef": "proc_sys_reset",
+            "typeRef": "reset",
+            "interfaceRef": "peripheral_aresetn",
+            "clockRef": "_bd_top_blp_s_aclk_kernel_01",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_aresetn",
+            "mode": "slave",
+            "instRef": "axi_ic_user",
+            "compRef": "smartconnect",
+            "typeRef": "reset",
+            "interfaceRef": "aresetn",
+            "clockRef": "__UNKNOWN__",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_ic_user_extend_aresetn",
+            "mode": "slave",
+            "instRef": "axi_ic_user_extend",
+            "compRef": "smartconnect",
+            "typeRef": "reset",
+            "interfaceRef": "aresetn",
+            "clockRef": "__UNKNOWN__",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_noc_kernel0_aresetn",
+            "mode": "slave",
+            "instRef": "axi_noc_kernel0",
+            "compRef": "axi_noc",
+            "typeRef": "reset",
+            "interfaceRef": "aresetn",
+            "clockRef": "__UNKNOWN__",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        },
+        {
+            "name": "axi_sc_plram_aresetn",
+            "mode": "slave",
+            "instRef": "axi_sc_plram",
+            "compRef": "smartconnect",
+            "typeRef": "reset",
+            "interfaceRef": "aresetn",
+            "clockRef": "__UNKNOWN__",
+            "dataWidth": "0",
+            "numIdBits": "0"
+        }
+    ]
+}
+

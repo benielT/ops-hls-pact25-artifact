@@ -1,0 +1,186 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'entry_proc'" level="0">
+<item name = "Date">Sun Jul 26 01:25:55 2026
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)</item>
+<item name = "Project">kernel_outerloop_0</item>
+<item name = "Solution">solution (Vitis Kernel Flow Target)</item>
+<item name = "Product family">versal</item>
+<item name = "Target device">xcvc1902-vsvd1760-2MP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 0.901 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">0, 0, 0 ns, 0 ns, 0, 0, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 24, -</column>
+<column name="Register">-, -, 3, -, -</column>
+<specialColumn name="Available">1934, 1968, 1799680, 899840, 463</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done">2, 2, 1, 2</column>
+<column name="real_start">2, 2, 1, 2</column>
+<column name="stencilConfig_grid_size_0_c47_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_grid_size_1_c60_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_grid_size_2_c73_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_lower_limit_0_c86_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_lower_limit_1_c99_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_lower_limit_2_c112_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_outer_loop_limit_c164_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_upper_limit_0_c125_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_upper_limit_1_c138_blk_n">2, 2, 1, 2</column>
+<column name="stencilConfig_upper_limit_2_c151_blk_n">2, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="start_once_reg">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="start_full_n">in, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="start_out">out, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="start_write">out, 1, ap_ctrl_hs, entry_proc, return value</column>
+<column name="p_read">in, 16, ap_none, p_read, scalar</column>
+<column name="stencilConfig_grid_size_0_c47_din">out, 16, ap_fifo, stencilConfig_grid_size_0_c47, pointer</column>
+<column name="stencilConfig_grid_size_0_c47_num_data_valid">in, 3, ap_fifo, stencilConfig_grid_size_0_c47, pointer</column>
+<column name="stencilConfig_grid_size_0_c47_fifo_cap">in, 3, ap_fifo, stencilConfig_grid_size_0_c47, pointer</column>
+<column name="stencilConfig_grid_size_0_c47_full_n">in, 1, ap_fifo, stencilConfig_grid_size_0_c47, pointer</column>
+<column name="stencilConfig_grid_size_0_c47_write">out, 1, ap_fifo, stencilConfig_grid_size_0_c47, pointer</column>
+<column name="p_read1">in, 16, ap_none, p_read1, scalar</column>
+<column name="stencilConfig_grid_size_1_c60_din">out, 16, ap_fifo, stencilConfig_grid_size_1_c60, pointer</column>
+<column name="stencilConfig_grid_size_1_c60_num_data_valid">in, 3, ap_fifo, stencilConfig_grid_size_1_c60, pointer</column>
+<column name="stencilConfig_grid_size_1_c60_fifo_cap">in, 3, ap_fifo, stencilConfig_grid_size_1_c60, pointer</column>
+<column name="stencilConfig_grid_size_1_c60_full_n">in, 1, ap_fifo, stencilConfig_grid_size_1_c60, pointer</column>
+<column name="stencilConfig_grid_size_1_c60_write">out, 1, ap_fifo, stencilConfig_grid_size_1_c60, pointer</column>
+<column name="p_read2">in, 16, ap_none, p_read2, scalar</column>
+<column name="stencilConfig_grid_size_2_c73_din">out, 16, ap_fifo, stencilConfig_grid_size_2_c73, pointer</column>
+<column name="stencilConfig_grid_size_2_c73_num_data_valid">in, 3, ap_fifo, stencilConfig_grid_size_2_c73, pointer</column>
+<column name="stencilConfig_grid_size_2_c73_fifo_cap">in, 3, ap_fifo, stencilConfig_grid_size_2_c73, pointer</column>
+<column name="stencilConfig_grid_size_2_c73_full_n">in, 1, ap_fifo, stencilConfig_grid_size_2_c73, pointer</column>
+<column name="stencilConfig_grid_size_2_c73_write">out, 1, ap_fifo, stencilConfig_grid_size_2_c73, pointer</column>
+<column name="p_read3">in, 16, ap_none, p_read3, scalar</column>
+<column name="stencilConfig_lower_limit_0_c86_din">out, 16, ap_fifo, stencilConfig_lower_limit_0_c86, pointer</column>
+<column name="stencilConfig_lower_limit_0_c86_num_data_valid">in, 3, ap_fifo, stencilConfig_lower_limit_0_c86, pointer</column>
+<column name="stencilConfig_lower_limit_0_c86_fifo_cap">in, 3, ap_fifo, stencilConfig_lower_limit_0_c86, pointer</column>
+<column name="stencilConfig_lower_limit_0_c86_full_n">in, 1, ap_fifo, stencilConfig_lower_limit_0_c86, pointer</column>
+<column name="stencilConfig_lower_limit_0_c86_write">out, 1, ap_fifo, stencilConfig_lower_limit_0_c86, pointer</column>
+<column name="p_read4">in, 16, ap_none, p_read4, scalar</column>
+<column name="stencilConfig_lower_limit_1_c99_din">out, 16, ap_fifo, stencilConfig_lower_limit_1_c99, pointer</column>
+<column name="stencilConfig_lower_limit_1_c99_num_data_valid">in, 3, ap_fifo, stencilConfig_lower_limit_1_c99, pointer</column>
+<column name="stencilConfig_lower_limit_1_c99_fifo_cap">in, 3, ap_fifo, stencilConfig_lower_limit_1_c99, pointer</column>
+<column name="stencilConfig_lower_limit_1_c99_full_n">in, 1, ap_fifo, stencilConfig_lower_limit_1_c99, pointer</column>
+<column name="stencilConfig_lower_limit_1_c99_write">out, 1, ap_fifo, stencilConfig_lower_limit_1_c99, pointer</column>
+<column name="p_read5">in, 16, ap_none, p_read5, scalar</column>
+<column name="stencilConfig_lower_limit_2_c112_din">out, 16, ap_fifo, stencilConfig_lower_limit_2_c112, pointer</column>
+<column name="stencilConfig_lower_limit_2_c112_num_data_valid">in, 3, ap_fifo, stencilConfig_lower_limit_2_c112, pointer</column>
+<column name="stencilConfig_lower_limit_2_c112_fifo_cap">in, 3, ap_fifo, stencilConfig_lower_limit_2_c112, pointer</column>
+<column name="stencilConfig_lower_limit_2_c112_full_n">in, 1, ap_fifo, stencilConfig_lower_limit_2_c112, pointer</column>
+<column name="stencilConfig_lower_limit_2_c112_write">out, 1, ap_fifo, stencilConfig_lower_limit_2_c112, pointer</column>
+<column name="p_read6">in, 16, ap_none, p_read6, scalar</column>
+<column name="stencilConfig_upper_limit_0_c125_din">out, 16, ap_fifo, stencilConfig_upper_limit_0_c125, pointer</column>
+<column name="stencilConfig_upper_limit_0_c125_num_data_valid">in, 3, ap_fifo, stencilConfig_upper_limit_0_c125, pointer</column>
+<column name="stencilConfig_upper_limit_0_c125_fifo_cap">in, 3, ap_fifo, stencilConfig_upper_limit_0_c125, pointer</column>
+<column name="stencilConfig_upper_limit_0_c125_full_n">in, 1, ap_fifo, stencilConfig_upper_limit_0_c125, pointer</column>
+<column name="stencilConfig_upper_limit_0_c125_write">out, 1, ap_fifo, stencilConfig_upper_limit_0_c125, pointer</column>
+<column name="p_read7">in, 16, ap_none, p_read7, scalar</column>
+<column name="stencilConfig_upper_limit_1_c138_din">out, 16, ap_fifo, stencilConfig_upper_limit_1_c138, pointer</column>
+<column name="stencilConfig_upper_limit_1_c138_num_data_valid">in, 3, ap_fifo, stencilConfig_upper_limit_1_c138, pointer</column>
+<column name="stencilConfig_upper_limit_1_c138_fifo_cap">in, 3, ap_fifo, stencilConfig_upper_limit_1_c138, pointer</column>
+<column name="stencilConfig_upper_limit_1_c138_full_n">in, 1, ap_fifo, stencilConfig_upper_limit_1_c138, pointer</column>
+<column name="stencilConfig_upper_limit_1_c138_write">out, 1, ap_fifo, stencilConfig_upper_limit_1_c138, pointer</column>
+<column name="p_read8">in, 16, ap_none, p_read8, scalar</column>
+<column name="stencilConfig_upper_limit_2_c151_din">out, 16, ap_fifo, stencilConfig_upper_limit_2_c151, pointer</column>
+<column name="stencilConfig_upper_limit_2_c151_num_data_valid">in, 3, ap_fifo, stencilConfig_upper_limit_2_c151, pointer</column>
+<column name="stencilConfig_upper_limit_2_c151_fifo_cap">in, 3, ap_fifo, stencilConfig_upper_limit_2_c151, pointer</column>
+<column name="stencilConfig_upper_limit_2_c151_full_n">in, 1, ap_fifo, stencilConfig_upper_limit_2_c151, pointer</column>
+<column name="stencilConfig_upper_limit_2_c151_write">out, 1, ap_fifo, stencilConfig_upper_limit_2_c151, pointer</column>
+<column name="p_read9">in, 16, ap_none, p_read9, scalar</column>
+<column name="stencilConfig_outer_loop_limit_c164_din">out, 16, ap_fifo, stencilConfig_outer_loop_limit_c164, pointer</column>
+<column name="stencilConfig_outer_loop_limit_c164_num_data_valid">in, 3, ap_fifo, stencilConfig_outer_loop_limit_c164, pointer</column>
+<column name="stencilConfig_outer_loop_limit_c164_fifo_cap">in, 3, ap_fifo, stencilConfig_outer_loop_limit_c164, pointer</column>
+<column name="stencilConfig_outer_loop_limit_c164_full_n">in, 1, ap_fifo, stencilConfig_outer_loop_limit_c164, pointer</column>
+<column name="stencilConfig_outer_loop_limit_c164_write">out, 1, ap_fifo, stencilConfig_outer_loop_limit_c164, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Jul 26 01:28:22 2026
+# Process ID: 1957110
+# Current directory: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip/vivado.log
+# Journal file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip/vivado.jou
+# Running On: acclnode05, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 32, Host memory: 540639 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2884.902 ; gain = 0.027 ; free physical = 153772 ; free virtual = 487907
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_outerloop_0_fadd_32ns_32ns_32_2_primitive_dsp_0_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_outerloop_0_fadd_32ns_32ns_32_2_primitive_dsp_0_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_outerloop_0_fadd_32ns_32ns_32_2_primitive_dsp_0_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_outerloop_0_fmadd_32ns_32ns_32ns_32ns_32_3_primitive_dsp_0_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_outerloop_0_fmadd_32ns_32ns_32ns_32ns_32_3_primitive_dsp_0_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_outerloop_0_fmadd_32ns_32ns_32ns_32ns_32_3_primitive_dsp_0_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_outerloop_0_fmul_32ns_32ns_32_3_primitive_dsp_0_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_outerloop_0_fmul_32ns_32ns_32_3_primitive_dsp_0_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_outerloop_0_fmul_32ns_32ns_32_3_primitive_dsp_0_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Running package_xo -xo_path /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/export.xo -kernel_name kernel_outerloop_0 -kernel_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip/../kernel/kernel.xml -kernel_files /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/device/src/kernel_outerloop_0.cpp -ip_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip/ip_unzip_dir -design_xml /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.autopilot/db/kernel_outerloop_0.design.xml -debug_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/.debug -hls_directory /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/kernel_outerloop_0/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 26 01:28:40 2026...

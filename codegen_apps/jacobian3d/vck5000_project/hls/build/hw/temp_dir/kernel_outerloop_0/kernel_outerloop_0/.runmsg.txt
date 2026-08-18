@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: kernel_outerloop_0
+Log file: /home/x_thileeb/repos/ops-hls-pact25-artifact/codegen_apps/jacobian3d/vck5000_project/hls/build/hw/temp_dir/kernel_outerloop_0/kernel_outerloop_0/vitis_hls.log

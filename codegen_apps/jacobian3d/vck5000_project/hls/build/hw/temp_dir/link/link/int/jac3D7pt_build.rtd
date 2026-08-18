@@ -1,0 +1,482 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "build_metadata": {
+        "dsa": {
+            "vendor": "xilinx",
+            "board_id": "vck5000",
+            "name": "gen4x8_xdma_2",
+            "version_major": "202210",
+            "version_minor": "1",
+            "description": "",
+            "generated_by": {
+                "name": "Vivado",
+                "version": "2022.1",
+                "cl": "3523110",
+                "time_stamp": "Wed Apr 13 18:03:54 2022"
+            },
+            "board": {
+                "name": "xilinx.com:vck5000:1.0",
+                "vendor": "xilinx.com",
+                "part": "xcvc1902-vsvd1760-2MP-e-S",
+                "board_part": "xilinx.com:vck5000:part0:1.0"
+            },
+            "feature_roms": [
+                {
+                    "time_epoch": "0"
+                }
+            ]
+        },
+        "xclbin": {
+            "generated_by": {
+                "name": "v++",
+                "version": "2022.1",
+                "cl": "3524075",
+                "time_stamp": "2022-04-13-17:42:45",
+                "options": "\/tools\/Xilinx\/Vitis\/2022.1\/bin\/unwrapped\/lnx64.o\/v++ --config hls\/host\/xrt.cfg --connectivity.stream_connect datamover_outerloop_0_1.arg0_axis_out:kernel_outerloop_0_1.arg0_axis_in:128 --connectivity.stream_connect kernel_outerloop_0_1.arg1_axis_out:datamover_outerloop_0_1.arg1_axis_in:128 --hls.jobs 64 --input_files .\/hls\/build\/hw\/datamover_outerloop_0.xo --input_files .\/hls\/build\/hw\/kernel_outerloop_0.xo --link --log_dir hls\/build\/hw\/temp_dir\/link\/logs\/ --optimize 3 --output .\/hls\/build\/hw\/jac3D7pt.xsa --platform xilinx_vck5000_gen4x8_xdma_2_202210_1 --remote_ip_cache \/home\/x_thileeb\/repos\/ops-hls-pact25-artifact\/scripts\/..\/OPS\/ops\/hls\/IP_CACHE\/ --report_level 0 --save-temps --target hw --temp_dir hls\/build\/hw\/temp_dir\/link\/ "
+            },
+            "user_regions": [
+                {
+                    "name": "OCL_REGION_0",
+                    "type": "clc_region",
+                    "instance_path": "top_i\/ulp",
+                    "base_address": "",
+                    "kernels": [
+                        {
+                            "name": "kernel_outerloop_0",
+                            "ports": [
+                                {
+                                    "name": "ARG0_AXIS_IN",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "256",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "ARG1_AXIS_OUT",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "256",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x80",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "slr_region",
+                                    "address_qualifier": "0",
+                                    "id": "0",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "outer_itr",
+                                    "address_qualifier": "0",
+                                    "id": "1",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x18",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_grid_size_0",
+                                    "address_qualifier": "0",
+                                    "id": "2",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x20",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_grid_size_1",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x28",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_grid_size_2",
+                                    "address_qualifier": "0",
+                                    "id": "4",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x30",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_dim",
+                                    "address_qualifier": "0",
+                                    "id": "5",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x38",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_total_itr",
+                                    "address_qualifier": "0",
+                                    "id": "6",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x40",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_lower_limit_0",
+                                    "address_qualifier": "0",
+                                    "id": "7",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x48",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_lower_limit_1",
+                                    "address_qualifier": "0",
+                                    "id": "8",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x50",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_lower_limit_2",
+                                    "address_qualifier": "0",
+                                    "id": "9",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x58",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_upper_limit_0",
+                                    "address_qualifier": "0",
+                                    "id": "10",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x60",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_upper_limit_1",
+                                    "address_qualifier": "0",
+                                    "id": "11",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x68",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_upper_limit_2",
+                                    "address_qualifier": "0",
+                                    "id": "12",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x70",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "stencilConfig_outer_loop_limit",
+                                    "address_qualifier": "0",
+                                    "id": "13",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x78",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "arg0_axis_in",
+                                    "address_qualifier": "4",
+                                    "id": "14",
+                                    "port": "ARG0_AXIS_IN",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>&"
+                                },
+                                {
+                                    "name": "arg1_axis_out",
+                                    "address_qualifier": "4",
+                                    "id": "15",
+                                    "port": "ARG1_AXIS_OUT",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>&"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "kernel_outerloop_0_1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "datamover_outerloop_0",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM0",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM1",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "ARG0_AXIS_OUT",
+                                    "mode": "write_only",
+                                    "range": "",
+                                    "data_width": "256",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "ARG1_AXIS_IN",
+                                    "mode": "read_only",
+                                    "range": "",
+                                    "data_width": "256",
+                                    "port_type": "stream",
+                                    "base": ""
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x80",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "is_loopback",
+                                    "address_qualifier": "0",
+                                    "id": "0",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x1",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_start_0",
+                                    "address_qualifier": "0",
+                                    "id": "1",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x18",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_end_0",
+                                    "address_qualifier": "0",
+                                    "id": "2",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x20",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_start_1",
+                                    "address_qualifier": "0",
+                                    "id": "3",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x28",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_end_1",
+                                    "address_qualifier": "0",
+                                    "id": "4",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x30",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_start_2",
+                                    "address_qualifier": "0",
+                                    "id": "5",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x38",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "range_end_2",
+                                    "address_qualifier": "0",
+                                    "id": "6",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x40",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "gridSize_0",
+                                    "address_qualifier": "0",
+                                    "id": "7",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x48",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "gridSize_1",
+                                    "address_qualifier": "0",
+                                    "id": "8",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x50",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "gridSize_2",
+                                    "address_qualifier": "0",
+                                    "id": "9",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x58",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x2",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "outer_itr",
+                                    "address_qualifier": "0",
+                                    "id": "10",
+                                    "port": "S_AXI_CONTROL",
+                                    "size": "0x4",
+                                    "offset": "0x60",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x4",
+                                    "type": "unsigned int"
+                                },
+                                {
+                                    "name": "arg0",
+                                    "address_qualifier": "1",
+                                    "id": "11",
+                                    "port": "M_AXI_GMEM0",
+                                    "size": "0x8",
+                                    "offset": "0x68",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "arg1",
+                                    "address_qualifier": "1",
+                                    "id": "12",
+                                    "port": "M_AXI_GMEM1",
+                                    "size": "0x8",
+                                    "offset": "0x74",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "arg0_axis_out",
+                                    "address_qualifier": "4",
+                                    "id": "13",
+                                    "port": "ARG0_AXIS_OUT",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>&"
+                                },
+                                {
+                                    "name": "arg1_axis_in",
+                                    "address_qualifier": "4",
+                                    "id": "14",
+                                    "port": "ARG1_AXIS_IN",
+                                    "size": "0x0",
+                                    "offset": "0x0",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "stream<hls::axis<ap_uint<256>, 0, 0, 0>, 0>&"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "datamover_outerloop_0_1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
